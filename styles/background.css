@@ -1,0 +1,61 @@
+@keyframes move {
+  from {
+    filter: blur(50px);
+  }
+  to {
+    filter: blur(200px);
+  }
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #002733;
+  color: white;
+  overflow: hidden;
+  z-index: -10;
+}
+.background-children {
+  z-index: 999999;
+}
+#background-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -5;
+  filter: blur(100px);
+}
+.dot {
+  z-index: 5;
+  mix-blend-mode: screen;
+  position: fixed;
+  top: 10%;
+  right: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #1b8489;
+  box-shadow: 0px 0px 5px #1a8489;
+  box-shadow: 0px 0px 5px white;
+  filter: blur(35px);
+  animation: move infinite ease-in-out alternate;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.4;
+  filter: contrast(0.5);
+  z-index: 100000;
+  pointer-events: none;
+}
+
+.content {
+  color: white;
+  z-index: 9999;
+}

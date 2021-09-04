@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <link rel="stylesheet" href="../styles/attributions.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/navmenu-desktop.css">
+    <link rel="stylesheet" href="../styles/navmenu-mobile.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-desktop.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
+    <link rel="stylesheet" href="../styles/button-pill.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+  </head>
+  <body>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
+          <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
+          AmeBye
+        </a>
+        <ul class="nav-menu"></ul>
+      </nav>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <div class="background">
+      <canvas id="background-canvas"></canvas>
+      <div class="app-header">
+        <h1 id="title">ATTRIBUTIONS</h1>
+        <div id="img" class="app-header-image-wrapper">
+          <img alt="Header" src="../assets/images/placeholder.png" />
+        </div>
+      </div>
+      <div class="app-content">
+        <div class="app-content-text">
+          <div>
+            <h3 id="advisors">PI & ADVISORS</h3>
+            <div class="person-container">
+              <img alt="Name Surname" src="../assets/images/placeholder.png"/>
+              <div>
+                <h5>VARDAS PAVARDĖ</h5>
+                <h6>something something</h6>
+                <div class="breaker"></div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. 
+                </p>
+              </div>
+            </div>
+            <div class="person-container">
+              <img alt="Name Surname" src="../assets/images/placeholder.png"/>
+              <div>
+                <h5>VARDAS PAVARDĖ</h5>
+                <h6>something something</h6>
+                <div class="breaker"></div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. 
+                </p>
+              </div>
+            </div>
+            <h3 id="instructors">INSTRUCTORS</h3>
+            <div class="person-container">
+              <img alt="Name Surname" src="../assets/images/placeholder.png"/>
+              <div>
+                <h5>VARDAS PAVARDĖ</h5>
+                <h6>something something</h6>
+                <div class="breaker"></div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. 
+                </p>
+              </div>
+            </div>
+            <div class="person-container">
+              <img alt="Name Surname" src="../assets/images/placeholder.png"/>
+              <div>
+                <h5>VARDAS PAVARDĖ</h5>
+                <h6>something something</h6>
+                <div class="breaker"></div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. 
+                </p>
+              </div>
+            </div>
+            <h3 id="wetlab">WET LAB</h3>
+            <table>
+              <tr>
+                <th></th>
+                <th>Something</th>
+                <th>Something</th>
+                <th>Something</th>
+              </tr>
+              <tr>
+                <td>Vardas Pavardė</td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+              </tr>
+              <tr>
+                <td>Vardas Pavardė</td>
+                <td><div></div></td>
+                <td colspan="2"><div class="marked"></div></td>
+              </tr>
+              <tr>
+                <td>Vardas Pavardė</td>
+                <td colspan="3"><div class="marked"></div></td>
+              </tr>
+              <tr>
+                <td>Vardas Pavardė</td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div class="marked"></div></td>
+              </tr>
+            </table>
+            <h3 id="drylab">DRY LAB</h3>
+            <table>
+              <tr>
+                <th></th>
+                <th>Something</th>
+                <th>Something</th>
+                <th>Something</th>
+              </tr>
+              <tr>
+                <td>Vardas Pavardė</td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+              </tr>
+              <tr>
+                <td>Vardas Pavardė</td>
+                <td><div></div></td>
+                <td colspan="2"><div class="marked"></div></td>
+              </tr>
+              <tr>
+                <td>Vardas Pavardė</td>
+                <td colspan="3"><div class="marked"></div></td>
+              </tr>
+              <tr>
+                <td>Vardas Pavardė</td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div class="marked"></div></td>
+              </tr>
+            </table>
+            <h3 id="HP">HUMAN PRACTICES</h3>
+            <table>
+              <tr>
+                <th></th>
+                <th>Something</th>
+                <th>Something</th>
+                <th>Something</th>
+              </tr>
+              <tr>
+                <td>Vardas Pavardė</td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+              </tr>
+              <tr>
+                <td>Vardas Pavardė</td>
+                <td><div></div></td>
+                <td colspan="2"><div class="marked"></div></td>
+              </tr>
+              <tr>
+                <td>Vardas Pavardė</td>
+                <td colspan="3"><div class="marked"></div></td>
+              </tr>
+              <tr>
+                <td>Vardas Pavardė</td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div class="marked"></div></td>
+              </tr>
+            </table>
+            <h3 id="team">TEAM</h3>
+            <table class="team-table">
+              <tr>
+                <th></th>
+                <th></th>
+                <th>Greta</th>
+                <th>Radvilas</th>
+                <th>Karolis</th>
+                <th>Dominykas</th>
+                <th>Ita</th>
+                <th>Rimvydė</th>
+                <th>Bernadeta</th>
+                <th>Ieva</th>
+                <th>Jokūbas</th>
+                <th>Nikolajus</th>
+                <th>Saulius</th>
+                <th>Gintarė</th>
+                <th>Guoda</th>
+              </tr>
+              <tr>
+                <td rowspan="3" class="row-title">WET LAB</td>
+                <td class="row-title-follow">Something</td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Something</td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Something</td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+              </tr>
+              <tr>
+                <td rowspan="3" class="row-title">DRY LAB</td>
+                <td class="row-title-follow">Something</td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Something</td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Something</td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+              </tr>
+              <tr>
+                <td rowspan="3" class="row-title">HUMAN PRACTICES</td>
+                <td class="row-title-follow">Something</td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Something</td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Something</td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div class="marked"></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+                <td><div></div></td>
+              </tr>
+            </table>
+            <h3 id="sponsors">SPONSORS</h3>
+          </div>
+          <div class="references-wrapper"></div>
+        </div>
+        <div class="index-container">
+          <div class="index-header"></div>
+          <div class="index-content"></div>
+        </div>
+      </div>
+      <footer>
+        <div class="logo-igem">
+          <object data="../assets/logos/T--Vilnius-Lithuania--iGEM-2021.svg"> </object>
+        </div>
+        <div class="social-container">
+          <div>FOLLOW US</div>
+          <div>
+            <div class="placeholder-social-icon"></div>
+            <div class="placeholder-social-icon"></div>
+            <div class="placeholder-social-icon"></div>
+          </div>
+        </div>
+        <div class="mail-container">
+          <div>CONTACT US</div>
+          <a href="mailto:info@vilniusigem.lt">info@vilniusigem.lt</a>
+        </div>
+        <div class="grid-sponsors">
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--VU.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--GMC.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--SnapGene.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Termofisher.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Nanodiagnostika.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Laborama.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Telesoftas.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Biotecha.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Kopicentras.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Grida.svg"> </object>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../scripts/navigationTabs.js"></script>
+    <script src="../scripts/background.js"></script>
+    <script src="../scripts/contentpage.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script>
+      contentPage(
+        "Sections",
+        [
+          {
+            name: 'PI & advisors',
+            id: 'advisors',
+          },
+          {
+            name: 'Instructors',
+            id: 'instructors',
+          },
+          {
+            name: 'Wet lab',
+            id: 'wetlab',
+          },
+          {
+            name: 'Dry lab',
+            id: 'drylab',
+          },
+          {
+            name: 'Human practices',
+            id: 'HP',
+          },
+          {
+            name: 'Team',
+            id: 'team',
+          },
+          {
+            name: 'Sponsors',
+            id: 'sponsors',
+          },
+        ],
+        [],
+        [],
+        true,
+        150,
+      )
+    </script>
+  </body>
+</html>

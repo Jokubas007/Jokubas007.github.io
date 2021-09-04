@@ -1,0 +1,107 @@
+@media (max-width: 1024px) {
+  .nav-item-accessibility {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    padding: 0 7px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .nav-item-accessibility:focus-within .dropdown-menu {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    transition: -webkit-transform 0.25s ease;
+    transition: -ms-transform 0.25s ease;
+    transition: transform 0.25s ease;
+  }
+  .nav-item-accessibility:focus-within .dropdown-menu-content {
+    display: flex !important;
+  }
+  .nav-item-accessibility .dropdown-menu {
+    cursor: default;
+    display: block;
+    background: rgba(0, 39, 51, 0.7);
+    color: #ffffff;
+    width: 80vw;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    -webkit-transform: translateX(110%);
+    -ms-transform: translateX(110%);
+    transform: translateX(110%);
+    transition: -webkit-transform 0.25s ease;
+    transition: -ms-transform 0.25s ease;
+    transition: transform 0.25s ease;
+  }
+  .nav-item-accessibility .dropdown-menu:before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backdrop-filter: blur(80px);
+    backdrop-filter: blur(80px);
+  }
+  .nav-item-accessibility .dropdown-menu .dropdown-menu-content {
+    padding: 14px 14px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-item-accessibility .dropdown-menu .breaker {
+    width: 90%;
+    height: 1px;
+    background-color: #000000;
+    margin: 21px 0px;
+  }
+  .nav-item-accessibility .dropdown-menu .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 38px;
+    width: 100%;
+  }
+  .nav-item-accessibility .dropdown-menu .item .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .nav-item-accessibility .dropdown-menu .item .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 100%;
+  }
+  .nav-item-accessibility .dropdown-menu .item .text .title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .nav-item-accessibility .dropdown-menu .item .text .subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .nav-icon {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  .nav-icon .nav-icon-img {
+    position: relative;
+    z-index: 2;
+    height: 27px;
+    width: 27px;
+  }
+  .nav-icon .nav-icon-dropdown {
+    display: none;
+  }
+}

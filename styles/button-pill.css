@@ -1,0 +1,30 @@
+.pillButton {
+  position: relative;
+}
+.pillButton .pill-enabled {
+  position: absolute;
+  top: -6px;
+  left: -7px;
+  -webkit-transform: translateX(38px);
+  -ms-transform: translateX(38px);
+  transform: translateX(38px);
+  transition: -webkit-transform 0.25s ease;
+  transition: -ms-transform 0.25s ease;
+  transition: transform 0.25s ease;
+  fill: #0D4B5E;
+}
+.pillButton .pill-disabled {
+  fill: white;
+  position: absolute;
+  top: -6px;
+  left: -7px;
+  -webkit-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  transform: translateX(0px);
+  transition: -webkit-transform 0.25s ease;
+  transition: -ms-transform 0.25s ease;
+  transition: transform 0.25s ease;
+}
+.pillButton img {
+  position: relative;
+}

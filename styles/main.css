@@ -1,0 +1,25 @@
+:root {
+  --main-font: 'Quicksand';
+  --secondary-font: 'Spartan';
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: var(--main-font), sans-serif;
+  background-color: #0D4B5E;
+}
+
+h1, h2, h3, h4, h5 {
+  border: var(--disability-profile,2px) solid #FFB800;
+  padding: var(--disability-profile, 10px 12px);
+  width: fit-content;
+  box-sizing: border-box;
+}
+
+a, .nav-item {
+  border: var(--disability-profile,2px) solid #00E0FF;
+}
+
+a {
+  padding: var(--disability-profile, 10px 12px);
+}

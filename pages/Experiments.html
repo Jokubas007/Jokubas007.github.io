@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <link rel="stylesheet" href="../styles/experiments.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/navmenu-desktop.css">
+    <link rel="stylesheet" href="../styles/navmenu-mobile.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-desktop.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
+    <link rel="stylesheet" href="../styles/button-pill.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+  </head>
+  <body>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
+          <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
+          AmeBye
+        </a>
+        <ul class="nav-menu"></ul>
+      </nav>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <div class="background">
+      <canvas id="background-canvas"></canvas>
+      <div class="app-header">
+        <h1 id="title">EXPERIMENTS</h1>
+        <div id="img" class="app-header-image-wrapper">
+          <img alt="Header" src="../assets/images/placeholder.png" />
+        </div>
+      </div>
+      <div class="app-content">
+        <div class="downloads-group">
+          <div 
+            class="button"
+            tabindex="0"
+          >
+            PROTOCOLS
+            <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M33 22.3333V29.4444C33 30.3874 32.6254 31.2918 31.9586 31.9586C31.2918 32.6254 30.3874 33 29.4444 33H4.55556C3.61256 33 2.70819 32.6254 2.0414 31.9586C1.3746 31.2918 1 30.3874 1 29.4444V22.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8.11133 13.4445L17.0002 22.3333L25.8891 13.4445" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17 22.3333V1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>              
+          </div>
+          <div 
+            class="button"
+            tabindex="0"
+          >
+            <div>
+              <span>BENCHLING</span>
+              <br>
+              PREVENTION
+            </div>
+            <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M33 22.3333V29.4444C33 30.3874 32.6254 31.2918 31.9586 31.9586C31.2918 32.6254 30.3874 33 29.4444 33H4.55556C3.61256 33 2.70819 32.6254 2.0414 31.9586C1.3746 31.2918 1 30.3874 1 29.4444V22.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8.11133 13.4445L17.0002 22.3333L25.8891 13.4445" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17 22.3333V1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>              
+          </div>
+          <div 
+            class="button"
+            tabindex="0"
+          >
+            <div>
+              <span>BENCHLING</span>
+              <br>
+              DETECTION
+            </div>
+            <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M33 22.3333V29.4444C33 30.3874 32.6254 31.2918 31.9586 31.9586C31.2918 32.6254 30.3874 33 29.4444 33H4.55556C3.61256 33 2.70819 32.6254 2.0414 31.9586C1.3746 31.2918 1 30.3874 1 29.4444V22.3333" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8.11133 13.4445L17.0002 22.3333L25.8891 13.4445" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17 22.3333V1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>              
+          </div>
+        </div>
+        <div class="breaker"></div>
+        <div class="experiments-content">
+          <div>
+            <div class="week-selector">
+              <svg 
+                class="button-previous" 
+                tabindex="0"
+                width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="15.002" y="2.50012" width="17.6787" height="3.53575" rx="1" transform="rotate(135 15.002 2.50012)" fill="#002733"/>
+                <rect x="15.002" y="2.50012" width="17.6787" height="3.53575" rx="1" transform="rotate(135 15.002 2.50012)" fill="#002733"/>
+                <rect x="15.002" y="2.50012" width="17.6787" height="3.53575" rx="1" transform="rotate(135 15.002 2.50012)" fill="#0D4B5E"/>
+                <rect x="12.502" y="25.6081" width="17.6787" height="3.53575" rx="1" transform="rotate(-135 12.502 25.6081)" fill="#002733"/>
+                <rect x="12.502" y="25.6081" width="17.6787" height="3.53575" rx="1" transform="rotate(-135 12.502 25.6081)" fill="#002733"/>
+                <rect x="12.502" y="25.6081" width="17.6787" height="3.53575" rx="1" transform="rotate(-135 12.502 25.6081)" fill="#0D4B5E"/>
+              </svg>
+              <div></div>
+              <svg
+                class="button-next"
+                tabindex="0"
+                width="15" height="26" viewBox="0 0 15 26" fill="none" xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect width="17.6769" height="3.53538" rx="1" transform="matrix(0.707033 0.70718 0.707033 -0.70718 0 2.50012)" fill="#002733"/>
+                <rect width="17.6769" height="3.53538" rx="1" transform="matrix(0.707033 0.70718 0.707033 -0.70718 0 2.50012)" fill="#002733"/>
+                <rect width="17.6769" height="3.53538" rx="1" transform="matrix(0.707033 0.70718 0.707033 -0.70718 0 2.50012)" fill="#0D4B5E"/>
+                <rect width="17.6769" height="3.53538" rx="1" transform="matrix(0.707033 -0.70718 -0.707033 -0.70718 2.5 25.6081)" fill="#002733"/>
+                <rect width="17.6769" height="3.53538" rx="1" transform="matrix(0.707033 -0.70718 -0.707033 -0.70718 2.5 25.6081)" fill="#002733"/>
+                <rect width="17.6769" height="3.53538" rx="1" transform="matrix(0.707033 -0.70718 -0.707033 -0.70718 2.5 25.6081)" fill="#0D4B5E"/>
+              </svg>                
+            </div>
+            <div class="text" id="week-0">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-0
+              </p>
+            </div>
+            <div class="text" id="week-1">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-1
+              </p>
+            </div>
+            <div class="text" id="week-2">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-2
+              </p>
+            </div>
+            <div class="text" id="week-3">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-3
+              </p>
+            </div>
+            <div class="text" id="week-4">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-4
+              </p>
+            </div>
+            <div class="text" id="week-5">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-5
+              </p>
+            </div>
+            <div class="text" id="week-6">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-6
+              </p>
+            </div>
+            <div class="text" id="week-7">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-7
+              </p>
+            </div>
+            <div class="text" id="week-8">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-8
+              </p>
+            </div>
+            <div class="text" id="week-9">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-9
+              </p>
+            </div>
+            <div class="text" id="week-10">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-10
+              </p>
+            </div>
+            <div class="text" id="week-11">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-11
+              </p>
+            </div>
+            <div class="text" id="week-12">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-12
+              </p>
+            </div>
+            <div class="text" id="week-13">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-13
+              </p>
+            </div>
+            <div class="text" id="week-14">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-14
+              </p>
+            </div>
+            <div class="text" id="week-15">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-15
+              </p>
+            </div>
+            <div class="text" id="week-16">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-16
+              </p>
+            </div>
+            <div class="text" id="week-17">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-17
+              </p>
+            </div>
+            <div class="text" id="week-18">
+              <h2>Prevention</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. Vestibulum pulvinar interdum mauris nec congue. Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <h2>Detection</h2>
+              <p>
+                week-18
+              </p>
+            </div>
+          </div>
+          <div class="calendar-container">
+            <div class="item">
+              <h6>JUNE</h6>
+              <div id="calendar-june"></div>
+            </div>
+            <div class="item">
+              <h6>JULY</h6>
+              <div id="calendar-july"></div>
+            </div>
+            <div class="item">
+              <h6>AUGUST</h6>
+              <div id="calendar-august"></div>
+            </div>
+            <div class="item">
+              <h6>SEPTEMBER</h6>
+              <div id="calendar-september"></div>
+            </div>
+            <div class="item">
+              <h6>OCTOBER</h6>
+              <div id="calendar-october"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="logo-igem">
+          <object data="../assets/logos/T--Vilnius-Lithuania--iGEM-2021.svg"> </object>
+        </div>
+        <div class="social-container">
+          <div>FOLLOW US</div>
+          <div>
+            <div class="placeholder-social-icon"></div>
+            <div class="placeholder-social-icon"></div>
+            <div class="placeholder-social-icon"></div>
+          </div>
+        </div>
+        <div class="mail-container">
+          <div>CONTACT US</div>
+          <a href="mailto:info@vilniusigem.lt">info@vilniusigem.lt</a>
+        </div>
+        <div class="grid-sponsors">
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--VU.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--GMC.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--SnapGene.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Termofisher.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Nanodiagnostika.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Laborama.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Telesoftas.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Biotecha.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Kopicentras.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Grida.svg"> </object>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../scripts/navigationTabs.js"></script>
+    <script src="../scripts/background.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/experiments.js"></script>
+  </body>
+</html>

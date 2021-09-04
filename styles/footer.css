@@ -1,0 +1,104 @@
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 50px;
+	width: 100%;
+	height: 282px;
+	left: 0px;
+	top: 8281px;
+	background-color: #0D4B5E;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 21px;
+	line-height: 26px;
+}
+
+footer .logo-igem {
+    padding: 1.5rem;
+    padding-right: 2rem;
+    border-right: 2px solid white;
+}
+
+footer .social-container, footer .mail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .social-container > div:last-child {
+    display: flex;
+    margin-top: 1rem;
+}
+
+footer .social-container > div:last-child .placeholder-social-icon {
+width: 1.5rem;
+height: 1.5rem;
+background-color: lightblue;
+border-radius: 10px;
+}
+
+footer .social-container > div:last-child .placeholder-social-icon:nth-child(2) {
+    margin: 0 1.5625rem;
+}
+
+footer .mail-container > a {
+    display: block;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: white;
+}
+
+footer .grid-sponsors {
+    display: grid;
+    grid-template-columns: 200px repeat(2, 132px);
+    column-gap: 41px;
+    row-gap: 0;
+    width: 650px;
+}
+
+footer .grid-sponsors > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 42px;
+}
+
+footer .grid-sponsors > div object {
+    height: 42px;  
+}
+
+footer .grid-sponsors div:nth-child(1) {
+    grid-row: 1/3;
+    height: 104px;
+}
+
+footer .grid-sponsors div:nth-child(1) object {
+    height: 104px;
+}
+
+footer .grid-sponsors div:nth-child(4) {
+    grid-row: 3/5;
+    height: 104px;
+}
+
+footer .grid-sponsors div:nth-child(4) object {
+    height: 104px;
+}
+
+footer .grid-sponsors object:nth-child(1) {
+    width: 263px;
+}
+
+footer .grid-sponsors object:nth-child(2) {
+    width: 152px;
+}
+
+footer .grid-sponsors object:nth-child(2) {
+    width: 132px;
+}
