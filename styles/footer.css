@@ -1,10 +1,9 @@
 footer {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 	padding: 50px;
 	width: 100%;
-	height: 282px;
 	background-color: #0D4B5E;
 	font-style: normal;
 	font-weight: 300;
@@ -12,6 +11,10 @@ footer {
 	line-height: 26px;
     z-index: 100;
     position: relative;
+    flex-wrap: wrap;
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 footer .logo-igem {
@@ -59,7 +62,14 @@ footer .grid-sponsors {
     grid-template-columns: 200px repeat(2, 132px);
     column-gap: 41px;
     row-gap: 0;
-    width: 650px;
+}
+
+@media (max-width: 1024px) {
+    footer .grid-sponsors {
+        width: 100%;
+        justify-content: center;
+        margin-top: 3vh;
+    }
 }
 
 footer .grid-sponsors > div {
