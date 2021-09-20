@@ -1,97 +1,97 @@
 @font-face {
-  font-family: "Quicksand";
-  src: url("../assets/fonts/Quicksand-Light.ttf");
-  font-style: normal;
-  font-weight: 300;
+    font-family: "Quicksand";
+    src: url("../assets/fonts/Quicksand-Light.ttf");
+    font-style: normal;
+    font-weight: 300;
 }
 
 @font-face {
-  font-family: "Quicksand";
-  src: url("../assets/fonts/Quicksand-Regular.ttf");
-  font-style: normal;
-  font-weight: 400;
+    font-family: "Quicksand";
+    src: url("../assets/fonts/Quicksand-Regular.ttf");
+    font-style: normal;
+    font-weight: 400;
 }
 
 @font-face {
-  font-family: "Quicksand";
-  src: url("../assets/fonts/Quicksand-Medium.ttf");
-  font-style: normal;
-  font-weight: 500;
+    font-family: "Quicksand";
+    src: url("../assets/fonts/Quicksand-Medium.ttf");
+    font-style: normal;
+    font-weight: 500;
 }
 
 @font-face {
-  font-family: "Quicksand";
-  src: url("../assets/fonts/Quicksand-SemiBold.ttf");
-  font-style: normal;
-  font-weight: 600;
+    font-family: "Quicksand";
+    src: url("../assets/fonts/Quicksand-SemiBold.ttf");
+    font-style: normal;
+    font-weight: 600;
 }
 
 @font-face {
-  font-family: "Quicksand";
-  src: url("../assets/fonts/Quicksand-Bold.ttf");
-  font-style: normal;
-  font-weight: 700;
+    font-family: "Quicksand";
+    src: url("../assets/fonts/Quicksand-Bold.ttf");
+    font-style: normal;
+    font-weight: 700;
 }
 
 @font-face {
-  font-family: "Spartan";
-  src: url("../assets/fonts/Spartan-Light.ttf");
-  font-style: normal;
-  font-weight: 300;
+    font-family: "Spartan";
+    src: url("../assets/fonts/Spartan-Light.ttf");
+    font-style: normal;
+    font-weight: 300;
 }
 
 @font-face {
-  font-family: "Spartan";
-  src: url("../assets/fonts/Spartan-Regular.ttf");
-  font-style: normal;
-  font-weight: 400;
+    font-family: "Spartan";
+    src: url("../assets/fonts/Spartan-Regular.ttf");
+    font-style: normal;
+    font-weight: 400;
 }
 
 @font-face {
-  font-family: "Spartan";
-  src: url("../assets/fonts/Spartan-SemiBold.ttf");
-  font-style: normal;
-  font-weight: 600;
+    font-family: "Spartan";
+    src: url("../assets/fonts/Spartan-SemiBold.ttf");
+    font-style: normal;
+    font-weight: 600;
 }
 
 @font-face {
-  font-family: "Spartan";
-  src: url("../assets/fonts/Spartan-Bold.ttf");
-  font-style: normal;
-  font-weight: 700;
+    font-family: "Spartan";
+    src: url("../assets/fonts/Spartan-Bold.ttf");
+    font-style: normal;
+    font-weight: 700;
 }
 
 @font-face {
-  font-family: "Spartan";
-  src: url("../assets/fonts/Spartan-Bold.ttf");
-  font-style: normal;
-  font-weight: 800;
+    font-family: "Spartan";
+    src: url("../assets/fonts/Spartan-ExtraBold.ttf");
+    font-style: normal;
+    font-weight: 800;
 }
 
 @font-face {
-  font-family: "OpenDyslexic";
-  src: url('../assets/fonts/OpenDyslexic-Regular.ttf');
-  font-style: normal;
-  font-weight: 400;
+    font-family: "OpenDyslexic";
+    src: url('../assets/fonts/OpenDyslexic-Regular.ttf');
+    font-style: normal;
+    font-weight: 400;
 }
 
 @font-face {
-  font-family: "OpenDyslexic";
-  src: url('../assets/fonts/OpenDyslexic-Italic.ttf');
-  font-style: normal;
-  font-weight: 300;
+    font-family: "OpenDyslexic";
+    src: url('../assets/fonts/OpenDyslexic-Italic.ttf');
+    font-style: normal;
+    font-weight: 300;
 }
 
 @font-face {
-  font-family: "OpenDyslexic";
-  src: url('../assets/fonts/OpenDyslexic-BoldItalic.ttf');
-  font-style: normal;
-  font-weight: 500;
+    font-family: "OpenDyslexic";
+    src: url('../assets/fonts/OpenDyslexic-BoldItalic.ttf');
+    font-style: normal;
+    font-weight: 500;
 }
 
 @font-face {
-  font-family: "OpenDyslexic";
-  src: url('../assets/fonts/OpenDyslexic-Bold.ttf');
-  font-style: normal;
-  font-weight: 700;
+    font-family: "OpenDyslexic";
+    src: url('../assets/fonts/OpenDyslexic-Bold.ttf');
+    font-style: normal;
+    font-weight: 700;
 }

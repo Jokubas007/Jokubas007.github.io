@@ -57,56 +57,43 @@ function refreshExperimentsPage() {
   if (currentWeek === 0){
     document.querySelector('.week-selector > .button-previous').classList.add('hidden');
   }
-  if (currentWeek === experimentsWeeks.length) {
+  if (currentWeek === experimentsWeeks.length - 1) {
     document.querySelector('.week-selector > .button-next').classList.add('hidden');
   }
   document.querySelector('.week-selector > div').innerHTML = experimentsWeeks[currentWeek];
   experimentsTabCount.forEach((tab) => {
     tabStrings = [];
     for (let i = 0; i < tab.count; i++) {
-      if (i + tab.sumCount < currentWeek) {
+      if (i + tab.sumCount === currentWeek) {
         tabStrings = [
           ...tabStrings,
           `
-            <svg 
-              tabindex="0"
-              onclick="setCurrentWeek(${i+tab.sumCount})"
-              onkeypress="setCurrentWeek(${i+tab.sumCount})"
-              width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="9" cy="9" r="9" fill="#FCCEC0"/>
-            </svg>          
-          `
-        ]
-      } else if (i + tab.sumCount > currentWeek) {
-        tabStrings = [
-          ...tabStrings,
-          `
-            <svg 
-              tabindex="0"
-              onclick="setCurrentWeek(${i+tab.sumCount})"
-              onkeypress="setCurrentWeek(${i+tab.sumCount})"
-              width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle cx="9" cy="9" r="8" stroke="#EF9F89" stroke-width="2"/>
-            </svg>                  
+          <svg
+            tabindex="0"
+            onclick="setCurrentWeek(${i+tab.sumCount})"
+            onkeypress="setCurrentWeek(${i+tab.sumCount})"
+            width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="9" cy="9" r="9" fill="#EF9F89"/>
+          </svg>             
           `
         ]
       } else {
         tabStrings = [
           ...tabStrings,
           `
-            <svg
+            <svg 
               tabindex="0"
               onclick="setCurrentWeek(${i+tab.sumCount})"
               onkeypress="setCurrentWeek(${i+tab.sumCount})"
               width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
             >
-              <circle cx="9" cy="9" r="9" fill="#EF9F89"/>
-            </svg>                 
+              <circle class="circle-button-outline" cx="9" cy="9" r="8" stroke="#EF9F89" stroke-width="2"/>
+              <circle class="circle-button" cx="9" cy="9" r="9" fill="#FCCEC0"/>
+            </svg>                  
           `
         ]
-      }
+      } 
     }
     document.querySelector(`#${tab.id}`).innerHTML = tabStrings.join('\n');
   })

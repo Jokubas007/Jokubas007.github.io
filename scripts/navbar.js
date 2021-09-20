@@ -15,7 +15,7 @@ function initializeNavbar() {
   if (window.innerWidth <= 1024) {
     const navbarHTMLStrings = navigationTabs.map((tab) => {
       const tabStrings = tab.menuItems.map((item) => `
-        <li><a class="dropdown-link" href="${item.path}">${item.title}</a></li>
+        <li><div class="breaker"></div><a class="dropdown-link" href="${item.path}">${item.title}</a></li>
       `);
       return `
         <li
@@ -27,7 +27,7 @@ function initializeNavbar() {
           onblur="navbarFocusedElement = undefined"
         >
           <div class="nav-dropdown-title">
-            ${tab.title} <img alt="" src="../assets/icons/iconDropdown.svg" />
+            ${tab.title} <img alt="" src="https://2021.igem.org/wiki/images/c/c8/T--Vilnius-Lithuania--iconDropdown.svg" />
           </div>
           <ul class="dropdown-menu">
             ${tabStrings.join('\n')}
@@ -45,19 +45,19 @@ function initializeNavbar() {
           onkeydown="navbarHandleClickDesktop()"
           onblur="navbarFocusedElement = undefined"
         >
-          <img class="nav-icon-img" alt="Accessibility" src="../assets//icons/iconAccessibility.svg" />
+          <img class="nav-icon-img" alt="Accessibility" src="https://2021.igem.org/wiki/images/e/ef/T--Vilnius-Lithuania--iconAccessibility.svg" />
         </div>
         <div class="dropdown-menu">
           <div class="dropdown-menu-content">
           <div class="item">
-            <div class="button">
+            <div >
             <div 
               role="button" 
               tabindex="0"
               id="disability-button"
             >
               <div class="pillButton">
-              <img alt="" src="../assets/icons/iconPillBackground.svg" />
+              <img alt="" src="https://2021.igem.org/wiki/images/2/21/T--Vilnius-Lithuania--iconPillBackground.svg" />
               <div id="disability-button-pill">
                 <svg width="56" height="43" viewBox="0 0 56 43" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d)">
@@ -89,19 +89,18 @@ function initializeNavbar() {
             </div>
             </div>
             <div class="icon">
-            <img alt="" src="../assets/icons/iconDisability.svg" />
+            <img alt="" src="https://2021.igem.org/wiki/images/7/7c/T--Vilnius-Lithuania--iconDisability.svg" />
             </div>
           </div>
-          <div class="breaker"></div>
           <div class="item">
-            <div class="button">
+            <div >
             <div 
               role="button" 
               tabindex="0"
               id="dyslexia-button"
             >
               <div class="pillButton">
-              <img alt="" src="../assets/icons/iconPillBackground.svg" />
+              <img alt="" src="https://2021.igem.org/wiki/images/2/21/T--Vilnius-Lithuania--iconPillBackground.svg" />
               <div id="dyslexia-button-pill">
                 <svg width="56" height="43" viewBox="0 0 56 43" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d)">
@@ -130,7 +129,7 @@ function initializeNavbar() {
             </div>
             </div>
             <div class="icon">
-            <img alt="" src="../assets/icons/iconDyslexia.svg" />
+            <img alt="" src="https://2021.igem.org/wiki/images/a/ab/T--Vilnius-Lithuania--iconDyslexia.svg" />
             </div>
           </div>
           </div>
@@ -152,9 +151,9 @@ function initializeNavbar() {
           <img
             class="nav-icon-img"
             alt="Menu"
-            src="../assets/icons/iconMenu.svg"
+            src="https://2021.igem.org/wiki/images/7/79/T--Vilnius-Lithuania--iconMenu.svg"
           /> 
-          <img class="nav-icon-dropdown" alt="" src="../assets/icons/iconDropdown.svg" />
+          <img class="nav-icon-dropdown" alt="" src="https://2021.igem.org/wiki/images/c/c8/T--Vilnius-Lithuania--iconDropdown.svg" />
         </div>
         <div class="side-menu">
           <ul class="side-menu-content">
@@ -178,7 +177,7 @@ function initializeNavbar() {
           onblur="navbarFocusedElement = undefined"
         >
           <div class="nav-dropdown-title">
-            ${tab.title} <img alt="" src="../assets/icons/iconDropdown.svg" />
+            ${tab.title} <img alt="" src="https://2021.igem.org/wiki/images/c/c8/T--Vilnius-Lithuania--iconDropdown.svg" />
           </div>
           <ul class="dropdown-menu">
             ${tabStrings.join('\n')}
@@ -197,19 +196,19 @@ function initializeNavbar() {
           onkeydown="navbarHandleClickDesktop()"
           onblur="navbarFocusedElement = undefined"
         >
-          <img class="nav-icon-img" alt="Accessibility" src="../assets//icons/iconAccessibility.svg" />
+          <img class="nav-icon-img" alt="Accessibility" src="https://2021.igem.org/wiki/images/e/ef/T--Vilnius-Lithuania--iconAccessibility.svg" />
         </div>
         <div class="dropdown-menu">
           <div class="dropdown-menu-content">
           <div class="item">
-            <div class="button">
+            <div >
             <div 
               role="button" 
               tabindex="0"
               id="disability-button"
             >
               <div class="pillButton">
-              <img alt="" src="../assets/icons/iconPillBackground.svg" />
+              <img alt="" src="https://2021.igem.org/wiki/images/2/21/T--Vilnius-Lithuania--iconPillBackground.svg" />
               <div id="disability-button-pill">
                 <svg width="56" height="43" viewBox="0 0 56 43" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d)">
@@ -241,19 +240,19 @@ function initializeNavbar() {
             </div>
             </div>
             <div class="icon">
-            <img alt="" src="../assets/icons/iconDisability.svg" />
+            <img alt="" src="https://2021.igem.org/wiki/images/7/7c/T--Vilnius-Lithuania--iconDisability.svg" />
             </div>
           </div>
           <div class="breaker"></div>
           <div class="item">
-            <div class="button">
+            <div >
             <div 
               role="button" 
               tabindex="0"
               id="dyslexia-button"
             >
               <div class="pillButton">
-              <img alt="" src="../assets/icons/iconPillBackground.svg" />
+              <img alt="" src="https://2021.igem.org/wiki/images/2/21/T--Vilnius-Lithuania--iconPillBackground.svg" />
               <div id="dyslexia-button-pill">
                 <svg width="56" height="43" viewBox="0 0 56 43" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d)">
@@ -282,7 +281,7 @@ function initializeNavbar() {
             </div>
             </div>
             <div class="icon">
-            <img alt="" src="../assets/icons/iconDyslexia.svg" />
+            <img alt="" src="https://2021.igem.org/wiki/images/a/ab/T--Vilnius-Lithuania--iconDyslexia.svg" />
             </div>
           </div>
           </div>

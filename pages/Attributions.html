@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="../styles/fonts.css">
     <link rel="stylesheet" href="../styles/background.css">
     <link rel="stylesheet" href="../styles/attributions.css">
+    <link rel="stylesheet" href="../styles/sideindex-mobile.css">
     <link rel="stylesheet" href="../styles/navbar.css">
     <link rel="stylesheet" href="../styles/navmenu-desktop.css">
     <link rel="stylesheet" href="../styles/navmenu-mobile.css">
@@ -37,7 +38,7 @@
       <div class="app-content">
         <div class="app-content-text">
           <div>
-            <h3 id="advisors">PI & ADVISORS</h3>
+            <h3 class="index-headline">PI & ADVISORS</h3>
             <div class="person-container">
               <img alt="Name Surname" src="../assets/images/placeholder.png"/>
               <div>
@@ -60,7 +61,7 @@
                 </p>
               </div>
             </div>
-            <h3 id="instructors">INSTRUCTORS</h3>
+            <h3 class="index-headline">INSTRUCTORS</h3>
             <div class="person-container">
               <img alt="Name Surname" src="../assets/images/placeholder.png"/>
               <div>
@@ -83,7 +84,7 @@
                 </p>
               </div>
             </div>
-            <h3 id="wetlab">WET LAB</h3>
+            <h3 class="index-headline">WET LAB</h3>
             <table>
               <tr>
                 <th></th>
@@ -113,7 +114,7 @@
                 <td><div class="marked"></div></td>
               </tr>
             </table>
-            <h3 id="drylab">DRY LAB</h3>
+            <h3 class="index-headline">DRY LAB</h3>
             <table>
               <tr>
                 <th></th>
@@ -143,7 +144,7 @@
                 <td><div class="marked"></div></td>
               </tr>
             </table>
-            <h3 id="HP">HUMAN PRACTICES</h3>
+            <h3 class="index-headline">HUMAN PRACTICES</h3>
             <table>
               <tr>
                 <th></th>
@@ -173,7 +174,7 @@
                 <td><div class="marked"></div></td>
               </tr>
             </table>
-            <h3 id="team">TEAM</h3>
+            <h3 class="index-headline">TEAM</h3>
             <table class="team-table">
               <tr>
                 <th></th>
@@ -340,7 +341,7 @@
                 <td><div></div></td>
               </tr>
             </table>
-            <h3 id="sponsors">SPONSORS</h3>
+            <h3 class="index-headline">SPONSORS</h3>
           </div>
           <div class="references-wrapper"></div>
         </div>
@@ -406,38 +407,6 @@
     <script>
       contentPage(
         "Sections",
-        [
-          {
-            name: 'PI & advisors',
-            id: 'advisors',
-          },
-          {
-            name: 'Instructors',
-            id: 'instructors',
-          },
-          {
-            name: 'Wet lab',
-            id: 'wetlab',
-          },
-          {
-            name: 'Dry lab',
-            id: 'drylab',
-          },
-          {
-            name: 'Human practices',
-            id: 'HP',
-          },
-          {
-            name: 'Team',
-            id: 'team',
-          },
-          {
-            name: 'Sponsors',
-            id: 'sponsors',
-          },
-        ],
-        [],
-        [],
         true,
         150,
       )

@@ -1,4 +1,36 @@
-function contentPage(whichIndexActive, sections, references, figures, isInitialLoad, indexWidth){
+function contentPage(whichIndexActive, isInitialLoad, indexWidth){
+  const sectionsElements = document.querySelectorAll('.index-headline');
+  const sections = Array.from(sectionsElements).map((section, idx) => ({
+    name: section.innerHTML,
+    id: `headline-${idx}`,
+  }));
+  sectionsElements.forEach((section, idx) => {
+    section.id = `headline-${idx}`
+  });
+
+  const figuresElements = document.querySelectorAll('.figure-container');
+  const figures = Array.from(figuresElements).map((figure, idx) => (  {
+    title: figure.lastElementChild.firstElementChild.innerHTML,
+    id: `figure-${idx}`,
+    img: figure.firstElementChild.src,
+  }));
+  figuresElements.forEach((figure, idx) => {
+    figure.id = `figure-${idx}`
+  });
+
+  let referencesElements = [];
+  if (document.querySelector('.references-container') !== null) {
+    referencesElements = Array.from(document.querySelector('.references-container').childNodes)
+                                .filter((reference) => reference.nodeName !== "#text");
+  }
+  const references = [];
+  for (let i = 0; i < referencesElements.length/2; i++) {
+    references.push({
+      number: referencesElements[2*i].innerHTML,
+      text: referencesElements[2*i+1].innerHTML,
+    });
+  }
+
   const availableTabs = [
     sections.length ? {
       buttonName: 'sections-button',
@@ -40,7 +72,9 @@ function contentPage(whichIndexActive, sections, references, figures, isInitialL
   if (sections.length !== 0) {
     sectionsButton = document.querySelector('#sections-button');
     sectionsButton.onclick = function() {
-      contentPage("Sections", sections, references, figures, false)
+      if (window.innerWidth >= 1025){
+        contentPage("Sections", sections, references, figures, false)
+      }
     }
     sectionsButton.onkeypress = function() {
       contentPage("Sections", sections, references, figures, false)
@@ -48,17 +82,6 @@ function contentPage(whichIndexActive, sections, references, figures, isInitialL
   }
   
   if (references.length !== 0){
-    refrencesStrings = references.map((reference) => `
-    <div class="number">${reference.number}</div>
-    <div>${reference.text}</div>
-    `);
-    document.querySelector('.references-wrapper').innerHTML = `
-      <div class="breaker"></div>
-      <h2>References</h2>
-      <div class="references-container">
-        ${refrencesStrings.join('\n')}
-      </div>
-    `
     referencesButton = document.querySelector('#references-button');
     referencesButton.onclick = function() {
       contentPage("References", sections, references, figures, false)
@@ -145,7 +168,7 @@ function contentPage(whichIndexActive, sections, references, figures, isInitialL
           </h3>
           <img src=${figure.img} alt=${figure.title} />
           <div
-            class="button"
+            class="figures-button"
             role="button"
             onclick="
               document.getElementById('${figure.id}').scrollIntoView();
@@ -175,26 +198,30 @@ function draw(sections, indexWidth){
   const index = document.querySelector('.index-container');
   const content = document.querySelector('.app-content');
   const navbar = document.querySelector('.navbar');
-  if (
-    window.scrollY + navbar.offsetHeight + 16 + index.offsetHeight > content.offsetHeight + content.offsetTop - 96
-  ) {
-    index.style.position = 'absolute';
-    index.style.top = null;
-    index.style.bottom = '96px';
-    index.style.right = '96px';
-    index.style.width = `${indexWidth}px`;
-  } else if (window.scrollY - content.offsetTop >= 0) {
-    index.style.position = 'fixed';
-    index.style.bottom = null;
-    index.style.top = `${navbar.offsetHeight + 16}px`;
-    index.style.right = '96px';
-    index.style.width = `${indexWidth}px`;
+  if (window.innerWidth >= 1025) {
+    if (
+      window.scrollY + navbar.offsetHeight + 16 + index.offsetHeight > content.offsetHeight + content.offsetTop - 96
+    ) {
+      index.style.position = 'absolute';
+      index.style.top = null;
+      index.style.bottom = '96px';
+      index.style.right = '10vw';
+      index.style.width = `${indexWidth}px`;
+    } else if (window.scrollY - content.offsetTop >= 0) {
+      index.style.position = 'fixed';
+      index.style.bottom = null;
+      index.style.top = `${navbar.offsetHeight + 16}px`;
+      index.style.right = '10vw';
+      index.style.width = `${indexWidth}px`;
+    } else {
+      index.style.position = 'relative';
+      index.style.bottom = null;
+      index.style.top = null;
+      index.style.right = null;
+      index.style.width = `${indexWidth}px`;
+    }
   } else {
-    index.style.position = 'relative';
-    index.style.bottom = null;
-    index.style.top = null;
-    index.style.right = null;
-    index.style.width = `${indexWidth}px`;
+    index.style = null;
   }
 
   if (document.querySelector('#sections-button').classList.contains("underline")) {

@@ -1,0 +1,272 @@
+@media (max-width: 1024px) {
+  .landing-page-content {
+    position: relative;
+    width: 100vw;
+  }
+
+  .landing-page-content .content-container:first-child {
+    width: 100vw;
+    height: 150vh;
+    position: relative;
+  }
+
+  .landing-page-content .content-container .logo img {
+    width: 60%;
+    margin-bottom: 5px;
+  }
+
+  .landing-page-content .content-container .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  .landing-page-content .content-container .logo h1 {
+    margin: 0 !important;
+    font-family: var(--main-font);
+    font-size: 160px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160px;
+    letter-spacing: 0em;
+    margin-bottom: 50px !important;
+  }
+
+  .landing-page-content .content-container .logo div {
+    font-family: var(--main-font);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 45px;
+    letter-spacing: 0em;
+  }
+
+  .landing-page-content .content-container:nth-child(2) > div {
+    width: 40%;
+    margin-left: 10%;
+    margin-bottom: 60px;
+    font-family: var(--main-font);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .landing-page-content .content-container:nth-child(2) > div > span {
+    font-family: var(--secondary-font);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .landing-page-content .content-container:nth-child(3) > div {
+    width: 40%;
+    margin-left: 10%;
+    font-family: var(--main-font);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .landing-page-content .content-container:nth-child(3) > div span {
+    font-family: var(--secondary-font);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .landing-page-content .content-container:nth-child(3) > div h2 {
+    font-family: var(--secondary-font);
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FCCEC0;
+    margin: 86px 0 !important;
+  }
+
+  .landing-page-content .content-container:nth-child(3) > div:first-child {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 60px;
+  }
+
+  .landing-page-content .content-container:nth-child(3) > div:first-child > div {
+    width: 50%;
+  }
+
+  .landing-page-content .content-container:nth-child(4) {
+    position: relative;
+    padding: 96px 10%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .landing-page-content .content-container:nth-child(4) > .map-container {
+    margin-bottom: 60px;
+  }
+
+  .landing-page-content .content-container:nth-child(4) > div:last-child h3 {
+    margin: 0 !important;
+    margin-bottom: 7px !important;
+    color: #FCCEC0;
+    font-family: var(--secondary-font);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .landing-page-content .content-container:nth-child(4) > div:last-child div {
+    margin: 0 !important;
+    margin-bottom: 57px !important;
+    font-family: var(--main-font);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .China, #IN, #IR, #SA, #EG, #ZA, #TZ, #MX, #BR, #CO, #EQ, #EC {
+    fill: #FCCEC0;
+  }
+
+  .China:hover, #IN:hover, #IR:hover, #SA:hover, #EG:hover, #ZA:hover, #TZ:hover, #MX:hover, #BR:hover, #CO:hover, #EQ:hover, #EC:hover {
+    fill: #EF9F89;
+  }
+
+  .map-tooltip {
+    display: none;
+    position: fixed;
+    padding: 15px;
+    background-color: #EF9F89;
+    color: #000000;
+    width: 205px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .map-tooltip > div {
+    font-family: var(--secondary-font);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .map-tooltip > table tr > th {
+    font-family: var(--main-font);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: right;
+    padding: 9px 0;
+  }
+
+  .map-tooltip > table tr > th:first-child {
+    text-align: left;
+  }
+
+  .map-tooltip > table tr > td {
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding: 9px 0;
+  }
+
+  .map-tooltip > table tr:first-child {
+    border-bottom: solid thin;
+  }
+
+  .map-tooltip > table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .map path {
+    stroke-width: 1;
+    stroke: #0D4B5E;
+  }
+
+  .landing-page-content .content-container:nth-child(5) {
+    position: relative;
+    padding: 96px 10%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox */
+    box-sizing: border-box;
+  }
+
+  .landing-page-content .content-container:nth-child(5) > h2 {
+    font-family: var(--secondary-font);
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 81px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FCCEC0;
+    margin: 0 !important;
+    margin-bottom: 59px !important;
+  }
+
+  .landing-page-content .content-container:nth-child(5) > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .landing-page-content .content-container:nth-child(5) > div > div {
+    font-family: var(--main-font);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .landing-page-content .content-container:nth-child(5) > div > div:last-child {
+    display: none;
+  }
+
+  .landing-page-content .content-container:nth-child(5) > div > div:first-child {
+    margin-bottom: 60px;
+  }
+
+  .circles-container svg {
+    width: 80vw;
+    margin-left: -15px;
+  }
+}

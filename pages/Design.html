@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <link rel="stylesheet" href="../styles/contentpage-desktop.css">
+    <link rel="stylesheet" href="../styles/contentpage-mobile.css">
+    <link rel="stylesheet" href="../styles/sideindex-desktop.css">
+    <link rel="stylesheet" href="../styles/sideindex-mobile.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/navmenu-desktop.css">
+    <link rel="stylesheet" href="../styles/navmenu-mobile.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-desktop.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
+    <link rel="stylesheet" href="../styles/button-pill.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/parallelcard.css">
+  </head>
+  <body>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
+          <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
+          AmeBye
+        </a>
+        <ul class="nav-menu"></ul>
+      </nav>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <div class="background">
+      <canvas id="background-canvas"></canvas>
+      <div class="app-header">
+        <h1 id="title">DESIGN</h1>
+        <div id="img" class="app-header-image-wrapper">
+          <img alt="Header" src="../assets/images/placeholder.png" />
+        </div>
+      </div>
+      <div class="app-content">
+        <div class="app-content-text">
+          <div class="content-page-container">
+            <h3 class="index-headline">Headline 1</h3>
+            <div class="main-text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                ac enim id metus rutrum blandit sed non dolor. Pellentesque
+                feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim,
+                id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper
+                dui et, posuere velit. Cras viverra, tortor at porta pulvinar,
+                libero eros pulvinar orci, sed pulvinar neque felis eget dui.
+                Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget
+                bibendum turpis. Vestibulum pulvinar interdum mauris nec congue.
+                Etiam id nunc ac risus dictum semper sed in nisl.
+              </p>
+              <p>
+                Cras ultrices eu massa vitae congue. Vestibulum arcu enim, congue
+                id lacus at, laoreet fringilla tortor. Praesent libero nunc,
+                maximus vel suscipit nec, fringilla sed augue. Praesent porttitor
+                vehicula efficitur. Aenean ac bibendum lectus. Praesent vestibulum
+                velit ut nunc accumsan, non molestie erat pretium. In a ante
+                vulputate, semper sapien at, tristique erat. Morbi vitae euismod
+                eros, at pulvinar erat. Vivamus auctor arcu sed tellus egestas,
+                vitae imperdiet eros viverra. Nulla molestie sapien vitae ipsum
+                pulvinar dictum. Sed sit amet dolor a neque dictum malesuada et
+                nec lectus. Aenean tristique ornare nisl, at imperdiet magna
+                placerat eget. Suspendisse ut blandit elit, sit amet iaculis ex.
+                Nam vel varius velit. Aenean pretium scelerisque enim, quis mollis
+                nunc finibus eu.
+              </p>
+            </div>
+            <div class="card-container">
+              <div class="button-container">
+                <div class="readbtn">
+                  <img src="../assets/icons/T--Vilnius-Lithuania--ellipse_arrow_right.svg" tabindex="0">
+                  <div>Read more about left card</div>
+                </div>
+                <div class="readbtn hidden">
+                  <img src="../assets/icons/T--Vilnius-Lithuania--ellipse_arrow_right.svg" tabindex="0">
+                  <div>Read more about right card</div>
+                </div>
+              </div>
+              <div class="left-card-container">
+                <div class="left-card">
+                  <h3 id="headline-left">Headline Left Card</h3>
+                  <p>
+                    Content that appears in the card from the left.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                    ac enim id metus rutrum blandit sed non dolor. Pellentesque
+                    feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim,
+                    id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper
+                    dui et, posuere velit. Cras viverra, tortor at porta pulvinar,
+                    libero eros pulvinar orci, sed pulvinar neque felis eget dui.
+                    Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget
+                    bibendum turpis. Vestibulum pulvinar interdum mauris nec congue.
+                    Etiam id nunc ac risus dictum semper sed in nisl.
+                  </p>
+                  <p>
+                    Cras ultrices eu massa vitae congue. Vestibulum arcu enim, congue
+                    id lacus at, laoreet fringilla tortor. Praesent libero nunc,
+                    maximus vel suscipit nec, fringilla sed augue. Praesent porttitor
+                    vehicula efficitur. Aenean ac bibendum lectus. Praesent vestibulum
+                    velit ut nunc accumsan, non molestie erat pretium. In a ante
+                    vulputate, semper sapien at, tristique erat. Morbi vitae euismod
+                    eros, at pulvinar erat. Vivamus auctor arcu sed tellus egestas,
+                    vitae imperdiet eros viverra. Nulla molestie sapien vitae ipsum
+                    pulvinar dictum. Sed sit amet dolor a neque dictum malesuada et
+                    nec lectus. Aenean tristique ornare nisl, at imperdiet magna
+                    placerat eget. Suspendisse ut blandit elit, sit amet iaculis ex.
+                    Nam vel varius velit. Aenean pretium scelerisque enim, quis mollis
+                    nunc finibus eu.
+                  </p>
+                  <p>
+                    Cras ultrices eu massa vitae congue. Vestibulum arcu enim, congue
+                    id lacus at, laoreet fringilla tortor. Praesent libero nunc,
+                    maximus vel suscipit nec, fringilla sed augue. Praesent porttitor
+                    vehicula efficitur. Aenean ac bibendum lectus. Praesent vestibulum
+                    velit ut nunc accumsan, non molestie erat pretium. In a ante
+                    vulputate, semper sapien at, tristique erat. Morbi vitae euismod
+                    eros, at pulvinar erat. Vivamus auctor arcu sed tellus egestas,
+                    vitae imperdiet eros viverra. Nulla molestie sapien vitae ipsum
+                    pulvinar dictum. Sed sit amet dolor a neque dictum malesuada et
+                    nec lectus. Aenean tristique ornare nisl, at imperdiet magna
+                    placerat eget. Suspendisse ut blandit elit, sit amet iaculis ex.
+                    Nam vel varius velit. Aenean pretium scelerisque enim, quis mollis
+                    nunc finibus eu.
+                  </p>
+                </div>
+              </div>
+              <div class="right-card-container">
+                <div class="right-card">
+                  <h3 id="headline-right">Headline Right Card</h3>
+                  <p>
+                    Cras ultrices eu massa vitae congue. Vestibulum arcu enim, congue
+                    id lacus at, laoreet fringilla tortor. Praesent libero nunc,
+                    maximus vel suscipit nec, fringilla sed augue. Praesent porttitor
+                    vehicula efficitur. Aenean ac bibendum lectus. Praesent vestibulum
+                    velit ut nunc accumsan, non molestie erat pretium. In a ante
+                    vulputate, semper sapien at, tristique erat. Morbi vitae euismod
+                    eros, at pulvinar erat. Vivamus auctor arcu sed tellus egestas,
+                    vitae imperdiet eros viverra. Nulla molestie sapien vitae ipsum
+                    pulvinar dictum. Sed sit amet dolor a neque dictum malesuada et
+                    nec lectus. Aenean tristique ornare nisl, at imperdiet magna
+                    placerat eget. Suspendisse ut blandit elit, sit amet iaculis ex.
+                    Nam vel varius velit. Aenean pretium scelerisque enim, quis mollis
+                    nunc finibus eu.
+                  </p>
+                  <p>
+                    Cras ultrices eu massa vitae congue. Vestibulum arcu enim, congue
+                    id lacus at, laoreet fringilla tortor. Praesent libero nunc,
+                    maximus vel suscipit nec, fringilla sed augue. Praesent porttitor
+                    vehicula efficitur. Aenean ac bibendum lectus. Praesent vestibulum
+                    velit ut nunc accumsan, non molestie erat pretium. In a ante
+                    vulputate, semper sapien at, tristique erat. Morbi vitae euismod
+                    eros, at pulvinar erat. Vivamus auctor arcu sed tellus egestas,
+                    vitae imperdiet eros viverra. Nulla molestie sapien vitae ipsum
+                    pulvinar dictum. Sed sit amet dolor a neque dictum malesuada et
+                    nec lectus. Aenean tristique ornare nisl, at imperdiet magna
+                    placerat eget. Suspendisse ut blandit elit, sit amet iaculis ex.
+                    Nam vel varius velit. Aenean pretium scelerisque enim, quis mollis
+                    nunc finibus eu.
+                  </p>
+                  <p class="filler">
+                    Content that appears in the card from the left.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                    ac enim id metus rutrum blandit sed non dolor. Pellentesque
+                    feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim,
+                    id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper
+                    dui et, posuere velit. Cras viverra, tortor at porta pulvinar,
+                    libero eros pulvinar orci, sed pulvinar neque felis eget dui.
+                    Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget
+                    bibendum turpis. Vestibulum pulvinar interdum mauris nec congue.
+                    Etiam id nunc ac risus dictum semper sed in nisl.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <h3 class="index-headline">Headline 2</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              ac enim id metus rutrum blandit sed non dolor. Pellentesque
+              feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim,
+              id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper
+              dui et, posuere velit. Cras viverra, tortor at porta pulvinar,
+              libero eros pulvinar orci, sed pulvinar neque felis eget dui.
+              Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget
+              bibendum turpis. Vestibulum pulvinar interdum mauris nec congue.
+              Etiam id nunc ac risus dictum semper sed in nisl.
+            </p>
+            <p>
+              Cras ultrices eu massa vitae congue. Vestibulum arcu enim, congue
+              id lacus at, laoreet fringilla tortor. Praesent libero nunc,
+              maximus vel suscipit nec, fringilla sed augue. Praesent porttitor
+              vehicula efficitur. Aenean ac bibendum lectus. Praesent vestibulum
+              velit ut nunc accumsan, non molestie erat pretium. In a ante
+              vulputate, semper sapien at, tristique erat. Morbi vitae euismod
+              eros, at pulvinar erat. Vivamus auctor arcu sed tellus egestas,
+              vitae imperdiet eros viverra. Nulla molestie sapien vitae ipsum
+              pulvinar dictum. Sed sit amet dolor a neque dictum malesuada et
+              nec lectus. Aenean tristique ornare nisl, at imperdiet magna
+              placerat eget. Suspendisse ut blandit elit, sit amet iaculis ex.
+              Nam vel varius velit. Aenean pretium scelerisque enim, quis mollis
+              nunc finibus eu.
+            </p>
+            <div class="figure-container">
+              <img src="../assets/images/placeholder.png" id="Figure1" alt="" />
+              <div><b>Figure 1</b><b>.</b> Description</div>
+            </div>
+            <h3 class="index-headline">Headline 3</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              ac enim id metus rutrum blandit sed non dolor. Pellentesque
+              feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim,
+              id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper
+              dui et, posuere velit. Cras viverra, tortor at porta pulvinar,
+              libero eros pulvinar orci, sed pulvinar neque felis eget dui.
+              Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget
+              bibendum turpis. Vestibulum pulvinar interdum mauris nec congue.
+              Etiam id nunc ac risus dictum semper sed in nisl.
+            </p>
+            <div class="figure-container">
+              <img src="../assets/images/placeholder.png" id="Figure2" alt="" />
+              <div><b>Figure 2</b><b>.</b> Description</div>
+            </div>
+            <p>
+              Cras ultrices eu massa vitae congue. Vestibulum arcu enim, congue
+              id lacus at, laoreet fringilla tortor. Praesent libero nunc,
+              maximus vel suscipit nec, fringilla sed augue. Praesent porttitor
+              vehicula efficitur. Aenean ac bibendum lectus. Praesent vestibulum
+              velit ut nunc accumsan, non molestie erat pretium. In a ante
+              vulputate, semper sapien at, tristique erat. Morbi vitae euismod
+              eros, at pulvinar erat. Vivamus auctor arcu sed tellus egestas,
+              vitae imperdiet eros viverra. Nulla molestie sapien vitae ipsum
+              pulvinar dictum. Sed sit amet dolor a neque dictum malesuada et
+              nec lectus. Aenean tristique ornare nisl, at imperdiet magna
+              placerat eget. Suspendisse ut blandit elit, sit amet iaculis ex.
+              Nam vel varius velit. Aenean pretium scelerisque enim, quis mollis
+              nunc finibus eu.
+            </p>
+          </div>
+          <div class="references-wrapper">
+            <div class="breaker"></div>
+            <h2>References</h2>
+            <div class="references-container">
+              <div class="number">1.</div><div>Trundle, K. Teaching Science During the Early Childhood Years. National Geographic Learning (2010).</div>
+              <div class="number">11.</div><div>Trundle, K. Teaching Science During the Early Childhood Years. National Geographic Learning (2010).</div>
+            </div>
+          </div>
+        </div>
+        <div class="index-container">
+          <div class="index-header"></div>
+          <div class="index-content"></div>
+        </div>
+      </div>
+      <footer>
+        <div class="logo-igem">
+          <object data="../assets/logos/T--Vilnius-Lithuania--iGEM-2021.svg"> </object>
+        </div>
+        <div class="social-container">
+          <div>FOLLOW US</div>
+          <div>
+            <div class="placeholder-social-icon"></div>
+            <div class="placeholder-social-icon"></div>
+            <div class="placeholder-social-icon"></div>
+          </div>
+        </div>
+        <div class="mail-container">
+          <div>CONTACT US</div>
+          <a href="mailto:info@vilniusigem.lt">info@vilniusigem.lt</a>
+        </div>
+        <div class="grid-sponsors">
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--VU.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--GMC.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--SnapGene.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Termofisher.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Nanodiagnostika.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Laborama.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Telesoftas.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Biotecha.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Kopicentras.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Grida.svg"> </object>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../scripts/navigationTabs.js"></script>
+    <script src="../scripts/background.js"></script>
+    <script src="../scripts/contentpage.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/parallelcard.js"></script>
+    <script>
+      contentPage(
+        "Sections",
+        true,
+        300,
+      )
+    </script>
+  </body>
+</html>

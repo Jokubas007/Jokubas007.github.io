@@ -171,3 +171,15 @@
   letter-spacing: 0em;
   text-align: left;
 }
+
+.experiments-content .circle-button {
+  display: none;
+}
+
+.experiments-content svg:hover .circle-button {
+  display: block;
+}
+
+.experiments-content svg:hover .circle-button-outline {
+  display: none;
+}

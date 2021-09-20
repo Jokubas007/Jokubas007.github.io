@@ -19,6 +19,7 @@
     right: 0;
     left: unset;
     padding: 27px 14px;
+    transform: translateY(1px);
   }
   .nav-item-accessibility .dropdown-menu .dropdown-menu-content {
     display: flex;

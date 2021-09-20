@@ -3,7 +3,7 @@
     position: relative;
     align-items: center;
     justify-content: center;
-    height: 5rem;
+    height: 100px;
     padding: 0 7px;
     cursor: pointer;
     z-index: 1;
@@ -45,7 +45,7 @@
     backdrop-filter: blur(80px);
   }
   .nav-item-accessibility .dropdown-menu .dropdown-menu-content {
-    padding: 14px 14px;
+    padding: 14px 64px;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -62,7 +62,19 @@
     justify-content: space-around;
     height: 38px;
     width: 100%;
+    background-color: #FCCEC0;
+    margin: 18px 0px;
+    height: 70px;
+    color: black;
+    padding: 20px 11px;
+    border-radius: 10px;
   }
+
+  .nav-item-accessibility .dropdown-menu .item .icon img {
+    width: 44px;
+    height: 44px;
+  }
+
   .nav-item-accessibility .dropdown-menu .item .button {
     display: flex;
     align-items: center;
@@ -79,27 +91,28 @@
   .nav-item-accessibility .dropdown-menu .item .text .title {
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 24px;
     line-height: 22px;
   }
   .nav-item-accessibility .dropdown-menu .item .text .subtitle {
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 20px;
     line-height: 15px;
   }
   .nav-icon {
-    height: 5rem;
+    height: 100px;
     display: flex;
     align-items: center;
     position: relative;
     z-index: 2;
+    margin-right: 18px;
   }
   .nav-icon .nav-icon-img {
     position: relative;
     z-index: 2;
-    height: 27px;
-    width: 27px;
+    height: 54px;
+    width: 54px;
   }
   .nav-icon .nav-icon-dropdown {
     display: none;

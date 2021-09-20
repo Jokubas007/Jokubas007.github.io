@@ -56,41 +56,39 @@
   margin: 0 16px;
 }
 
+.button-group > .button:hover {
+  background: #677F86;
+}
+
 .button-group > .button.active {
   background-color: #FCCEC0;
   color: #0D4B5E;
 }
 
-.label-group {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin-bottom: 50px;
-}
-
-.label-group > div {
-  position: relative;
-  background: #34555E;
+.humanpractises-content > .back-to-top-btn {
+  position: fixed;
+  right: 2.5vw;
+  top: 70%;
+  display: none;
+  z-index: 50;
+  width: 60px;
   font-family: var(--secondary-font);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 20px;
-  letter-spacing: 0em;
-  text-align: center;
-  padding: 12px 0 10px 0;
-  color: white;
-  border-radius: 5px;
-  width: 200px;
+	font-size: 1.5vh;
+	font-style: normal;
+	font-weight: 800;
+	letter-spacing: 0em;
+	text-align: left;
 }
 
-.label-group > div > div {
-  width: 29px;
-  height: 29px;
-  border-radius: 4px;
-  position: absolute;
-  right: 7px;
-  top: 6px;
+.humanpractises-content > .back-to-top-btn.active {
+  display: block;
+}
+
+.humanpractises-content > .back-to-top-btn > img {
+  cursor: pointer;
+  transform: rotate(270deg);
+  width: 60px;
+  margin-bottom: 8px;
 }
 
 .box-academia, .box-academia > .tooltip {
@@ -129,17 +127,9 @@
   border-color: #002733 transparent transparent transparent;
 }
 
-
-.humanpractises-content {
-  position: relative;
-  padding: 96px;
-  display: grid;
-  grid-template-columns: 1fr 65vw;
-  column-gap: 20px;
-}
-
 .calendar {
-  overflow-y: auto;
+  margin: 60px;
+  position: relative;
 }
 
 .calendar > .month {
@@ -161,55 +151,70 @@
 
 .calendar > .month > h3 {
   font-family: var(--secondary-font);
-  font-size: 35px;
+  font-size: 4vh;
   font-style: normal;
   font-weight: 800;
-  line-height: 39px;
   letter-spacing: 0em;
   text-align: center;
   color: #FCCEC0;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .month-entry {
-  font-family: var(--main-font);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 18px;
-  letter-spacing: 0em;
-  text-align: left;
-  background-color: #34555E;
-  padding: 4px 7px;
-  margin: 4px 0;
+  width: 70%;
+}
+
+.month-entry > .month-entry-header {
+  background-color: #395F6B;
+  padding: 0.5vh 2vh;
+  margin-top: 4px !important;
   border-radius: 5px;
   display: grid;
   grid-template-columns: 1fr 29px;
   column-gap: 16px;
-  width: 60%;
+  width: 100%;
   align-items: center;
   position: relative;
   z-index: 1;
   cursor: pointer;
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  width: 100%;
 }
 
-.month-entry.orange {
+
+.month-entry > .month-entry-header > h4 {
+  font-family: var(--main-font);
+  font-size: 2vh;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5vh;
+  letter-spacing: 0em;
+  text-align: center;
+  width: 100%;
+}
+
+.month-entry > .month-entry-header.active {
+  border-radius: 5px 5px 0 0;
+}
+
+.month-entry > .month-entry-header.orange {
   background-color: #FCCEC0;
   color: #000000;
   cursor: auto;
+  border-radius: 5px;
+  margin-bottom: 8px;
 }
 
-.month-entry.active {
-  background-color: #677F86;
-}
-
-.month-entry > div {
+.month-entry > .month-entry-header > div {
   position: relative;
   height: 29px;
   border-radius: 4px;
 }
 
-.month-entry > div .tooltip {
+.month-entry > .month-entry-header > div .tooltip {
   visibility: hidden;
   width: 120px;
   text-align: center;
@@ -221,15 +226,15 @@
   z-index: 1;
 }
 
-.month-entry > div:hover .tooltip {
+.month-entry > .month-entry-header > div:hover .tooltip {
   visibility: visible;
 }
 
-.month-entry > div:active .tooltip {
+.month-entry > .month-entry-header > div:active .tooltip {
   visibility: visible;
 }
 
-.month-entry > div .tooltip::after {
+.month-entry > .month-entry-header > div .tooltip::after {
   content: " ";
   position: absolute;
   top: 100%;
@@ -248,84 +253,120 @@
   background-color: #34555E;
 }
 
-.humanpractises-content .text {
-  height: calc(100vh - 5rem - 50px);
+.month-entry {
+  z-index: 10;
 }
 
-.humanpractises-content .text > div {
-  height: calc(100vh - 5rem - 150px);
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-right: 10px;
+.month-entry > .month-entry-text {
+  background-color: #002733;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 8px;
+  padding: 0px;
+  height: 0px;
+  overflow: hidden;
 }
 
-.humanpractises-content .text > h2 {
-  margin: 0;
-  margin-bottom: 40px;
-  color: #FCCEC0;
+.month-entry > .month-entry-text.active {
+  height: 100%;
+  overflow: auto;
+  padding: 3vh;
+  border: 2px solid #395F6B;
+}
+
+.month-entry > .month-entry-text > h3, .month-entry > .month-entry-text > p, .month-entry > .month-entry-text > img {
+  margin: 3vh 0 !important;
+}
+
+.month-entry > .month-entry-text > h3 {
   font-family: var(--secondary-font);
-  font-size: 36px;
+  font-size: 3vh;
   font-style: normal;
   font-weight: 800;
-  line-height: 40px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-
-.humanpractises-content .text > div > h3, .humanpractises-content .text > div > p, .humanpractises-content .text > div > img {
-  margin: 12px 0;
-}
-
-.humanpractises-content .text > div > h3 {
-  font-family: var(--secondary-font);
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 27px;
   letter-spacing: 0em;
   text-align: center;
 }
 
-.humanpractises-content .text > div > p {
+.month-entry > .month-entry-text > p {
   font-family: var(--main-font);
-  font-size: 18px;
+  font-size: 2vh;
   font-style: normal;
   font-weight: 300;
-  line-height: 27px;
   letter-spacing: 0em;
   text-align: left;
 }
 
-.humanpractises-content .text > div > img {
+.month-entry > .month-entry-text > img {
   max-width: 100%;
 }
 
-.humanpractises-content .text > div::-webkit-scrollbar {
+.month-entry > .month-entry-text::-webkit-scrollbar {
   width: 5px;
 }
 
-.humanpractises-content .text > div::-webkit-scrollbar-thumb {
+.month-entry > .month-entry-text::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 100px;
   height: 10px;
 }
 
-.humanpractises-content .text > div::-webkit-scrollbar-track {
+.month-entry > .month-entry-text::-webkit-scrollbar-track {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 100px;
 }
 
-.calendar::-webkit-scrollbar {
-  width: 0px;
+.humanpractises-content > .list-container {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  font-family: var(--secondary-font);
+  font-size: 1.5vh;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0em;
+  text-align: center;
+  z-index: 20;
 }
 
-.calendar::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 100px;
-  height: 10px;
+.humanpractises-content > .list-container > div {
+  display: none;
+  grid-template-columns: 1fr 2.5vh;
+  column-gap: 16px;
+  align-items: center;
+  padding: calc(1vh + 5px) 1vh 1vh 1vh;
+  margin-bottom: 0.5vh;
+  background-color: #34555E;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  transform: translateX(-73%);
+  transition: transform 0.25s ease;
 }
 
-.calendar::-webkit-scrollbar-track {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 100px;
+.humanpractises-content > .list-container > div.active {
+  display: grid;
+}
+
+.humanpractises-content > .list-container > div:hover {
+  transform: translateX(-5px);
+  transition: transform 0.25s ease;
+}
+
+.humanpractises-content > .list-container > div:focus {
+  transform: translateX(-5px);
+  transition: transform 0.25s ease;
+}
+
+.humanpractises-content > .list-container > div > div:last-child {
+  height: 2.5vh;
+  width: 2.5vh;
+  border-radius: 4px;
+  margin-top: -5px;
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }

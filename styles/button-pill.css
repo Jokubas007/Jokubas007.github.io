@@ -1,4 +1,5 @@
 .pillButton {
+  cursor: pointer;
   position: relative;
 }
 .pillButton .pill-enabled {

@@ -1,0 +1,159 @@
+@media (max-width: 1024px) {
+  .app-header {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .app-header h1 {
+    position: absolute;
+    text-align: center;
+    font-family: var(--secondary-font) !important;
+    font-style: normal;
+    color: rgba(252, 206, 192, 1);
+    font-size: 10vh;
+    font-weight: 800 !important;
+    bottom: 1%;
+    left: 5%;
+    z-index: 1;
+    margin: 0;
+  }
+
+  .app-header-image-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 70%;
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+  }
+
+  .app-header-image-wrapper > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .app-content {
+    padding: 0 5%;
+  }
+
+  .app-content > h2 {
+    font-family: var(--secondary-font);
+    font-size: 4vh;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FCCEC0;
+    margin: 10vh 0 5vh 0 !important;
+  }
+
+  .grid-team, .grid-PI, .grid-instructors {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 5vh;
+  }
+
+  .grid-PI {
+    margin-bottom: 10vh;
+  }
+
+  .card {
+    position: relative;
+  }
+
+  .card > .hover-effector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 100%;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .card > .hover-effector:hover {
+    background-color: rgba(252, 206, 192, 0.6);
+    backdrop-filter: blur(1vh);
+  }
+
+  .card > .hover-effector:focus-within{
+    background-color: rgba(252, 206, 192, 0.6);
+    backdrop-filter: blur(1vh);
+  }
+
+  .card > .hover-effector:hover > .img-description {
+    visibility: visible;
+  }
+
+  .card > .hover-effector:focus-within > .img-description {
+    visibility: visible;
+  }
+
+  .card > .hover-effector > .img-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2vh;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .card > .hover-effector > .img-description > .member-description > .line {
+    height: 0.7vw;
+    width: 10vw;
+    border-radius: 5px;
+    margin-bottom: 1vh;
+    background-color: rgba(0, 39, 51, 1);
+  }
+
+  .card > .hover-effector > .img-description > .member-description {
+    font-family: var(--secondary-font);
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(0, 39, 51, 1);
+  }
+
+  .card > .hover-effector > .img-description > .member-description > div {
+    margin-bottom: 0.5vh;
+  }
+
+  .card > .hover-effector > .img-description > .linkedin-ref {
+    width: 4vh;
+    height: 4vh;
+  }
+
+  .card > .hover-effector > .img-description > .linkedin-ref > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card > .member-photo {
+    position: relative;
+    width: 100%;
+    z-index: -1;
+    margin-bottom: 1.5vh;
+  }
+
+  .card > .name {
+    width: 100%;
+    font-family: var(--secondary-font);
+    font-size: 3vh;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0em;
+    text-align: center;
+    word-wrap: break-word;
+  }
+}

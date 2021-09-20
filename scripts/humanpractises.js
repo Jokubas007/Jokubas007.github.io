@@ -65,6 +65,19 @@ const months = [
 ]
 let currentTab = 'Wet lab';
 
+function toggleActiveTab(id) {
+  const header = document.querySelector(`#month-entry-${id} > .month-entry-header`);
+  const text = document.querySelector(`#month-entry-${id} > .month-entry-text`);
+
+  if (header.classList.contains('active')) {
+    header.classList.remove('active');
+    text.classList.remove('active');
+  } else {
+    header.classList.add('active');
+    text.classList.add('active');
+  }
+}
+
 function refreshHPpage() {
   switch(currentTab) {
     case 'Wet lab':
@@ -94,18 +107,25 @@ function refreshHPpage() {
               class="month-entry"
               tabindex="0"
               id="month-entry-${tab.line_number}"
-              onclick="refreshPageText(${tab.line_number})"
-              onkeypress="refreshPageText(${tab.line_number})"
+              onclick="toggleActiveTab(${tab.line_number})"
+              onkeypress="toggleActiveTab(${tab.line_number})"
             >
-              ${tab.label}
-              <div class="box-${tab.stakeholder.toLowerCase()}"><span class="tooltip">${tab.stakeholder}</span></div>
+              <div class="month-entry-header">
+                <h4>${tab.label}</h4>
+                <div class="box-${tab.stakeholder.toLowerCase()}"><span class="tooltip">${tab.stakeholder}</span></div>
+              </div>
+              <div class="month-entry-text">
+                ${tab.description}
+              </div>
             </div>
             ${
               tab.tooltip === null ? "" :
               `
-                <div class="month-entry orange">
-                  ${tab.tooltip}
-                  <div></div>
+                <div class="month-entry">
+                  <div class="month-entry-header orange">
+                    <h4>${tab.tooltip}</h4>
+                    <div></div>
+                  </div>
                 </div>
               `
             }
@@ -116,51 +136,37 @@ function refreshHPpage() {
     </div>
   `).join('\n');
   document.querySelector('.calendar').innerHTML = monthString;
-  const activeTabId = Math.min(...filteredTabs.map((tab) => tab.line_number));
-  refreshPageText(activeTabId);
-}
-
-function refreshPageText(newId) {
-  if (document.querySelector('.month-entry.active') !== null) {
-    document.querySelector('.month-entry.active').classList.remove('active');
-  }
-  document.querySelector(`#month-entry-${newId}`).classList.add('active');
-  const activeTab = hpTabs.filter((tab) => tab.line_number === newId)[0];
-  document.querySelector('.humanpractises-content > .text > h2').innerHTML = activeTab.heading;
-  document.querySelector('.humanpractises-content > .text > div').innerHTML = activeTab.description;
 }
 
 refreshHPpage();
 
-
-function draw(){
-  const index = document.querySelector('.humanpractises-content .text');
-  const content = document.querySelector('.humanpractises-content');
-  const navbar = document.querySelector('.navbar');
-  if (
-    window.scrollY + navbar.offsetHeight + 32 + index.offsetHeight > content.offsetHeight + content.offsetTop - 96
-  ) {
-    index.style.position = 'absolute';
-    index.style.top = null;
-    index.style.bottom = '96px';
-    index.style.right = '96px';
-    index.style.width = `65vw`;
-  } else if (window.scrollY - content.offsetTop >= -16) {
-    index.style.position = 'fixed';
-    index.style.bottom = null;
-    index.style.top = `${navbar.offsetHeight + 32}px`;
-    index.style.right = '96px';
-    index.style.width = `65vw`;
-  } else {
-    index.style.position = 'relative';
-    index.style.bottom = null;
-    index.style.top = null;
-    index.style.right = null;
-    index.style.width = `65vw`;
+window.addEventListener(
+  'scroll',
+  () => {
+    if(1*window.innerHeight < window.scrollY) {
+      document.querySelector('.humanpractises-content > .back-to-top-btn').classList.add('active');
+      [...document.querySelectorAll('.humanpractises-content > .list-container > div')].forEach((listItem) => {
+        listItem.classList.add('active');
+      });
+    } else {
+      document.querySelector('.humanpractises-content > .back-to-top-btn').classList.remove('active');
+      [...document.querySelectorAll('.humanpractises-content > .list-container > div')].forEach((listItem) => {
+        listItem.classList.remove('active');
+      });
+    }
   }
+)
 
-  requestAnimationFrame(draw);
-}
+document.querySelector('.humanpractises-content > .back-to-top-btn').addEventListener(
+  'click',
+  () => {
+    window.scrollTo(0, window.innerHeight - 25);
+  }
+)
 
-requestAnimationFrame(draw);
-
+document.querySelector('.humanpractises-content > .back-to-top-btn').addEventListener(
+  'keypress',
+  () => {
+    window.scrollTo(0, window.innerHeight - 25);
+  }
+)

@@ -1,0 +1,82 @@
+.card-container {
+	position: relative;
+}
+
+.right-card-container {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.left-card-container {
+	position: absolute;
+	left: calc(-100% - 60px);
+	width: 100%;
+	background-color: #002733;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	transition: left 0.25s ease;
+}
+
+.left-card-container.open {
+	left: 0;
+	transition: left 0.25s ease;
+}
+
+.right-card-container, .left-card-container {
+	padding: 40px;
+	margin-bottom: 60px;
+	color: white;
+	height: 100%;
+}
+
+.right-card-container .filler, .left-card-container .filler {
+	color: rgba(0, 0, 0, 0);
+}
+
+.right-card-container {
+	background-color: #054d54;
+}
+
+.card-container .button-container {
+	position: absolute;
+	right: -90px;
+	width: 121px;
+	top: 20px;
+	height: calc(100% - 40px);
+	z-index: 10;
+}
+
+.card-container .button-container .readbtn {
+	width: 121px;
+}
+
+.card-container .button-container .readbtn > img {
+	cursor: pointer;
+}
+
+.card-container .button-container .readbtn > div {
+	margin-left: 40px;
+	font-family: var(--secondary-font);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 16px;
+	letter-spacing: 0em;
+	text-align: left;
+	color: black;
+}
+
+.card-container .button-container .readbtn:last-child > img {
+	transform: rotate(180deg);
+}
+
+.card-container .button-container .readbtn {
+	position: relative;
+}
+
+.card-container .button-container .readbtn.hidden {
+	display: none;
+}

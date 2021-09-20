@@ -1,0 +1,97 @@
+@font-face {
+    font-family: "Quicksand";
+    src: url("https://2021.igem.org/wiki/images/9/98/T--Vilnius-Lithuania--Quicksand-Light.ttf");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("https://2021.igem.org/wiki/images/2/2e/T--Vilnius-Lithuania--Quicksand-Regular.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("https://2021.igem.org/wiki/images/2/2a/T--Vilnius-Lithuania--Quicksand-Medium.ttf");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("https://2021.igem.org/wiki/images/2/2b/T--Vilnius-Lithuania--Quicksand-SemiBold.ttf");
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("https://2021.igem.org/wiki/images/6/6a/T--Vilnius-Lithuania--Quicksand-Bold.ttf");
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Spartan";
+    src: url("https://2021.igem.org/wiki/images/a/a8/T--Vilnius-Lithuania--Spartan-Light.ttf");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Spartan";
+    src: url("https://2021.igem.org/wiki/images/c/c0/T--Vilnius-Lithuania--Spartan-Regular.ttf");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Spartan";
+    src: url("https://2021.igem.org/wiki/images/0/0d/T--Vilnius-Lithuania--Spartan-SemiBold.ttf");
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Spartan";
+    src: url("https://2021.igem.org/wiki/images/1/10/T--Vilnius-Lithuania--Spartan-Bold.ttf");
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Spartan";
+    src: url("https://2021.igem.org/wiki/images/e/e1/T--Vilnius-Lithuania--Spartan-ExtraBold.ttf");
+    font-style: normal;
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: "OpenDyslexic";
+    src: url('https://2021.igem.org/wiki/images/5/53/T--Vilnius-Lithuania--OpenDyslexic-Regular.ttf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "OpenDyslexic";
+    src: url('https://2021.igem.org/wiki/images/c/ce/T--Vilnius-Lithuania--OpenDyslexic-Italic.ttf');
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "OpenDyslexic";
+    src: url('https://2021.igem.org/wiki/images/0/0c/T--Vilnius-Lithuania--OpenDyslexic-BoldItalic.ttf');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "OpenDyslexic";
+    src: url('https://2021.igem.org/wiki/images/8/86/T--Vilnius-Lithuania--OpenDyslexic-Bold.ttf');
+    font-style: normal;
+    font-weight: 700;
+}
