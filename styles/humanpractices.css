@@ -65,6 +65,10 @@
   color: #0D4B5E;
 }
 
+.humanpractises-content {
+  position: relative;
+}
+
 .humanpractises-content > .back-to-top-btn {
   position: fixed;
   right: 2.5vw;
@@ -78,10 +82,21 @@
 	font-weight: 800;
 	letter-spacing: 0em;
 	text-align: left;
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  height: fit-content;
 }
 
 .humanpractises-content > .back-to-top-btn.active {
   display: block;
+}
+
+.humanpractises-content > .back-to-top-btn.fix-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 0px !important;
+  right: 2.5vw;
 }
 
 .humanpractises-content > .back-to-top-btn > img {
@@ -329,6 +344,13 @@
   letter-spacing: 0em;
   text-align: center;
   z-index: 20;
+}
+
+.humanpractises-content > .list-container.fix-bottom {
+  position: absolute;
+  top: auto;
+  bottom: 0px !important;
+  left: 0;
 }
 
 .humanpractises-content > .list-container > div {

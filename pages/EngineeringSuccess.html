@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <link rel="stylesheet" href="../styles/contentpage-desktop.css">
+    <link rel="stylesheet" href="../styles/contentpage-mobile.css">
+    <link rel="stylesheet" href="../styles/sideindex-desktop.css">
+    <link rel="stylesheet" href="../styles/sideindex-mobile.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/navmenu-desktop.css">
+    <link rel="stylesheet" href="../styles/navmenu-mobile.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-desktop.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
+    <link rel="stylesheet" href="../styles/button-pill.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/engineering-success.css">
+  </head>
+  <body>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
+          <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
+          AmeBye
+        </a>
+        <ul class="nav-menu"></ul>
+      </nav>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <div class="background">
+      <canvas id="background-canvas"></canvas>
+      <div class="app-header">
+        <h1 id="title">ENGINEERING SUCCESS</h1>
+        <div id="img" class="app-header-image-wrapper">
+          <img alt="Header" src="../assets/images/placeholder.png" />
+        </div>
+      </div>
+      <div class="app-content">
+        <div class="app-content-text">
+          <div class="content-page-container">
+            <h3 class="index-headline">Overview</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              ac enim id metus rutrum blandit sed non dolor. Pellentesque
+              feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim,
+              id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper
+              dui et, posuere velit. Cras viverra, tortor at porta pulvinar,
+              libero eros pulvinar orci, sed pulvinar neque felis eget dui.
+              Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget
+              bibendum turpis. Vestibulum pulvinar interdum mauris nec congue.
+              Etiam id nunc ac risus dictum semper sed in nisl.
+            </p>
+            <svg viewBox="0 0 1000 400" id="overview-animation">
+              <defs>
+                <marker
+                    id="arrowhead"
+                    markerWidth="5"
+                    markerHeight="7"
+                    refX="0"
+                    refY="3.5"
+                    orient="auto">
+                    <polygon
+                        points="0 0, 5 3.5, 0 7"
+                        fill="#054d54"
+                    />
+                </marker>
+              </defs>
+              <line 
+                x1="50"
+                y1="200"
+                x2="900"
+                y2="200"
+                style="stroke:#054d54; stroke-width:2"
+                marker-end="url(#arrowhead)"
+              />
+              <line 
+                x1="200"
+                y1="380"
+                x2="200"
+                y2="20"
+                style="stroke:#054d54; stroke-width:2"
+                marker-end="url(#arrowhead)"
+              />
+            </svg> 
+            <h3 class="index-headline">Fusion protein modeling</h3>
+            <svg viewBox="0 0 1000 400" id="protein-animation">
+              <defs>
+                <marker
+                    id="arrowhead"
+                    markerWidth="5"
+                    markerHeight="7"
+                    refX="0"
+                    refY="3.5"
+                    orient="auto">
+                    <polygon
+                        points="0 0, 5 3.5, 0 7"
+                        fill="#054d54"
+                    />
+                </marker>
+              </defs>
+              <line 
+                x1="50"
+                y1="200"
+                x2="900"
+                y2="200"
+                style="stroke:#054d54; stroke-width:2"
+                marker-end="url(#arrowhead)"
+              />
+              <line 
+                x1="200"
+                y1="380"
+                x2="200"
+                y2="20"
+                style="stroke:#054d54; stroke-width:2"
+                marker-end="url(#arrowhead)"
+              />
+            </svg>
+            <div class="cycle protein-cycle active" id="protein-cycle-0">
+              <h3>Cycle 1: Design</h3>
+              <p>
+                Since one of the parts of our project is to create a fusion protein system for the bottleneck
+                reaction of naringenin synthesis, we decided to model it in silico. The model’s primary purpose is
+                to check whether the shorter distance between active sites leads to the higher production of naringenin.
+                In the process, we found out that even the modeling part required to cover the main steps of engineering:
+                design, build, test, and learn. Therefore, we began with the already existing modeling workflow described
+                for a fusion construct with a malaria pre-erythrocytic vaccine candidate [1].
+                The described modeling approach was initially designed as follows:
+              </p>
+              <ol>
+                <li>Choosing the protein candidates</li>
+                <li>Selecting linkers</li>
+                <li>Primary structural analysis of the fusion system</li>
+                <li>Protein modeling</li>
+                <li>Scoring modeled complexes to choose the model for visualization</li>
+                <li>Plotting Ramachandran graphs before structure refinement</li>
+                <li>Structure refinement</li>
+                <li>Plotting Ramachandran graphs after structure refinement</li>
+              </ol>
+            </div>
+            <div class="cycle protein-cycle" id="protein-cycle-1">
+              <h3>Cycle 1: Build</h3>
+              <p>
+                The building stage of the modeling flow consisted of performing the initial design flow.
+                In this cycle we have raised a hypothesis that homology-based protein modeling approaches
+                should not be the most suitable method for our case, since there are few fusion models existing.
+              </p>
+              <ol>
+                <li>The protein candidates were chosen to be 4-coumarate-CoA ligase 2 from Glycine max and chalcone synthase from Arabidopsis thaliana</li>
+                <li>Seven linkers were chosen for our fusion system. Four of them were flexible glycine and serine linkers (GSG, (GGGGS)n, where n is equal to 1, 2, and 3) and the other three were rigid ((EAAAK)n, where n is equal to 1, 2, and 3)</li>
+                <li>For a primary structural analysis we studied PDB: 3TSY structure - an experimentally determined structure of the fusion system that has 4CL protein in it. We took this structure as a starting point of what we can expect from our models</li>
+                <li>Protein modeling was initially attempted to perform using homology-based modeling program SWISS-MODEL[2]</li>
+                <li>The modeled structures in the first cycle were evaluated using VoroMQA[3], QMEAN[4], and QMEANDisCo[5] scores</li>
+                <li>The plot was not drawn in this cycle</li>
+                <li>The structure refinement was not performed in this cycle</li>
+                <li>The plot was not drawn in this cycle</li>
+              </ol>
+            </div>
+            <div class="cycle protein-cycle" id="protein-cycle-2">
+              <h3>Cycle 1: Test</h3>
+              <p>
+                The output of SWISS-MODEL showed that sequence identity between the templates found and the sequence
+                that is modeled is 66.42 - 69.36%. According to the specialists in protein modeling,
+                homology-based methods are suitable, when the sequence identity between the template
+                and the modeled sequence is more than 25%, belonging to the “daylight” zone[7], thus, in theory,
+                the method could be applied.
+              </p>
+              <p>
+                The modeling flow was tested with PyMOL[6] visualization program using commands
+                `cealign`, `set seq_view`. We were looking for an accurate representation of the
+                linked proteins in the fusion system by comparing them to their distinct versions.
+                The main focus on the system was the linker region, which in the homology-based modeling
+                case was composed of the uncoiled domain of 4CL that made up a highly disordered massive linker region.
+                We stopped the flow after the visualization because we decided that structure refinement using molecular
+                dynamics will not introduce any significant changes to the structure.
+              </p>
+            </div>
+            <div class="cycle protein-cycle" id="protein-cycle-3">
+              <h3>Cycle 1: Learn</h3>
+              <p>
+                Nonetheless in theory the homology-based modeling method could be applied,
+                these modeling results proved that this approach could not be applied to our fusion protein system.
+                Therefore, we decided to try running <i>ab initio</i> protein modeling programs.
+              </p>
+            </div>
+            <div class="cycle protein-cycle" id="protein-cycle-4">
+              <h3>Cycle 2: Design</h3>
+              <p>
+                The design (main steps) of the modeling flow stayed the same as it was in the first cycle,
+                yet also we included one more step - energy minimization with Yasara[10] -
+                that was inserted after the protein modeling step. The main changes in the second
+                cycle were the choice of protein modeling programs. In this engineering cycle we took <i>ab initio</i>
+                modeling programs trRosetta[8] and RoseTTAFold[9] to model our proteins.
+              </p>
+            </div>
+            <div class="cycle protein-cycle" id="protein-cycle-5">
+              <h3>Cycle 2: Build</h3>
+              <ol>
+                <li>Protein candidates stayed the same as in the first cycle</li>
+                <li>Linkers stayed the same as in the first cycle</li>
+                <li>Primary structure analysis was not required to be redone in the second cycle</li>
+                <li>Protein modeling was performed using trRosetta and RoseTTAFold simultaneously</li>
+                <li>The modeled structures were evaluated using VoroMQA score</li>
+                <li>Energy minimization with Yasara.</li>
+                <li>The Ramachandran plots were drawn before molecular dynamics (MD) simulations</li>
+                <li>We performed short MD simulations for the trivial linker (GSG) case</li>
+                <li>The Ramachandran plots were drawn before molecular dynamics (MD) simulations</li>
+              </ol>
+            </div>
+            <div class="cycle protein-cycle" id="protein-cycle-6">
+              <h3>Cycle 2: Test</h3>
+              <p>
+                The modeled structures visually were not satisfactory - the disordered domain of 4CL
+                protein was still present in the structure. The energy minimization step with Yasara
+                and MD simulations did not introduce any significant changes to the structure. 
+              </p>
+            </div>
+            <div class="cycle protein-cycle" id="protein-cycle-7">
+              <h3>Cycle 2: Learn</h3>
+              <p>
+                After this step we decided to consult the bioinformatician who works with protein modeling.
+                He suggested we include multiple sequence alignment files into our modeling flow. Additionally,
+                we got advice to use more scoring functions in the evaluation step.
+                Yet also we consulted the protein molecular dynamics specialist to get a professional
+                insight into how we should run the MD for our system to get a more significant output.
+                After the consultation we adjusted the box size of the system and the duration of the simulations.
+              </p>
+            </div>
+            <div class="cycle protein-cycle" id="protein-cycle-8">
+              <h3>Cycle 3: Design</h3>
+              <p>
+                In the third engineering cycle we included our own generated multiple sequence alignment (MSA)
+                files as input to the protein modeling programs of our choice.
+                In addition, we took into account the advice from the specialists and included
+                QMEAN and QMEANDisCo scores into the evaluation of the structures. The structure
+                refinement was not performed in this cycle due to the lack of computational resources at the time.
+              </p>
+            </div>
+            <div class="cycle protein-cycle" id="protein-cycle-9">
+              <h3>Cycle 3: Build</h3>
+              <ol>
+                <li>Protein candidates stayed the same as in the previous cycle</li>
+                <li>Linkers stayed the same as in the previous cycle</li>
+                <li>Primary structure analysis was not required to be redone</li>
+                <li>Protein modeling was performed using RoseTTAFold</li>
+                <li>The modeled structures were evaluated using QMEAN, QMEANDisCo, and VoroMQA scores</li>
+                <li>The plot was not drawn in this cycle</li>
+                <li>The structure refinement was not performed in this cycle</li>
+                <li>The plot was not drawn in this cycle</li>
+                <li>The distances between active sites in fusion protein systems with rigid linkers were calculated</li>
+              </ol>
+            </div>
+            <div class="cycle protein-cycle" id="protein-cycle-10">
+              <h3>Cycle 3: Test</h3>
+              <p>
+                The modeled structures were visually satisfactory -
+                the disordered domain of 4CL protein was less disordered in the modeled structure.
+              </p>
+            </div>
+            <div class="cycle protein-cycle" id="protein-cycle-11">
+              <h3>Cycle 3: Learn</h3>
+              <p>
+                The multiple sequence alignment (MSA) files have a significant impact on the modeling output.
+              </p>
+            </div>
+            <div class="cycle protein-cycle" id="protein-cycle-12">
+              <h3>Cycle 4: Design</h3>
+              <p>
+                According to the output of the third cycle, the fourth engineering cycle was not required.
+                However, after the latter cycle was finished, AlphaFold2[11] became available for public use.
+                Therefore, we decided to apply this highly evaluated tool in our modeling workflow.
+                The structure refinement was not performed in this cycle due to the insignificant impact of
+                MD for structures recorded in the studies[12].
+              </p>
+            </div>
+            <div class="cycle protein-cycle" id="protein-cycle-13">
+              <h3>Cycle 4: Build</h3>
+              <ol>
+                <li>Protein candidates stayed the same as in the previous cycle</li>
+                <li>Linkers stayed the same as in the previous cycle</li>
+                <li>Primary structure analysis was not required to be redone</li>
+                <li>Protein modeling was performed using AlphaFold2</li>
+                <li>The modeled structures were evaluated using QMEAN, QMEANDisCo, ProQ2D, ProQRosCenD, ProQRosFAD, ProQ3D scores</li>
+                <li>The plots were drawn in this cycle</li>
+                <li>The structure refinement was not performed in this cycle</li>
+                <li>The distances between active sites in fusion protein systems with rigid linkers were calculated</li>
+              </ol>
+            </div>
+            <div class="cycle protein-cycle" id="protein-cycle-14">
+              <h3>Cycle 4: Test</h3>
+              <p>
+                The output of the fourth cycle had the less disordered domain just as the output of the third cycle.
+              </p>
+            </div>
+            <div class="cycle protein-cycle" id="protein-cycle-15">
+              <h3>Cycle 4: Learn</h3>
+              <p>
+                We were visually satisfied with the modeled complex.
+                Nonetheless, AlphaFold2 models do not require the usage of molecular
+                dynamics for structure refinement, we considered applying them to get a
+                better insight of the system with flexible linkers. 
+              </p>
+            </div>
+          </div>
+          <div class="references-wrapper">
+            <div class="breaker"></div>
+            <h2>References</h2>
+            <div class="references-container">
+              <div class="number">1.</div><div>Trundle, K. Teaching Science During the Early Childhood Years. National Geographic Learning (2010).</div>
+              <div class="number">11.</div><div>Trundle, K. Teaching Science During the Early Childhood Years. National Geographic Learning (2010).</div>
+            </div>
+          </div>
+        </div>
+        <div class="index-container">
+          <div class="index-header"></div>
+          <div class="index-content"></div>
+        </div>
+      </div>
+      <footer>
+        <div class="logo-igem">
+          <object data="../assets/logos/T--Vilnius-Lithuania--iGEM-2021.svg"> </object>
+        </div>
+        <div class="social-container">
+          <div>FOLLOW US</div>
+          <div>
+            <div class="placeholder-social-icon"></div>
+            <div class="placeholder-social-icon"></div>
+            <div class="placeholder-social-icon"></div>
+          </div>
+        </div>
+        <div class="mail-container">
+          <div>CONTACT US</div>
+          <a href="mailto:info@vilniusigem.lt">info@vilniusigem.lt</a>
+        </div>
+        <div class="grid-sponsors">
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--VU.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--GMC.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--SnapGene.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Termofisher.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Nanodiagnostika.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Laborama.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Telesoftas.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Biotecha.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Kopicentras.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Grida.svg"> </object>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../scripts/navigationTabs.js"></script>
+    <script src="../scripts/background.js"></script>
+    <script src="../scripts/contentpage.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/drawSineAnimation.js"></script>
+    <script src="../scripts/engineeringSuccess.js"></script>
+    <script>
+      contentPage(
+        "Sections",
+        true,
+        300,
+      )
+    </script>
+  </body>
+</html>

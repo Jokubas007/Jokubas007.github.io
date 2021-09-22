@@ -115,8 +115,8 @@
 
 	.content-page-container ul, .content-page-container ol {
 		margin: 0 !important;
+		margin-left: 0px !important;
 		margin-bottom: 40px !important;
-		margin-left: 48px !important;
 		font-family: var(--main-font);
 		font-size: 2vh !important;
 		font-style: normal;

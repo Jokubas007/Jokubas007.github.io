@@ -1,0 +1,31 @@
+svg {
+  fill: #fff;
+}
+
+svg text {
+  fill: #054d54;
+}
+
+#overview-animation circle {
+  fill: #054d54;
+}
+
+#protein-animation .svg-button {
+  cursor: pointer;
+}
+
+#protein-animation .svg-button:hover {
+  fill: #9bb7ba;
+}
+
+#protein-animation .svg-button.active {
+  fill: #054d54;
+}
+
+.cycle {
+  display: none;
+}
+
+.cycle.active {
+  display: block;
+}

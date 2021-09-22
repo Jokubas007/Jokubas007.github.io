@@ -143,11 +143,25 @@ refreshHPpage();
 window.addEventListener(
   'scroll',
   () => {
+    const content = document.querySelector('.humanpractises-content').getBoundingClientRect()
     if(1*window.innerHeight < window.scrollY) {
       document.querySelector('.humanpractises-content > .back-to-top-btn').classList.add('active');
       [...document.querySelectorAll('.humanpractises-content > .list-container > div')].forEach((listItem) => {
         listItem.classList.add('active');
       });
+      const pos = content.bottom - (window.innerHeight * 0.7 + document.querySelector('.humanpractises-content > .back-to-top-btn').getBoundingClientRect().height);
+      const pos1 = content.bottom - (window.innerHeight * 0.5 + document.querySelector('.humanpractises-content > .list-container').getBoundingClientRect().height);
+      if (pos <= 0) {
+        document.querySelector('.humanpractises-content > .back-to-top-btn').classList.add('fix-bottom');
+      } else {
+        document.querySelector('.humanpractises-content > .back-to-top-btn').classList.remove('fix-bottom');
+      }
+
+      if (pos1 <= 0) {
+        document.querySelector('.humanpractises-content > .list-container').classList.add('fix-bottom');
+      } else {
+        document.querySelector('.humanpractises-content > .list-container').classList.remove('fix-bottom');
+      }
     } else {
       document.querySelector('.humanpractises-content > .back-to-top-btn').classList.remove('active');
       [...document.querySelectorAll('.humanpractises-content > .list-container > div')].forEach((listItem) => {
