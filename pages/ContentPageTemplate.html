@@ -31,6 +31,12 @@
     </div>
     <div class="background">
       <canvas id="background-canvas"></canvas>
+      <canvas
+        id="canvas-transition"
+        data-fragment-url="../assets/transition/BackgroundTransition.frag"
+        width="500"
+        height="500"
+      ></canvas>
       <div class="app-header">
         <h1 id="title">TEST PAGE</h1>
         <div id="img" class="app-header-image-wrapper">
@@ -245,5 +251,7 @@
         300,
       )
     </script>
+    <script src="../scripts/GlslCanvas.js"></script>
+    <script src="../scripts/backgroundTransition.js"></script>
   </body>
 </html>

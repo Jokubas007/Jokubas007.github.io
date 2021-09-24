@@ -59,3 +59,10 @@
   color: white;
   z-index: 9999;
 }
+
+#canvas-transition {
+	display: block;
+	position: fixed;
+	z-index: 50;
+}
+

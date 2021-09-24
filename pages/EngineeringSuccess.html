@@ -32,6 +32,12 @@
     </div>
     <div class="background">
       <canvas id="background-canvas"></canvas>
+      <canvas
+        id="canvas-transition"
+        data-fragment-url="../assets/transition/BackgroundTransition.frag"
+        width="500"
+        height="500"
+      ></canvas>
       <div class="app-header">
         <h1 id="title">ENGINEERING SUCCESS</h1>
         <div id="img" class="app-header-image-wrapper">
@@ -53,71 +59,9 @@
               bibendum turpis. Vestibulum pulvinar interdum mauris nec congue.
               Etiam id nunc ac risus dictum semper sed in nisl.
             </p>
-            <svg viewBox="0 0 1000 400" id="overview-animation">
-              <defs>
-                <marker
-                    id="arrowhead"
-                    markerWidth="5"
-                    markerHeight="7"
-                    refX="0"
-                    refY="3.5"
-                    orient="auto">
-                    <polygon
-                        points="0 0, 5 3.5, 0 7"
-                        fill="#054d54"
-                    />
-                </marker>
-              </defs>
-              <line 
-                x1="50"
-                y1="200"
-                x2="900"
-                y2="200"
-                style="stroke:#054d54; stroke-width:2"
-                marker-end="url(#arrowhead)"
-              />
-              <line 
-                x1="200"
-                y1="380"
-                x2="200"
-                y2="20"
-                style="stroke:#054d54; stroke-width:2"
-                marker-end="url(#arrowhead)"
-              />
-            </svg> 
+            <svg viewBox="0 0 710 350" id="overview-animation"></svg> 
             <h3 class="index-headline">Fusion protein modeling</h3>
-            <svg viewBox="0 0 1000 400" id="protein-animation">
-              <defs>
-                <marker
-                    id="arrowhead"
-                    markerWidth="5"
-                    markerHeight="7"
-                    refX="0"
-                    refY="3.5"
-                    orient="auto">
-                    <polygon
-                        points="0 0, 5 3.5, 0 7"
-                        fill="#054d54"
-                    />
-                </marker>
-              </defs>
-              <line 
-                x1="50"
-                y1="200"
-                x2="900"
-                y2="200"
-                style="stroke:#054d54; stroke-width:2"
-                marker-end="url(#arrowhead)"
-              />
-              <line 
-                x1="200"
-                y1="380"
-                x2="200"
-                y2="20"
-                style="stroke:#054d54; stroke-width:2"
-                marker-end="url(#arrowhead)"
-              />
-            </svg>
+            <svg viewBox="0 0 710 350" id="protein-animation"></svg>
             <div class="cycle protein-cycle active" id="protein-cycle-0">
               <h3>Cycle 1: Design</h3>
               <p>
@@ -381,5 +325,7 @@
         300,
       )
     </script>
+    <script src="../scripts/GlslCanvas.js"></script>
+    <script src="../scripts/backgroundTransition.js"></script>
   </body>
 </html>

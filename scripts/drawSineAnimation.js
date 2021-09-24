@@ -1,7 +1,7 @@
 function drawSineAnimation(id, freq, counterStep, callback, initializeButtons) {
   let svg = document.getElementById(id);
   let origin = { 
-      x: 200,
+      x: 50,
       y: 200
   };
 
@@ -21,18 +21,18 @@ function drawSineAnimation(id, freq, counterStep, callback, initializeButtons) {
       </marker>
     </defs>
     <line 
-      x1="50"
+      x1="0"
       y1="200"
-      x2="900"
+      x2="700"
       y2="200"
       style="stroke:#054d54; stroke-width:2"
       marker-end="url(#arrowhead)"
     />
     <line 
-      x1="200"
-      y1="380"
-      x2="200"
-      y2="20"
+      x1="50"
+      y1="330"
+      x2="50"
+      y2="70"
       style="stroke:#054d54; stroke-width:2"
       marker-end="url(#arrowhead)"
     />

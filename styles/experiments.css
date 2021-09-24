@@ -31,8 +31,9 @@
 }
 
 .app-content {
-  background: #ffffff;
+  position: relative;
   padding: 96px;
+  z-index: 9999;
 }
 
 .downloads-group {

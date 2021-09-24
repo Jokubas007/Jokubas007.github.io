@@ -34,10 +34,9 @@
 	.app-content {
 		position: relative;
 		padding: 96px 96px;
-		background-color: #ffffff;
-		z-index: 0;
 		color: black;
 		font-style: normal;
+		z-index: 9999;
 		font-weight: 300;
 		letter-spacing: 0em;
 		text-align: left;

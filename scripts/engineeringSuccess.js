@@ -46,7 +46,7 @@ window.addEventListener(
     if (animationInViewport && !animationInProgress && animationLeftViewport) {
       animationInProgress = true;
       animationLeftViewport = false;
-      drawSineAnimation('overview-animation', 0.01, 6, () => {animationInProgress = false}, () => {});
+      drawSineAnimation('overview-animation', 3*0.01, 3, () => {animationInProgress = false}, () => {});
     }
   }
 );
