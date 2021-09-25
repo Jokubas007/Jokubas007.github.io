@@ -16,6 +16,7 @@
   color: white;
   overflow: hidden;
   z-index: -10;
+  width: 100%;
 }
 .background-children {
   z-index: 999999;
@@ -56,13 +57,15 @@
 }
 
 .content {
-  color: white;
   z-index: 9999;
 }
 
 #canvas-transition {
 	display: block;
-	position: fixed;
-	z-index: 50;
+	position: absolute;
+  width: 100vw;
+  height: 110vh;
+  z-index: 999;
+  image-rendering: crisp-edges;
+  filter: blur(5px);
 }
-

@@ -8,7 +8,7 @@ precision mediump float;
 uniform vec2 u_resolution;
 uniform float u_treshold;
 
-uniform sampler2D u_sprite; // ./transition.ppg
+uniform sampler2D u_sprite; // ../assets/transition/transition.png
 
 void main(){
     vec2 uv = gl_FragCoord.xy/u_resolution.xy;
