@@ -169,7 +169,7 @@ for(let i = 0; i < rows; i++){
 }
 
 circlesString = `
-  <svg viewBox="0 0 612 372" perserveAspectRatio="xMinYMid">
+  <svg viewBox="0 0 612 372">
     ${circlesString}
   </svg>
 `

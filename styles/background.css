@@ -64,8 +64,7 @@
 	display: block;
 	position: absolute;
   width: 100vw;
-  height: 110vh;
+  height: 100vh;
   z-index: 999;
   image-rendering: crisp-edges;
-  filter: blur(5px);
 }

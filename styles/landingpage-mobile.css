@@ -46,56 +46,51 @@
   }
 
   .landing-page-content .content-container:nth-child(2) > div {
-    width: 40%;
+    width: 80%;
     margin-left: 10%;
     margin-bottom: 60px;
     font-family: var(--main-font);
-    font-size: 36px;
+    font-size: 2.5vh;
     font-style: normal;
     font-weight: 300;
-    line-height: 40px;
     letter-spacing: 0em;
     text-align: left;
   }
 
   .landing-page-content .content-container:nth-child(2) > div > span {
     font-family: var(--secondary-font);
-    font-size: 36px;
+    font-size: 2.5vh;
     font-style: normal;
     font-weight: 800;
-    line-height: 40px;
     letter-spacing: 0em;
     text-align: left;
   }
 
   .landing-page-content .content-container:nth-child(3) > div {
-    width: 40%;
+    width: 80%;
     margin-left: 10%;
     font-family: var(--main-font);
-    font-size: 36px;
+    font-size: 2.5vh;
     font-style: normal;
     font-weight: 300;
-    line-height: 40px;
     letter-spacing: 0em;
     text-align: left;
   }
 
   .landing-page-content .content-container:nth-child(3) > div span {
     font-family: var(--secondary-font);
-    font-size: 36px;
+    font-size: 2.5vh;
     font-style: normal;
     font-weight: 800;
-    line-height: 40px;
     letter-spacing: 0em;
     text-align: left;
   }
 
   .landing-page-content .content-container:nth-child(3) > div h2 {
     font-family: var(--secondary-font);
-    font-size: 54px;
+    font-size: 4vh;
     font-style: normal;
     font-weight: 800;
-    line-height: 54px;
     letter-spacing: 0em;
     text-align: left;
     color: #FCCEC0;
@@ -106,10 +101,6 @@
     width: 80%;
     margin-left: 10%;
     margin-bottom: 60px;
-  }
-
-  .landing-page-content .content-container:nth-child(3) > div:first-child > div {
-    width: 50%;
   }
 
   .landing-page-content .content-container:nth-child(4) {
@@ -124,6 +115,7 @@
 
   .landing-page-content .content-container:nth-child(4) > .map-container {
     margin-bottom: 60px;
+    display: none;
   }
 
   .landing-page-content .content-container:nth-child(4) > div:last-child h3 {
@@ -131,10 +123,9 @@
     margin-bottom: 7px !important;
     color: #FCCEC0;
     font-family: var(--secondary-font);
-    font-size: 48px;
+    font-size: 3.5vh;
     font-style: normal;
     font-weight: 800;
-    line-height: 54px;
     letter-spacing: 0em;
     text-align: left;
   }
@@ -143,10 +134,9 @@
     margin: 0 !important;
     margin-bottom: 57px !important;
     font-family: var(--main-font);
-    font-size: 36px;
+    font-size: 2.5vh;
     font-style: normal;
     font-weight: 300;
-    line-height: 36px;
     letter-spacing: 0em;
     text-align: left;
   }
@@ -172,20 +162,18 @@
 
   .map-tooltip > div {
     font-family: var(--secondary-font);
-    font-size: 18px;
+    font-size: 1.5vh;
     font-style: normal;
     font-weight: 800;
-    line-height: 20px;
     letter-spacing: 0em;
     text-align: left;
   }
 
   .map-tooltip > table tr > th {
     font-family: var(--main-font);
-    font-size: 12px;
+    font-size: 0.8vh;
     font-style: normal;
     font-weight: 300;
-    line-height: 14px;
     letter-spacing: 0em;
     text-align: right;
     padding: 9px 0;
@@ -197,10 +185,9 @@
 
   .map-tooltip > table tr > td {
     font-family: var(--secondary-font);
-    font-size: 15px;
+    font-size: 1vh;
     font-style: normal;
     font-weight: 800;
-    line-height: 15px;
     letter-spacing: 0em;
     text-align: center;
     padding: 9px 0;
@@ -230,15 +217,15 @@
 
   .landing-page-content .content-container:nth-child(5) > h2 {
     font-family: var(--secondary-font);
-    font-size: 72px;
+    font-size: 5vh;
     font-style: normal;
     font-weight: 800;
-    line-height: 81px;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: center;
     color: #FCCEC0;
     margin: 0 !important;
     margin-bottom: 59px !important;
+    width: 100%;
   }
 
   .landing-page-content .content-container:nth-child(5) > div {
@@ -249,10 +236,9 @@
 
   .landing-page-content .content-container:nth-child(5) > div > div {
     font-family: var(--main-font);
-    font-size: 24px;
+    font-size: 2vh;
     font-style: normal;
     font-weight: 300;
-    line-height: 30px;
     letter-spacing: 0em;
     text-align: left;
   }
@@ -265,8 +251,119 @@
     margin-bottom: 60px;
   }
 
-  .circles-container svg {
-    width: 80vw;
-    margin-left: -15px;
+  .circles-container {
+    display: none;
+  }
+
+  .landing-page-content .solution-container {
+    padding: 96px !important;
+  }
+
+  .landing-page-content .solution-container > h2 {
+    width: 100%;
+    margin: 0 !important;
+    margin-bottom: 96px !important;
+    font-family: var(--secondary-font);
+    font-size: 7vh;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FCCEC0;
+  }
+
+  .landing-page-content .solution-container > div {
+    display: flex;
+    flex-direction: column-reverse;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox */
+    box-sizing: border-box;
+    margin-bottom: 80px;
+  }
+
+  .landing-page-content .solution-container > div:nth-child(3) {
+    flex-direction: column;
+  }
+
+  .landing-page-content .solution-container > div > img,  .landing-page-content .solution-container > div > div {
+    width: 100%;
+  }
+
+  .landing-page-content .solution-container > div > img {
+    margin-top: 10% !important;
+  }
+
+  .landing-page-content .solution-container p {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox */
+    box-sizing: border-box;
+    height: fit-content;
+    margin: 0 !important;
+  }
+
+  .landing-page-content .solution-container > div > div > h3 {
+    margin: 0 !important;
+    margin-bottom: 40px !important;
+    font-family: var(--secondary-font);
+    font-size: 5vh;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FCCEC0;
+    width: 100%;
+  }
+
+  .landing-page-content .solution-container > div > div {
+    font-family: var(--main-font);
+    font-size: 2.5vh;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .landing-page-content .useful-links-container > div {
+    display: flex;
+    margin: 0 10%;
+    margin-bottom: 96px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox */
+    box-sizing: border-box;
+    justify-content: space-between;
+  }
+
+  .landing-page-content .useful-links-container > div > a > img {
+    width: 16vw;
+    margin-bottom: 20px !important;
+  }
+
+  .landing-page-content .useful-links-container > div > a {
+    text-align: center;
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    font-size: 2.5vw;
+    color: #ffffff;
+    text-decoration: none;    
+  }
+
+  .landing-page-content .useful-links-container > h2 {
+    font-family: var(--secondary-font);
+    font-size: 6vh;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FCCEC0;
+    width: 100vw;
+    margin: 0 !important;
+  }
+
+  .ameba {
+    position: fixed;
+    width: 50%;
+    height: 50%;
   }
 }

@@ -6,7 +6,7 @@
 
   .landing-page-content .content-container {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
   }
 
@@ -27,41 +27,37 @@
   .landing-page-content .content-container .logo h1 {
     margin: 0 !important;
     font-family: var(--main-font);
-    font-size: 68px;
+    font-size: 10vh;
     font-style: normal;
     font-weight: 700;
-    line-height: 30px;
     letter-spacing: 0em;
     margin-bottom: 40px !important;
   }
 
   .landing-page-content .content-container .logo div {
     font-family: var(--main-font);
-    font-size: 36px;
+    font-size: 4vh;
     font-style: normal;
     font-weight: 300;
-    line-height: 45px;
     letter-spacing: 0em;
   }
 
   .landing-page-content .content-container:nth-child(2) > div {
     position: absolute;
-    width: 10%;
+    width: 20%;
     font-family: var(--main-font);
-    font-size: 18px;
+    font-size: 3vh;
     font-style: normal;
     font-weight: 300;
-    line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
   }
 
   .landing-page-content .content-container:nth-child(2) > div > span {
     font-family: var(--secondary-font);
-    font-size: 18px;
+    font-size: 3vh;
     font-style: normal;
     font-weight: 800;
-    line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
   }
@@ -78,32 +74,29 @@
 
   .landing-page-content .content-container:nth-child(3) > div {
     position: absolute;
-    width: 10%;
+    width: 20%;
     font-family: var(--main-font);
-    font-size: 18px;
+    font-size: 3vh;
     font-style: normal;
     font-weight: 300;
-    line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
   }
 
   .landing-page-content .content-container:nth-child(3) > div span {
     font-family: var(--secondary-font);
-    font-size: 18px;
+    font-size: 3vh;
     font-style: normal;
     font-weight: 800;
-    line-height: 24px;
     letter-spacing: 0em;
     text-align: left;
   }
 
   .landing-page-content .content-container:nth-child(3) > div h2 {
     font-family: var(--secondary-font);
-    font-size: 40px;
+    font-size: 6vh;
     font-style: normal;
     font-weight: 800;
-    line-height: 54px;
     letter-spacing: 0em;
     text-align: left;
     color: #FCCEC0;
@@ -118,7 +111,7 @@
   }
 
   .landing-page-content .content-container:nth-child(3) > div:first-child > div {
-    width: 33%;
+    width: 50%;
   }
 
   .landing-page-content .content-container:nth-child(3) > div:last-child {
@@ -143,10 +136,9 @@
     margin-bottom: 7px !important;
     color: #FCCEC0;
     font-family: var(--secondary-font);
-    font-size: 48px;
+    font-size: 5vh;
     font-style: normal;
     font-weight: 800;
-    line-height: 54px;
     letter-spacing: 0em;
     text-align: left;
   }
@@ -155,10 +147,9 @@
     margin: 0 !important;
     margin-bottom: 57px !important;
     font-family: var(--main-font);
-    font-size: 24px;
+    font-size: 3vh;
     font-style: normal;
     font-weight: 300;
-    line-height: 30px;
     letter-spacing: 0em;
     text-align: left;
   }
@@ -184,20 +175,18 @@
 
   .map-tooltip > div {
     font-family: var(--secondary-font);
-    font-size: 18px;
+    font-size: 2vh;
     font-style: normal;
     font-weight: 800;
-    line-height: 20px;
     letter-spacing: 0em;
     text-align: left;
   }
 
   .map-tooltip > table tr > th {
     font-family: var(--main-font);
-    font-size: 12px;
+    font-size: 1.2vh;
     font-style: normal;
     font-weight: 300;
-    line-height: 14px;
     letter-spacing: 0em;
     text-align: right;
     padding: 9px 0;
@@ -209,10 +198,9 @@
 
   .map-tooltip > table tr > td {
     font-family: var(--secondary-font);
-    font-size: 15px;
+    font-size: 1.5vh;
     font-style: normal;
     font-weight: 800;
-    line-height: 15px;
     letter-spacing: 0em;
     text-align: center;
     padding: 9px 0;
@@ -242,10 +230,9 @@
 
   .landing-page-content .content-container:nth-child(5) > h2 {
     font-family: var(--secondary-font);
-    font-size: 72px;
+    font-size: 10vh;
     font-style: normal;
     font-weight: 800;
-    line-height: 81px;
     letter-spacing: 0em;
     text-align: left;
     color: #FCCEC0;
@@ -256,14 +243,16 @@
   .landing-page-content .content-container:nth-child(5) > div {
     display: flex;
     align-items: center;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox */
+    box-sizing: border-box;
   }
 
   .landing-page-content .content-container:nth-child(5) > div > div {
     font-family: var(--main-font);
-    font-size: 24px;
+    font-size: 1.5vw;
     font-style: normal;
     font-weight: 300;
-    line-height: 30px;
     letter-spacing: 0em;
     text-align: left;
   }
@@ -273,6 +262,111 @@
   }
 
   .circles-container svg {
-    width: 50vw;
+    width: 40vw;
+  }
+
+  .landing-page-content .solution-container {
+    padding: 96px !important;
+  }
+
+  .landing-page-content .solution-container > h2 {
+    width: 100%;
+    margin: 0 !important;
+    margin-bottom: 96px !important;
+    font-family: var(--secondary-font);
+    font-size: 10vh;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FCCEC0;
+  }
+
+  .landing-page-content .solution-container > div {
+    display: flex;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox */
+    box-sizing: border-box;
+    margin-bottom: 80px;
+  }
+
+  .landing-page-content .solution-container > div > img,  .landing-page-content .solution-container > div > div {
+    width: 45%;
+  }
+
+  .landing-page-content .solution-container > div > img {
+    margin-right: 10% !important;
+  }
+
+  .landing-page-content .solution-container p {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox */
+    box-sizing: border-box;
+    height: fit-content;
+    margin: 0 !important;
+  }
+
+  .landing-page-content .solution-container > div > div > h3 {
+    margin: 0 !important;
+    margin-bottom: 40px !important;
+    font-family: var(--secondary-font);
+    font-size: 7vh;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FCCEC0;
+  }
+
+  .landing-page-content .solution-container > div > div {
+    font-family: var(--main-font);
+    font-size: 2.5vh;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .landing-page-content .useful-links-container > div {
+    display: flex;
+    margin: 0 96px;
+    margin-bottom: 96px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox */
+    box-sizing: border-box;
+    justify-content: space-between;
+  }
+
+  .landing-page-content .useful-links-container > div > a > img {
+    width: 16vw;
+    margin-bottom: 20px !important;
+  }
+
+  .landing-page-content .useful-links-container > div > a {
+    text-align: center;
+    font-family: var(--main-font);
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0em;
+    font-size: 2.5vh;
+    color: #ffffff;
+    text-decoration: none;    
+  }
+
+  .landing-page-content .useful-links-container > h2 {
+    font-family: var(--secondary-font);
+    font-size: 7vh;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FCCEC0;
+    width: 100vw;
+  }
+
+  .ameba {
+    position: fixed;
+    width: 50%;
+    height: 50%;
   }
 }

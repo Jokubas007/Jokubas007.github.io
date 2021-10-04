@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <link rel="stylesheet" href="../styles/contentpage-desktop.css">
+    <link rel="stylesheet" href="../styles/contentpage-mobile.css">
+    <link rel="stylesheet" href="../styles/sideindex-desktop.css">
+    <link rel="stylesheet" href="../styles/sideindex-mobile.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/navmenu-desktop.css">
+    <link rel="stylesheet" href="../styles/navmenu-mobile.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-desktop.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
+    <link rel="stylesheet" href="../styles/button-pill.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/table.css">
+    <link rel="stylesheet" href="../styles/bypass-block.css">
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://2021.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </head>
+  <body>
+    
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a href="#main-content" class="bypass-block-link visually-hidden visible-when-focused">Skip to main content</a>
+        <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
+          <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
+          AmeBye
+        </a>
+        <ul class="nav-menu"></ul>
+      </nav>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <div class="background">
+      <canvas id="background-canvas"></canvas>
+      <canvas
+        id="canvas-transition"
+      ></canvas>
+      <div class="app-header">
+        <h1 id="title">MODEL</h1>
+        <div id="img" class="app-header-image-wrapper">
+          <img alt="Header" src="../assets/images/placeholder.png" />
+        </div>
+      </div>
+      <div id="main-content" class="app-content">
+        <div class="app-content-text">
+          <div class="content-page-container">
+            <h3 class="index-headline">Motivation</h3>
+            <p>
+              We engineered a metabolic pathway for naringenin production in <i>E. coli Nissle 1917</i>
+              in order to produce the probiotics for the prevention part of our project. 
+              We performed mathematical analysis in order to expedite the engineering process
+              by deciding what promoters to use based on the model for the pathway we derived. 
+            </p>
+            <h3 class="index-headline">Derivation</h3>
+            <p>
+              Creating a model that would be able to accurately estimate the amount of naringenin
+              produced by the pathway is an infeasible task before doing any practical experiments.
+              However, we are able to write down a simple model with which we could study the speed
+              of the reactions and that would help us decide on the strength of promoters that should be
+              used. 
+            </p>
+            <p>
+              To this end, we use the staple of modeling in synthetic biology:
+              Michaelis–Menten kinetics. That is we model the following type of enzymatic reaction:
+              $$[E] + [S] \leftrightarrows [ES] \rightarrow [E] + [P],$$
+              with differential equations:
+              $$\frac{d [P]}{dt} = k_{cat}[E]\frac{[P]}{K_m + [P]},$$
+              $$\frac{d [S]}{dt} = -k_{cat}[E]\frac{[P]}{K_m + [P]},$$
+              here \([E]\), \([S]\), \([P]\) are the concentrations of enzyme, substrate and product
+              respectively (and \([x]\) is going to denote the concentration of species \(x\) in all that follows),
+              \(k_{cat}\) is a constant called the turnover number and \(K_m\) is a constant
+              that is called Michaelis constant.
+            </p>
+            <p>
+              In order to model the concentration of mRNA and enzymes, we use the following differential equations:
+              $$\frac{d[mRNA]}{dt} = \alpha_{mRNA} - \beta_{mRNA}[mRNA],$$
+              $$\frac{d[Enzyme]}{dt} = \alpha_{enzyme}[mRNA] - \beta_{enzyme}[Enzyme],$$
+              here \(\beta\)’s denote the decay rates, \(\alpha_{mRNA}\) denotes the transcription
+              rate and \(\alpha_{enzyme}\) denotes the translation rate.
+            </p>
+            <p>
+              Our team measured the strengths of candidate promoters relative to each other.
+              In other words, we measured how many times a specific promoter is stronger or
+              weaker than the promoter that was used as the positive control, as can be seen from <b>Table 1</b>.
+            </p>
+            <p>
+              We would like this measurement to be reflected in our model.
+              Thus, we denote some base transcription rate (specified later) as \(\zeta\) and write:
+              $$\alpha_{mRNA} = \gamma_{mRNA}\zeta.$$
+            </p>
+            <p>
+              Now, our goal is to model the pathway depicted in <b>Figure 1</b>.
+            </p>
+            <div class="figure-container">
+              <img src="../assets/images/T--Vilnius-Lithuania--Naringenin_synthesis.png" id="Naringenin-pathway-figure" alt="" />
+              <div><b>Figure 1</b><b>.</b> Naringenin synthesis pathway.</div>
+            </div>
+            <p>
+              The pathway can be expressed by the following chemical reactions:
+              \begin{equation}
+              \emptyset \rightarrow mRNA(TAL) \rightarrow \emptyset,
+              \end{equation}
+              \begin{equation}
+              \emptyset \rightarrow mRNA(4CL) \rightarrow \emptyset,
+              \end{equation}
+              \begin{equation}
+              \emptyset \rightarrow mRNA(CHS) \rightarrow \emptyset,
+              \end{equation}
+              \begin{equation}
+              \emptyset \rightarrow mRNA(CHI) \rightarrow \emptyset,
+              \end{equation}
+              \begin{equation}
+              mRNA(TAL) \rightarrow mRNA(TAL) + TAL,
+              \end{equation}
+              \begin{equation}
+              TAL \rightarrow \emptyset,
+              \end{equation}
+              \begin{equation}
+              mRNA(4CL) \rightarrow mRNA(4CL) + 4CL,
+              \end{equation}
+              \begin{equation}
+              4CL \rightarrow \emptyset,
+              \end{equation}
+              \begin{equation}
+              mRNA(CHS) \rightarrow mRNA(CHS) + CHS,
+              \end{equation}
+              \begin{equation}
+              CHS \rightarrow \emptyset,
+              \end{equation}
+              \begin{equation}
+              mRNA(CHI) \rightarrow mRNA(CHI) + CHI,
+              \end{equation}
+              \begin{equation}
+              CHI \rightarrow \emptyset,
+              \end{equation}
+              $$TYR + TAL \rightarrow CACID + TAL,$$ 
+              $$CACID + 4CL + CoA \rightarrow CCoA + 4CL,$$ 
+              $$CCoA + CHS + 3 \times MalCoA \rightarrow NCHAL + CHS + 4 \times CoA,$$ 
+              $$NCHAL + CHI \rightarrow NAR + CHI,$$ 
+              $$NAR \rightarrow \emptyset.$$
+            </p>
+            <p>
+              If we assume that there is an infinite (or alternatively very large) amount of tyrosine,
+              CoA and Mal-CoA (if we wished to model the amount of naringenin produced,
+              then assumption that the concentration of Mal-CoA is infinite would be incorrect as
+              this seems to be the major bottleneck of the pathway. However here we only wish to
+              study the reaction speeds, thus we believe that the assumption is valid for this purpose),
+              we can model these reactions by the following system of differential equations:
+              \begin{equation}
+                \frac{d(TAL)}{dt} = \gamma_{TAL}\zeta - \beta_{m(TAL)}(TAL),
+              \end{equation}
+              \begin{equation}
+                \frac{d(4CL)}{dt} = \gamma_{4CL}\zeta - \beta_{m(4CL)}(4CL),
+              \end{equation}
+              \begin{equation}
+                \frac{d(CHS)}{dt} = \gamma_{CHS}\zeta - \beta_{m(CHS)}(CHS),
+              \end{equation}
+              \begin{equation}
+                \frac{d(CHI)}{dt} = \gamma_{CHI}\zeta - \beta_{m(CHI)}(CHI),
+              \end{equation}
+              \begin{equation}
+                \frac{d[TAL]}{dt} = \alpha_{TAL}(TAL) - \beta_{TAL}[TAL],
+              \end{equation}
+              \begin{equation}
+                \frac{d[4CL]}{dt} = \alpha_{4CL}(4CL) - \beta_{4CL}[4CL],
+              \end{equation}
+              \begin{equation}
+                \frac{d[CHS]}{dt} = \alpha_{CHS}(CHS) - \beta_{CHS}[CHS],
+              \end{equation}
+              \begin{equation}
+                \frac{d[CHI]}{dt} = \alpha_{CHI}(CHI) - \beta_{CHI}[CHI],
+              \end{equation}
+              $$\frac{d[CACID]}{dt} = k_{TAL}[TAL] - k_{4CL}[4CL]\frac{[CACID]}{K_{4CL} + [CACID]},$$
+              $$\frac{d[CCoA]}{dt} = k_{4CL}[4CL]\frac{[CACID]}{K_{4CL} + [CACID]} - k_{CHS}[CHS]\frac{[CCoA]}{K_{CHS} + [CCoA]},$$
+              $$\frac{d[NCHAL]}{dt} = k_{CHS}[CHS]\frac{[CCoA]}{K_{CHS} + [CCoA]} - k_{CHI}[CHI]\frac{[NCHAL]}{K_{CHI} + [NCHAL]},$$
+              $$\frac{d[NCHAL]}{dt} = k_{CHI}[CHI]\frac{[NCHAL]}{K_{CHI} + [NCHAL]} - \beta_{NAR}[NAR],$$
+              here \((x)\) denotes \([mRNA(x)]\), small \(k\)’s denote the appropriate turnover numbers
+              and big \(K\)’s denote the appropriate Michaelis constants.
+            </p>
+            <p>
+              This model is overly complicated for our purposes. We can reduce it by noting that the reactions
+              \((1) - (12)\) happen on a faster time scale then the rest. Therefore, we can assume that the reactions
+              \((1) - (12)\) are in the steady state for the entirety of the process. With this assumption we have
+              additional conditions:
+              \begin{equation}
+                \frac{d(TAL)}{dt} = 0,
+              \end{equation}
+              \begin{equation}
+                \frac{d(4CL)}{dt} = 0,
+              \end{equation}
+              \begin{equation}
+                \frac{d(CHS)}{dt} = 0,
+              \end{equation}
+              \begin{equation}
+                \frac{d(CHI)}{dt} = 0,
+              \end{equation}
+              \begin{equation}
+                \frac{d[TAL]}{dt} = 0,
+              \end{equation}
+              \begin{equation}
+                \frac{d[4CL]}{dt} = 0,
+              \end{equation}
+              \begin{equation}
+                \frac{d[CHS]}{dt} = 0,
+              \end{equation}
+              \begin{equation}
+                \frac{d[CHI]}{dt} = 0.
+              \end{equation}
+            </p>
+            <p>
+              By combining \((13)-(16)\) with \((21)-(24)\) we get
+              $$(x) = \frac{\gamma\zeta}{\beta_{mRNA}},$$
+              and then by combining \((17)-(20)\) with \((25)-(28)\) we get 
+              $$[x] = \frac{\alpha\gamma\zeta}{\beta_{mRNA}\beta_{enzyme}}.$$
+            </p>
+            <p>
+              We can additionally assume that translation rates and decay rates
+              of mRNA and enzyme are similar for different species. Then by taking
+              the base transcription rate \(\zeta\) such that
+              $$\frac{\alpha\zeta}{\beta_{mRNA}\beta_{enzyme}}$$
+              is equal to 1 we can reduce the original model to a simpler model with less equations:
+              $$\frac{d[CACID]}{dt} = k_{TAL}\gamma_{TAL} - k_{4CL}\gamma_{4CL}\frac{[CACID]}{K_{4CL} + [CACID]},$$
+              $$\frac{d[CCoA]}{dt} = k_{4CL}\gamma_{4CL}\frac{[CACID]}{K_{4CL} + [CACID]} - k_{CHS}\gamma_{CHS}\frac{[CCoA]}{K_{CHS} + [CCoA]},$$
+              $$\frac{d[NCHAL]}{dt} = k_{CHS}\gamma_{CHS}\frac{[CCoA]}{K_{CHS} + [CCoA]} - k_{CHI}\gamma_{CHI}\frac{[NCHAL]}{K_{CHI} + [NCHAL]},$$
+              $$\frac{d[NAR]}{dt} = k_{CHI}\gamma_{CHI}\frac{[NCHAL]}{K_{CHI} + [NCHAL]} - \beta_{NAR}[NAR].$$
+            </p>
+            <h3 class="index-headline">Analysis</h3>
+            <p>
+              We see that in the steady state we have
+              $$[NAR] = \frac{k_{TAL}\gamma_{TAL}}{\beta_{NAR}}.$$
+              This makes intuitive sense - the more substrate one puts in,
+              the more product one expects to get. However, the steady-state might
+              take an exorbitant amount of time to reach depending on the parameters.
+              Thus, we decided to study the system after simulating it for 16 hours
+              (taking the initial concentrations of all proteins in the pathway to be 0)
+              as these are the timescales that the  performance of the engineered pathway would be measured in.
+            </p>
+            <p>
+              Next, we researched the literature to compile probable values
+              for turnover numbers and Michaelis constants. We came up with the following figures:
+            </p>
+            <div class="table-container">
+              <div><b>Table 2</b><b>.</b> Turnover numbers (\(k_{cat}\)).</div>
+              <table class="table table-bordered table-hover table-condensed">
+                <thead>
+                  <tr>
+                    <th>Enzyme</th>
+                    <th>Values (1/s)</th>
+                    <th>Average (1/s)</th>
+                    <th>Reference</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Tyrosine ammonia-lyase (TAL)</td>
+                    <td>107</td>
+                    <td>119</td>
+                    <td><b>[1]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>114</td>
+                    <td></td>
+                    <td><b>[1]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>115</td>
+                    <td></td>
+                    <td><b>[1]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>139</td>
+                    <td></td>
+                    <td><b>[1]</b></td>
+                  </tr>
+                  <tr>
+                    <td>4-coumarate-CoA ligase (4CL)</td>
+                    <td>0.2163</td>
+                    <td>0.3354</td>
+                    <td><b>[2]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.2205</td>
+                    <td></td>
+                    <td><b>[2]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.7821</td>
+                    <td></td>
+                    <td><b>[2]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.1225</td>
+                    <td></td>
+                    <td><b>[2]</b></td>
+                  </tr>
+                  <tr>
+                    <td>Chalcone synthase (CHS)</td>
+                    <td>0.045</td>
+                    <td>0.0575</td>
+                    <td><b>[3]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.178</td>
+                    <td></td>
+                    <td><b>[4]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.11</td>
+                    <td></td>
+                    <td><b>[4]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.085</td>
+                    <td></td>
+                    <td><b>[4]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.05</td>
+                    <td></td>
+                    <td><b>[4]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.0202</td>
+                    <td></td>
+                    <td><b>[5]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.0167</td>
+                    <td></td>
+                    <td><b>[6]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.042</td>
+                    <td></td>
+                    <td><b>[7]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.007</td>
+                    <td></td>
+                    <td><b>[7]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.021</td>
+                    <td></td>
+                    <td><b>[8]</b></td>
+                  </tr>
+                  <tr>
+                    <td>Chalcone isomerase (CHI)</td>
+                    <td>5</td>
+                    <td>89.5</td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>7.8</td>
+                    <td></td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>9.6</td>
+                    <td></td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>35.2</td>
+                    <td></td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>56.9</td>
+                    <td></td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>130.3</td>
+                    <td></td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>134.7</td>
+                    <td></td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>197.7</td>
+                    <td></td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>228.2</td>
+                    <td></td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="table-container">
+              <div><b>Table 3</b><b>.</b> Michaelis constants (\(K_{M}\)).</div>
+              <table class="table table-bordered table-hover table-condensed">
+                <thead>
+                  <tr>
+                    <th>Enzyme</th>
+                    <th>Values (mM)</th>
+                    <th>Average (mM)</th>
+                    <th>Reference</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>4-coumarate-CoA ligase (4CL)</td>
+                    <td>0.389</td>
+                    <td>0.276</td>
+                    <td><b>[2]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.155</td>
+                    <td></td>
+                    <td><b>[2]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.283</td>
+                    <td></td>
+                    <td><b>[2]</b></td>
+                  </tr>
+                  <tr>
+                    <td>Chalcone synthase (CHS)</td>
+                    <td>0.0049</td>
+                    <td>0.0049</td>
+                    <td><b>[7]</b></td>
+                  </tr>
+                  <tr>
+                    <td>Chalcone isomerase (CHI)</td>
+                    <td>0.0024</td>
+                    <td>0.007</td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.0048</td>
+                    <td></td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.0048</td>
+                    <td></td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.0061</td>
+                    <td></td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.007</td>
+                    <td></td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.0085</td>
+                    <td></td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.0086</td>
+                    <td></td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.0099</td>
+                    <td></td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>0.0105</td>
+                    <td></td>
+                    <td><b>[9]</b></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              From <b>Table 1</b> we see that the reaction producing naringenin chalcone seems to
+              be around 10 times slower than the second slowest one in the pathway.
+              This makes sense since this is a sequential reaction involving 4 molecules.
+              Seeing this, we hypothesized that this reaction is the major bottleneck of the pathway.
+              That is, the only parameters that have a major impact on the output of the model are 
+              \(k_{CHS}\) and \(\gamma_{CHS}\).
+            </p>
+            <p>
+              We validated this hypothesis by performing a simple sensitivity analysis as follows:
+            </p>
+            <ol>
+              <li>
+                Generate 10000 samples of parameter values by uniformly sampling from the intervals detailed
+                in <b>Table 4</b>. (The average value for \(\beta_{NAR}\) was derived from <b>[10]</b>).
+              </li>
+              <li>Simulate the model with generated random parameters for 16 hours and save the concentration of naringenin.</li>
+              <li>Compute the correlation coefficients between the parameters and concentration of naringenin.</li>
+            </ol>
+            <div class="table-container">
+              <div><b>Table 4</b><b>.</b> Parameter values used in sensitivity analysis.</div>
+              <table class="table table-bordered table-hover table-condensed">
+                <thead>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Value range</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>\(\gamma_{TAL}\)</td>
+                    <td>\(0.33 - 3\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(\gamma_{4CL}\)</td>
+                    <td>\(0.33 - 3\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(\gamma_{CHS}\)</td>
+                    <td>\(0.33 - 3\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(\gamma_{CHI}\)</td>
+                    <td>\(0.33 - 3\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(\beta_{NAR}\)</td>
+                    <td>\(3.6\mathrm{e}{-5} \pm 3.6\mathrm{e}{-6}  \: (1/s)\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(k_{TAL}\)</td>
+                    <td>\(119 \pm 11.9  \: (1/s)\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(k_{4CL}\)</td>
+                    <td>\(0.3354 \pm 0.034  \: (1/s)\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(k_{CHS}\)</td>
+                    <td>\(0.0575 \pm 0.006  \: (1/s)\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(k_{CHI}\)</td>
+                    <td>\(89.5 \pm 8.95  \: (1/s)\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(K_{4CL}\)</td>
+                    <td>\(0.276 \pm 0.028  \: (mM)\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(K_{CHS}\)</td>
+                    <td>\(0.0049 \pm 0.0005  \: (mM)\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(K_{CHI}\)</td>
+                    <td>\(0.007 \pm 0.0007  \: (mM)\)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              The results of sensitivity analysis are presented in <b>Table 5</b>.
+            </p>
+            <div class="table-container">
+              <div><b>Table 5</b><b>.</b> Results of sensitivity analysis.</div>
+              <table class="table table-bordered table-hover table-condensed">
+                <thead>
+                  <tr>
+                    <th>Parameter</th>
+                    <th>Correlation coefficient</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>\(\gamma_{TAL}\)</td>
+                    <td>\(0.0242\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(\gamma_{4CL}\)</td>
+                    <td>\(0.0339\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(\gamma_{CHS}\)</td>
+                    <td>\(0.9833\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(\gamma_{CHI}\)</td>
+                    <td>\(0.0008\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(\beta_{NAR}\)</td>
+                    <td>\(-0.0938\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(k_{TAL}\)</td>
+                    <td>\(-0.0113\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(k_{4CL}\)</td>
+                    <td>\(0.0041\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(k_{CHS}\)</td>
+                    <td>\(0.1042\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(k_{CHI}\)</td>
+                    <td>\(-0.0009\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(K_{4CL}\)</td>
+                    <td>\(-0.0161\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(K_{CHS}\)</td>
+                    <td>\(-0.0199\)</td>
+                  </tr>
+                  <tr>
+                    <td>\(K_{CHI}\)</td>
+                    <td>\(-0.0096\)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              The sensitivity analysis confirmed our hypothesis. We note
+              that it also showed that another important parameter is the decay rate of naringenin.
+            </p>
+            <h3 class="index-headline">Conclusion</h3>
+            <p>
+              We derived a simple mathematical model for the naringenin pathway that our team wanted to
+              implement <i>in vivo</i>. By performing sensitivity analysis, we determined that the
+              reaction which turns Coumaryl-CoA to naringenin, chalcone synthase is the bottleneck
+              of the naringenin synthesis process. Thus we decided to use a pSlpA that we noticed by
+              analysing possible promoters for <i>E.coli</i> and <i>L.paracasei</i> . Furthermore,
+              BBa_J23101, also known as one from the Anderson's collection promoter, was compared
+              and picked up for other naringenin pathway protein expression (). 
+            </p>
+          </div>
+          <div class="references-wrapper">
+            <div class="breaker"></div>
+            <h2>References</h2>
+            <div class="references-container">
+              <div class="number">1.</div>
+              <div>
+                Zhou, S., Liu, P., Chen, J., Du, G., Li, H., Zhou, J. (2016).
+                Characterization of mutants of a tyrosine ammonia-lyase from Rhodotorula glutinis.
+                Appl. Microbiol. Biotechnol. 100, 10443-10452.
+                <a href="https://www.pubmed.ncbi.nlm.nih.gov/27401923">To the article.</a>
+              </div>
+              <div class="number">2.</div>
+              <div>
+                Gao, S., Yu, H. N., Xu, R. X., Cheng, A. X., & Lou, H. X. (2015).
+                Cloning and functional characterization of a 4-coumarate CoA ligase
+                from liverwort Plagiochasma appendiculatum. Phytochemistry, 111, 48–58.
+                <a href="https://pubmed.ncbi.nlm.nih.gov/25593011/">To the article.</a>
+              </div>
+              <div class="number">3.</div>
+              <div>
+                Guo, H.-L., Yang, Y.-D., Ma, Y.-D., Liu, W.-B., Feng, J., Luo, Z.-Q., … Ma, L.-Q. (2016).
+                A bifunctional type III polyketide synthase from raspberry (Rubus idaeus L.) with both chalcone
+                synthase and benzalacetone synthase activity. Journal of Plant Biochemistry and Biotechnology, 26(1), 80–90.
+                <a href="https://link.springer.com/article/10.1007/s13562-016-0365-7">To the article.</a>
+              </div>
+              <div class="number">4.</div>
+              <div>
+                Shen, Y., Li, X., Chai, T., & Wang, H. (2016).
+                Outer-sphere residues influence the catalytic activity of a chalcone synthase
+                from Polygonum cuspidatum. FEBS open bio, 6(6), 610–618.
+                <a href="https://pubmed.ncbi.nlm.nih.gov/27419064/">To the article.</a>
+              </div>
+              <div class="number">5.</div>
+              <div>
+                Stewart, C., Jr, Woods, K., Macias, G., Allan, A. C., Hellens, R. P., & Noel, J. P. (2017).
+                Molecular architectures of benzoic acid-specific type III polyketide synthases.
+                Acta crystallographica. Section D, Structural biology, 73(Pt 12), 1007–1019. 
+                <a href="https://pubmed.ncbi.nlm.nih.gov/29199980/">To the article.</a>
+              </div>
+              <div class="number">6.</div>
+              <div>
+                Abe, I., Watanabe, T., & Noguchi, H. (2004).
+                Enzymatic formation of long-chain polyketide pyrones by plant type III polyketide synthases.
+                Phytochemistry, 65(17), 2447–2453. 
+                <a href="https://pubmed.ncbi.nlm.nih.gov/15381408/">To the article.</a>
+              </div>
+              <div class="number">7.</div>
+              <div>
+                Liu, B., Falkenstein-Paul, H., Schmidt, W., & Beerhues, L. (2003).
+                Benzophenone synthase and chalcone synthase from Hypericum androsaemum
+                cell cultures: cDNA cloning, functional expression, and site-directed
+                mutagenesis of two polyketide synthases. The Plant journal : for cell
+                and molecular biology, 34(6), 847–855.
+                <a href="https://pubmed.ncbi.nlm.nih.gov/12795704/">To the article.</a>
+              </div>
+              <div class="number">8.</div>
+              <div>
+                Morita, H., Takahashi, Y., Noguchi, H., & Abe, I. (2000).
+                Enzymatic formation of unnatural aromatic polyketides by chalcone synthase.
+                Biochemical and biophysical research communications, 279(1), 190–195. 
+                <a href="https://pubmed.ncbi.nlm.nih.gov/11112437/">To the article.</a>
+              </div>
+              <div class="number">9.</div>
+              <div>
+                Park, S. H., Lee, C. W., Cho, S. M., Lee, H., Park, H., Lee, J., & Lee, J. H. (2018).
+                Crystal structure and enzymatic properties of chalcone isomerase from
+                the Antarctic vascular plant Deschampsia antarctica Desv. PloS one, 13(2), e0192415.  
+                <a href="https://pubmed.ncbi.nlm.nih.gov/29394293/">To the article.</a>
+              </div>
+              <div class="number">10.</div>
+              <div>
+                Kanaze, F. I., Bounartzi, M. I., Georgarakis, M., & Niopas, I. (2006).
+                Pharmacokinetics of the citrus flavanone aglycones hesperetin and naringenin after
+                single oral administration in human subjects. European Journal of Clinical Nutrition, 61(4), 472–477. 
+                <a href="https://www.nature.com/articles/1602543">To the article.</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index-container">
+          <div class="index-header"></div>
+          <div class="index-content"></div>
+        </div>
+      </div>
+      <footer>
+        <div class="logo-igem">
+          <object data="../assets/logos/T--Vilnius-Lithuania--iGEM-2021.svg"> </object>
+        </div>
+        <div class="social-container">
+          <div>FOLLOW US</div>
+          <div>
+            <a class="placeholder-social-icon" href="https://www.facebook.com/VilniusiGEM">
+              <img src="../assets/icons/facebook.svg" />
+            </a>
+            <a class="placeholder-social-icon" href="https://www.instagram.com/igem_vilnius/">
+              <img src="../assets/icons/instagram.svg" />
+            </a>
+            <a class="placeholder-social-icon" href="https://www.linkedin.com/company/vilnius-igem/">
+              <img src="../assets/icons/linkedin.svg" />
+            </a>
+          </div>
+        </div>
+        <div class="mail-container">
+          <div>CONTACT US</div>
+          <a href="mailto:info@vilniusigem.lt">info@vilniusigem.lt</a>
+        </div>
+        <div class="grid-sponsors">
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--VU.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Termofisher.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/CityOfVilnius.svg"> </object>
+            </div>
+          </div>
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--GMC.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Nanodiagnostika.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Telesoftas.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Kopicentras.svg"> </object>
+            </div>
+          </div>
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--SnapGene.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Laborama.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Biotecha.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Grida.svg"> </object>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../scripts/navigationTabs.js"></script>
+    <script src="../scripts/background.js"></script>
+    <script src="../scripts/contentpage.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script>
+      contentPage(
+        "Sections",
+        true,
+        300,
+      )
+    </script>
+    <script src="../scripts/GlslCanvas.js"></script>
+    <script src="../scripts/backgroundTransition.js"></script>
+  </body>
+</html>

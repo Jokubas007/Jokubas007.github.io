@@ -15,10 +15,19 @@
     <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
     <link rel="stylesheet" href="../styles/button-pill.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/bypass-block.css">
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://2021.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </head>
   <body>
+    
     <div class="navbar-container">
       <nav class="navbar">
+        <a href="#main-content" class="bypass-block-link visually-hidden visible-when-focused">Skip to main content</a>
         <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
           <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
           AmeBye
@@ -40,11 +49,16 @@
           <img alt="Header" src="../assets/images/placeholder.png" />
         </div>
       </div>
-      <div class="app-content">
+      <div id="main-content" class="app-content">
         <div class="app-content-text">
           <div class="content-page-container">
             <h3 class="index-headline">Headline 1</h3>
             <p>
+              You might recognise this famous protozoan - an amoeba - from Biology textbooks. Although it looks fair and harmless, don't get fooled: it can be hazardous. More precisely, <i>Entamoeba histolytica</i> species causes a disease called <b>amebiasis</b>. When <i>E. histolytica</i> enters the human body through contaminated water, food or hands, it turns into trophozoites - a metabolically active form. Trophozoites can appear in two types: 
+              <ul>
+              <li><i>Forma minuta</i> causes asymptomatic infection and has no invasive tendencies. In some cases, it can progress to forma magna. We are targeting this form with preventive probiotics.</li>
+              <li><i>Forma magna</i> causes intestinal infection - amebic colitis. It has an invasive tendency that leads to systemic infection. Complications occur in various parenchymal organs and sometimes leads to death. We are targeting forma magna with a rapid and specific detection tool.</li>
+              </ul>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
               ac enim id metus rutrum blandit sed non dolor. Pellentesque
               feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim,
@@ -141,6 +155,20 @@
               <img src="../assets/images/placeholder.png" id="Figure1" alt="" />
               <div><b>Figure 1</b><b>.</b> Description</div>
             </div>
+            <h3 class="index-headline">Math!!!!</h3>
+            <p>
+              MathJax is cool 
+              $$\sum_{n=0}^{\infty} \frac{x^n}{n!}$$
+
+              $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+
+              $$
+              \begin{equation}
+              \sum_{n=0}^{\infty} \frac{x^n}{n!}
+              \end{equation}
+              $$
+            </p>
+            $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
             <h3 class="index-headline">Headline 3</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
@@ -194,9 +222,15 @@
         <div class="social-container">
           <div>FOLLOW US</div>
           <div>
-            <div class="placeholder-social-icon"></div>
-            <div class="placeholder-social-icon"></div>
-            <div class="placeholder-social-icon"></div>
+            <a class="placeholder-social-icon" href="https://www.facebook.com/VilniusiGEM">
+              <img src="../assets/icons/facebook.svg" />
+            </a>
+            <a class="placeholder-social-icon" href="https://www.instagram.com/igem_vilnius/">
+              <img src="../assets/icons/instagram.svg" />
+            </a>
+            <a class="placeholder-social-icon" href="https://www.linkedin.com/company/vilnius-igem/">
+              <img src="../assets/icons/linkedin.svg" />
+            </a>
           </div>
         </div>
         <div class="mail-container">
@@ -205,34 +239,43 @@
         </div>
         <div class="grid-sponsors">
           <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--VU.svg"> </object>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--VU.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Termofisher.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/CityOfVilnius.svg"> </object>
+            </div>
           </div>
           <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--GMC.svg"> </object>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--GMC.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Nanodiagnostika.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Telesoftas.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Kopicentras.svg"> </object>
+            </div>
           </div>
           <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--SnapGene.svg"> </object>
-          </div>
-          <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--Termofisher.svg"> </object>
-          </div>
-          <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--Nanodiagnostika.svg"> </object>
-          </div>
-          <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--Laborama.svg"> </object>
-          </div>
-          <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--Telesoftas.svg"> </object>
-          </div>
-          <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--Biotecha.svg"> </object>
-          </div>
-          <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--Kopicentras.svg"> </object>
-          </div>
-          <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--Grida.svg"> </object>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--SnapGene.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Laborama.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Biotecha.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Grida.svg"> </object>
+            </div>
           </div>
         </div>
       </footer>

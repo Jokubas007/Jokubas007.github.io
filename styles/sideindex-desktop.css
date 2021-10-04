@@ -101,6 +101,7 @@
   .index-content > .figures > img {
     width: 292px;
     height: 154px;
+    object-fit: contain;
   }
 
   .index-content > .figures > h3 {

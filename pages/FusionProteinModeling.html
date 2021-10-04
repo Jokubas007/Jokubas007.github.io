@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <link rel="stylesheet" href="../styles/contentpage-desktop.css">
+    <link rel="stylesheet" href="../styles/contentpage-mobile.css">
+    <link rel="stylesheet" href="../styles/sideindex-desktop.css">
+    <link rel="stylesheet" href="../styles/sideindex-mobile.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/navmenu-desktop.css">
+    <link rel="stylesheet" href="../styles/navmenu-mobile.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-desktop.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
+    <link rel="stylesheet" href="../styles/button-pill.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/table.css">
+    <link rel="stylesheet" href="../styles/bypass-block.css">
+  </head>
+  <body>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a href="#main-content" class="bypass-block-link visually-hidden visible-when-focused">Skip to main content</a>
+        <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
+          <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
+          AmeBye
+        </a>
+        <ul class="nav-menu"></ul>
+      </nav>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <div class="background">
+      <canvas id="background-canvas"></canvas>
+      <canvas
+        id="canvas-transition"
+      ></canvas>
+      <div class="app-header">
+        <h1 id="title" style="top: 150px;">FUSION PROTEIN MODELING</h1>
+        <div id="img" class="app-header-image-wrapper">
+          <img alt="Header" src="../assets/images/placeholder.png" />
+        </div>
+      </div>
+      <div id="main-content" class="app-content">
+        <div class="app-content-text">
+          <div class="content-page-container">
+            <h3 class="index-headline">Motivation</h3>
+            <p>
+              We decided to create probiotics that synthesize <b>naringenin</b> - a 
+              compound that belongs to flavonoids and has an antiprotozoal activity 
+              against <i>Entamoeba histolytica.</i> The synthesis of naringenin takes 
+              place in four reaction steps that are catalyzed by four enzymes: TAL 
+              (tyrosine ammonia-lyase from <i>Herpetosiphon aurantiacus</i>), 4CL 
+              (4-coumarate-CoA ligase 2 from <i>Glycine max</i>), CHS (chalcone synthase from 
+              <i>Arabidopsis thaliana</i>), and CHI (chalcone isomerase from <i>Medicago sativa</i>)[34].  
+              Although, a high concentration of the compound is needed to have the desired 
+              effect on our target amoeba species. Therefore we came up with an idea to 
+              increase the flavonoid synthesis by boosting the bottleneck reactions catalyzed 
+              by proteins <b>4CL </b>and <b>CHS</b> by linking the two mentioned proteins together. 
+              Additionally, we were interested in checking whether the <b>shorter distance</b> between 
+              the active sites of the fused proteins provides <b>higher efficiency</b> of the reaction 
+              measured by the higher concentration of produced naringenin. For this purpose, we needed 
+              to determine what kind of structure this fusion protein complex would have, from which 
+              we could calculate the distance between active sites of the enzymes.
+            </p>
+            <h3 class="index-headline">Connection to synthetic biology</h3>
+            <p>
+              Synthetic biology allows scientists to reach beyond naturally evolved 
+              architectures by combining biological, chemical[44], and computer engineering. 
+              Since one of the goals of synthetic biology is to redesign systems that are 
+              found in nature to adjust them for desired purposes, our team this year decided 
+              to boost the production of naringenin in our system. For this purpose, we 
+              combined biological and chemical engineering attributes. We chose to include 
+              <i>in silico</i> modeling techniques to support one of the main concepts of synthetic 
+              biology - connecting different scientific fields - and broaden our understanding 
+              of the designed system. Specialists from structural bioinformatics and 
+              the <i>de novo</i> protein design field contributed to this part of our 
+              project by providing valuable expertise to improve our fusion protein modeling 
+              and make this element more substantiated.
+            </p>
+            <h3 class="index-headline">Modeling approach</h3>
+            <p>
+              Once we came up with an idea to fuse proteins 4CL and CHS, we looked for 
+              existing modeling approaches applied to the cases like ours. The initial 
+              approach was to analyze the structure of the fusion protein complex based 
+              on the structural analysis of a candidate against malaria[1]. S. Shamriz and 
+              H. Ofoghi presented the basal approach that consists of primary structural 
+              analysis, secondary structure prediction, three-dimensional model prediction, 
+              structure validation with molecular dynamics, and the analysis of the simulations.
+            </p>
+            <h3 class="index-headline">Choice of the fusion components</h3>
+            <h4 class="">4CL (N')</h4>
+            <p>
+              We took  4CL from <i>Glycine max.</i> This protein has not got an 
+              experimentally determined structure. Hence the template (PDB: 5BSR) (homology model) 
+              for the initial homology-based modeling was taken from <i>Nicotiana tabacum,</i> 
+              which is not an organism of our choice (more information about 4CL modeling can be found 
+              in 'Our fusion proteins' section). Sequence similarity between <i>Glycine max</i> and 
+              <i>Nicotiana tabacum</i> 4CL homologs is 67.66%, which is considered high enough to 
+              perform homology-based modeling for this protein.
+            </p>
+            <div class="figure-container">
+              <img src="../assets/images/T--Vilnius-Lithuania--4CL_5BSR.png" id="Figure1" alt="" />
+              <div><b>Figure 1</b><b>.</b> 4CL2 from <i>Glycine max</i> (pink) with 4CL2 from <i>Nicotiana tabacum</i> (electric)</div>
+            </div>
+            <h4 class="">CHS (C')</h4>
+            <p>
+              We took CHS protein from <i>Arabidopsis thaliana.</i> This protein has got 
+              its structure determined using the X-ray diffraction method, and it is 
+              deposited in Protein Data Bank with accession number 6DXB.
+            </p>
+            <div class="figure-container">
+              <img src="../assets/images/T--Vilnius-Lithuania--CHS_mechanism.png" id="Figure2" alt="" />
+              <div><b>Figure 2</b><b>.</b> CHS catalyzed reaction</div>
+            </div>
+            <div class="figure-container">
+              <img src="../assets/images/T--Vilnius-Lithuania--CHS_active_site.png" id="Figure3" alt="" />
+              <div><b>Figure 3</b><b>.</b> Active site residues of CHS</div>
+            </div>
+            <h3 class="index-headline">Linkers</h3>
+            <p>
+              Based on the literature analysis[4][38][39], we found out that <b>beneficial interaction</b> 
+              between two enzymes takes place after incorporating linkers that 
+              are composed of 5 to 15 amino acid residues. We included GSG linker because 4CL 
+              from <i>Arabidopsis thaliana</i> - a homolog to the protein of our choice - has 
+              already been linked with stilbene synthase (STS). There were <i>in vitro</i> kinetic 
+              assays performed for the 4CL:GSG:STS complex and its <b>crystallographic structure </b>
+              (PDB: 3TSY) was deposited to Protein Data Bank. In summary, we chose to connect 
+              our proteins using linkers that are <b>flexible:</b> GSG, GGGGS, (GGGGS)2, (GGGGS)3; 
+              and <b>rigid:</b> EAAAK, (EAAAK)2, (EAAAK)3. They were analysed in terms of their 
+              hydrophobicity[31], sensitivity to proteases[32], and secondary structure[33].
+            </p>
+            <div class="table-container">
+              <div><b>Table 1</b><b>.</b> Characterization of linkers</div>
+              <table class="table table-bordered table-hover table-condensed">
+                <thead><tr><th title="Field #1">Linker</th>
+                <th title="Field #2">Length</th>
+                <th title="Field #3">Flexibility</th>
+                <th title="Field #4">Hydrophobicity</th>
+                <th title="Field #5">Sensitivity to proteases</th>
+                <th title="Field #6">Secondary structure</th>
+                </tr></thead>
+                <tbody><tr>
+                <td>GSG</td>
+                <td align="right">3</td>
+                <td>Flexible</td>
+                <td>Neutral</td>
+                <td>-</td>
+                <td>Flexible</td>
+                </tr>
+                <tr>
+                <td>GGGGS</td>
+                <td align="right">5</td>
+                <td>Flexible</td>
+                <td>Neutral</td>
+                <td>-</td>
+                <td>Flexible</td>
+                </tr>
+                <tr>
+                <td>(GGGGS)2</td>
+                <td align="right">10</td>
+                <td>Flexible</td>
+                <td>Neutral</td>
+                <td>-</td>
+                <td>Flexible</td>
+                </tr>
+                <tr>
+                <td>(GGGGS)3</td>
+                <td align="right">15</td>
+                <td>Flexible</td>
+                <td>Neutral</td>
+                <td>-</td>
+                <td>Flexible</td>
+                </tr>
+                <tr>
+                <td>EAAAK</td>
+                <td align="right">5</td>
+                <td>Rigid</td>
+                <td>60% hydrophobic</td>
+                <td>Glutamyl endopeptidase</td>
+                <td>&alpha;-helical</td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td>20% acidic</td>
+                <td>LysC</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td>20% basic</td>
+                <td>LysN</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td> </td>
+                <td>Proteinase K</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td> </td>
+                <td>Staphylococcal peptidase I</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td> </td>
+                <td>Thermolysin</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td> </td>
+                <td>Trypsin</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td>(EAAAK)2</td>
+                <td align="right">10</td>
+                <td>Rigid</td>
+                <td>60% hydrophobic</td>
+                <td>Asp-N endopeptidase + N-terminal Glu</td>
+                <td>&alpha;-helical</td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td>20% acidic</td>
+                <td>Glutamyl endopeptidase</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td>20% basic</td>
+                <td>LysC</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td> </td>
+                <td>LysN</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td> </td>
+                <td>Proteinase K</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td> </td>
+                <td>Staphylococcal peptidase I</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td> </td>
+                <td>Thermolysin</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td> </td>
+                <td>Trypsin</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td>(EAAAK)3</td>
+                <td align="right">15</td>
+                <td>Rigid</td>
+                <td>60% hydrophobic</td>
+                <td>Asp-N endopeptidase + N-terminal Glu</td>
+                <td>&alpha;-helical</td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td>20% acidic</td>
+                <td>Glutamyl endopeptidase</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td>20% basic</td>
+                <td>LysC</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td> </td>
+                <td>LysN</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td> </td>
+                <td>Proteinase K</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td> </td>
+                <td>Staphylococcal peptidase I</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td> </td>
+                <td>Thermolysin</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td align="right"></td>
+                <td> </td>
+                <td> </td>
+                <td>Trypsin</td>
+                <td> </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <h3 class="index-headline">Primary structural analysis</h3>
+            <p>
+              There were proteins found that were formerly linked: 4CL and STS (stilbene synthase from 
+              <i>Vitis vinifera</i>) with GSG linker. This structure was determined experimentally using 
+              the X-ray diffraction method and deposited into the Protein Data Bank database with PDB: 3TSY. 
+              The experimentally determined structure of linked proteins 4CL:GSG:STS does not have a 
+              part (residues 483-588) of the fusion protein sequence, which takes up the C terminal part of 
+              4CL amino acid chain and GSG linker. Since GSG is <b>flexible,</b> it is not surprising that the 
+              structure of the GSG region is <b>disordered.</b> However, it is interesting that the <b>whole region</b> of 
+              the C terminal in 4CL protein becomes disordered. Considering the rigid linker case, there are 
+              examples of experimentally determined structures deposited in Protein Data Bank[28][29], which 
+              prove that the structure of fusion proteins linked via rigid linkers can be experimentally determined 
+              without having a <b>partial loss</b> of the modeled sequence.
+            </p>
+            <div class="figure-container">
+              <img src="../assets/images/T--Vilnius-Lithuania--4CL_3TSY.png" id="Figure4" alt="" />
+              <div><b>Figure 4</b><b>.</b> Modeled 4CL (pink) overlay with monomeric enzymes 4CL and STS (PDB 3TSY, electric), disordered domain (light pink)</div>
+            </div>
+            <h3 class="index-headline"><i>Ab initio</i> protein modeling</h3>
+            <p>
+              Our motivation to choose <b><i>ab initio</i> </b>protein modeling instead of 
+              homology-based is that homology-based programs might not cover the <b>whole</b> fusion 
+              protein sequence that we intend to model. This assumption was confirmed when we provided 
+              the trivial case of linking - 4CL linked with CHS via GSG. SWISS-MODEL[3] program 
+              provided one template that covered the whole target sequence - the analyzed 3TSY structure. 
+              The modeled system included a massive disordered region on the <b>C terminal part</b> of the 4CL 
+              sequence. The rest of the 48 templates covered roughly half of the sequence - on the N terminal 
+              or the C terminal. It is not surprising that there were no templates that would have a higher 
+              than 70 percent identity on the N terminal side since 4CL from <i>G. max</i> does not have an 
+              experimentally determined structure. Meanwhile, as expected, the SWISS-MODEL program did find a 
+              100 percent match on the C terminal for CHS from <i>A. thaliana.</i> Since SWISS-MODEL builds each 
+              model based on one template, this approach is not suitable for our case.
+            </p>
+            <div class="figure-container">
+              <img src="../assets/images/T--Vilnius-Lithuania--GSG_SWISS.png" id="Figure5" alt="" />
+              <div><b>Figure 5</b><b>.</b> Modeled 4CL:GSG:CHS (fusion - electric, linker - cyan) overlay with template structures of enzymes 4CL (pink) with disordered domain (light pink) and CHS (dark green)</div>
+            </div>
+            <div class="table-container">
+              <div><b>Table 2</b><b>.</b> Evaluating 4CL:GSG:CHS structure that was modeled using homology-based method SWISS-MODEL</div>
+              <table class="table table-bordered table-hover table-condensed">
+                <thead><tr><th title="Field #1">Model</th>
+                <th title="Field #2">Template</th>
+                <th title="Field #3">Sequence identity</th>
+                <th title="Field #4">QMEAN</th>
+                <th title="Field #5">QMEANDisCo</th>
+                <th title="Field #6">VoroMQA</th>
+                </tr></thead>
+                <tbody><tr>
+                <td><b>model_1.pdb</b></td>
+                <td>3TSY</td>
+                <td>66.42%</td>
+                <td align="right"><b>-2.19</b></td>
+                <td align="right"><b>0.71</b></td>
+                <td><b>0.504224</b></td>
+                </tr>
+                <tr>
+                <td>model_2.pdb</td>
+                <td>3TSY</td>
+                <td><b>69.36%</b></td>
+                <td align="right">-2.41</td>
+                <td align="right">0.71</td>
+                <td>0.496802</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              Therefore, in order to model the <b>complete</b> structure of our fusion protein sequence, 
+              we tried using <i>ab initio</i> modeling methods (I-TASSER[7], RoseTTAFold[2], and trRosetta[8]) 
+              instead of homology-based modeling approaches. Eventually, the initial modeling was performed only 
+              using trRosetta and RoseTTAFold because I-TASSER did not complete the queries we uploaded to their 
+              server in May and June. Additionally, the standalone version could not be accessed at the time.
+            </p>
+            <p>
+              Lastly, we attempted to use both versions of <b>trRosetta</b> program: server and standalone. We found 3DFI[9] 
+              Perl scripts created to run the program and generate structure files in PDB format when the input sequence 
+              in FASTA is provided. We tested the program and managed to run it for a test target - 4CL protein. However, 
+              the standalone version of trRosetta did not finish the modeling of our fusion protein. The reason for this might 
+              be that the complex is simply <b>too big,</b> and the computer that we got access to run the program on 
+              had got <b>little RAM</b> (15 GB in total with 7 GB swap) with only 8 CPUs. There has also been an issue closed on 
+              Github[47] about the similar problem that trRosetta takes a long time on large MSA’s. It was explained that even 
+              running the program on a machine with GPU might throw an <b>‘out of memory’</b> error for MSA with ~600 residues. 
+              Meanwhile, our system is composed of roughly <b>1000 residues,</b> and the computer did not contain any GPU; 
+              therefore, it is clear why we did not manage to run this program for our case.
+            </p>
+            <p>
+              <b>RoseTTAFold</b> modeling approach can be accessed via the Robetta server when the RoseTTAFold option is chosen. 
+              The first release of RoseTTAFold became open on Github as a standalone version of the program on 4th July; however, 
+              it requires over 400 GB of disc space. Since we did not have such resources, we could not use the standalone version 
+              of the program.
+            </p>
+            <p>
+              Before getting access to AlphaFold2, we initially attempted to model structures using RoseTTAFold <b>without</b> providing 
+              manually created <b>multiple sequence alignment</b> (MSA) files. In our project development, we had consultations with 
+              researchers that specialize in <b>protein structural bioinformatics,</b> and we were suggested to create <b>our own MSA</b> files. 
+              The mentioned approach should represent our fusion protein system not partially but as a whole more <b>accurately</b> (a more detailed 
+              description of this modeling approach can be found in the further sections). Since RoseTTAFold does not provide the MSA files that it 
+              generates by default, only an assumption can be made that these files might not accurately represent the region of the sequence that 
+              is located <b>near the linker.</b> Therefore we wrote scripts to generate MSA files with template sequences for our fusion proteins 
+              connected with our chosen linker.
+            </p>
+            <h3 class="index-headline">Scoring modeled complexes</h3>
+            <p>
+              The model of the complex has to be chosen according to its <b>evaluation scores.</b> 
+              We had a few consultations about the protein complex modeling and each of the consulting 
+              specialists of this field emphasized that we should apply at least <b>several</b> scoring systems, 
+              hence the best quality model would be chosen.
+            </p>
+            <h4 class="">VoroMQA</h4>
+            <p>
+              <b>VoroMQA[10]</b> - the method is based on partitioning space into Voronoi cells. Two adjacent Voronoi 
+              cells share a set of points that form a surface called a <b>Voronoi face,</b> which can be viewed as a 
+              geometric representation of <b>contact</b> between two atoms. VoroMQA determines the quality of protein 
+              structural models using inter-atomic and solvent contact areas, including the knowledge-based statistical potential.
+            </p>
+            <h4 class="">ProSA</h4>
+            <p>
+              ProSA[11] is a program uses knowledge-based potentials of <b>mean force</b> to evaluate the <b>accuracy</b> of the input model.    
+              The structure’s energy is evaluated using a <b>distance-based</b> pair potential and a potential that 
+              captures the solvent <b>exposure</b> of protein residues. From these energies, two characteristics are 
+              derived: a <b>z-score</b> and a plot of its residue energies.
+            </p>
+            <p>
+              The z-score indicates overall model quality and measures the structure’s total energy deviation 
+              concerning an energy distribution derived from random conformations. Z-scores outside a range 
+              characteristic determined by structures of  native proteins indicate errors and low quality of 
+              the model that is being evaluated.
+            </p> 
+            <h4 class="">TM-Score</h4>         
+            <p>
+              TM-Score[12] is a template modeling score is a variation of the Levitt-Gerstein (LG) 
+              score, which weights <b>shorter</b> distances between corresponding residues 
+              more strongly than longer distances.
+            </p>
+            <h4 class="">TM-align</h4>   
+            <p>
+              TM-align[46] is an algorithm that employs <b>TM-Score</b> and <b>dynamic programming </b> 
+              to generate the best structural alignment between two 
+              protein structures.
+            </p>
+            <h4 class="">CAD-Score</h4>   
+            <p>The definition of CAD-score[13] is based on the three considerations:</p>
+            <ol>
+              <li>
+                contacts in the model should be evaluated according to the <b>contacts</b> 
+                in the <b>reference</b> structure (target);
+              </li>
+              <li>
+                any missing residues in the model should be treated in the same way as 
+                if <b>none</b> of their contacts were <b>correctly</b> predicted;
+              </li>
+              <li>
+                strong over-prediction (nonphysical overlap) of a particular contact 
+                should be equivalent to <b>missing</b> that contact entirely (in other words, 
+                there should be no <b>false-positive</b> predictions in terms of contact).
+              </li>
+            </ol>
+            <h4 class="">QMEAN</h4>   
+            <p>
+              <b>QMEAN</b>[48] is an acronym for <b>Q</b>ualitative <b>M</b>odel <b>E</b>nergy <b>AN</b>alysis. 
+              There are five different descriptors used for this evaluation approach, which are:
+              <ol>
+                <li>
+                    <b>torsion angle</b> potential;
+                </li>
+                <li>
+                  distance-dependent pairwise <b>residue</b> potential;
+                </li>
+                <li>
+                  <b>solvation</b> potential;
+                </li>
+                <li>
+                  the term describing agreement of predicted and calculated <b>secondary structure</b>;
+                </li>
+                <li>
+                  the term describing <b>solvent accessibility</b>.
+                </li>
+              </ol>
+            </p>
+            <h4 class="">QMEANDisCo</h4>  
+            <p>
+              In addition to QMEAN composite scoring, <b>QMEANDisCo</b>[14] introduces a new 
+              distance constraint (DisCo) that evaluates the <b>agreement</b> of pairwise 
+              <b>distances</b> and <b>constraints</b> taken from homologous experimentally 
+              determined protein structures.
+            </p>
+            <h4 class="">ProQ3D</h4>
+            <p>
+              <b>ProQ3D</b>[15] is a <b>single-model</b> quality estimation program. ProQ estimated the quality of the 
+              whole model using a machine learning approach - <b>support-vector machine</b> - by summing up the 
+              predicted qualities for each residue.
+              ProQ2 included <b>profile weights</b> to improve the predictions.
+              ProQ3 included <b>energy terms</b> calculated from Rosetta.
+            </p>
+            <p>
+              Overall, <b>ProQ3D</b> uses the same inputs as in ProQ3. Although, a <b>neural network </b>
+              is used to assess the quality of the protein structure instead of a support vector machine.
+            </p>
+            <h3 class="index-headline">Ramachandran plot analysis</h3>
+            <p>
+              Protein structural scientists use <b>Ramachandran plots</b> to gain a better insight into the 
+              <b>secondary</b> structure of peptides. It represents the <b>combinations</b> of φ and ᴪ dihedral angles. 
+              Most pairs of φ and ᴪ are sterically <b>forbidden</b> since they introduce interatomic clashes. Outlines mark 
+              <b>allowed</b> regions in the graph. The plots were generated using <a href="https://pypi.org/project/RamachanDraw/">RamachanDraw</a> library. 
+              We thought it would be helpful to add the customization functionality; therefore, we wrote a small software tool <b>RamachanDrawX</b> that allows 
+              us to plot Ramachandran plots more efficiently and <b>customize</b> them for the desired design.
+            </p>
+            <h3 class="index-headline">Structure refinement using molecular dynamics</h3>
+            <p>
+              After modeling and evaluating structures with several scoring functions, there is usually a 
+              need to <b>refine</b> structures after modeling <i>in silico</i> to avoid potential 
+              clashes between atoms and make the design more <b>stable</b> energetically. 
+              However, our protein complexes are rather <b>big;</b> they are composed of 962 - 974 
+              residues (<b>173 610 - 329 648 atoms</b> without solvate particles). 
+              After consulting with a molecular dynamics specialist working with protein 
+              structures, we found out that at least <b>100 nanoseconds</b> of simulations 
+              would be needed for our fusion protein system, which is a computationally 
+              <b>costly</b> procedure.
+            </p>
+            <p>
+              We chose <b>GROMACS</b> program to perform molecular dynamics simulations 
+              since it is freely <b>available</b>, <b>versatile</b>, and has an <b>extensive</b> 
+              documentation. Our initial choice of molecular dynamics protocol was based on a 
+              tutorial published in Bioinformatics Review[23]. As mentioned, we organized a 
+              consultation with a bioinformatics scientist who specializes in molecular 
+              dynamics. After the meeting, we had all the answers to the questions raised 
+              related to this part of modeling and received many suggestions on how to get 
+              the most out of molecular dynamics simulation. Generally, after the consultation, 
+              we adjusted our molecular dynamics protocol to be the one described in the table 
+              below. Explanations for each of the used commands can be found in the Perl script 
+              written for this molecular dynamics flow.
+            </p>
+            <div class="table-container">
+              <div><b>Table 3</b><b>.</b> Adjustments to the molecular dynamics simulation steps</div>
+              <table class="table table-bordered table-hover table-condensed">
+                <thead><tr><th title="Field #1">Before consultation</th>
+                <th title="Field #2">After consultation</th>
+                <th title="Field #3">Command</th>
+                </tr></thead>
+                <tbody><tr>
+                <td>Preparing protein file by removing other chains and heterogenous atoms</td>
+                <td> </td>
+                <td>`grep`</td>
+                </tr>
+                <tr>
+                <td>Converting protein's PDB file to Gromacs format GRO</td>
+                <td> </td>
+                <td>`pdb2gmx`</td>
+                </tr>
+                <tr>
+                <td>Choosing force-field CHARMM27</td>
+                <td>Choosing force-field AMBER94</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td>Choosing water model SPC</td>
+                <td>Choosing water model TIP3</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td>Defining a box with 2 &Aring; distance between protein each wall of the dodecahedron type box</td>
+                <td>Defining a box with 1.2 &Aring; distance between protein and each wall of the dodecahedron type box</td>
+                <td>`editconf`</td>
+                </tr>
+                <tr>
+                <td>Solvating protein</td>
+                <td> </td>
+                <td>`solvate`</td>
+                </tr>
+                <tr>
+                <td>Adding ions to neutralize the system, selecting group SOL</td>
+                <td>Adding ions to neutralize the system</td>
+                <td>`grompp`, `genion`</td>
+                </tr>
+                <tr>
+                <td> </td>
+                <td>Adding ions to simulate water with dissolved salt (concentration 150 mM)</td>
+                <td> </td>
+                </tr>
+                <tr>
+                <td>Energy minimization step to reach negative potential energy and maximum force to be less than 1000 kJ/mol/nm</td>
+                <td> </td>
+                <td>`grompp`, `mdrun`, `energy`</td>
+                </tr>
+                <tr>
+                <td>Temperature equilibration for 100 ps, 300 K</td>
+                <td> </td>
+                <td>`grompp`,`mdrun` `energy`</td>
+                </tr>
+                <tr>
+                <td>Pressure equilibration for 100 ps, 300 K</td>
+                <td> </td>
+                <td>`grompp`,`mdrun` `energy`</td>
+                </tr>
+                <tr>
+                <td>Production run for 1 ns</td>
+                <td>Production run for 100 ns</td>
+                <td>grompp`, `mdrun`</td>
+                </tr>
+                </tbody></table>
+            </div>
+            <h4 class="">MARTINI coarse-grained simulations</h4>
+            <p>
+              Since we want to calculate the <b>distance</b> between active sites of our linked 
+              proteins, the cases with <b>rigid</b> linkers are relatively trivial. Although, we 
+              had to dig deeper about the approach to calculate distance between active sites 
+              in a <b>flexible</b> linker case. The initial idea was to find the <b>maximum</b> distance 
+              between active centers in the flexible linker case. This approach requires all 
+              possible <b>conformations</b> to find the one that provides the maximum distance 
+              between proteins. On the other hand, there might be particular <b>conformations</b> that 
+              are more likely than others. In any case, molecular dynamics simulations were needed 
+              to perform to catch the shifts in protein conformations.
+            </p>
+            <p>
+              However, since molecular dynamics simulations need to be performed on the <b>large</b>
+              protein system consisting of roughly <b>1000 residues,</b> the atomic molecular dynamics 
+              might last around a week on an 80 core system. Therefore bioinformatician V. Kairys 
+              suggested using MARTINI scripts and performing <b>coarse-grained</b> simulations. This 
+              kind of approach is less computationally expensive. The third version of MARTINI scripts 
+              is released, although we opted for the second version since it has more tutorials. 
+              Additionally, since Python3 is more commonly used nowadays, we chose martinize.py 
+              script adjusted for this Python version.
+            </p>
+            <h3 class="index-headline">Modeling fusion system components</h3>
+            <h4 class="">4CL</h4>
+            <p>
+              Since we take 4CL protein from <i>Glycine max</i> organism, we had to model 
+              the structure for our protein. Initially, we attempted to do this by using two 
+              programs: SWISS-MODEL[3] and RoseTTAFold. When <b>AlphaFold2</b>[35] became freely 
+              available in July, we decided to model our chosen 4CL protein using this 
+              prominent tool. For this purpose, we used Google Colab notebook[36], 
+              in which AlphaFold2 was implemented, and we received <b>three models</b> in 
+              unrelaxed and relaxed states. According to the documentation found in DeepMind’s 
+              AlphaFold2 repository, the relaxed state contains a structure made after Amber 
+              <b>relaxation</b> procedure made on an unrelaxed structure - model provided right 
+              after modeling with AlphaFold2. It was not stated whether 
+              the <b>average plDDT score</b> provided as output is calculated for the unrelaxed 
+              or relaxed state. However, the models representing <b>relaxed states </b>
+              were generally evaluated <b>better.</b>
+            </p>
+            <div class="table-container">
+              <div><b>Table 5</b><b>.</b> Evaluation of 4CL modeled structures</div>
+              <table class="table table-bordered table-hover table-condensed">
+                <thead><tr><th title="Field #1">Model trRosetta</th>
+                <th title="Field #2">QMEAN4</th>
+                <th title="Field #3">QMEANDisCo</th>
+                <th title="Field #4">VoroMQA score</th>
+                </tr></thead>
+                <tbody><tr>
+                <td>4CL.sqit.pdb</td>
+                <td align="right">-0.94</td>
+                <td align="right">0.67</td>
+                <td align="right">0.478739</td>
+                </tr>
+                </tbody></table>
+            </div>
+            <div class="table-container">
+              <table class="table table-bordered table-hover table-condensed">
+                <thead><tr><th title="Field #1">Model SWISS-MODEL</th>
+                <th title="Field #2">QMEAN4</th>
+                <th title="Field #3">QMEANDisCo</th>
+                <th title="Field #4">VoroMQA score</th>
+                </tr></thead>
+                <tbody><tr>
+                <td>4CL_1.pdb</td>
+                <td align="right">-0.73</td>
+                <td align="right">0.84</td>
+                <td align="right">0.541558</td>
+                </tr>
+                <tr>
+                <td>4CL_2.pdb</td>
+                <td align="right">-0.61</td>
+                <td align="right">0.82</td>
+                <td align="right">0.519713</td>
+                </tr>
+                <tr>
+                <td>4CL_3.pdb</td>
+                <td align="right">-0.34</td>
+                <td align="right">0.85</td>
+                <td align="right">0.549002</td>
+                </tr>
+                </tbody></table>
+            </div>
+            <div class="table-container">
+              <table class="table table-bordered table-hover table-condensed">
+                <thead><tr><th title="Field #1">Model RoseTTAFold</th>
+                <th title="Field #2">QMEAN4</th>
+                <th title="Field #3">QMEANDisCo</th>
+                <th title="Field #4">VoroMQA score</th>
+                </tr></thead>
+                <tbody><tr>
+                <td>MODEL_1_4CL2_SOYBN.pdb</td>
+                <td align="right">1.71</td>
+                <td align="right">0.77</td>
+                <td>0.540512</td>
+                </tr>
+                <tr>
+                <td>MODEL_5_4CL2_SOYBN.pdb</td>
+                <td align="right">1.44</td>
+                <td align="right">0.77</td>
+                <td>0.540305</td>
+                </tr>
+                <tr>
+                <td>MODEL_2_4CL2_SOYBN.pdb</td>
+                <td align="right">1.6</td>
+                <td align="right">0.76</td>
+                <td>0.539742</td>
+                </tr>
+                <tr>
+                <td>MODEL_3_4CL2_SOYBN.pdb</td>
+                <td align="right">1.61</td>
+                <td align="right">0.77</td>
+                <td>0.533458</td>
+                </tr>
+                <tr>
+                <td>MODEL_4_4CL2_SOYBN.pdb</td>
+                <td align="right">1.79</td>
+                <td align="right">0.76</td>
+                <td>0.530254</td>
+                </tr>
+                </tbody></table>
+            </div>
+            <div class="table-container">
+              <div><b>Table 6</b><b>.</b> Evaluation of 4CL modeled using RoseTTAFold with MSA structures</div>
+              <table class="table table-bordered table-hover table-condensed">
+                <thead><tr><th title="Field #1">Model</th>
+                <th title="Field #2">QMEAN4</th>
+                <th title="Field #3">QMEANDisCo</th>
+                <th title="Field #4">VoroMQA score</th>
+                </tr></thead>
+                <tbody><tr>
+                <td>MODEL_1_4CL_MSA.pdb</td>
+                <td align="right">1.88</td>
+                <td align="right">0.77</td>
+                <td align="right">0.541581</td>
+                </tr>
+                <tr>
+                <td>MODEL_2_4CL_MSA.pdb</td>
+                <td align="right">1.12</td>
+                <td align="right">0.75</td>
+                <td align="right">0.526281</td>
+                </tr>
+                <tr>
+                <td>MODEL_3_4CL_MSA.pdb</td>
+                <td align="right">1.09</td>
+                <td align="right">0.76</td>
+                <td align="right">0.529501</td>
+                </tr>
+                <tr>
+                <td>MODEL_4_4CL_MSA.pdb</td>
+                <td align="right">0.95</td>
+                <td align="right">0.76</td>
+                <td align="right">0.534835</td>
+                </tr>
+                <tr>
+                <td>MODEL_5_4CL_MSA.pdb</td>
+                <td align="right">1.41</td>
+                <td align="right">0.76</td>
+                <td align="right">0.529382</td>
+                </tr>
+                </tbody></table>
+            </div>
+            <div class="table-container">
+              <div><b>Table 7</b><b>.</b> Evaluation of 4CL modeled using AlphaFold2</div>
+              <table class="table table-bordered table-hover table-condensed">
+                <thead><tr><th title="Field #1">Model</th>
+                <th title="Field #2">QMEAN4</th>
+                <th title="Field #3">QMEANDisCo</th>
+                <th title="Field #4">VoroMQA score</th>
+                <th title="Field #5">Average plDDT</th>
+                </tr></thead>
+                <tbody><tr>
+                <td>4CL_unrelaxed_model_1.pdb</td>
+                <td align="right">-0.62</td>
+                <td align="right">0.79</td>
+                <td align="right">0.546974</td>
+                <td><b>89.651979</b></td>
+                </tr>
+                <tr>
+                <td>4CL_unrelaxed_model_2.pdb</td>
+                <td align="right">-1.01</td>
+                <td align="right">0.79</td>
+                <td align="right">0.549646</td>
+                <td>89.276523</td>
+                </tr>
+                <tr>
+                <td>4CL_unrelaxed_model_3.pdb</td>
+                <td align="right">-1.02</td>
+                <td align="right">0.79</td>
+                <td align="right">0.546767</td>
+                <td>88.780811</td>
+                </tr>
+                <tr>
+                <td><b>4CL_relaxed_model_1.pdb</b></td>
+                <td align="right">0.13</td>
+                <td align="right"><b>0.8</b></td>
+                <td align="right">0.551421</td>
+                <td>-</td>
+                </tr>
+                <tr>
+                <td>4CL_relaxed_model_2.pdb</td>
+                <td align="right"><b>0.3</b></td>
+                <td align="right"><b>0.8</b></td>
+                <td align="right"><b>0.552571</b></td>
+                <td>-</td>
+                </tr>
+                <tr>
+                <td>4CL_relaxed_model_3.pdb</td>
+                <td align="right">-0.86</td>
+                <td align="right"><b>0.8</b></td>
+                <td align="right">0.549808</td>
+                <td>-</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="figure-container">
+              <img src="../assets/images/T--Vilnius-Lithuania--4CL_lDDT.png" id="Figure6" alt="" />
+              <div><b>Figure 6</b><b>.</b> Coverage and predicted lDDT per position of 4CL structure modeled with AlphaFold2</div>
+            </div>
+            <div class="figure-container">
+              <img src="../assets/images/T--Vilnius-Lithuania--4CL_PAE.png" id="Figure7" alt="" />
+              <div><b>Figure 7</b><b>.</b> Predicted alignment error of 4CL structure modeled with AlphaFold2</div>
+            </div>
+            <p>
+              The model generated with AlphaFold2, when overlaid with homology-based modeling 
+              created structure, showed a structural <b>mismatch</b> at the C terminal from 
+              453rd residue until the last one (562nd) in AlphaFold2 model; meanwhile, 
+              the design of SWISS-MODEL did not have the complete sequence modeled.
+            </p>
+            <div class="figure-container">
+              <img src="../assets/images/T--Vilnius-Lithuania--4CL_B.png" id="Figure8" alt="" />
+              <div><b>Figure 8</b><b>.</b> 4CL structures modeled with SWISS-MODEL (left) and AlphaFold2 (right). The darker shade of blue indicates higher structure determination quality (B-factor spectrum)</div>
+              
+            </div>
+            <div class="figure-container">
+              <img src="../assets/images/T--Vilnius-Lithuania--4CL_SWISS_disordered.png" id="Figure9" alt="" />
+              <div><b>Figure 9</b><b>.</b> Disordered region of 4CL structure modeled with AlphaFold2 (electric) overlay with SWISS-MODEL model (pink)</div>
+            </div>
+            <h4 class="">CHS</h4>
+            <p>
+              As mentioned in the description of the initial modeling approach, 
+              chalcone synthase (CHS) from <i>A. thaliana</i> has got its structure 
+              determined <b>experimentally.</b> However, after reading the CASP14 
+              analysis about <b>refinement</b> category[25][26], which analyzed the 
+              accuracy of AlphaFold2 models. The study pointed out that AlphaFold2 
+              results might indicate <b>crystal lattice contacts</b> - the locations 
+              in the experimentally determined structure that are not as accurate 
+              as the rest of the protein. Therefore, it was intriguing to <b>compare</b> 
+              CHS’ experimental structure with its AlphaFold2 model and check whether 
+              the crystal lattice contacts of the experimental structure can 
+              be <b>observed</b> in our case.
+            </p>
+            <div class="table-container">
+              <div><b>Table 8</b><b>.</b> Evaluation of CHS modeled using AlphaFold2[34]
+              </div>
+              <table class="table table-bordered table-hover table-condensed">
+                <thead><tr><th title="Field #1">Model</th>
+                <th title="Field #2">QMEAN4</th>
+                <th title="Field #3">QMEANDisCo</th>
+                <th title="Field #4">VoroMQA score</th>
+                <th title="Field #5">Average plDDT</th>
+                </tr></thead>
+                <tbody><tr>
+                <td>CHS_unrelaxed_model_1.pdb</td>
+                <td align="right">0.08</td>
+                <td align="right">0.85</td>
+                <td align="right">0.535824</td>
+                <td><b>96.86796</b></td>
+                </tr>
+                <tr>
+                <td>CHS_unrelaxed_model_2.pdb</td>
+                <td align="right">-0.13</td>
+                <td align="right">0.85</td>
+                <td align="right">0.542367</td>
+                <td>96.62286</td>
+                </tr>
+                <tr>
+                <td>CHS_unrelaxed_model_3.pdb</td>
+                <td align="right">-0.45</td>
+                <td align="right">0.84</td>
+                <td align="right">0.536282</td>
+                <td>96.34417</td>
+                </tr>
+                <tr>
+                <td><b>CHS_relaxed_model_1.pdb</b></td>
+                <td align="right">0.2</td>
+                <td align="right"><b>0.86</b></td>
+                <td align="right"><b>0.542643</b></td>
+                <td>-</td>
+                </tr>
+                <tr>
+                <td>CHS_relaxed_model_2.pdb</td>
+                <td align="right"><b>0.21</b></td>
+                <td align="right"><b>0.86</b></td>
+                <td align="right">0.539895</td>
+                <td>-</td>
+                </tr>
+                <tr>
+                <td>CHS_relaxed_model_3.pdb</td>
+                <td align="right">0.2</td>
+                <td align="right"><b>0.86</b></td>
+                <td align="right">0.540226</td>
+                <td>-</td>
+                </tr>
+                </tbody></table>
+            </div>
+            <p>
+              For modeling to be optimal, AlphaFold2 should have at least 30 sequences 
+              coverage at each position. Meanwhile, plDDT measures how well the 
+              <b>environment</b> in the reference structure is represented in the modeled 
+              protein structure. Apart from the first positions in the N terminal, 
+              predicted lDDT was <b>highly evaluated </b>in each position of CHS protein.
+            </p>
+            <div class="figure-container">
+              <img src="../assets/images/T--Vilnius-Lithuania--CHS_lDDT.png" id="Figure10" alt="" />
+              <div><b>Figure 10</b><b>.</b> Coverage and predicted lDDT per position of CHS structure modelled with AlphaFold2</div>
+            </div>
+            <div class="figure-container">
+              <img src="../assets/images/T--Vilnius-Lithuania--CHS_PAE.png" id="Figure11" alt="" />
+              <div><b>Figure 11</b><b>.</b> Predicted alignment error of CHS structure modelled with AlphaFold2
+              </div>
+            </div>
+            <p>
+              The experimental structure did not have the design of the <b>first six </b>
+              residues. This might be because the N terminal part of the sequence 
+              was considered to be a <b>disordered region,</b> just as it was with the C 
+              terminal of 4CL protein in the case of PDB: 3TSY. According to the 
+              PyMOL[50] B-factor[41] coloring of PDB: 6DXB structure, the <b>less accurate</b> 
+              residues were found in positions: 7-8, 67, 83-84, 208-209, 271-276, 295-299, 
+              327-328 (table 9). Meanwhile, the B-factor coloring showed that only 
+              the <b>first eight</b> in the N terminal and residues in positions <b>210-212</b> 
+              were <b>inaccurate.</b> Since the crystal packing can <b>distort</b> local 
+              protein structure, it can be assumed that there were crystal lattice 
+              contacts in the places of inaccurately represented residues. These 
+              residues were observed in the experimental structure and not in the 
+              model generated with AlphaFold2. 
+            </p>
+            <div class="table-container">
+              <div><b>Table 9</b><b>.</b>  Inaccurate residues according to PyMOL B-factor coloring
+              </div>
+              <table class="table table-bordered table-hover table-condensed">
+                <thead><tr><th title="Field #1">Experimental structure</th>
+                <th title="Field #2">Modeled structure</th>
+                </tr></thead>
+                <tbody><tr>
+                <td>7-8</td>
+                <td>1-8</td>
+                </tr>
+                <tr>
+                <td>67</td>
+                <td>-</td>
+                </tr>
+                <tr>
+                <td>83-84</td>
+                <td>-</td>
+                </tr>
+                <tr>
+                <td>208-209</td>
+                <td>210-212</td>
+                </tr>
+                <tr>
+                <td>271-276</td>
+                <td>-</td>
+                </tr>
+                <tr>
+                <td>295-299</td>
+                <td>-</td>
+                </tr>
+                <tr>
+                <td>327-328</td>
+                <td>-</td>
+                </tr>
+                </tbody></table>
+            </div>
+            <div class="figure-container">
+              <img src="../assets/images/T--Vilnius-Lithuania--CHS_B.png" id="Figure12" alt="" />
+              <div><b>Figure 12</b><b>.</b> B-factor coloring for CHS experimental structure
+              </div>
+            </div>
+            <div class="figure-container">
+              <img src="../assets/images/T--Vilnius-Lithuania--CHS_AF2_B.png" id="Figure13" alt="" />
+              <div><b>Figure 13</b><b>.</b> B-factor coloring for CHS structure modeled with AlphaFold2
+              </div>
+            </div>
+            <p>
+              Visually observed differences between experimental structure 
+              and the best model from AlphaFold2 were seen in residues: 235-237 
+              (partial alpha helix was not obtained in the model), 261-263, 269-273 
+              (beta-sheets were introduced in the model), 383-385 (the beta-sheet 
+              was slightly bent in the model).
+            </p>
+            <div class="figure-container">
+              <img src="../assets/images/T--Vilnius-Lithuania--CHS_exp_AF2_comparison.png" id="Figure14" alt="" />
+              <div><b>Figure 14</b><b>.</b> Structural differences between experimental CHS structure and the best model of AlphaFold2
+              </div>
+            </div>
+            <h3 class="index-headline">Initial fusion system modeling</h3>
+            <p>
+              We attempted to model fusion protein systems with seven 
+              different linkers: GSG, EAAAK, (EAAAK)2, (EAAAK)3, GGGGS, 
+              (GGGGS)2, and (GGGGS)3. Each structure was modeled using 
+              two <i>ab initio</i> protein modeling tools: trRosetta 
+              and RoseTTAFold. The structures were evaluated using VoroMQA 
+              scoring function. ProSA z-scores are not provided for all 
+              structures since the web-server was temporarily unavailable 
+              when we employed this modeling approach. The results 
+              are represented in the tables below. All structures were 
+              analyzed visually with PyMOL visualization program. The 
+              modeling results were not satisfactory due to the large 
+              portion of 4CL being uncoiled in the fusion protein model. 
+              The model for each linker case was chosen according to 
+              VoroMQA score.
+            </p>
+            <p>
+              We attempted to use Yasara[45] program to perform 
+              <b>energy minimization.</b> The output of Yasara did introduce 
+              a slight structural shift, which was observed with PyMOL 
+              command `cealign` when the minimized model was compared with 
+              the original 4CL:GSG:CHS model. However, the VoroMQA score of 
+              the <b>original</b> complex was higher (0.516429) than of the one 
+              that was generated by Yasara program (0.512734). Since the 
+              structural change was not significant, we did not apply this 
+              program to other structures.
+            </p>
+            <div class="figure-container">
+              <img src="../assets/images/T--Vilnius-Lithuania--4CL_GSG_CHS_Yasara.png" id="Figure15" alt="" />
+              <div><b>Figure 15</b><b>.</b> Structural alignment using PyMOL of 4CL:GSG:CHS structures before (electric) and after (pink) energy minimization with Yasara
+              </div>
+            </div>
+            <p>
+              Besides Yasara, we also attempted to do structural refinement using 
+              <b>molecular dynamics</b> simulations. Since molecular dynamics is a 
+              computationally <b>expensive</b> procedure, we tried performing a 
+              trivial version of simulations on our target system. In order to test 
+              this technique, we used steps described in the section about the 
+              molecular dynamics approach <b>before consulting</b> the specialist of the 
+              field. 
+            </p>
+            <p>
+              The results of the modeling and refinement flow for 4CL:GSG:CHS case are 
+              presented in the supplementary data file.
+            </p>
+            <h3 class="index-headline">Unsuccessful modeling alternatives</h3>
+            <h4 class="">Reverse linking GSG</h4>
+            <p>
+              After doing a visual analysis of the initially modeled complexes, 
+              we saw that the <b>C terminal</b> of 4CL structure in a fusion protein 
+              is <b>unfurled</b> in <b>all cases</b> of linkers; therefore, we started to look for 
+              ways to improve our modeling approach. One of the ideas was to perform 
+              <b>reverse</b> linking and check how the target domain behaves when the 
+              proteins are linked in the reverse order. Although the results showed an 
+              even <b>more disrupted</b> structure of linked proteins, therefore we 
+              rejected this approach. It can be seen that the linker is found in the modeled domain of CHS structure. Additionally, both structures CHS and 4CL are not structurally aligned to their native structures. 
+            </p>
+            <p>
+              The results of the reverse linking for 4CL:GSG:CHS case are 
+              presented in the supplementary data file.
+            </p>
+            <h4 class="">Separate modeling</h4>
+            <p>
+              The idea of the <b>separate</b> structural modeling was to model 
+              fusion proteins with a chosen <b>rigid</b> linker separately and align 
+              the distinct structures afterward. The naive expectation was to get 
+              modeled sequences aligned via a <b>portion</b> of the linker sequence. 
+              We decided to test this technique with the <b>trivial</b> case of rigid 
+              linker - <b>EAAAK.</b> However, due to the short length of sequence that was 
+              intended to be aligned, PyMOL did not perform `cealign` command successfully. 
+            </p>
+            <p>
+              The results of the separate modeling for 4CL:GSG:CHS case are 
+              presented in the supplementary data file.
+            </p>      
+            <h3 class="index-headline">Improving modeling strategy with MSA</h3>
+            <p>
+              After consulting specialists in the protein modeling field and 
+              receiving fresh ideas about improving our modeling workflow, we 
+              were suggested including <b>multiple sequence alignment</b> (MSA) 
+              as an <b>additional</b> input into our chosen modeling programs. 
+              Nonetheless, both trRosetta and RoseTTAFold generate MSA internally, 
+              yet these MSA files do not represent the linked protein case accurately 
+              enough because the output models still had a <b>large</b> portion of 
+              the disordered region between the <b>linked</b> proteins. Therefore, we were 
+              encouraged to use sequence-search methods to create MSA files for 
+              our modeling input ourselves. 
+            </p>
+            <p>
+              Bioinformaticians from Stockholm University presented PconsDock 
+              approach[6], showing that the <b>fold-and-dock</b> method can model 
+              a pair of proteins linked via <b>poly-G</b> between two chains. This 
+              technique resembled our problem, thus we attempted to include into the 
+              constructed MSA files not only the exact linker sequence yet also 
+              the prolonged with glycines on both sides version of it. We wrote 
+              scripts to generate <b>multiple sequence alignment</b> files adjusted 
+              to our system of fused proteins. The script that produces MSA files 
+              was written in Perl. This script takes as input two a3m files, a 
+              linker sequence, and a boolean option whether to extend the linker 
+              sequence or not. The variation to extend linker sequence with poly-G 
+              was included in the script’s functionality, although this modeling 
+              method could not be applied practically; the extended linker system 
+              was not intended to be checked in the wet-lab <b>experimentally.</b> Therefore 
+              we continued this modeling flow only with the exact linker sequence 
+              included in the MSA. <b>Full query-template</b> a3m MSA files were 
+              obtained from <b>HHblits</b>[40] server and taken as an input to our 
+              script. The script reads the MSA file of the first protein and saves 
+              <b>taxonomic IDs</b> of the species to which the sequences belong. 
+              Afterward, the script reads the MSA file of the <b>second </b>protein, 
+              checks whether the taxonomic ID of the sequence has a match in the 
+              first MSA file, and if the match is found, the sequences 
+              are <b>merged</b> via the linker sequence. The final multiple sequence 
+              alignment file is printed on the screen of the terminal.
+            </p>
+            <h4 class="">Results of modeling approach with MSA</h4>
+            <p>
+              The results of the modeling with MSA files included can be found in 
+              supplementary data file.
+            </p>
+            <h2 class="index-headline">Modeling with AlphaFold2</h2>
+            <p>
+              The highly accurate protein structure prediction tool 
+              AlphaFold2 evaluated in CASP14 was published in Nature to be 
+              freely open to the public on 15th July 2021. Since the program 
+              requires extensive computational resources, we could not install 
+              it and run it locally. However, Kliment Olechnovič, the 
+              bioinformatician from Vilnius University, suggested that we 
+              model our protein complexes using a <a href="https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2_complexes.ipynb">Google Colab notebook</a> which has 
+              AlphaFold2 adjusted to <b>protein complexes.</b> According to the CASP14 
+              evaluation of model <b>refinement category</b>[25][26], AlphaFold2 generated 
+              structures require no structure refinement in most cases. During the 
+              modeling software assessment, the errors observed in the modeled 
+              structures were mainly found at <b>crystal lattice contacts,</b> where the 
+              experimentally determined structure is likely to be unrepresentative 
+              of biological conformations. Therefore molecular dynamics simulations 
+              for AlphaFold2 modeled structure refinement are unnecessary. 
+            </p>
+            <p>
+              The modeling with AlphaFold2 was performed using its generated MSA 
+              files with MMseq2. The composed MSA files covered each part of the 
+              fusion protein system by at least <b>500 sequences,</b> which is a good 
+              result because the best modeling results are achieved when there is coverage of 
+              <b>30</b> (ideally 100) sequences at each position (based on the notes 
+              in <a href="https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb">Google Colab notebook</a>). 
+            </p>
+            <p>
+              AlphaFold2 has <b>five </b>parameter sets for modeling, thus 
+              in most cases, it can produce five distinct modeling variants. 
+              Although our fusion protein system is composed of around 1000 
+              residues that make up a rather large complex, the Colab version 
+              of AlphaFold2 gave us <b>two</b> unrelaxed models as an output for 
+              each linker case. In general, the quality of the models was impressive, 
+              according to plDDT scoring; the score was mostly high except for 
+              the linker region. 
+            </p>
+            <p>
+              <b>Predicted aligned error (PAE)</b> gives information about the 
+              relative orientations of different parts of the modeled structure[49]. 
+              The PAE plot shows that each modeled part of the fusion protein system 
+              - 4CL, the linker, and CHS - are modeled reliably within each portion, 
+              yet their positions relative to each other are not evaluated confidently. 
+              Therefore, only an <b>assumption</b> can be made that rigid linkers take up the 
+              modeled orientation. However, rigid linker domains and terminals of the 
+              linked proteins might have <b>disordered</b> parts that significantly change 
+              the <b>conformation.</b> Although, this assumption had to be made because 
+              we had limited access to computational resources for molecular dynamics 
+              simulations to receive a better view of the system. The main purpose of 
+              this modeling workflow is to find <b>distances</b> between active sites of 
+              the fused proteins. Therefore we required molecular dynamics simulations 
+              to determine the most likely conformations of protein systems, and due 
+              to computational limitations, we restricted this idea to the systems with 
+              flexible linkers. 
+            </p>
+            <p>
+              Ramachandran plots show whether there are no steric clashes in 
+              the structures. Apparently, the given plots show that the clashes 
+              are present in the modeled structures. The reason for this is 
+              that the models are not relaxed (Amber force-field was not applied). 
+            </p>
+
+            <h4>Linker GSG</h4>
+              <div class="table-container">
+                <div><b>Table 23</b><b>.</b>  Evaluation of 4CL:GSG:CHS structures modeled with AlphaFold2
+                </div>
+                <table class="table table-bordered table-hover table-condensed">
+                  <thead><tr><th title="Field #1">Model</th>
+                  <th title="Field #2">QMEAN</th>
+                  <th title="Field #3">QMEANDisCo</th>
+                  <th title="Field #4">VoroMQA</th>
+                  </tr></thead>
+                  <tbody><tr>
+                  <td><b>4CL_GSG_CHS_unrelaxed_model_1.pdb</b></td>
+                  <td align="right"><b>-1.01</b></td>
+                  <td align="right"><b>0.78</b></td>
+                  <td align="right"><b>0.539915</b></td>
+                  </tr>
+                  <tr>
+                  <td>4CL_GSG_CHS_unrelaxed_model_2.pdb</td>
+                  <td align="right">-1.18</td>
+                  <td align="right">0.77</td>
+                  <td align="right">0.537669</td>
+                  </tr>
+                  </tbody></table>
+              </div>
+              <div class="table-container">
+                <table class="table table-bordered table-hover table-condensed">
+                  <thead><tr><th title="Field #1">Model</th>
+                  <th title="Field #5">ProQ2D</th>
+                  <th title="Field #6">ProQRosCenD</th>
+                  <th title="Field #7">ProQRosFAD</th>
+                  <th title="Field #8">ProQ3D</th>
+                  </tr></thead>
+                  <tbody><tr>
+                  <td><b>4CL_GSG_CHS_unrelaxed_model_1.pdb</b></td>
+                  <td align="right"><b>0.709</b></td>
+                  <td align="right">0.625</td>
+                  <td align="right"><b></b></td>
+                  <td align="right">0.705</td>
+                  </tr>
+                  <tr>
+                  <td>4CL_GSG_CHS_unrelaxed_model_2.pdb</td>
+                  <td align="right">0.701</td>
+                  <td align="right"><b>0.633</b></td>
+                  <td align="right">0.801</td>
+                  <td align="right"><b>0.721</b></td>
+                  </tr>
+                  </tbody></table>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--GSG_cov_lDDT.png" id="Figure29" alt="" />
+                <div><b>Figure 29</b><b>.</b> Coverage and predicted lDDT per position of 4CL:GSG:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--GSG_PAE.png" id="Figure30" alt="" />
+                <div><b>Figure 30</b><b>.</b> Predicted alignment error of 4CL:GSG:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--GSG_AF2_RP.png" id="Figure31" alt="" />
+                <div><b>Figure 31</b><b>.</b> Ramachandran plot of the best 4CL:GSG:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--GSG_dist.png" id="Figure32" alt="" />
+                <div><b>Figure 32</b><b>.</b>  Illustrating distance between 4CL:GSG:CHS active sites
+                </div>
+              </div>
+
+            <h4>Linker EAAAK</h4>
+              <div class="table-container">
+                <div><b>Table 24</b><b>.</b>  Evaluation of 4CL:EAAAK:CHS structures modeled with AlphaFold2
+                </div>
+                <table class="table table-bordered table-hover table-condensed">
+                  <thead><tr><th title="Field #1">Model</th>
+                  <th title="Field #2">QMEAN</th>
+                  <th title="Field #3">QMEANDisCo</th>
+                  <th title="Field #4">VoroMQA</th>
+                  </tr></thead>
+                  <tbody><tr>
+                  <td><b>4CL_EAAAK_CHS_unrelaxed_model_1.pdb</b></td>
+                  <td align="right"><b>-0.69</b></td>
+                  <td align="right"><b>0.79</b></td>
+                  <td align="right"><b>0.542077</b></td>
+                  </tr>
+                  <tr>
+                  <td>4CL_EAAAK_CHS_unrelaxed_model_2.pdb</td>
+                  <td align="right">-1.03</td>
+                  <td align="right"><b>0.79</b></td>
+                  <td align="right">0.536476</td>
+                  </tr>
+                  </tbody></table>
+              </div>
+              <div class="table-container">
+                <table class="table table-bordered table-hover table-condensed">
+                  <thead><tr><th title="Field #1">Model</th>
+                  <th title="Field #5">ProQ2D</th>
+                  <th title="Field #6">ProQRosCenD</th>
+                  <th title="Field #7">ProQRosFAD</th>
+                  <th title="Field #8">ProQ3D</th>
+                  </tr></thead>
+                  <tbody><tr>
+                  <td><b>4CL_EAAAK_CHS_unrelaxed_model_1.pdb</b></td>
+                  <td align="right"><b>0.708</b></td>
+                  <td align="right">0.624</td>
+                  <td align="right">0.794</td>
+                  <td align="right">0.710</td>
+                  </tr>
+                  <tr>
+                  <td>4CL_EAAAK_CHS_unrelaxed_model_2.pdb</td>
+                  <td align="right">0.7</td>
+                  <td align="right"><b>0.63</b></td>
+                  <td align="right"><b>0.798</b></td>
+                  <td align="right"><b>0.717</b></td>
+                  </tr>
+                  </tbody></table>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--EAAAK_cov_lDDT.png" id="Figure33" alt="" />
+                <div><b>Figure 33</b><b>.</b> Coverage and predicted lDDT per position of 4CL:EAAAK:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--EAAAK_PAE.png" id="Figure34" alt="" />
+                <div><b>Figure 34</b><b>.</b> Predicted alignment error of 4CL:EAAAK:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--EAAAK_AF2_RP.png" id="Figure35" alt="" />
+                <div><b>Figure 35</b><b>.</b> Ramachandran plot of the best 4CL:EAAAK:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--4CL_EAAAK_CHS_AF2_dist.png" id="Figure36" alt="" />
+                <div><b>Figure 36</b><b>.</b>  Illustrating distance between 4CL:EAAAK:CHS active sites
+                </div>
+              </div>
+
+            <h4>Linker (EAAAK)2</h4>
+              <div class="table-container">
+                <div><b>Table 25</b><b>.</b>  Evaluation of 4CL:(EAAAK)2:CHS structures modeled with AlphaFold2
+                </div>
+                <table class="table table-bordered table-hover table-condensed">
+                  <thead><tr><th title="Field #1">Model</th>
+                  <th title="Field #2">QMEAN</th>
+                  <th title="Field #3">QMEANDisCo</th>
+                  <th title="Field #4">VoroMQA</th>
+                  </tr></thead>
+                  <tbody><tr>
+                  <td><b>4CL_EAAAK_2_CHS_unrelaxed_model_1.pdb</b></td>
+                  <td align="right"><b>-0.78</b></td>
+                  <td align="right">0.79</td>
+                  <td align="right"><b>0.541834</b></td>
+                  </tr>
+                  <tr>
+                  <td>4CL_EAAAK_2_CHS_unrelaxed_model_2.pdb</td>
+                  <td align="right">-1.16</td>
+                  <td align="right"><b>0.78</b></td>
+                  <td align="right">0.536158</td>
+                  </tr>
+                  </tbody></table>
+              </div>
+              <div class="table-container">
+                <div><b>Table 25</b><b>.</b>  Evaluation of 4CL:(EAAAK)2:CHS structures modeled with AlphaFold2
+                </div>
+                <table class="table table-bordered table-hover table-condensed">
+                  <thead><tr><th title="Field #1">Model</th>
+                  <th title="Field #5">ProQ2D</th>
+                  <th title="Field #6">ProQRosCenD</th>
+                  <th title="Field #7">ProQRosFAD</th>
+                  <th title="Field #8">ProQ3D</th>
+                  </tr></thead>
+                  <tbody><tr>
+                  <td><b>4CL_EAAAK_2_CHS_unrelaxed_model_1.pdb</b></td>
+                  <td align="right">0.69</td>
+                  <td align="right"><b>0.638</b></td>
+                  <td align="right"><b>0.81</b></td>
+                  <td align="right"><b>0.718</b></td>
+                  </tr>
+                  <tr>
+                  <td>4CL_EAAAK_2_CHS_unrelaxed_model_2.pdb</td>
+                  <td align="right"><b>0.693</b></td>
+                  <td align="right">0.616</td>
+                  <td align="right">0.789</td>
+                  <td align="right">0.691</td>
+                  </tr>
+                  </tbody></table>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--EAAAK_2_cov_lDDT.png" id="Figure37" alt="" />
+                <div><b>Figure 37</b><b>.</b> Coverage and predicted lDDT per position of 4CL:(EAAAK)2:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--EAAAK_2_PAE.png" id="Figure38" alt="" />
+                <div><b>Figure 38</b><b>.</b> Predicted alignment error of 4CL:(EAAAK)2:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--EAAAK_2_AF2_RP.png" id="Figure39" alt="" />
+                <div><b>Figure 39</b><b>.</b> Ramachandran plot of the best 4CL:(EAAAK)2:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--4CL_EAAAK_2_CHS_dist.png" id="Figure40" alt="" />
+                <div><b>Figure 40</b><b>.</b>  Illustrating distance between 4CL:(EAAAK)2:CHS active sites
+                </div>
+              </div>
+
+              <h4>Linker (EAAAK)3</h4>
+              <div class="table-container">
+                <div><b>Table 26</b><b>.</b>  Evaluation of 4CL:(EAAAK)3:CHS structures modeled with AlphaFold2
+                </div>
+                <table class="table table-bordered table-hover table-condensed">
+                  <thead><tr><th title="Field #1">Model</th>
+                  <th title="Field #2">QMEAN</th>
+                  <th title="Field #3">QMEANDisCo</th>
+                  <th title="Field #4">VoroMQA</th>
+                  </tr></thead>
+                  <tbody><tr>
+                  <td><b>4CL_EAAAK_3_CHS_unrelaxed_model_1.pdb</b></td>
+                  <td align="right"><b>-1.36</b></td>
+                  <td align="right"><b>0.78</b></td>
+                  <td align="right"><b>0.537969</b></td>
+                  </tr>
+                  <tr>
+                  <td>4CL_EAAAK_3_CHS_unrelaxed_model_2.pdb</td>
+                  <td align="right">-1.38</td>
+                  <td align="right">0.77</td>
+                  <td align="right">0.533997</td>
+                  </tr>
+                  </tbody></table>
+              </div>
+              <div class="table-container">
+                <table class="table table-bordered table-hover table-condensed">
+                  <thead><tr><th title="Field #1">Model</th>
+                  <th title="Field #5">ProQ2D</th>
+                  <th title="Field #6">ProQRosCenD</th>
+                  <th title="Field #7">ProQRosFAD</th>
+                  <th title="Field #8">ProQ3D</th>
+                  </tr></thead>
+                  <tbody><tr>
+                  <td><b>4CL_EAAAK_3_CHS_unrelaxed_model_1.pdb</b></td>
+                  <td align="right"><b>0.693</b></td>
+                  <td align="right">0.617</td>
+                  <td align="right">0.795</td>
+                  <td align="right">0.697</td>
+                  </tr>
+                  <tr>
+                  <td>4CL_EAAAK_3_CHS_unrelaxed_model_2.pdb</td>
+                  <td align="right">0.693</td>
+                  <td align="right"><b>0.634</b></td>
+                  <td align="right"><b>0.803</b></td>
+                  <td align="right"><b>0.713</b></td>
+                  </tr>
+                  </tbody></table>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--EAAAK_3_cov_lDDT.png" id="Figure37" alt="" />
+                <div><b>Figure 41</b><b>.</b> Coverage and predicted lDDT per position of 4CL:(EAAAK)3:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--EAAAK_3_PAE.png" id="Figure42" alt="" />
+                <div><b>Figure 42</b><b>.</b> Predicted alignment error of 4CL:(EAAAK)3:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--EAAAK_3_AF2_RP.png" id="Figure43" alt="" />
+                <div><b>Figure 43</b><b>.</b> Ramachandran plot of the best 4CL:(EAAAK)3:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--4CL_EAAAK_3_CHS_dist.png" id="Figure44" alt="" />
+                <div><b>Figure 44</b><b>.</b>  Illustrating distance between 4CL:(EAAAK)3:CHS active sites
+                </div>
+              </div>
+
+              <h4>Linker GGGGS</h4>
+              <div class="table-container">
+                <div><b>Table 27</b><b>.</b>  Evaluation of 4CL:GGGGS:CHS structures modeled with AlphaFold2
+                </div>
+                <table class="table table-bordered table-hover table-condensed">
+                  <thead><tr><th title="Field #1">Model</th>
+                  <th title="Field #2">QMEAN</th>
+                  <th title="Field #3">QMEANDisCo</th>
+                  <th title="Field #4">VoroMQA</th>
+                  </tr></thead>
+                  <tbody><tr>
+                  <td><b>4CL_GGGGS_CHS_unrelaxed_model_1.pdb</b></td>
+                  <td align="right"><b>-0.75</b></td>
+                  <td align="right"><b>0.78</b></td>
+                  <td align="right"><b>0.542</b></td>
+                  </tr>
+                  <tr>
+                  <td>4CL_GGGGS_CHS_unrelaxed_model_2.pdb</td>
+                  <td align="right">-1.16</td>
+                  <td align="right">0.77</td>
+                  <td align="right">0.536974</td>
+                  </tr>
+                  </tbody></table>
+              </div>
+              <div class="table-container">
+                <table class="table table-bordered table-hover table-condensed">
+                  <thead><tr><th title="Field #1">Model</th>
+                  <th title="Field #5">ProQ2D</th>
+                  <th title="Field #6">ProQRosCenD</th>
+                  <th title="Field #7">ProQRosFAD</th>
+                  <th title="Field #8">ProQ3D</th>
+                  </tr></thead>
+                  <tbody><tr>
+                  <td><b>4CL_GGGGS_CHS_unrelaxed_model_1.pdb</b></td>
+                  <td align="right"><b>0.691</b></td>
+                  <td align="right">0.617</td>
+                  <td align="right">0.779</td>
+                  <td align="right">0.698</td>
+                  </tr>
+                  <tr>
+                  <td>4CL_GGGGS_CHS_unrelaxed_model_2.pdb</td>
+                  <td align="right">0.691</td>
+                  <td align="right"><b>0.640</b></td>
+                  <td align="right"><b>0.809</b></td>
+                  <td align="right"><b>0.725</b></td>
+                  </tr>
+                  </tbody></table>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--GGGGS_cov_lDDT.png" id="Figure45" alt="" />
+                <div><b>Figure 45</b><b>.</b> Coverage and predicted lDDT per position of 4CL:GGGGS:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--GGGGS_PAE.png" id="Figure46" alt="" />
+                <div><b>Figure 46</b><b>.</b> Predicted alignment error of 4CL:GGGGS:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--GGGGS_AF2_RP.png" id="Figure47" alt="" />
+                <div><b>Figure 47</b><b>.</b> Ramachandran plot of the best 4CL:GGGGS:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--GGGGS_dist.png" id="Figure48" alt="" />
+                <div><b>Figure 48</b><b>.</b>  Illustrating distance between 4CL:GGGGS:CHS active sites
+                </div>
+              </div>
+
+              <h4>Linker (GGGGS)2</h4>
+              <div class="table-container">
+                <div><b>Table 28</b><b>.</b>  Evaluation of 4CL:(GGGGS)2:CHS structures modeled with AlphaFold2
+                </div>
+                <table class="table table-bordered table-hover table-condensed">
+                  <thead><tr><th title="Field #1">Model</th>
+                  <th title="Field #2">QMEAN</th>
+                  <th title="Field #3">QMEANDisCo</th>
+                  <th title="Field #4">VoroMQA</th>
+                  </tr></thead>
+                  <tbody><tr>
+                  <td><b>4CL_GGGGS_2_CHS_unrelaxed_model_1.pdb</b></td>
+                  <td align="right">-1.02</td>
+                  <td align="right"><b>0.78</b></td>
+                  <td align="right"><b>0.540667</b></td>
+                  </tr>
+                  <tr>
+                  <td>4CL_GGGGS_2_CHS_unrelaxed_model_2.pdb</td>
+                  <td align="right"><b>-0.9</b></td>
+                  <td align="right"><b>0.78</b></td>
+                  <td align="right">0.53278</td>
+                  </tr>
+                  </tbody></table>
+              </div>
+              <div class="table-container">
+                <table class="table table-bordered table-hover table-condensed">
+                  <thead><tr><th title="Field #1">Model</th>
+                  <th title="Field #5">ProQ2D</th>
+                  <th title="Field #6">ProQRosCenD</th>
+                  <th title="Field #7">ProQRosFAD</th>
+                  <th title="Field #8">ProQ3D</th>
+                  </tr></thead>
+                  <tbody><tr>
+                  <td><b>4CL_GGGGS_2_CHS_unrelaxed_model_1.pdb</b></td>
+                  <td align="right"><b>0.697</b></td>
+                  <td align="right"><b>0.635</b></td>
+                  <td align="right"><b>0.807</b></td>
+                  <td align="right">0.716</td>
+                  </tr>
+                  <tr>
+                  <td>4CL_GGGGS_2_CHS_unrelaxed_model_2.pdb</td>
+                  <td align="right"><b>0.697</b></td>
+                  <td align="right">0.629</td>
+                  <td align="right">0.802</td>
+                  <td align="right"><b>0.725</b></td>
+                  </tr>
+                  </tbody></table>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--GGGGS_2_cov_lDDT.png" id="Figure49" alt="" />
+                <div><b>Figure 49</b><b>.</b> Coverage and predicted lDDT per position of 4CL:(GGGGS)2:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--GGGGS_2_PAE.png" id="Figure50" alt="" />
+                <div><b>Figure 50</b><b>.</b> Predicted alignment error of 4CL:(GGGGS)2:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--GGGGS_2_AF2_RP.png" id="Figure51" alt="" />
+                <div><b>Figure 51</b><b>.</b> Ramachandran plot of the best 4CL:(GGGGS)2:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--GGGGS_2_dist.png" id="Figure52" alt="" />
+                <div><b>Figure 52</b><b>.</b>  Illustrating distance between 4CL:(GGGGS)2:CHS active sites
+                </div>
+              </div>
+
+              <h4>Linker (GGGGS)3</h4>
+              <div class="table-container">
+                <div><b>Table 29</b><b>.</b>  Evaluation of 4CL:(GGGGS)3:CHS structures modeled with AlphaFold2
+                </div>
+                <table class="table table-bordered table-hover table-condensed">
+                  <thead><tr><th title="Field #1">Model</th>
+                  <th title="Field #2">QMEAN</th>
+                  <th title="Field #3">QMEANDisCo</th>
+                  <th title="Field #4">VoroMQA</th>
+                  </tr></thead>
+                  <tbody><tr>
+                  <td><b>4CL_GGGGS_3_CHS_unrelaxed_model_1.pdb</b></td>
+                  <td align="right"><b>-1.25</b></td>
+                  <td align="right"><b>0.78</b></td>
+                  <td align="right"><b>0.540568</b></td>
+                  </tr>
+                  <tr>
+                  <td>4CL_GGGGS_3_CHS_unrelaxed_model_2.pdb</td>
+                  <td align="right">-1.36</td>
+                  <td align="right">0.77</td>
+                  <td align="right">0.531981</td>
+                  </tr>
+                  </tbody></table>
+              </div>
+              <div class="table-container">
+                <table class="table table-bordered table-hover table-condensed">
+                  <thead><tr><th title="Field #1">Model</th>
+                  <th title="Field #5">ProQ2D</th>
+                  <th title="Field #6">ProQRosCenD</th>
+                  <th title="Field #7">ProQRosFAD</th>
+                  <th title="Field #8">ProQ3D</th>
+                  </tr></thead>
+                  <tbody><tr>
+                  <td><b>4CL_GGGGS_3_CHS_unrelaxed_model_1.pdb</b></td>
+                  <td align="right"><b>0.696</b></td>
+                  <td align="right"><b>0.627</b></td>
+                  <td align="right">0.801</td>
+                  <td align="right">0.707</td>
+                  </tr>
+                  <tr>
+                  <td>4CL_GGGGS_3_CHS_unrelaxed_model_2.pdb</td>
+                  <td align="right">0.687</td>
+                  <td align="right">0.626</td>
+                  <td align="right"><b>0.804</b></td>
+                  <td align="right"><b>0.719</b></td>
+                  </tr>
+                  </tbody></table>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--GGGGS_3_cov_lDDT.png" id="Figure53" alt="" />
+                <div><b>Figure 53</b><b>.</b> Coverage and predicted lDDT per position of 4CL:(GGGGS)3:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--GGGGS_3_PAE.png" id="Figure54" alt="" />
+                <div><b>Figure 54</b><b>.</b> Predicted alignment error of 4CL:(GGGGS)3:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--GGGGS_3_AF2_RP.png" id="Figure55" alt="" />
+                <div><b>Figure 55</b><b>.</b> Ramachandran plot of the best 4CL:(GGGGS)3:CHS structure modeled with AlphaFold2
+                </div>
+              </div>
+              <div class="figure-container">
+                <img src="../assets/images/T--Vilnius-Lithuania--GGGGS_3_dist.png" id="Figure56" alt="" />
+                <div><b>Figure 56</b><b>.</b>  Illustrating distance between 4CL:(GGGGS)3:CHS active sites
+                </div>
+              </div>
+
+
+            <h3 class="index-headline">Modeling linkers as unknown amino acids</h3>
+            <p>
+              <a href="https://twitter.com/sokrypton/status/1420218259798953989">28th July S. Ovchinnikov shared</a> that AlphaFold2 
+              is capable of modeling structures with <b>unknown</b> amino acids 
+              (labeled as ‘U’). Therefore we decided to give this feature a 
+              try and model structures with <b>poly-U</b> chains as linkers with 
+              N equal to 3, 5, 10, and 15. Although it was noted 
+              that the <b>relaxation</b> procedure is unavailable when unknown 
+              amino acids are in the structure.
+            </p>
+            <p>
+              The results of modeling with unknown amino acids in the place 
+              of linkers show that linkers of 3 and 5 amino acids provide protein 
+              orientation that is similar to the one modeled with known amino 
+              acids. Meanwhile, linkers of 10 and 15 unknown amino acids doom 
+              the <b>higher degree</b> of freedom to the orientation of the complex. 
+            </p>
+            <p>
+              Scores of the models with unknown aminoacids can be found in 
+              supplementary data.
+            </p>
+            <div class="figure-container">
+              <img src="../assets/images/T--Vilnius-Lithuania--Us_dist.png" id="Figure57" alt="" />
+              <div><b>Figure 57</b><b>.</b> Fusion protein structures modeled with 3 (upper left), 5 (upper right), 10 (lower left), 15 (lower right) unknown amino acids, 4CL (pink), CHS (dark green) with their distances
+              </div>
+            </div>
+            <h3 class="index-headline">Alternative modeling strategy with docking</h3>
+            <p>
+              Another approach that was suggested is to try applying <b>protein docking. </b>
+              For this approach, steps would be to use protein-protein <b>docking</b> 
+              software, generate a significant number of conformations, <b>filter </b>
+              conformations based on the distance between linked ends according 
+              to the <b>length</b> of the linker that the structure is modeled for, 
+              pick the filtered conformations, <b>evaluate quality</b> with previously 
+              used scoring functions. This approach was not applied due to the 
+              shortage of time.
+            </p>
+          </div>
+          <div class="references-wrapper">
+            <div class="breaker"></div>
+            <h2>References</h2>
+            <div class="references-container">
+              <div class="number">1.</div><div>Shamriz, S., & Ofoghi, H. (2016). Design, structure prediction and molecular dynamics simulation of a fusion construct containing malaria pre-erythrocytic vaccine candidate, Pf CelTOS, and human interleukin 2 as adjuvant. BMC bioinformatics, 17(1), 1-15. <a href="https://www.biorxiv.org/content/10.1101/2021.06.14.448402v1.abstract" target="_blank">To the article.</a></div>
+              <div class="number">2.</div><div>Baek, M., DiMaio, F., Anishchenko, I., Dauparas, J., Ovchinnikov, S., Lee, G. R., ... & Baker, D. (2021). Accurate prediction of protein structures and interactions using a 3-track network. bioRxiv. <a href="https://doi.org/10.1101/2021.06.14.448402">To the article.</a> <a href="https://robetta.bakerlab.org" target="_blank">To the tool.</a></div>
+              <div class="number">3.</div><div>Waterhouse, A., Bertoni, M., Bienert, S., Studer, G., Tauriello, G., Gumienny, R., ... & Schwede, T. (2018). SWISS-MODEL: homology modelling of protein structures and complexes. Nucleic acids research, 46(W1), W296-W303. <a href="https://doi.org/10.1093/nar/gky427" target="_blank">To the article.</a></div>
+              <div class="number">4.</div><div>Lu, P., & Feng, M. G. (2008). Bifunctional enhancement of a β-glucanase-xylanase fusion enzyme by optimization of peptide linkers. Applied microbiology and biotechnology, 79(4), 579-587. <a href="https://doi.org/10.1007/s00253-008-1468-4" target="_blank">To the article.</a></div>
+              <div class="number">5.</div><div>Wiederstein, M., & Sippl, M. J. (2007). ProSA-web: interactive web service for the recognition of errors in three-dimensional structures of proteins. Nucleic acids research, 35(suppl_2), W407-W410. <a href="https://doi.org/10.1093/nar/gkm290" target="_blank">To the article.</a></div>
+              <div class="number">6.</div><div>Pozzati, G., Zhu, W., Bassot, C., Lamb, J., Kundrotas, P., & Elofsson, A. (2021). Limits and potential of combined folding and docking using PconsDock. bioRxiv. <a href="https://doi.org/10.1101/2021.06.04.446442" target="_blank">To the article.</a></div>
+              <div class="number">7.</div><div>Yang, J., Yan, R., Roy, A., Xu, D., Poisson, J., & Zhang, Y. (2015). The I-TASSER Suite: protein structure and function prediction. Nature methods, 12(1), 7-8. <a href="https://doi.org/10.1038/nmeth.3213" target="_blank">To the article.</a> <a href="https://zhanglab.dcmb.med.umich.edu/I-TASSER/" target="_blank">To the tool.</a></div>
+              <div class="number">8.</div><div>Yang, J., Anishchenko, I., Park, H., Peng, Z., Ovchinnikov, S., & Baker, D. (2020). Improved protein structure prediction using predicted interresidue orientations. Proceedings of the National Academy of Sciences, 117(3), 1496-1503. <a href="https://www.pnas.org/content/117/3/1496.short" target="_blank">To the article.</a></div>
+              <div class="number">9.</div><div>3DFI scripts to run trRosetta <a href="https://github.com/PombertLab/3DFI#trRosetta---deep-learning-based-protein-structure-modeling" target="_blank">To the tool.</a></div>
+              <div class="number">10.</div><div>Olechnovič, K., & Venclovas, Č. (2019). VoroMQA web server for assessing three-dimensional structures of proteins and protein complexes. Nucleic acids research, 47(W1), W437-W442. <a href="https://academic.oup.com/nar/article/47/W1/W437/5487673?login=true" target="_blank">To the article.</a></div>
+              <div class="number">11.</div><div>Li, G., Huang, Z., Zhang, C., Dong, B. J., Guo, R. H., Yue, H. W., ... & Xing, X. H. (2016). Construction of a linker library with widely controllable flexibility for fusion protein design. Applied microbiology and biotechnology, 100(1), 215-225. <a href="https://doi.org/10.1007/s00253-015-6985-3" target="_blank">To the article.</a></div>
+              <div class="number">12.</div><div>Xu, J., & Zhang, Y. (2010). How significant is a protein structure similarity with TM-score= 0.5?. Bioinformatics, 26(7), 889-895. <a href="https://doi.org/10.1093/bioinformatics/btq066" target="_blank">To the article.</a></div>
+              <div class="number">13.</div><div>Olechnovič, K., & Venclovas, Č. (2020). Contact area-based structural analysis of proteins and their complexes using CAD-score. In Structural Bioinformatics (pp. 75-90). Humana, New York, NY. <a href="https://doi.org/10.1007/978-1-0716-0270-6_6" target="_blank">To the article.</a></div>          
+              <div class="number">14.</div><div>Studer, G., Rempfer, C., Waterhouse, A. M., Gumienny, R., Haas, J., & Schwede, T. (2020). QMEANDisCo—distance constraints applied on model quality estimation. Bioinformatics, 36(6), 1765-1771. <a href="https://doi.org/10.1093/bioinformatics/btz828" target="_blank">To the article.</a></div>
+              <div class="number">15.</div><div>Uziela, K., Menendez Hurtado, D., Shu, N., Wallner, B., & Elofsson, A. (2017). ProQ3D: improved model quality assessments using deep learning. Bioinformatics, 33(10), 1578-1580. <a href="https://academic.oup.com/bioinformatics/article/33/10/1578/2801464?login=true" target="_blank">To the article.</a></div>
+              <div class="number">16.</div><div>Fusion protein modelling, Profacgen. <a href="https://www.profacgen.com/Fusion-Protein-Modeling.htm" target="_blank">To the source.</a></div>        
+              <div class="number">17.</div><div>Fusion protein modelling, Parics Saclay iGEM 2014. <a href="http://2014.igem.org/Team:Paris_Saclay/Modeling/Fusion_Proteine" target="_blank">To the Wiki.</a></div>
+              <div class="number">18.</div><div>Dry Lab, Modelling, IIT Roorkee iGEM 2020. <a href="https://2020.igem.org/Team:IIT_Roorkee/Model" target="_blank">To the Wiki.</a></div>
+              <div class="number">19.</div><div>Protein structure prediction, Western Canada iGEM 2019. <a href="https://2019.igem.org/Team:Western_Canada/Dry_Lab_structures" target="_blank">To the Wiki.</a></div>
+              <div class="number">20.</div><div>Structural model, IISER Bhopai iGEM 2020. <a href="https://2020.igem.org/Team:IISER_Bhopal/Model_structural_model" target="_blank">To the Wiki.</a></div>
+              <div class="number">21.</div><div>Protein modelling, Toronto iGEM 2017. <a href="http://2017.igem.org/Team:Toronto/Protein-Modelling" target="_blank">To the Wiki.</a></div>
+              <div class="number">22.</div><div>Structural modelling, Warsaw iGEM 2009. <a href="http://2009.igem.org/Team:Warsaw/Modelling/Structural#Results" target="_blank">To the Wiki.</a></div>
+              <div class="number">23.</div><div>Dr. Muniba Faiza, Tutorial: Molecular dynamics (MD) simulation using Gromacs, 2019. <a href=" https://bioinformaticsreview.com/20191210/tutorial-molecular-dynamics-md-simulation-using-gromacs/" target="_blank">To the source.</a></div>
+              <div class="number">24.</div><div>Jumper, J., Evans, R., Pritzel, A., Green, T., Figurnov, M., Ronneberger, O., ... & Hassabis, D. (2021). Highly accurate protein structure prediction with AlphaFold. Nature, 1-11. <a href="https://doi.org/10.1038/s41586-021-03819-2" target="_blank">To the article.</a></div>
+              <div class="number">25.</div><div>Simpkin, A. J., Rodríguez, F. S., Mesdaghi, S., Kryshtafovych, A., & Rigden, D. J. (2021). Evaluation of model refinement in CASP14. Proteins: Structure, Function, and Bioinformatics. <a href="https://doi.org/10.1002/prot.26185" target="_blank">To the article.</a></div>
+              <div class="number">26.</div><div>Heo, L., Janson, G., & Feig, M. Physics‐Based Protein Structure Refinement in the Era of Artificial Intelligence. Proteins: Structure, Function, and Bioinformatics. <a href="https://doi.org/10.1002/prot.26161" target="_blank">To the article.</a></div>
+              <div class="number">27.</div><div>Pesce, F., & Lindorff-Larsen, K. (2021). Refining conformational ensembles of flexible proteins against small-angle X-ray scattering data. bioRxiv. <a href="https://doi.org/10.1101/2021.05.29.446281" target="_blank">To the article.</a></div>
+              <div class="number">28.</div><div>Collu, G., Bierig, T., Krebs, A. S., Engilberge, S., Varma, N., Guixa-Gonzalez, R., ... & Benoit, R. M. (2020). Chimeric single α-helical domains as rigid fusion protein connections for protein nanotechnology and structural biology. bioRxiv. <a href="https://doi.org/10.1101/2020.09.29.318410" target="_blank">To the article.</a></div>
+              <div class="number">29.</div><div>Jeong, W. H., Lee, H., Song, D. H., Eom, J. H., Kim, S. C., Lee, H. S., ... & Lee, J. O. (2016). Connecting two proteins using a fusion alpha helix stabilized by a chemical cross linker. Nature communications, 7(1), 1-9. <a href="https://doi.org/10.1038/ncomms11031" target="_blank">To the article.</a></div>
+              <div class="number">30.</div><div>Chen, X., Zaro, J. L., & Shen, W. C. (2013). Fusion protein linkers: property, design and functionality. Advanced drug delivery reviews, 65(10), 1357-1369. <a href="https://doi.org/10.1016/j.addr.2012.09.039" target="_blank">To the article.</a></div>
+              <div class="number">31.</div><div>Peptide Hydrophobicity/Hydrophilicity Analysis, Peptide2.0. <a href="https://www.peptide2.com/N_peptide_hydrophobicity_hydrophilicity.php" target="_blank">To the source.</a></div>
+              <div class="number">32.</div><div>PeptideCutter, Expasy, SIB Swiss Institute of Bioinformatics. <a href="https://web.expasy.org/peptide_cutter/" target="_blank">To the tool.</a></div>
+              <div class="number">33.</div><div>PEP-FOLD3. <a href="https://bioserv.rpbs.univ-paris-diderot.fr/services/PEP-FOLD3/#references" target="_blank">To the tool.</a></div>
+              <div class="number">34.</div><div>Dunstan, M. S., Robinson, C. J., Jervis, A. J., Yan, C., Carbonell, P., Hollywood, K. A., ... & Scrutton, N. S. (2020). Engineering Escherichia coli towards de novo production of gatekeeper (2 S)-flavanones: naringenin, pinocembrin, eriodictyol and homoeriodictyol. Synthetic Biology, 5(1), ysaa012. <a href="https://doi.org/10.1093/synbio/ysaa012" target="_blank">To the article.</a></div>
+              <div class="number">35.</div><div>AlphaFold2, DeepMind, GitHub. <a href="https://github.com/deepmind/alphafold" target="_blank">To the tool.</a></div>
+              <div class="number">36.</div><div>Jumper, J., Evans, R., Pritzel, A., Green, T., Figurnov, M., Ronneberger, O., ... & Hassabis, D. (2021). Highly accurate protein structure prediction with AlphaFold. Nature, 1-11. <a href=" https://doi.org/10.1038/s41586-021-03819-2" target="_blank">To the article.</a></div>
+              <div class="number">37.</div><div>Sergey Ovchinnikov, Milot Mirdita, & Martin Steinegger. (2021, July 22). ColabFold - Making Protein folding accessible to all via Google Colab (Version v1.0-alpha). Zenodo. <a href="http://doi.org/10.5281/zenodo.5123297" target="_blank">To the tool.</a></div>
+              <div class="number">38.</div><div>Reddy Chichili, V. P., Kumar, V., & Sivaraman, J. (2013). Linkers in the structural biology of protein–protein interactions. Protein Science, 22(2), 153-167. <a href=" https://onlinelibrary.wiley.com/doi/abs/10.1002/pro.2206" target="_blank">To the article.</a></div>
+              <div class="number">39.</div><div>Guo, H., Yang, Y., Xue, F., Zhang, H., Huang, T., Liu, W., ... & Ma, L. (2017). Effect of flexible linker length on the activity of fusion protein 4-coumaroyl-CoA ligase:: stilbene synthase. Molecular BioSystems, 13(3), 598-606. <a href="https://pubs.rsc.org/en/content/articlehtml/2017/mb/c6mb00563b" target="_blank">To the article.</a></div>
+              <div class="number">40.</div><div>Zimmermann, L., Stephens, A., Nam, S. Z., Rau, D., Kübler, J., Lozajic, M., ... & Alva, V. (2018). A completely reimplemented MPI bioinformatics toolkit with a new HHpred server at its core. Journal of molecular biology, 430(15), 2237-2243. S0022-2836(17)30587-9  <a href="http://www.sciencedirect.com/science/article/pii/S0022283617305879" target="_blank">To the article.</a></div>
+              <div class="number">41.</div><div>Johnson, T. W., Gallego, R. A., Brooun, A., Gehlhaar, D., & McTigue, M. (2018). Reviving B-Factors: Retrospective Normalized B-Factor Analysis of c-ros Oncogene 1 Receptor Tyrosine Kinase and Anaplastic Lymphoma Kinase L1196M with Crizotinib and Lorlatinib. ACS medicinal chemistry letters, 9(9), 878–883. <a href="https://doi.org/10.1021/acsmedchemlett.8b00147" target="_blank">To the article.</a></div>
+              <div class="number">42.</div><div>Mariani, V., Biasini, M., Barbato, A., & Schwede, T. (2013). lDDT: a local superposition-free score for comparing protein structures and models using distance difference tests. Bioinformatics, 29(21), 2722-2728. <a href="https://doi.org/10.1093/bioinformatics/btt473" target="_blank">To the article.</a></div>
+              <div class="number">43.</div><div>Hiranuma, N., Park, H., Baek, M., Anishchenko, I., Dauparas, J., & Baker, D. (2021). Improved protein structure refinement guided by deep learning based accuracy estimation. Nature communications, 12(1), 1-11. <a href="https://doi.org/10.1038/s41467-021-21511-x" target="_blank">To the article.</a></div>
+              <div class="number">44.</div><div>Zhou, W., Šmidlehner, T., & Jerala, R. (2020). Synthetic biology principles for the design of protein with novel structures and functions. FEBS letters, 594(14), 2199-2212. <a href="https://doi.org/10.1002/1873-3468.13796" target="_blank">To the article.</a></div>
+              <div class="number">45.</div><div>Land H., Humble M.S. (2018) YASARA: A Tool to Obtain Structural Guidance in Biocatalytic Investigations. In: Bornscheuer U., Höhne M. (eds) Protein Engineering. Methods in Molecular Biology, vol 1685. Humana Press, New York, NY. <a href="https://doi.org/10.1007/978-1-4939-7366-8_4" target="_blank">To the article.</a></div>
+              <div class="number">46.</div><div>Zhang, Y., & Skolnick, J. (2005). TM-align: a protein structure alignment algorithm based on the TM-score. Nucleic acids research, 33(7), 2302-2309. <a href="https://doi.org/10.1093/nar/gki524" target="_blank">To the article.</a></div>
+              <div class="number">47.</div><div>trRosetta GPU issue  <a href="https://github.com/gjoni/trRosetta/issues/5" target="_blank">To the source.</a></div>
+              <div class="number">48.</div><div>Benkert, P., Tosatto, S. C. E., & Schomburg, D. (2008). QMEAN: A comprehensive scoring function for model quality assessment. Proteins: Structure, Function, and Bioinformatics, 71(1), 261–277. doi:10.1002/prot.21715 <a href="https://pubmed.ncbi.nlm.nih.gov/17932912/" target="_blank">To the article.</a></div>
+              <div class="number">49.</div><div>Sameer Velankar, Gerard Kleywegt, Alex Bateman (2021). AlphaFold Protein Structure Predictions - a Step Change for Biology. EMBL’s European Bioinformatics Institute (EMBL-EBI). <a href=" https://network.febs.org/posts/alphafold-protein-structure-predictions-a-step-change-for-biology" target="_blank">To the article.</a></div>
+              <div class="number">50.</div><div>DeLano, W. L. (2002). Pymol: An open-source molecular graphics tool. CCP4 Newsletter on protein crystallography, 40(1), 82-92. <a href=" http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.231.5879&rep=rep1&type=pdf#page=44" target="_blank">To the article.</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="index-container">
+          <div class="index-header"></div>
+          <div class="index-content"></div>
+        </div>
+      </div>
+      <footer>
+        <div class="logo-igem">
+          <object data="../assets/logos/T--Vilnius-Lithuania--iGEM-2021.svg"> </object>
+        </div>
+        <div class="social-container">
+          <div>FOLLOW US</div>
+          <div>
+            <div class="placeholder-social-icon"></div>
+            <div class="placeholder-social-icon"></div>
+            <div class="placeholder-social-icon"></div>
+          </div>
+        </div>
+        <div class="mail-container">
+          <div>CONTACT US</div>
+          <a href="mailto:info@vilniusigem.lt">info@vilniusigem.lt</a>
+        </div>
+        <div class="grid-sponsors">
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--VU.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--GMC.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--SnapGene.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Termofisher.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Nanodiagnostika.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Laborama.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Telesoftas.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Biotecha.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Kopicentras.svg"> </object>
+          </div>
+          <div>
+            <object data="../assets/logos/T--Vilnius-Lithuania--Grida.svg"> </object>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../scripts/navigationTabs.js"></script>
+    <script src="../scripts/background.js"></script>
+    <script src="../scripts/contentpage.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script>
+      contentPage(
+        "Sections",
+        true,
+        300,
+      )
+    </script>
+    <script src="../scripts/GlslCanvas.js"></script>
+    <script src="../scripts/backgroundTransition.js"></script>
+  </body>
+</html>

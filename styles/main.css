@@ -23,3 +23,10 @@ a, .nav-item {
 a {
   padding: var(--disability-profile, 10px 12px);
 }
+
+li {
+  border: var(--disability-profile,2px) solid #FFB800;
+  padding: var(--disability-profile, 10px 12px);
+  width: fit-content;
+  box-sizing: border-box;
+}

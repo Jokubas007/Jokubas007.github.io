@@ -66,20 +66,22 @@ function background (){
 
     ctx.clearRect(0, 0, windowWidth, windowHeight);
 
-    circles.forEach((circle) => {
-      ctx.fillStyle = `rgba(26, 132, 137, ${0.8 * (getPosition(animationFrame + circle.delay, animationLength))})`;
-      for (let i = 0; i <= Math.floor(height / 3000); i++) {
-        ctx.beginPath();
-        ctx.arc(
-          width * circle.x,
-          circle.y - window.scrollY + i * 3000,
-          circle.radius * windowWidth, 0, 2 * Math.PI,
-        );
-        ctx.fill();
-      }
-    });
-
-    animationFrame += 1;
+    if(window.innerWidth >= 1024) {
+      circles.forEach((circle) => {
+        ctx.fillStyle = `rgba(26, 132, 137, ${0.8 * (getPosition(animationFrame + circle.delay, animationLength))})`;
+        for (let i = 0; i <= Math.floor(height / 3000); i++) {
+          ctx.beginPath();
+          ctx.arc(
+            width * circle.x,
+            circle.y - window.scrollY + i * 3000,
+            circle.radius * windowWidth, 0, 2 * Math.PI,
+          );
+          ctx.fill();
+        }
+      });
+  
+      animationFrame += 1;
+    }
 
     window.requestAnimationFrame(draw);
   };
