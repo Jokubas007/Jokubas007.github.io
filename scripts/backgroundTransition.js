@@ -8,13 +8,12 @@ function generate(canvas, sandbox) {
     precision mediump float;
     #endif
 
-    #define PI 3.1415926535
-    #define HALF_PI 1.57079632679
+
 
     uniform vec2 u_resolution;
     uniform float u_treshold;
 
-    uniform sampler2D u_image; // ../assets/transition/gradientas.png
+    uniform sampler2D u_image; // ../assets/transition/gradientasss.png
 
     void main(){
       vec2 uv = gl_FragCoord.xy/u_resolution.xy;
@@ -41,8 +40,8 @@ function generate(canvas, sandbox) {
     canvas.style.filter = `blur(5px)`;
   }
   */
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
+  canvas.width = 2*canvas.clientWidth;
+  canvas.height = 2*canvas.clientHeight;
   sandbox.load(shaderFrag);
 }
 
