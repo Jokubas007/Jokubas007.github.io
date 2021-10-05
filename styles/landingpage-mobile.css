@@ -2,6 +2,7 @@
   .landing-page-content {
     position: relative;
     width: 100vw;
+    line-height: 1.5;
   }
 
   .landing-page-content .content-container:first-child {

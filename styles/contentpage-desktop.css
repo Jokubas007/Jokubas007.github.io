@@ -48,6 +48,7 @@
     -moz-box-sizing: border-box;    /* Firefox */
     box-sizing: border-box;
 		width: 100% !important;
+		line-height: 1.5;
 	}
 
 	.app-content-text {

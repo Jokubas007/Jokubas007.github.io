@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <link rel="stylesheet" href="../styles/contentpage-desktop.css">
+    <link rel="stylesheet" href="../styles/contentpage-mobile.css">
+    <link rel="stylesheet" href="../styles/sideindex-desktop.css">
+    <link rel="stylesheet" href="../styles/sideindex-mobile.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/navmenu-desktop.css">
+    <link rel="stylesheet" href="../styles/navmenu-mobile.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-desktop.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
+    <link rel="stylesheet" href="../styles/button-pill.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/table.css">
+    <link rel="stylesheet" href="../styles/bypass-block.css">
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://2021.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </head>
+  <body>
+    
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a href="#main-content" class="bypass-block-link visually-hidden visible-when-focused">Skip to main content</a>
+        <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
+          <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
+          AmeBye
+        </a>
+        <ul class="nav-menu"></ul>
+      </nav>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <div class="background">
+      <canvas id="background-canvas"></canvas>
+      <canvas
+        id="canvas-transition"
+      ></canvas>
+      <div class="app-header">
+        <h1 id="title">SOFTWARE</h1>
+        <div id="img" class="app-header-image-wrapper">
+          <img alt="Header" src="../assets/images/placeholder.png" />
+        </div>
+      </div>
+      <div id="main-content" class="app-content">
+        <div class="app-content-text">
+          <div class="content-page-container">
+            <h3 class="index-headline">Introduction</h3>
+            <h3 class="index-headline">EFBALite</h3>
+              <h4>Motivation</h4>
+              <p>
+                Creating aptamers in the labaratory is an expensive and time consuming process. Thus we
+                were inspired by <b>[1]</b> to create software that would help with this process.
+                The result of our efforts is EFBALite - an implementation
+                (with several improvments and additions) of the Entropic Fragment-Based Approach ...
+                in the Python programming language that is able to generate an aptamer from scratch.
+              </p>
+              <p>
+                The program and user guide is available at the GitHub repository (...).
+              </p>
+              <h4>Description and theory</h4>
+              <p>
+                As the name suggest the algorithm used by EFBALite is based on
+                a statistical measure called relative entropy (or Kullback–Leibler divergence),
+                thus to begin we need to construct a probability space. We use statistical mechanics to accomplish this goal.
+              </p>
+              <p>
+                Let \(\Omega\) denote the phase space of our aptamer target complex.
+                The PDF (point density function) of \(\Omega\) (considered as a random variable) is given by
+                $$f_{\Omega} (Q) = \frac{e^{-\beta H(Q)}}{Z},$$
+                where \(H\) is the Hamiltonian, \(\beta\) is a constant (which depends on temperature) and 
+                $$Z = \int_{\mathbb{R} ^ n} e^{-\beta H(Q)} dQ$$
+                is the partition function.
+              </p>
+              <p>
+                We approach the problem of finding a suitable aptamer for our target using a
+                "lockpicking" approach. That is we try to generate the aptamer one nucleotide at the time,
+                instead of trying to guess the whole sequence at once.
+                This approach allows us to avoid a combinatorial explosion for longer sequences.
+              </p>
+              <p>
+                Suppose we are trying to fit an aptamer of length one (that is a single nucleotide)
+                to our target. The goal of our approach is to find a nucloetide that binds the best when
+                compared to the binding of a random nucleotide. In our approach we measure this by seeing
+                how random the distribution of \(\Omega\) is with a specific nucleotide instead of a random one.
+                Alternatively, we can formulate this as "how much information 
+                do we gain about \(\Omega\) if we use this specific nucleotide instead of a random one?".
+                We then of course pick the nucleotide with the biggest information gain. 
+              </p>
+              <p>
+                The information gain can be quantified as relative entropy. But first, more notation,
+                let \(\Omega^R\) denote the phase phase of the complex with a random nucleotide and \(\Omega^N\) the
+                phase phase of the complex with a particular nucleotide, where \(N\) can be equal to A, C, G, T or U
+                (depending on your flavor of aptamer). Then the relative entropy \(D_{KL}\) from
+                \(\Omega^R\) to \(\Omega^N\) is equal to
+                $$D_{KL} = \int_{\mathbb{R}^n} f_{\Omega^N}(Q) \log\left(\frac{f_{\Omega^N}(Q)}{f_{\Omega^R}(Q)}\right) dQ,$$
+                note that \(D_{KL}\) is not symmetric in terms of \(\Omega^R\) and \(\Omega^N\).
+              </p>
+              <p>
+                The \(f_{\Omega^R}(Q)\) can be calculated as
+                $$ f_{\Omega^R}(Q) = \sum_{n} P(N = n)f_{\Omega^n}(Q).$$
+                We took \(P(N = n)\) to be equal to \(1/4\), but alternative weights can
+                be used if one knows the prior distribution of nucleotides in the aptamer.
+              </p>
+              <p>
+                We find the subsequent nucleotides in the aptamer by fixing the sequence that we have already
+                found and then computing the relative entropies for the next nucleotide.
+              </p>
+              <p>
+                For the practical implementation of the algorithm we construct a discrete phase space. For the first
+                nucleotide, we sample points on the surface of the target which are approximately \(x\)
+                angstroms apart (\(x\) can be specified as desired) and additionally
+                we rotate the nucleotide by 0 and 180 degrees along all Euler angles,
+                where we consider the O3 atom of the nucleotide to be the zero point of the Euclidean space.
+                For the subsequent nucleotides, we keep the already determined sequence fixed in space
+                and rotate the next nucleotide by -90, -60, -30, 0, 30, 60 and 90 degrees along all Euler angles
+                by considering the phosphate atom as the zero point of the Euclidean space.
+              </p>
+              <p>
+                The "lockpicking" approach does not find the optimal sequence in the space of
+                all sequences in terms of information gain. To get as close to the global maximum we implement
+                a searching procedure by specifying an information gain threshold \(T\) which each nucleotide in
+                the sequence must reach. This goes as follows. For the first nucleotide take the one with
+                the highest relative entropy, fix it to the phase space position that is most probable.
+                Now compute the second nucleotide, if the maximum relative entropy is higher than \(T\) keep the nucleotide,
+                fix it to the most probable position and continue, if not backtrack to the first
+                nucleotide and check the second most probable position. Continue this until you find a sequence
+                of desired length or exhaust all possible sampling positions.
+              </p>
+              <h4>Implementation</h4>
+              <p>
+                The program is written using the Python programming language.
+              </p>
+              <p>
+                To compute the energy of the aptamer target complex we use the
+                OpenMM package and use the OpenMM's implementation of the AMBER14 forcefield.
+              </p>
+              <p>
+                The program finishes generating an aptamer in reasonable time (overnight) on
+                a personal computer with a GPU.
+              </p>
+              <h4>Validation</h4>
+              <p>[Laukiam Delfto!!!]</p>
+            <h3 class="index-headline">EFBAScore</h3>
+              <h4>Motivation</h4>
+              <p>
+                The Entropic-Fragment Based approach can be used to create a a function that would score
+                the aptamer's affinity to target molecule. We implemented this scoring function in our second program -
+                EFBAScore. Admittedly, this scoring function is not very accurate, however
+                the main benefit is that it can be used to perform bulk scoring (that is score many
+                sequences with high computational efficiency) which allowed us to generate the starting dataset for
+                [Sauliaus softo pavadinimas] - our third piece of software.
+              </p>
+              <p>
+                The program and user guide is available at the GitHub repository (...).
+              </p>
+              <h4>Description and theory</h4>
+              <p>
+                The main ideas are the same as EFBALite. However, now we have an input sequence and
+                do not have to compare entropies between different nucleotides. Thus, our final score
+                is just the sum of entropies computed at every step.
+              </p>
+              <p>
+                To pick the spatial position for the
+                nucleotide we use the position that has the highest probability and. In order to
+                compute the entropy of a nucleotide we use a uniformly distributed random variable 
+                compute the relative entropy at every step instead of \(\Omega^R\).
+              </p>
+              <h4>Implementation</h4>
+              <p>
+                The program is written using the Python programming language.
+              </p>
+              <p>
+                To compute the energy of the aptamer target complex we use the OpenMM package
+                and use the OpenMM's implementation of the AMBER14 forcefield.
+              </p>
+            <h3 class="index-headline">Sauliaus softas</h3>
+          </div>
+          <div class="references-wrapper">
+            <div class="breaker"></div>
+            <h2>References</h2>
+            <div class="references-container">
+              <div class="number">1.</div>
+              <div>
+                Tseng, C.-Y., Ashrafuzzaman, M., Mane, J. Y., Kapty, J., Mercer, J. R., & Tuszynski, J. A. (2011).
+                Entropic Fragment-Based Approach to Aptamer Design. Chemical Biology & Drug Design, 78(1), 1–13.
+                <a href="https://pubmed.ncbi.nlm.nih.gov/21496214/">To the article.</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index-container">
+          <div class="index-header"></div>
+          <div class="index-content"></div>
+        </div>
+      </div>
+      <footer>
+        <div class="logo-igem">
+          <object data="../assets/logos/T--Vilnius-Lithuania--iGEM-2021.svg"> </object>
+        </div>
+        <div class="social-container">
+          <div>FOLLOW US</div>
+          <div>
+            <a class="placeholder-social-icon" href="https://www.facebook.com/VilniusiGEM">
+              <img src="../assets/icons/facebook.svg" />
+            </a>
+            <a class="placeholder-social-icon" href="https://www.instagram.com/igem_vilnius/">
+              <img src="../assets/icons/instagram.svg" />
+            </a>
+            <a class="placeholder-social-icon" href="https://www.linkedin.com/company/vilnius-igem/">
+              <img src="../assets/icons/linkedin.svg" />
+            </a>
+          </div>
+        </div>
+        <div class="mail-container">
+          <div>CONTACT US</div>
+          <a href="mailto:info@vilniusigem.lt">info@vilniusigem.lt</a>
+        </div>
+        <div class="grid-sponsors">
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--VU.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Termofisher.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/CityOfVilnius.svg"> </object>
+            </div>
+          </div>
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--GMC.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Nanodiagnostika.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Telesoftas.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Kopicentras.svg"> </object>
+            </div>
+          </div>
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--SnapGene.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Laborama.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Biotecha.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Grida.svg"> </object>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../scripts/navigationTabs.js"></script>
+    <script src="../scripts/background.js"></script>
+    <script src="../scripts/contentpage.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script>
+      contentPage(
+        "Sections",
+        true,
+        300,
+      )
+    </script>
+    <script src="../scripts/GlslCanvas.js"></script>
+    <script src="../scripts/backgroundTransition.js"></script>
+  </body>
+</html>

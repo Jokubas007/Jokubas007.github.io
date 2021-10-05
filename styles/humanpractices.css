@@ -67,6 +67,7 @@
 
 .humanpractises-content {
   position: relative;
+  line-height: 1.5;
 }
 
 .humanpractises-content > .back-to-top-btn {
