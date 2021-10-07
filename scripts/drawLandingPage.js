@@ -157,19 +157,19 @@ drawTooltip();
 let circles = [];
 const circleUpdatePeriod = 10;
 let currentFrame = 0;
-const rows = 30;
-const columns = 50;
+const rows = 24;
+const columns = 30;
 
 let circlesString = "";
 for(let i = 0; i < rows; i++){
   for(let j = 0; j < columns; j++){
-    circlesString += `<circle class="simulation-circle" id="simulation-circle-${columns*i+j}" cx=${12+j*12} cy=${12+i*12} r="4" stroke="black" stroke-width="1" fill="white" />`
+    circlesString += `<circle class="simulation-circle" id="simulation-circle-${columns*i+j}" cx=${20+j*20} cy=${25+i*20} r="7" stroke="black" stroke-width="1" fill="white" />`
     circles.push(null)
   }
 }
 
 circlesString = `
-  <svg viewBox="0 0 612 372">
+  <svg viewBox="0 0 612 492">
     ${circlesString}
   </svg>
 `
@@ -222,3 +222,9 @@ function spreadCircles() {
 }
 
 spreadCircles();
+
+document.querySelector('#links-description').innerHTML = linksDescription;
+document.querySelector('#links-design').innerHTML = linksDesign;
+document.querySelector('#links-hp').innerHTML = linksHP;
+document.querySelector('#links-parts').innerHTML = linksParts;
+document.querySelector('#links-software').innerHTML = linksSoftware;

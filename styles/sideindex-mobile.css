@@ -27,11 +27,11 @@
 
   .index-container:focus-within, .index-container:focus {
     width: 350px;
-    height: 700px;
+    max-height: 500px;
+    height: auto;
     border-radius: 25px;
     padding: 48px 48px;
     align-items: flex-start;
-    transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
   }
 
   .index-header {

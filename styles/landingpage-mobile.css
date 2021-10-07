@@ -11,7 +11,7 @@
     position: relative;
   }
 
-  .landing-page-content .content-container .logo img {
+  .landing-page-content .content-container .logo object {
     width: 60%;
     margin-bottom: 5px;
   }
@@ -286,11 +286,11 @@
     flex-direction: column;
   }
 
-  .landing-page-content .solution-container > div > img,  .landing-page-content .solution-container > div > div {
+  .landing-page-content .solution-container > div > object,  .landing-page-content .solution-container > div > div {
     width: 100%;
   }
 
-  .landing-page-content .solution-container > div > img {
+  .landing-page-content .solution-container > div > object {
     margin-top: 10% !important;
   }
 
@@ -334,9 +334,13 @@
     justify-content: space-between;
   }
 
-  .landing-page-content .useful-links-container > div > a > img {
+  .landing-page-content .useful-links-container > div > a svg {
     width: 16vw;
     margin-bottom: 20px !important;
+  }
+
+  .landing-page-content .useful-links-container > div > a svg > rect {
+    transform: translateY(-5px);
   }
 
   .landing-page-content .useful-links-container > div > a {

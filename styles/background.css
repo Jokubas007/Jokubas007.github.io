@@ -68,3 +68,9 @@
   z-index: 999;
   image-rendering: crisp-edges;
 }
+
+@media (max-width: 1024px) {
+  #canvas-transition {
+    display: none;
+  }
+}

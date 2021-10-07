@@ -8,12 +8,10 @@ function generate(canvas, sandbox) {
     precision mediump float;
     #endif
 
-
-
     uniform vec2 u_resolution;
     uniform float u_treshold;
 
-    uniform sampler2D u_image; // ../assets/transition/gradientasss.png
+    uniform sampler2D u_image; // ../assets/transition/transition.png
 
     void main(){
       vec2 uv = gl_FragCoord.xy/u_resolution.xy;
@@ -23,23 +21,9 @@ function generate(canvas, sandbox) {
       col = step(${animationStep}, col);
       col.a = col.x;
 
-
       gl_FragColor = col;
     }
   `;
-  /*
-  if (animationStep <= 0.4) {
-    const blur = Math.max(animationStep*5/0.4, 0);
-    if (animationStep >= 0.2) {
-      canvas.style.filter = `blur(${blur}px)`;
-    } else {
-      canvas.style.filter = `blur(0px)`;
-    }
-    
-  } else {
-    canvas.style.filter = `blur(5px)`;
-  }
-  */
   canvas.width = 2*canvas.clientWidth;
   canvas.height = 2*canvas.clientHeight;
   sandbox.load(shaderFrag);

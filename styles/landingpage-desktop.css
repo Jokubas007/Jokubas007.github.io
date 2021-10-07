@@ -11,8 +11,8 @@
     position: relative;
   }
 
-  .landing-page-content .content-container .logo img {
-    width: 280px;
+  .landing-page-content .content-container .logo object {
+    width: 15vw;
     margin-bottom: 5px;
   }
 
@@ -22,13 +22,13 @@
     align-items: center;
     position: absolute;
     right: 10%;
-    top: 20%;
+    bottom: 20%;
   }
 
   .landing-page-content .content-container .logo h1 {
     margin: 0 !important;
     font-family: var(--main-font);
-    font-size: 10vh;
+    font-size: 5vw;
     font-style: normal;
     font-weight: 700;
     letter-spacing: 0em;
@@ -37,7 +37,7 @@
 
   .landing-page-content .content-container .logo div {
     font-family: var(--main-font);
-    font-size: 4vh;
+    font-size: 2vw;
     font-style: normal;
     font-weight: 300;
     letter-spacing: 0em;
@@ -47,7 +47,7 @@
     position: absolute;
     width: 20%;
     font-family: var(--main-font);
-    font-size: 3vh;
+    font-size: 1.5vw;
     font-style: normal;
     font-weight: 300;
     letter-spacing: 0em;
@@ -56,7 +56,7 @@
 
   .landing-page-content .content-container:nth-child(2) > div > span {
     font-family: var(--secondary-font);
-    font-size: 3vh;
+    font-size: 1.5vw;
     font-style: normal;
     font-weight: 800;
     letter-spacing: 0em;
@@ -77,7 +77,7 @@
     position: absolute;
     width: 20%;
     font-family: var(--main-font);
-    font-size: 3vh;
+    font-size: 1.5vw;
     font-style: normal;
     font-weight: 300;
     letter-spacing: 0em;
@@ -86,7 +86,7 @@
 
   .landing-page-content .content-container:nth-child(3) > div span {
     font-family: var(--secondary-font);
-    font-size: 3vh;
+    font-size: 1.5vw;
     font-style: normal;
     font-weight: 800;
     letter-spacing: 0em;
@@ -95,7 +95,7 @@
 
   .landing-page-content .content-container:nth-child(3) > div h2 {
     font-family: var(--secondary-font);
-    font-size: 6vh;
+    font-size: 3vw;
     font-style: normal;
     font-weight: 800;
     letter-spacing: 0em;
@@ -122,7 +122,8 @@
 
   .landing-page-content .content-container:nth-child(4) {
     position: relative;
-    padding: 96px;
+    padding: 96px !important;
+    padding-left: 48px !important;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox */
     box-sizing: border-box;
@@ -137,7 +138,7 @@
     margin-bottom: 7px !important;
     color: #FCCEC0;
     font-family: var(--secondary-font);
-    font-size: 5vh;
+    font-size: 2.5vw;
     font-style: normal;
     font-weight: 800;
     letter-spacing: 0em;
@@ -148,7 +149,7 @@
     margin: 0 !important;
     margin-bottom: 57px !important;
     font-family: var(--main-font);
-    font-size: 3vh;
+    font-size: 1.5vw;
     font-style: normal;
     font-weight: 300;
     letter-spacing: 0em;
@@ -176,7 +177,7 @@
 
   .map-tooltip > div {
     font-family: var(--secondary-font);
-    font-size: 2vh;
+    font-size: 1vw;
     font-style: normal;
     font-weight: 800;
     letter-spacing: 0em;
@@ -185,7 +186,7 @@
 
   .map-tooltip > table tr > th {
     font-family: var(--main-font);
-    font-size: 1.2vh;
+    font-size: 0.6vw;
     font-style: normal;
     font-weight: 300;
     letter-spacing: 0em;
@@ -199,7 +200,7 @@
 
   .map-tooltip > table tr > td {
     font-family: var(--secondary-font);
-    font-size: 1.5vh;
+    font-size: 0.75vw;
     font-style: normal;
     font-weight: 800;
     letter-spacing: 0em;
@@ -223,7 +224,7 @@
 
   .landing-page-content .content-container:nth-child(5) {
     position: relative;
-    padding: 96px;
+    padding: 96px !important;
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox */
     box-sizing: border-box;
@@ -231,7 +232,7 @@
 
   .landing-page-content .content-container:nth-child(5) > h2 {
     font-family: var(--secondary-font);
-    font-size: 10vh;
+    font-size: 4.5vw;
     font-style: normal;
     font-weight: 800;
     letter-spacing: 0em;
@@ -258,6 +259,24 @@
     text-align: left;
   }
 
+  .landing-page-content .content-container:nth-child(5) > div > div:last-child {
+    font-size: 1vw;
+  }
+
+  .landing-page-content .content-container:nth-child(5) > div > div:last-child > div {
+    display: flex;
+    align-items: center;
+  }
+
+  .landing-page-content .content-container:nth-child(5) > div > div:last-child > div > svg {
+    width: 0.5vw;
+    margin-right: 8px;
+  }
+
+  .landing-page-content .content-container:nth-child(5) > div > .text-container {
+    width: 28vw;
+  }
+
   .circles-container {
     margin: 0 64px !important;
   }
@@ -275,7 +294,7 @@
     margin: 0 !important;
     margin-bottom: 96px !important;
     font-family: var(--secondary-font);
-    font-size: 10vh;
+    font-size: 5vw;
     font-style: normal;
     font-weight: 800;
     letter-spacing: 0em;
@@ -291,11 +310,11 @@
     margin-bottom: 80px;
   }
 
-  .landing-page-content .solution-container > div > img,  .landing-page-content .solution-container > div > div {
+  .landing-page-content .solution-container > div > object,  .landing-page-content .solution-container > div > div {
     width: 45%;
   }
 
-  .landing-page-content .solution-container > div > img {
+  .landing-page-content .solution-container > div > object {
     margin-right: 10% !important;
   }
 
@@ -311,7 +330,7 @@
     margin: 0 !important;
     margin-bottom: 40px !important;
     font-family: var(--secondary-font);
-    font-size: 7vh;
+    font-size: 3.5vw;
     font-style: normal;
     font-weight: 800;
     letter-spacing: 0em;
@@ -321,7 +340,7 @@
 
   .landing-page-content .solution-container > div > div {
     font-family: var(--main-font);
-    font-size: 2.5vh;
+    font-size: 1.25vw;
     font-style: normal;
     font-weight: 300;
     letter-spacing: 0em;
@@ -338,9 +357,9 @@
     justify-content: space-between;
   }
 
-  .landing-page-content .useful-links-container > div > a > img {
-    width: 16vw;
+  .landing-page-content .useful-links-container > div > a svg {
     margin-bottom: 20px !important;
+    width: 16vw;
   }
 
   .landing-page-content .useful-links-container > div > a {
@@ -349,14 +368,14 @@
     font-style: normal;
     font-weight: 400;
     letter-spacing: 0em;
-    font-size: 2.5vh;
+    font-size: 1.25vw;
     color: #ffffff;
     text-decoration: none;    
   }
 
   .landing-page-content .useful-links-container > h2 {
     font-family: var(--secondary-font);
-    font-size: 7vh;
+    font-size: 3.5vw;
     font-style: normal;
     font-weight: 800;
     letter-spacing: 0em;

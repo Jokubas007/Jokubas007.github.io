@@ -32,7 +32,7 @@
       <div class="landing-page-content">
         <div class="content-container">
           <div class="logo">
-            <img alt="logo" src="../assets/logos/amebyeLogo.svg"/>
+            <object data="../assets/logos/amebyeLogo.svg"></object>
             <h1>AmeBye</h1>
             <div>something something something</div>
           </div>
@@ -86,7 +86,7 @@
         <div class="content-container">
           <h2>Prevention</h2>
           <div>
-            <div>
+            <div class="text-container">
               About 80 - 90 percent of people infected with 
               E. histolytica face no symptoms but can transmit the disease to other people, 
               who might be more susceptible and face intricate complications. 
@@ -99,13 +99,22 @@
             <div class="circles-container"></div>
             <div>
               <div>
-                Healthy
+                <svg viewBox="0 0 14 14">
+                  <circle cx="7" cy="7" r="7" fill="white" />
+                </svg>
+                No infection
               </div>
               <div>
-                Healthy
+                <svg viewBox="0 0 14 14">
+                  <circle cx="7" cy="7" r="7" fill="#FCCEC0" />
+                </svg>
+                Asymptomatic infection
               </div>
               <div>
-                Healthy
+                <svg viewBox="0 0 14 14">
+                  <circle cx="7" cy="7" r="7" fill="#EF9F89" />
+                </svg>
+                Symptomatic infection
               </div>
             </div>
           </div>
@@ -113,7 +122,7 @@
         <div class="solution-container">
           <h2>Solution</h2>
           <div>
-            <img alt="Probiotics" src="../assets/images/probiotics.svg"/>
+            <object data="../assets/images/probiotics.svg"></object>
             <div>
               <h3>Probiotics</h3>
               <p>
@@ -139,7 +148,7 @@
                 institutions but for in-home use as well.
               </p>
             </div>
-            <img alt="Test" src="../assets/images/test.svg"/>
+            <object data="../assets/images/test.svg"></object>
           </div>
           <div>
             <div>
@@ -153,23 +162,23 @@
           <h2>Useful links</h2>
           <div>
             <a href="https://2021.igem.org/Team:Vilnius-Lithuania/Description">
-              <img alt="Description" src="../assets/images/links-description.svg"/>
+              <div id="links-description"></div>
               <div>Description</div>
             </a>
             <a href="https://2021.igem.org/Team:Vilnius-Lithuania/Design">
-              <img alt="Design" src="../assets/images/links-design.svg"/>
+              <div id="links-design"></div>
               <div>Design</div>
             </a>
             <a href="https://2021.igem.org/Team:Vilnius-Lithuania/Parts">
-              <img alt="Parts" src="../assets/images/links-parts.svg"/>
+              <div id="links-parts"></div>
               <div>Parts</div>
             </a>
             <a href="https://2021.igem.org/Team:Vilnius-Lithuania/Software">
-              <img alt="Software" src="../assets/images/links-software.svg"/>
+              <div id="links-software"></div>
               <div>Software</div>
             </a>
             <a href="https://2021.igem.org/Team:Vilnius-Lithuania/Human_Practices">
-              <img alt="Human practices" src="../assets/images/links-hp.svg"/>
+              <div id="links-hp"></div>
               <div>Human practices</div>
             </a>
           </div>
@@ -226,6 +235,7 @@
       </footer>
     </div>
   </body>
+  <script src="../scripts/iconsUsefullLinks.js"></script>
   <script src="../scripts/background.js"></script>
   <script src="../scripts/map.js"></script>
   <script src="../scripts/drawLandingPage.js"></script>
