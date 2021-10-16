@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <link rel="stylesheet" href="../styles/contentpage-desktop.css">
+    <link rel="stylesheet" href="../styles/contentpage-mobile.css">
+    <link rel="stylesheet" href="../styles/sideindex-desktop.css">
+    <link rel="stylesheet" href="../styles/sideindex-mobile.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/navmenu-desktop.css">
+    <link rel="stylesheet" href="../styles/navmenu-mobile.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-desktop.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
+    <link rel="stylesheet" href="../styles/button-pill.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/table.css">
+    <link rel="stylesheet" href="../styles/bypass-block.css">
+
+  </head>
+  <body>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a href="#main-content" class="bypass-block-link visually-hidden visible-when-focused">Skip to main content</a>
+        <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
+          <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
+          AmeBye
+        </a>
+        <ul class="nav-menu"></ul>
+      </nav>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <div class="background">
+      <canvas id="background-canvas"></canvas>
+      <canvas
+        id="canvas-transition"
+      ></canvas>
+      <div class="app-header">
+        <h1 id="title">
+         HARDWARE
+        </h1>
+        <div class="app-header-image-wrapper" id="img">
+         <img alt="Header" src="https://2021.igem.org/wiki/images/9/99/T--Vilnius-Lithuania--Hardware.jpg"/>
+        </div>
+       </div>
+       <div class="app-content">
+        <div class="app-content-text">
+         <div class="content-page-container">
+             <h3 class="index-headline">
+                Background
+             </h3>
+             <p>
+                Our diagnostic test is based on samples from blood and for this reason we created a vertical flow diagnostic test hardware design. Currently available models did not suit our needs as they were particularly created for lateral flow methods. Additionally, included buffers dilute the sample too much and create lower molarity solutions for our biomarkers. The problem occurs for lower dissociation constant aptamers - less molecules per volume mean less association and reduced colorimetric response.
+    
+             </p>
+             <h3 class="index-headline">
+                Introduction
+             </h3>
+             <p>
+                To make our diagnostic test reproducible we created a 3D printed case with 3 different spots for analyses. One spot for our biomarker and two control spots.  Upscaling manufacturing quantity to meet cost efficient level is possible by recreating model for injection molding, which is relatively cheaper for people in developing countries. Few other design considerations for cost cutting were applied and will be demonstrated later on.
+             </p>
+             <p>
+    For inspiration we took a lateral flow assay (LFA) device and thought about negative aspects which create <b>false negative</b> or <b>false positive</b> results and how we could solve them. During examination we found out that one of the main reasons for such results are physics behind colored bands from gold nanoparticles. Optimum pH should be kept during the whole detection period or wrong interpretation of the results is inevitable. In particular false negatives are more of a problem than false positives. The same example can be found in SARS-CoV-2 rapid tests where false negatives are 20% higher than for RT‐PCR [1]. 
+             </p>
+             <p>
+    False negative results mean missed cases of infection, with either delayed or no confirmed diagnosis and increased risk of community transmission due to false sense of security. In amebiasis circumstances postponed treatment could mean serious health problems or even fatality. For these reasons vertical flow colorimetric response was chosen as one of the possible solutions.
+             </p>
+             <h3 class="index-headline">
+                3D model
+             </h3>
+             <h4 class="index-headline">
+                Initial sketch
+             </h4>
+             <p>
+                By keeping in mind the same dimensions of LFA we created a mockup model which included 3 windows. However
+             </p>
+             <div class="figure-container">
+                <img alt="" src="https://2021.igem.org/wiki/images/5/59/T--Vilnius-Lithuania--initial_sketch.png"/>
+                <div>
+                  <b>
+                  Figure 1.
+                  </b>
+                  Initial AutoCAD sketch
+                </div>
+             </div>
+             <h4 class="index-headline">
+                Planning
+             </h4>
+             <p>
+                After researching we chose to create a model ourselves and the first version was for determining internal dimensions which should hold all necessary membranes. The first trial is shown in Figure 1. 
+             </p>
+    
+             <div class="figure-container">
+                <img alt="" src="https://2021.igem.org/wiki/images/e/e1/T--Vilnius-Lithuania--1_up_v2_area.png"/>
+                <div>
+                  <b>
+                  Figure 2.
+                  </b>
+                  Version 1 of diagnostic test 3D model
+                </div>
+             </div>
+    
+             <p>
+    We determined that oval shapes for membranes are best suited as they hold everything in place neatly. Both layers are embedded from top and bottom by plastic pieces and there are no need for glue. 
+    By building and learning from model about holes’ dimensions we created another model for further usage shown in figures 3 and 4.
+             </p>
+    
+             <div class="figure-container">
+                <img alt="" src="https://2021.igem.org/wiki/images/b/bf/T--Vilnius-Lithuania--2_up_v2_area.png"/>
+                <div>
+                  <b>
+                  Figure 3.
+                  </b>
+                  Version 2 of diagnostic test 3D model. Front side
+                </div>
+             </div>
+    
+             <div class="figure-container">
+                <img alt="" src="https://2021.igem.org/wiki/images/2/21/T--Vilnius-Lithuania--2_down_v2_area.png"/>
+                <div>
+                  <b>
+                  Figure 4.
+                  </b>
+                  Version 2 of diagnostic test 3D model. Bottom side with easy-to-read colorimetric assistance
+                </div>
+             </div>
+    
+             <p>
+    Version 2 showed negative results for user experience as it was too small to hold in hands. Also, hole depth was another problem as it could hold more blood but on the other hand it meant that person would have to precisely hit the membrane. We rethinked what from both previous models add value and created the final third design. 
+             </p>
+    
+             <div class="figure-container">
+                <img alt="" src="https://2021.igem.org/wiki/images/4/43/T--Vilnius-Lithuania--3_up_v2_area.png"/>
+                <div>
+                  <b>
+                  Figure 5.
+                  </b>
+                  Version 3 of diagnostic test 3D model. Front side
+                </div>
+             </div>
+    
+             <div class="figure-container">
+                <img alt="" src="https://2021.igem.org/wiki/images/1/1a/T--Vilnius-Lithuania--3_down_v2_area.png"/>
+                <div>
+                  <b>
+                  Figure 6.
+                  </b>
+                  Version 3 of diagnostic test 3D model. Bottom side with easy-to-read colorimetric assistance
+                </div>
+             </div>
+    
+             <p>
+    The last one model passed initial user experience tests and we included it in our proof of concept measurements. Overall model volume is X cubic centimeters. We think it is bare minimum for making it strong enough by using less materials. Original material in 3D printing was polylactic acid (PLA) as it was cost efficient for testing our design.
+             </p>
+    
+             <h4 class="index-headline">
+                Final dimensions
+             </h4>
+    
+             <p>
+             <ul>
+               <li>Outside  80x23x4.5 (mm) or 3.15x0.91x0.32 (inches).</li>
+               <li>Inside circle diameter 12.6 mm and overlay border 1.5 mm.</li>
+             </ul>
+             </p>
+    
+             <h4 class="index-headline">
+                3D printed version
+             </h4>
+             <p>
+    We hope that further usage of this hardware will enable future teams to experiment with wider applications of the membranes and vertical flow methodology. To make it convenient we include 
+             <a href="https://2021.igem.org/wiki/images/5/58/T--Vilnius-Lithuania--Prokaryote_genome_quality_assessment.pdf"
+             download> <b>link</b>
+             </a>
+    to download files for 3D printing. Initial design was done using AutoCAD 2022 and oncoming modifications could be done using the original file (.dwg). For only printing and viewing .stl files can be applicable in various software environments.
+             </p>
+    
+             <h4 class="index-headline">
+                Characteristics
+             </h4>
+             <p>
+             <ul>
+               <li>Asymmetric plasma separation membrane which enables high flow-rate while maintaining quality filtration.</li>
+               <li>PVDF membrane with immobilized PDA (polydiacetylene) and aptamer conjugates.</li>
+               <li>Bottom of the test has colored circles around the detection spot for better visualisation and accessibility. Merging of colors should indicate positive result for amebiasis.</li>
+               <li>For an easy-to-disassemble method one side of the test has a slightly hollow edge. This design aspect comes in mind when case should be opened for recycling of materials and safe disposal of membranes.</li>
+               <li>Casing is made of polylactic acid and is widely used for various 3D printing projects.</li>
+             </ul>
+             </p>
+    
+             <h4 class="index-headline">
+                Further modifications
+             </h4>
+             <p>
+    For better transportation and safer usage each spot could have a glued clear plastic bottom. It could also have positive effect for longevity of aptamers and prevent from environmental impact. 
+             </p>
+             <p>
+    Also, PVDF membrane could be changed to another more suitable for specific biomarker. It is known that proteins bind to membrane materials. To interfere with that interaction many other types of membranes could be applicable. Nitrocellulose is another option which we did not try in our case.
+             </p>
+    
+         </div>
+         <div class="references-wrapper">
+          <div class="breaker">
+          </div>
+          <h2>
+           References
+          </h2>
+          <div class="references-container">
+           <div class="number">
+            1.
+           </div>
+           <div>
+            Dinnes, J., Deeks, J. J., Berhane, S., Taylor, M., Adriano, A., Davenport, C., Dittrich, S., Emperador, D., Takwoingi, Y., Cunningham, J., Beese, S., Domen, J., Dretzke, J., Ferrante di Ruffano, L., Harris, I. M., Price, M. J., Taylor-Phillips, S., Hooft, L., Leeflang, M. M. G., … Van den Bruel, A. (2021). Rapid, point-of-care antigen and molecular-based tests for diagnosis of SARS-COV-2 infection. Cochrane Database of Systematic Reviews, 2021(4). https://doi.org/10.1002/14651858.cd013705.pub2 
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="index-container">
+         <div class="index-header">
+         </div>
+         <div class="index-content">
+         </div>
+        </div>
+       </div>
+       <footer>
+        <div class="logo-igem">
+         <object data="https://2021.igem.org/wiki/images/f/ff/T--Vilnius-Lithuania--iGEM-2021.svg">
+         </object>
+        </div>
+        <div class="social-container">
+         <div>
+          FOLLOW US
+         </div>
+         <div>
+          <div class="placeholder-social-icon">
+          </div>
+          <div class="placeholder-social-icon">
+          </div>
+          <div class="placeholder-social-icon">
+          </div>
+         </div>
+        </div>
+        <div class="mail-container">
+         <div>
+          CONTACT US
+         </div>
+         <a href="mailto:info@vilniusigem.lt">
+          info@vilniusigem.lt
+         </a>
+        </div>
+        <div class="grid-sponsors">
+         <div>
+          <object data="https://2021.igem.org/wiki/images/d/dc/T--Vilnius-Lithuania--VU.svg">
+          </object>
+         </div>
+         <div>
+          <object data="https://2021.igem.org/wiki/images/b/bb/T--Vilnius-Lithuania--GMC.svg">
+          </object>
+         </div>
+         <div>
+          <object data="https://2021.igem.org/wiki/images/d/df/T--Vilnius-Lithuania--SnapGene.svg">
+          </object>
+         </div>
+         <div>
+          <object data="https://2021.igem.org/wiki/images/b/bf/T--Vilnius-Lithuania--Termofisher.svg">
+          </object>
+         </div>
+         <div>
+          <object data="https://2021.igem.org/wiki/images/9/98/T--Vilnius-Lithuania--Nanodiagnostika.svg">
+          </object>
+         </div>
+         <div>
+          <object data="https://2021.igem.org/wiki/images/3/3e/T--Vilnius-Lithuania--Laborama.svg">
+          </object>
+         </div>
+         <div>
+          <object data="https://2021.igem.org/wiki/images/1/16/T--Vilnius-Lithuania--Telesoftas.svg">
+          </object>
+         </div>
+         <div>
+          <object data="https://2021.igem.org/wiki/images/c/c1/T--Vilnius-Lithuania--Biotecha.svg">
+          </object>
+         </div>
+         <div>
+          <object data="https://2021.igem.org/wiki/images/7/70/T--Vilnius-Lithuania--Kopicentras.svg">
+          </object>
+         </div>
+         <div>
+          <object data="https://2021.igem.org/wiki/images/4/4f/T--Vilnius-Lithuania--Grida.svg">
+          </object>
+         </div>
+        </div>
+       </footer>
+    </div>
+    <script src="../scripts/navigationTabs.js"></script>
+    <script src="../scripts/background.js"></script>
+    <script src="../scripts/contentpage.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script>
+      contentPage(
+        "Sections",
+        true,
+        300,
+      )
+    </script>
+    <script src="../scripts/GlslCanvas.js"></script>
+    <script src="../scripts/backgroundTransition.js"></script>
+  </body>
+</html>

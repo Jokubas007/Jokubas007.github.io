@@ -108,7 +108,7 @@ navigationTabs = [
     "menuItems": [
       {
         "title": "Team",
-        "path": "/Team:Vilnius-Lithuania/Members"
+        "path": "/Team:Vilnius-Lithuania/Team"
       },
       {
         "title": "Attributions",

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
     <link rel="stylesheet" href="../styles/button-pill.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/bypass-block.css">
   </head>
   <body>
     <div class="navbar-container">
@@ -30,20 +31,17 @@
       <canvas id="background-canvas"></canvas>
       <canvas
         id="canvas-transition"
-        data-fragment-url="../assets/transition/BackgroundTransition.frag"
-        width="500"
-        height="500"
       ></canvas>
       <div class="app-header">
         <h1 id="title">EXPERIMENTS</h1>
         <div id="img" class="app-header-image-wrapper">
-          <img alt="Header" src="../assets/images/placeholder.png" />
+          <img alt="Header" src="https://2021.igem.org/wiki/images/1/19/T--Vilnius-Lithuania--Experiments.JPG" />
         </div>
       </div>
       <div class="app-content">
         <div class="downloads-group">
           <div 
-            class="button"
+            class="button-download"
             tabindex="0"
           >
             PROTOCOLS
@@ -54,7 +52,7 @@
             </svg>              
           </div>
           <div 
-            class="button"
+            class="button-download"
             tabindex="0"
           >
             <div>
@@ -69,7 +67,7 @@
             </svg>              
           </div>
           <div 
-            class="button"
+            class="button-download"
             tabindex="0"
           >
             <div>
@@ -88,31 +86,29 @@
         <div class="experiments-content">
           <div>
             <div class="week-selector">
-              <svg 
-                class="button-previous" 
-                tabindex="0"
-                width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect x="15.002" y="2.50012" width="17.6787" height="3.53575" rx="1" transform="rotate(135 15.002 2.50012)" fill="#002733"/>
-                <rect x="15.002" y="2.50012" width="17.6787" height="3.53575" rx="1" transform="rotate(135 15.002 2.50012)" fill="#002733"/>
-                <rect x="15.002" y="2.50012" width="17.6787" height="3.53575" rx="1" transform="rotate(135 15.002 2.50012)" fill="#0D4B5E"/>
-                <rect x="12.502" y="25.6081" width="17.6787" height="3.53575" rx="1" transform="rotate(-135 12.502 25.6081)" fill="#002733"/>
-                <rect x="12.502" y="25.6081" width="17.6787" height="3.53575" rx="1" transform="rotate(-135 12.502 25.6081)" fill="#002733"/>
-                <rect x="12.502" y="25.6081" width="17.6787" height="3.53575" rx="1" transform="rotate(-135 12.502 25.6081)" fill="#0D4B5E"/>
-              </svg>
-              <div></div>
-              <svg
-                class="button-next"
-                tabindex="0"
-                width="15" height="26" viewBox="0 0 15 26" fill="none" xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="17.6769" height="3.53538" rx="1" transform="matrix(0.707033 0.70718 0.707033 -0.70718 0 2.50012)" fill="#002733"/>
-                <rect width="17.6769" height="3.53538" rx="1" transform="matrix(0.707033 0.70718 0.707033 -0.70718 0 2.50012)" fill="#002733"/>
-                <rect width="17.6769" height="3.53538" rx="1" transform="matrix(0.707033 0.70718 0.707033 -0.70718 0 2.50012)" fill="#0D4B5E"/>
-                <rect width="17.6769" height="3.53538" rx="1" transform="matrix(0.707033 -0.70718 -0.707033 -0.70718 2.5 25.6081)" fill="#002733"/>
-                <rect width="17.6769" height="3.53538" rx="1" transform="matrix(0.707033 -0.70718 -0.707033 -0.70718 2.5 25.6081)" fill="#002733"/>
-                <rect width="17.6769" height="3.53538" rx="1" transform="matrix(0.707033 -0.70718 -0.707033 -0.70718 2.5 25.6081)" fill="#0D4B5E"/>
-              </svg>                
+              <div class="week"></div>
+              <div>
+                <svg
+                  class="button-previous"
+                  viewBox="0 0 43 43"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  tabindex="0"
+                >
+                  <circle cx="21.5" cy="21.5" r="21.5" fill="#FCCEC0"/>
+                  <path d="M12.3389 20.6868C11.7866 20.6868 11.3389 21.1345 11.3389 21.6868C11.3389 22.2391 11.7866 22.6868 12.3389 22.6868V20.6868ZM31.3677 22.3939C31.7582 22.0034 31.7582 21.3702 31.3677 20.9797L25.0037 14.6157C24.6132 14.2252 23.98 14.2252 23.5895 14.6157C23.199 15.0062 23.199 15.6394 23.5895 16.0299L29.2464 21.6868L23.5895 27.3436C23.199 27.7341 23.199 28.3673 23.5895 28.7578C23.98 29.1484 24.6132 29.1484 25.0037 28.7578L31.3677 22.3939ZM12.3389 22.6868H30.6606V20.6868H12.3389V22.6868Z" fill="#002733"/>
+                </svg>
+                <svg
+                  class="button-next"
+                  viewBox="0 0 43 43"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  tabindex="0"
+                >
+                  <circle cx="21.5" cy="21.5" r="21.5" fill="#FCCEC0"/>
+                  <path d="M12.3389 20.6868C11.7866 20.6868 11.3389 21.1345 11.3389 21.6868C11.3389 22.2391 11.7866 22.6868 12.3389 22.6868V20.6868ZM31.3677 22.3939C31.7582 22.0034 31.7582 21.3702 31.3677 20.9797L25.0037 14.6157C24.6132 14.2252 23.98 14.2252 23.5895 14.6157C23.199 15.0062 23.199 15.6394 23.5895 16.0299L29.2464 21.6868L23.5895 27.3436C23.199 27.7341 23.199 28.3673 23.5895 28.7578C23.98 29.1484 24.6132 29.1484 25.0037 28.7578L31.3677 22.3939ZM12.3389 22.6868H30.6606V20.6868H12.3389V22.6868Z" fill="#002733"/>
+                </svg>
+              </div>              
             </div>
             <div class="text" id="week-0">
               <h2>Prevention</h2>

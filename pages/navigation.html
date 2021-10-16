@@ -1,12 +1,37 @@
 <div class="navbar-container">
   <nav class="navbar">
+    <a href="#main-content" class="bypass-block-link visually-hidden visible-when-focused">Skip to main content</a>
     <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
-      <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
+      <img src="https://2021.igem.org/wiki/images/b/b0/T--Vilnius-Lithuania--amebyeLogo.svg" alt="AmebyeLogo" />
       AmeBye
     </a>
     <ul class="nav-menu"></ul>
   </nav>
   <div class="progress-container">
     <div class="progress-bar"></div>
+  </div>
+  <div class=animation-container>
+    <script>
+      document.querySelector('body').classList.add("content-hidden");
+      window.addEventListener("load", function() {
+          setTimeout(function() {
+            document.querySelector('body').classList.remove("content-hidden");
+            document.querySelector('.animation-container').classList.add("loaded");
+            document.querySelector('.animation-container').innerHTML="";
+          }, 200);
+      });
+    </script>
+    <div id="loading-animation"></div>
+    <div>Loading...</div>
+    <script src="../scripts/lottie.js"></script>
+    <script>
+      var animation = bodymovin.loadAnimation({
+      container: document.getElementById('loading-animation'), 
+      path: '../assets/Loading_animacija.json', 
+      renderer: 'svg', 
+      loop: true, 
+      autoplay: true, 
+    });
+    </script>
   </div>
 </div>

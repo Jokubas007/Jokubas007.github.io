@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <link rel="stylesheet" href="../styles/contentpage-desktop.css">
+    <link rel="stylesheet" href="../styles/contentpage-mobile.css">
+    <link rel="stylesheet" href="../styles/sideindex-desktop.css">
+    <link rel="stylesheet" href="../styles/sideindex-mobile.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/navmenu-desktop.css">
+    <link rel="stylesheet" href="../styles/navmenu-mobile.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-desktop.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
+    <link rel="stylesheet" href="../styles/button-pill.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/table.css">
+    <link rel="stylesheet" href="../styles/bypass-block.css">
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+    <script src="https://2021.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  </head>
+  <style>
+    #bodyContent a[href ^="https://"] {
+         color: #054d54;
+     }
+ </style>
+ <body>
+  <div class="navbar-container">
+   <nav class="navbar">
+    <a class="navbar-logo" href="/Team:Vilnius-Lithuania">
+     <img alt="AmebyeLogo" src="https://2021.igem.org/wiki/images/b/b0/T--Vilnius-Lithuania--amebyeLogo.svg"/>
+     AmeBye
+    </a>
+    <ul class="nav-menu">
+    </ul>
+   </nav>
+   <div class="progress-container">
+    <div class="progress-bar">
+    </div>
+   </div>
+  </div>
+  <div class="background">
+   <canvas id="background-canvas">
+   </canvas>
+   <div class="app-header">
+    <h1 id="title">
+     AWARDS
+    </h1>
+    <div class="app-header-image-wrapper" id="img">
+     <img alt="Header" src="https://2021.igem.org/wiki/images/7/78/T--Vilnius-Lithuania--Awards.jpg"/>
+    </div>
+   </div>
+   <div class="app-content">
+    <div class="app-content-text">
+     <div class="content-page-container">
+
+
+        <table class="table table-bordered table-hover table-condensed">
+            <thead><tr><th title="Field #1">Award</th>
+            <th title="Field #2">Brief description</th>
+            </tr></thead>
+            <tbody><tr>
+            <td><a href="https://2021.igem.org/Team:Vilnius-Lithuania/Education" target="_blank">Education</a></td>
+            <td>Our cornerstone education journey was „Sense Lab“. We talked about synthetic biology through perspective of each of the five senses and around that synthesized art and science into one derivative activity or event.</td>
+            </tr>
+            <tr>
+            <td><a href="https://2021.igem.org/Team:Vilnius-Lithuania/Hardware" target="_blank">Hardware</a></td>
+            <td>We created a novel hardware design for rapid diagnostic tests which has a vertical flow through plasma separation membrane into our developed aptamers by directly applying the user&#39;s blood in front. </td>
+            </tr>
+            <tr>
+            <td><a href="https://2021.igem.org/Team:Vilnius-Lithuania/Inclusivity" target="_blank">Inclusivity</a></td>
+            <td>We focused on inclusive design to adapt the "6th SynBio Sense" for people with visual impairments and expanded this activity by creating tactile models for those who are unable to see. </td>
+            </tr>
+            <tr>
+            <td><a href="https://2021.igem.org/Team:Vilnius-Lithuania/Human_Practices" target="_blank">Integrated Human Practices</a></td>
+            <td>We made integrated not only wet lab processes, but all of the project activities as a whole - in the dry-lab and human practices as well by gainingprecious insight from  – experimental design, technical implementation, communication, education and social sciences.</td>
+            </tr>
+            <tr>
+            <td><a href="https://2021.igem.org/Team:Vilnius-Lithuania/Measurement" target="_blank">Measurement</a></td>
+            <td>We had to evaluate the strength of our promoters of interest and select the sequences that guarantee the most efficient protein synthesis.</td>
+            </tr>
+            <tr>
+            <td><a href="https://2021.igem.org/Team:Vilnius-Lithuania/Model" target="_blank">Model</a></td>
+            <td>We used the model to determine bottlenecks in the process of naringenin production</td>
+            </tr>
+            <tr>
+            <td><a href="https://2021.igem.org/Team:Vilnius-Lithuania/Software" target="_blank">Software</a></td>
+            <td>We decided to enhance the entropy based approach to generate aptamers computationally, which resulted in a two-part software: EFBALite (entropic fragment-based approach implementation) and TEA (“Transformer Enhanced Aptamers” neural network).</td>
+            </tr>
+            <tr>
+            <td><a href="https://2021.igem.org/Team:Vilnius-Lithuania/Entrepreneurship" target="_blank">Supporting Entrepreneurship</a></td>
+            <td>We have developed a 5-year business plan for a biotechnology company to release tools that could reduce the prevalence of infectious disease amebiasis worldwide.</td>
+            </tr>
+            <tr>
+            <td><a href="https://2021.igem.org/Team:Vilnius-Lithuania/Sustainable" target="_blank";>Sustainable Development Impact</a></td>
+            <td>We followed the UN Sustainable Development Goals that aim to ensure a better future for everyone.</td>
+            </tr>
+            <tr>
+            <td><a href="https://2021.igem.org/Team:Vilnius-Lithuania/Parts" target="_blank">Composite Part</a></td>
+            <td>Our team adapted VapXD system to the probiotic bacteria by designing a two factor regulated kill-switch (BBa_K3904005)</td>
+            </tr>
+            </tbody></table>
+
+     </div>
+    </div>
+        <div class="index-container">
+          <div class="index-header"></div>
+          <div class="index-content"></div>
+        </div>
+      </div>
+      <footer>
+        <div class="logo-igem">
+          <object data="../assets/logos/T--Vilnius-Lithuania--iGEM-2021.svg"> </object>
+        </div>
+        <div class="social-container">
+          <div>FOLLOW US</div>
+          <div>
+            <a class="placeholder-social-icon" href="https://www.facebook.com/VilniusiGEM">
+              <img src="../assets/icons/facebook.svg" />
+            </a>
+            <a class="placeholder-social-icon" href="https://www.instagram.com/igem_vilnius/">
+              <img src="../assets/icons/instagram.svg" />
+            </a>
+            <a class="placeholder-social-icon" href="https://www.linkedin.com/company/vilnius-igem/">
+              <img src="../assets/icons/linkedin.svg" />
+            </a>
+          </div>
+        </div>
+        <div class="mail-container">
+          <div>CONTACT US</div>
+          <a href="mailto:info@vilniusigem.lt">info@vilniusigem.lt</a>
+        </div>
+        <div class="grid-sponsors">
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--VU.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Termofisher.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/CityOfVilnius.svg"> </object>
+            </div>
+          </div>
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--GMC.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Nanodiagnostika.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Telesoftas.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Kopicentras.svg"> </object>
+            </div>
+          </div>
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--SnapGene.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Laborama.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Biotecha.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Grida.svg"> </object>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../scripts/navigationTabs.js"></script>
+    <script src="../scripts/background.js"></script>
+    <script src="../scripts/contentpage.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script>
+      contentPage(
+        "Sections",
+        true,
+        300,
+      )
+    </script>
+    <script src="../scripts/GlslCanvas.js"></script>
+    <script src="../scripts/backgroundTransition.js"></script>
+  </body>
+</html>

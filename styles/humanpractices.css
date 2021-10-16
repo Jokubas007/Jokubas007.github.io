@@ -1,33 +1,30 @@
 .app-header {
-	position: relative;
+  position: relative;
   z-index: 0;
   width: 100%;
   height: 100vh;
 }
 
 .app-header h1 {
-	position: absolute;
-	text-align: center;
-	font-family: var(--secondary-font);
-	font-style: normal;
-	color: rgba(252, 206, 192, 1);
-	font-size: 120px;
-	line-height: 134px;
-	font-weight: 800;
-  width: 80%;
-  bottom: 55%;
-  right: 10%;
+  position: absolute;
+  text-align: center;
+  font-family: var(--secondary-font) !important;
+  font-style: normal;
+  color: rgba(252, 206, 192, 1);
+  font-size: 5vw;
+  font-weight: 800 !important;
+  width: 100%;
+  bottom: 65%;
   z-index: 1;
+  margin: 0;
 }
 
 .app-header-image-wrapper {
-	display: flex;
-	justify-content: center;
-  width: 80%;
-  height: 60%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   position: absolute;
   bottom: 10%;
-  right: 10%;
 }
 
 .button-group {
@@ -37,17 +34,17 @@
   justify-content: space-around;
 }
 
-.button-group > .button {
+.button-group > .button-tab {
   background-color: #35555E;
   width: 365px;
   padding: 32px;
-  font-family: var(--secondary-font);
-  font-size: 27px;
+  font-family: var(--secondary-font) !important;
+  font-size: 27px !important;
   font-style: normal;
   font-weight: 800;
   line-height: 30px;
   letter-spacing: 0em;
-  text-align: center;
+  text-align: center !important;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -56,11 +53,11 @@
   margin: 0 16px;
 }
 
-.button-group > .button:hover {
+.button-group > .button-tab:hover {
   background: #677F86;
 }
 
-.button-group > .button.active {
+.button-group > .button-tab.active {
   background-color: #FCCEC0;
   color: #0D4B5E;
 }
@@ -68,6 +65,7 @@
 .humanpractises-content {
   position: relative;
   line-height: 1.5;
+  color: white !important;
 }
 
 .humanpractises-content > .back-to-top-btn {
@@ -77,12 +75,12 @@
   display: none;
   z-index: 50;
   width: 60px;
-  font-family: var(--secondary-font);
-	font-size: 1.5vh;
+  font-family: var(--secondary-font) !important;
+	font-size: 1.5vh !important;
 	font-style: normal;
 	font-weight: 800;
 	letter-spacing: 0em;
-	text-align: left;
+	text-align: left !important;
   -webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -109,7 +107,7 @@
 
 .box-academia, .box-academia > .tooltip {
   background-color: #EF9F89;
-  color: #000000;
+  color: #000000 !important;
 }
 
 .box-academia > .tooltip::after {
@@ -118,7 +116,7 @@
 
 .box-public, .box-public > .tooltip {
   background-color: #FCCEC0;
-  color: #000000;
+  color: #000000 !important;
 }
 
 .box-public > .tooltip::after {
@@ -127,19 +125,19 @@
 
 .box-government, .box-government > .tooltip {
   background-color: #1B8489;
-  color: white;
+  color: white !important;
 }
 
 .box-government > .tooltip::after {
   border-color: #1B8489 transparent transparent transparent;
 }
 
-.box-industry, .box-industry > .tooltip {
+.box-practitioners, .box-practitioners > .tooltip {
   background-color: #002733;
-  color: white;
+  color: white !important;
 }
 
-.box-industry > .tooltip::after {
+.box-practitioners > .tooltip::after {
   border-color: #002733 transparent transparent transparent;
 }
 
@@ -166,12 +164,12 @@
 }
 
 .calendar > .month > h3 {
-  font-family: var(--secondary-font);
-  font-size: 4vh;
+  font-family: var(--secondary-font) !important;
+  font-size: 4vh !important;
   font-style: normal;
   font-weight: 800;
   letter-spacing: 0em;
-  text-align: center;
+  text-align: center !important;
   color: #FCCEC0;
   margin: 0;
   text-transform: uppercase;
@@ -202,14 +200,15 @@
 
 
 .month-entry > .month-entry-header > h4 {
-  font-family: var(--main-font);
-  font-size: 2vh;
+  font-family: var(--main-font) !important;
+  font-size: 2vh !important;
   font-style: normal;
   font-weight: 400;
   line-height: 2.5vh;
   letter-spacing: 0em;
-  text-align: center;
+  text-align: center !important;
   width: 100%;
+  color: white !important;
 }
 
 .month-entry > .month-entry-header.active {
@@ -218,10 +217,14 @@
 
 .month-entry > .month-entry-header.orange {
   background-color: #FCCEC0;
-  color: #000000;
+  color: #000000 !important;
   cursor: auto;
   border-radius: 5px;
   margin-bottom: 8px;
+}
+
+.month-entry > .month-entry-header.orange > h4 {
+  color: #000000 !important;
 }
 
 .month-entry > .month-entry-header > div {
@@ -298,21 +301,22 @@
 }
 
 .month-entry > .month-entry-text > h3 {
-  font-family: var(--secondary-font);
-  font-size: 3vh;
+  font-family: var(--secondary-font)  !important;
+  font-size: 3vh !important;
   font-style: normal;
   font-weight: 800;
   letter-spacing: 0em;
-  text-align: center;
+  text-align: center !important;
+  color: white !important;
 }
 
 .month-entry > .month-entry-text > p {
-  font-family: var(--main-font);
-  font-size: 2vh;
+  font-family: var(--main-font) !important;
+  font-size: 2vh !important;
   font-style: normal;
   font-weight: 300;
   letter-spacing: 0em;
-  text-align: left;
+  text-align: left !important;
 }
 
 .month-entry > .month-entry-text > img {
@@ -338,12 +342,12 @@
   position: fixed;
   top: 50%;
   left: 0;
-  font-family: var(--secondary-font);
-  font-size: 1.5vh;
+  font-family: var(--secondary-font) !important;
+  font-size: 1.5vh !important;
   font-style: normal;
   font-weight: 800;
   letter-spacing: 0em;
-  text-align: center;
+  text-align: center !important;
   z-index: 20;
 }
 

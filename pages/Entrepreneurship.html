@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <link rel="stylesheet" href="../styles/contentpage-desktop.css">
+    <link rel="stylesheet" href="../styles/contentpage-mobile.css">
+    <link rel="stylesheet" href="../styles/sideindex-desktop.css">
+    <link rel="stylesheet" href="../styles/sideindex-mobile.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/navmenu-desktop.css">
+    <link rel="stylesheet" href="../styles/navmenu-mobile.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-desktop.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
+    <link rel="stylesheet" href="../styles/button-pill.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/table.css">
+    <link rel="stylesheet" href="../styles/bypass-block.css">
+
+  </head>
+  <body>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a href="#main-content" class="bypass-block-link visually-hidden visible-when-focused">Skip to main content</a>
+        <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
+          <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
+          AmeBye
+        </a>
+        <ul class="nav-menu"></ul>
+      </nav>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <div class="background">
+      <canvas id="background-canvas"></canvas>
+      <canvas
+        id="canvas-transition"
+      ></canvas>
+      <div class="app-header">
+        <h1 id="title">SUPPORTING ENTREPRENEURSHIP</h1>
+        <div id="img" class="app-header-image-wrapper">
+          <img alt="Header" src="https://2021.igem.org/wiki/images/a/a1/T--Vilnius-Lithuania--Entrepreneurship.jpg" />
+        </div>
+      </div>
+      <div id="main-content" class="app-content">
+        <div class="app-content-text">
+          <div class="content-page-container">
+            <h3 class="index-headline">Introduction</h3>
+            <p>
+              This year our team developed probiotics and a rapid diagnostic test - tools 
+              that could reduce the prevalence of widespread infectious disease known as 
+              amebiasis. However, to make a real difference, our products need to enter 
+              the market and reach those communities that our solution can help the most. 
+              For this reason, we looked at our project from the entrepreneurial 
+              perspective and <b>created a business plan for AmeBye</b>. As a future 
+              start-up company with no previous experience in the life sciences sector, 
+              we focused mainly on the market entry of a diagnostic test. We aim to 
+              release genetically modified probiotics after diagnostic test entry, as this 
+              requires further development for enhanced efficiency and longer period for 
+              clinical trials.
+            </p>
+            <p>
+              You can take a look at the business plan itself below or read a brief 
+              overview of the most fundamental aspects. 
+            </p>
+            <h3 class="index-headline">Market research</h3>
+            <h4>Potential customers</h4>
+            <p>
+              In order to make our diagnostic test <b>applicable</b> and <b>impactful</b>, 
+              we need to define our target audience. Then we can strategize on how to reach 
+              them effectively. We have singled out four main groups of <b>potential customers</b>:
+            </p>
+            <div class="table-container">
+              <div><b>Table 1.</b></div>
+              <table class="table table-bordered table-hover table-condensed">
+                <tbody><tr>
+                <td><b>Locals</b></td>
+                <td>
+                  Our customers are people living in tropical regions where 
+                  the prevalence of the infection has the highest rates. Our 
+                  test is rapid, cheap, specific, and the only one on the market 
+                  that can be used by people without medical or scientific 
+                  education. For this reason it could be bought by anyone at a 
+                  local pharmacy and used to obtain quick results in order to 
+                  receive the needed treatment as soon as possible.
+                </td>
+                </tr>
+                <tr>
+                <td><b>Hospitals and clinics</b></td>
+                <td> 
+                  Usually people with serious symptoms are hospitalized. For this 
+                  reason,  efforts are made to determine the cause of the disease 
+                  as quickly and accurately as possible so that special treatment 
+                  can be prescribed. As we were trying to better understand the 
+                  problem of amebiasis diagnostics, we spoke with several infectious 
+                  disease physicians both in Lithuania and in the regions of 
+                  amebiasis prevalence (Egypt, Mexico). They jointly  agreed that 
+                  quick and specific results generating tests would be extremely 
+                  beneficial, and applicable in hospitals, for the rapid and accurate 
+                  diagnosis of the deadly amebiasis.
+                </td>
+                </tr>
+                <tr>
+                <td><b>Foundations and non-profit organizations</b></td>
+                <td>
+                  The disease is most prevalent in developing countries, where a 
+                  significant proportion of people live below the poverty line. 
+                  For this reason, even the extremely low cost of a test would not 
+                  be available to them or simply would not be a priority purchase. 
+                  However, there are many foundations and organizations in those 
+                  countries, such as the Bill & Melinda Gates Foundation, the Clinton 
+                  Health Access Initiative (CHAI), the Foundation for Innovative 
+                  New Diagnostics (FIND), the Global Fund, Unitaid, and the World 
+                  Health Organization (WHO)), which seek to improve health protection 
+                  and reduce social inequalities by developing health initiatives to 
+                  prevent, diagnose and treat diseases of people living in poverty.
+                </td>
+                </tr>
+                <tr>
+                  <td><b>Travelers</b></td>
+                  <td>
+                    After traveling to developing countries, approximately 
+                    <b>29 percent </b>of international travelers  return home 
+                    carrying an infectious gastrointestinal disease [1]. As there 
+                    are many causes to such diseases and symptoms are similar, 
+                    it takes time to correctly perform differential diagnostics. 
+                    Also, as amebiasis is a rare disease in the developed world 
+                    some of the specialists have never faced it in clinical practice 
+                    therefore there is limited experience and an increased possibility 
+                    for human errors. To eliminate these reasons, AmeBye diagnostic 
+                    tool facilitates the diagnostics of this life-threatening infection.
+                  </td>
+                  </tr>
+                </tbody></table>
+            </div>
+            <h4>Competitor analysis</h4>
+            <p>
+              <b>AmeBye</b> is the first diagnostic tool that allows for an <b>affordable</b> 
+              and <b>specific</b> detection of invasive <i>E. histolytica</i> form. It is 
+              important to note that the infection is most prevalent in developing regions, 
+              therefore the price of the test is one of the most relevant criteria defining 
+              the leading diagnostic tool. In the table below we discuss other possible diagnostics 
+              types [2] in comparison with the AmeBye diagnostic test.
+            </p>
+            <div class="table-container">
+              <div><b>Table 2.</b> </div>
+              
+            </div>
+            <h3 class="index-headline">Our solution</h3>
+            <h4>Inventive approach</h4>
+            <p>
+              Amebiasis diagnostic test is composed of two main components - plastic hard case and membranes. Very few elements go into this vertical flow prototype and thus provide at least few advantages against the popular alternative - lateral flow assay. Firstly, our test design allows us to maintain the primary concentration of particular infection biomarkers. This is important because the initial volume of the sample is very small and colorimetric shifts depend on the quantities of biomarkers. Our design solves these problems in a <b>new manner</b> where gravity filtration of pure blood plays a crucial role.
+            </p>
+            <h4>Exit strategy</h4>
+            <p>
+              Consequently we thought about patenting our whole diagnostic test including a specific aptamer which is binding <i>E. histolytica</i> biomarker. Currently we are in final decision making steps for filing the initial application. By having overall advantage with our own intellectual property (IP) we can begin searching for business partners who may help in further diagnostic tool development. 
+            </p>
+            <p>
+              Our business model approach is asset creation and out-licensing. As a biotech company, we aim to focus on research and prototype development and find strategic partners, who would be responsible for conducting clinical trials, manufacturing, and distribution. This kind of transaction is based on a royalty agreement - a legal contract between a licensor (strategic partner) and a licensee (AmeBye). It grants the licensor the right to use the licensee’s intellectual property, under specific terms, in exchange for royalty payments. This business model is very favorable for startups in the life sciences sector, <b>providing possibilities</b> to gain a foothold in the market <b>faster</b>.
+            </p>
+            <h4>Scalability</h4>
+            <p>
+              While all of this is true for laboratory research, scalability is our next focus. We envision further growth in these directions:
+            </p>
+            <ul>
+              <li>
+                One of the main advantages is creating aptamers for more diverse infectious diseases as technology behind this is well known for our team. There are not so many diagnostic tests which are based on aptamer technology or colorimetric response and the market niche is quite flexible for our product. Detecting non-invasive intestinal <i>Entamoeba histolytica</i> could potentially be a further research cornerstone. 
+              </li>
+              <li>
+                As our team has developed genetically modified probiotics capable of naringenin synthesis for the prevention of infection, we aim to continue the improvement of this solution and eventually release it to the market. It could become the center of upcoming research projects as well as a sole income provider in the near future.
+              </li>
+              <li>
+                Asymptomatic / non invasive amebiasis diagnostics. It is always better to prevent the disease than to treat it, however if not succeeded, the diagnostics and treatment strategy must be established as soon as possible as the delay takes a heavy toll on the patient outcomes. In amebiasis case, it can lead to invasive extraintestinal form. The demand for non-invasive amebiasis diagnosis was expressed by the professionals that we consulted - microbiologist prof. Maria Del Socorro Flores Gonzalez from Mexico, parasitologist prof. Azza El-Adawy from Egypt, Vilnius University Santaros clinics infectologist Audronė Marcinkutė. Comprehensive insights from meetings can be accessed on <a href="https://2021.igem.org/Team:Vilnius-Lithuania/Human_Practices" target=”_blank”>Integrated Human Practices page.</a>
+              </li>
+            </ul>
+
+            <h3 class="index-headline">Implementation</h3>
+            <p>
+              We have carefully considered the feasibility of our idea. During productive discussions we agreed on goals, terms and deadlines, possible hardships and several alternatives on how to tackle particular milestones. Firstly, we have conducted a SWOT analysis in order to assess our business competitive advantages, weaknesses and how to convert them into strengths, further opportunities and feasible threats directing the direction of our business growth.
+            </p>
+            <h4>SWOT</h4>
+            <p>
+              We acknowledge our weaknesses and threats and understand that it is vital to create a strategy of solving them, in order to gain a foothold in the global market. We are going to overcome them by expanding our knowledge, raising competencies, and keeping close relationships with the target audience. More about our strategy can be found in our business plan.
+            </p>
+            
+            <h4>Finances</h4>
+            <p>
+              Analysis of the product and idea was followed by arranging a financial plan. Below there is a brief Profit and Loss statement, Cash - flow analysis. 
+            </p>
+            <div class="table-container">
+              <div><b>Table 4.</b></div>
+              <table class="table table-bordered table-hover table-condensed">
+                <thead>
+                  <tr>
+                    <th title="Field #1">Fixed assets</th>
+                    <th title="Field #2"></th>
+                </tr></thead>
+                <tbody><tr>
+                <td>Property</td>
+                <td>none </td>
+                </tr>
+                <tr>
+                <td>Equipment </td>
+                <td>15 000 EUR</td>
+                </tr>
+                <tr>
+                  <th title="Field #1">Custom assets</th>
+                  <th title="Field #2"></th>
+                </tr>
+                <tr>
+                <td>Liquid assets (cash in bank)</td>
+                <td>35 000 EUR</td>
+                </tr>
+                <tr>
+                <td>Petty cash</td>
+                <td>1000 EUR</td>
+                </tr>
+                <tr>
+                <td>Assets (stocks)</td>
+                <td>40000</td>
+                </tr>
+                </tbody></table>
+            </div>
+
+            <div class="table-container">
+              <div><b>Table 5.</b></div>
+              <table class="table table-bordered table-hover table-condensed">
+                <thead><tr><th title="Field #1">Cash flow</th>
+                <th title="Field #2"></th>
+                <th title="Field #3"></th>
+                <th title="Field #4"></th>
+                <th title="Field #5"></th>
+                <th title="Field #6"></th>
+                </tr></thead>
+                <tbody><tr>
+                <td> </td>
+                <td align="right">2021</td>
+                <td align="right">2022</td>
+                <td align="right">2023</td>
+                <td align="right">2024</td>
+                <td align="right">2025</td>
+                </tr>
+                <tr>
+                <td>Cash inflow</td>
+                <td align="right"></td>
+                <td align="right"></td>
+                <td align="right"></td>
+                <td align="right"></td>
+                <td align="right"></td>
+                </tr>
+                <tr>
+                <td>Sales income</td>
+                <td align="right">0</td>
+                <td align="right">10000</td>
+                <td align="right">65000</td>
+                <td align="right">150000</td>
+                <td align="right">250000</td>
+                </tr>
+                <tr>
+                <td>Personal investments</td>
+                <td align="right">4000</td>
+                <td align="right">4400</td>
+                <td align="right">4840</td>
+                <td align="right">5324</td>
+                <td align="right">5856</td>
+                </tr>
+                <tr>
+                <td>Net cash inflow</td>
+                <td align="right">4000</td>
+                <td align="right">14400</td>
+                <td align="right">69840</td>
+                <td align="right">155324</td>
+                <td align="right">255856</td>
+                </tr>
+                <tr>
+                  <thead><tr><th title="Field #1">Cash flow</th>
+                    <th title="Field #2"></th>
+                    <th title="Field #3"></th>
+                    <th title="Field #4"></th>
+                    <th title="Field #5"></th>
+                    <th title="Field #6"></th>
+                </tr>
+                <tr>
+                <td>Wages</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+                <td align="right">0</td>
+                <td align="right">50000</td>
+                <td align="right">52500</td>
+                </tr>
+                <tr>
+                <td>Professional fees</td>
+                <td align="right">0</td>
+                <td align="right">10000</td>
+                <td align="right">10000</td>
+                <td align="right">0</td>
+                <td align="right">15000</td>
+                </tr>
+                <tr>
+                <td>Patent</td>
+                <td align="right">0</td>
+                <td align="right">10000</td>
+                <td align="right">20000</td>
+                <td align="right">20000</td>
+                <td align="right">20000</td>
+                </tr>
+                <tr>
+                <td>Overheads</td>
+                <td align="right">1700</td>
+                <td align="right">6500</td>
+                <td align="right">10000</td>
+                <td align="right">14800</td>
+                <td align="right">18600</td>
+                </tr>
+                <tr>
+                <td>Materials</td>
+                <td align="right">7000</td>
+                <td align="right">10000</td>
+                <td align="right">14000</td>
+                <td align="right">20000</td>
+                <td align="right">35000</td>
+                </tr>
+                <tr>
+                <td>Net cash outflow</td>
+                <td align="right">8700</td>
+                <td align="right">36500</td>
+                <td align="right">54000</td>
+                <td align="right">104800</td>
+                <td align="right">141100</td>
+                </tr>
+                <tr>
+                <td>Net cash flow</td>
+                <td align="right">-8700</td>
+                <td align="right">-26500</td>
+                <td align="right">11000</td>
+                <td align="right">15200</td>
+                <td align="right">58900</td>
+                </tr>
+                <tr>
+                <td>Balance (with stocks)</td>
+                <td align="right">70300</td>
+                <td align="right">48200</td>
+                <td align="right">64040</td>
+                <td align="right">84564</td>
+                <td align="right">149320</td>
+                </tr>
+                </tbody></table>
+            </div>
+
+            <div class="figure-container">
+              <img src="https://2021.igem.org/wiki/images/1/1f/T--Vilnius-Lithuania--expenses_from_2021_to_2025.png"  alt="" />
+              <div><b>Fig. 1.</b> All expenses from 2021 to 2025</div>
+            </div>
+
+            <div class="figure-container">
+              <img src="https://2021.igem.org/wiki/images/e/e2/T--Vilnius-Lithuania--all_cash_flows.png"  alt="" />
+              <div><b>Fig. 2.</b> All cash flows and balance through years</div>
+            </div>
+
+            <h4>Development roadmap</h4>
+            <p>
+              After thorough research, we found 22 possible sources for financing. We divided them into four categories by the stages of business development during which the financing opportunity would be the most relevant: early-stage financing, minimum viable product development stage, further development and international market entry, non-specified suitable for any of the stages. The amount of sponsorship starts from 10 000 EUR and the sources include National Lithuanian and governments of targeted regions funding programmes, European Union instruments, accelerator programmes, venture capitals, angel investors.
+            </p>
+            <div class="figure-container">
+              <img src="https://2021.igem.org/wiki/images/6/69/T--Vilnius-Lithuania--development_roadmap.png" alt="Development_roadmap"/>
+              <div><b>Fig. 3.</b> Development roadmap</div>
+            </div>
+           
+            <h3 class="index-headline">Credibility</h3>
+            <h4>Skills</h4>
+            <p>
+              We do understand that a combination of <b>multiple skills</b> is essential for running a successful business. The most crucial ones include financial literacy,scientific knowledge and capability to use it, effective marketing and communication skills, powerful leadership as well as strong time management. As our team mainly consists of undergraduate members with little entrepreneurship, we are sure that professional assistance is needed for our business development. While the Vilnius-Lithuania iGEM team has many strong long-term connections with various scientific research teams in Vilnius University, we also have valuable collaborations with several companies and biotech startups including Biomatter Designs and CasZyme. These aforementioned connections grant us the opportunity to gain specific insights and knowledge in the fields where our team may lack the specific experience or skills and lead to the faster company growth.  
+            </p>
+            <h4>Stakeholders</h4>
+            <p>
+              While talking about the stakeholders, engaging employees, local communities, competing firms, government agencies can bring important issues to light and encourage the organization to develop corporate social responsibility as well as to provide the support needed for long-term sustainability:
+            </p>
+            <ul>
+              <li>
+                <b>employees</b> - have significant financial and time investments in the organization, and play a defining role in the strategy, tactics, and operations the organization carries out;
+              </li>
+              <li>
+                <b>local communities</b> - can improve a company’s decision-making, legitimacy and competitiveness by tapping into local knowledge, reducing conflict, boosting recruitment and preventing costly delays. As we found out during our consultation with dr. I. Giedraitytė, community leaders are the real local influencers and can be a significant partners in introducing the diagnostic test to local people for actual usage at home;
+              </li>
+              <li>
+                <b>competing firms</b> - competition improves the conduct of managers, as they understand that in such markets only the fittest can survive, this improves quality of products and reduces prices for consumers, maintains or increases market share, and returns on shareholders' investment;
+              </li>
+              <li>
+                <b>government agencies</b> - the decisions of government, businesses and other organisations inevitably affect different groups within society, which, thus, may directly affect the development of the business.
+              </li>
+            </ul>
+            <p>
+              Establishing ground rules for effective stakeholders communication may be the way to save time, remove obstacles and ultimately, finish projects on time and within budget. Stakeholder meetings are the most common communication method, especially since they can save time in conveying the message to a large number of people. This way we could constantly get feedback and be as effective and relevant as possible. 
+            </p>
+
+            <h3 class="index-headline">Long term impact</h3>
+            <p>
+              While thinking about the <b>long term perspective</b> of our business, we chose not to focus only on financial growth but to have a long term impact on society's healthcare. Our team believes in the possibility of improving people’s lives by scientific solutions.  We believe that our specific detection tool will ensure more effective diagnostics of Amebiasis. This would bring lower rates of amebiasis infection, better infection control. Although we are taking our first steps to establish a company and it will take time to grow, we believe that effective and focused work would allow us to become a part of the global market. We aim to implement our product in at least 3 target countries like India, Mexico and Egypt as well as in Europe in the following 5 years. Additionally, our end goal is to distribute our products in other countries, where rates of infection are the highest.
+            </p>
+            <p>
+              We kept in mind that while creating the business we should fulfill the present needs without compromising the future generations ability to meet theirs. That is why we decided to follow a sustainable approach while planning and building our company. This approach was inspired by Sustainable Development Goals proposed by the United Nations. Our business is based on goals 3, 9 and 17.
+            </p>
+            <p>
+              We aimed to contribute to goal 3 (good health and well being) by producing an affordable and efficient diagnostic test for amebiasis. We chose this objective to lower the chances of aggressive infection and to avoid possible worldwide pandemics. Following goal 9 (industry, innovation and infrastructure) results in adding to the general knowledge on the topic of amebiasis and its detection. Our innovative diagnostic technology is reliable, scalable and universal for development of new diagnostic tests in the future. Contributing to goal 17 (partnerships for the goals) by building bonds with foreign iGEM teams ensures insights on local society, its knowledge that are crucial to offer the best solutions for the existing problem. Moreover, we plan to build partnerships with strategic partners from target countries and local communities to ensure proper development of our product.
+            </p>
+            <p>
+              By critically evaluating the product we are developing, we understand that it might  as well have a <b>negative impact</b>. It could arise from manufacturing and false positive user readings of colorimetric response. Furthermore, in polymer synthesis it is crucial to create safe disposal of hazardous materials, keep personnel away from toxic substances. For this reason laboratory equipment should have high air flow rate fume hoods. It should also be mentioned that unsafe usage of potentially carcinogenic substances raises health concerns. 
+            </p>
+
+            <h3 class="index-headline">Experience</h3>
+            <p>
+              We want AmeBye to be a successful business, therefore we have searched for opportunities to strengthen our entrepreneurial knowledge. We are glad that we managed to find several ways of doing that.
+            </p>
+            <p>
+              First of all, we participated in the workshop “From iGEM to Entrepreneur'' organized by the Stockholm team. It was our first encounter with entrepreneurship in the iGEM competition. During the workshop, we gained valuable information on what shall be considered before starting a business. Guest speakers, invited by the Stockholm iGEM team talked about stakeholders, business models, market analysis, and many more. It was a rewarding experience that provided more insight into where to start when developing the AmeBye business plan. 
+            </p>
+            <p>
+              At the end of spring, we participated in the “Life sciences start-up masterclass” entrepreneurship event organized by the Science, Innovation, and Technology Agency (MITA). It was a weeklong training on how to set up a life sciences-oriented start-up in Lithuania, how to prepare a business plan, enter the market, and attract funding. The event was led by nine lecturers from Lithuania, Norway, the USA, and Spain. During the training, we had the opportunity to personally consult with one of the lecturers, Steinar Hoel Korsmo, President of the "Seed Forum International" foundation, on the development of a business plan. In workshop sessions, we put together our 5-year financial plan, prepared a pitch for the investors, and developed a business model. 
+            </p>
+            <p>
+              During the project, we constantly consulted with Monika Paulė, Innovations Expert & Entrepreneur, CEO at CasZyme, a company working with CRISPR-based molecular tools. She has a lot of experience working with life science start-ups, so she introduced us to the Lithuanian and foreign markets, and helped us a lot in creating a business plan. You can read more about her contribution here <a href="https://2021.igem.org/Team:Vilnius-Lithuania/Human_Practices" target=”_blank”>here</a>.
+            </p>
+            <p>
+              We also had initial talks with two potential investors - our long-term sponsor and his partner CEO of a high-end aviation enterprise. They proposed to help with our products’ realization financially and offered assistance in implementing amebiasis diagnostic test in emergent nations and their healthcare systems. We were also suggested the opportunity to develop a more standardized methodology for creating a wider range of products. 
+            </p>
+            <p>
+              Currently there are mutual agreements to extend our research with aforementioned investors as both sides continue to see prospects in both diagnostic tests and genetically modified probiotics. 
+            </p>
+
+            
+          </div>
+          <div class="references-wrapper">
+            <div class="breaker"></div>
+            <h2>References</h2>
+            <div class="references-container">
+              <div class="number">1.</div>
+              <div>
+                Swaminathan, A., Torresi, J., Schlagenhauf, P., Thursky, K., Wilder-Smith, A., Connor, B. A., Schwartz, E., Vonsonnenberg, F., Keystone, J., O'Brien, D. P., & GeoSentinel Network (2009). A global study of pathogens and host risk factors associated with infectious gastrointestinal disease in returned international travellers. The Journal of infection, 59(1), 19–27.
+                <a href="https://doi.org/10.1016/j.jinf.2009.05.008">To the article.</a>
+              </div>
+              <div class="number">2.</div>
+              <div>
+                Shirley, D. T., Farr, L., Watanabe, K., & Moonah, S. (2018). A Review of the Global Burden, New Diagnostics, and Current Therapeutics for Amebiasis. Open forum infectious diseases, 5(7), ofy161. 
+                <a href="https://doi.org/10.1093/ofid/ofy161">To the article.</a>
+              </div>
+              <div class="number">3.</div>
+              <div>
+                Tanyuksel, M., & Petri, W. A., Jr (2003). Laboratory diagnosis of amebiasis. Clinical microbiology reviews, 16(4), 713–729.
+                <a href="https://doi.org/10.1128/CMR.16.4.713-729.2003">To the article.</a>
+              </div>
+              <div class="number">4.</div>
+              <div>
+                CARDOEN, G. (2021, May 11). Current Directives. Public Health - European Commission. Retrieved October 10, 2021.
+                <a href="https://ec.europa.eu/health/md_sector/current_directives_e">To the article.</a>
+              </div>
+              <div class="number">5.</div>
+              <div>
+                Saker, L., Lee, K., Cannito, B., Gilmore, A., & Campbell-Lendrum, D. H. (2004). Globalization and infectious diseases: a review of the linkages.
+                <a href="https://apps.who.int/iris/bitstream/handle/10665/68726/TDR_STR_SEB_ST_04.2.pdf">To the book.</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="index-container">
+          <div class="index-header"></div>
+          <div class="index-content"></div>
+        </div>
+      </div>
+      <footer>
+        <div class="logo-igem">
+          <object data="../assets/logos/T--Vilnius-Lithuania--iGEM-2021.svg"> </object>
+        </div>
+        <div class="social-container">
+          <div>FOLLOW US</div>
+          <div>
+            <a class="placeholder-social-icon" href="https://www.facebook.com/VilniusiGEM">
+              <img src="../assets/icons/facebook.svg" />
+            </a>
+            <a class="placeholder-social-icon" href="https://www.instagram.com/igem_vilnius/">
+              <img src="../assets/icons/instagram.svg" />
+            </a>
+            <a class="placeholder-social-icon" href="https://www.linkedin.com/company/vilnius-igem/">
+              <img src="../assets/icons/linkedin.svg" />
+            </a>
+          </div>
+        </div>
+        <div class="mail-container">
+          <div>CONTACT US</div>
+          <a href="mailto:info@vilniusigem.lt">info@vilniusigem.lt</a>
+        </div>
+        <div class="grid-sponsors">
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--VU.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Termofisher.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/CityOfVilnius.svg"> </object>
+            </div>
+          </div>
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--GMC.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Nanodiagnostika.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Telesoftas.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Kopicentras.svg"> </object>
+            </div>
+          </div>
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--SnapGene.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Laborama.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Biotecha.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Grida.svg"> </object>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../scripts/navigationTabs.js"></script>
+    <script src="../scripts/background.js"></script>
+    <script src="../scripts/contentpage.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script>
+      contentPage(
+        "Sections",
+        true,
+        300,
+      )
+    </script>
+    <script src="../scripts/GlslCanvas.js"></script>
+    <script src="../scripts/backgroundTransition.js"></script>
+  </body>
+</html>

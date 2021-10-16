@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <link rel="stylesheet" href="../styles/contentpage-desktop.css">
+    <link rel="stylesheet" href="../styles/contentpage-mobile.css">
+    <link rel="stylesheet" href="../styles/sideindex-desktop.css">
+    <link rel="stylesheet" href="../styles/sideindex-mobile.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/navmenu-desktop.css">
+    <link rel="stylesheet" href="../styles/navmenu-mobile.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-desktop.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
+    <link rel="stylesheet" href="../styles/button-pill.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/table.css">
+    <link rel="stylesheet" href="../styles/bypass-block.css">
+
+  </head>
+  <body>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a href="#main-content" class="bypass-block-link visually-hidden visible-when-focused">Skip to main content</a>
+        <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
+          <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
+          AmeBye
+        </a>
+        <ul class="nav-menu"></ul>
+      </nav>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <div class="background">
+      <canvas id="background-canvas"></canvas>
+      <canvas
+        id="canvas-transition"
+      ></canvas>
+      <div class="app-header">
+        <h1 id="title">
+         INCLUSIVITY
+        </h1>
+        <div class="app-header-image-wrapper" id="img">
+         <img class="cover" alt="Header" src="https://2021.igem.org/wiki/images/e/eb/T--Vilnius-Lithuania--Inclusivity.JPG"/>
+        </div>
+       </div>
+       <div class="app-content">
+        <div class="app-content-text">
+         <div class="content-page-container">
+          <h3 class="index-headline">
+           Introduction
+          </h3>
+          <p>
+           At Vilnius-Lithuania iGEM, we recognize the importance of
+           <b>
+            diversity and inclusion
+           </b>
+           within the science community. We are committed to making the synthetic biology community more open and creating a learning environment where everyone feels welcome.
+          </p>
+          <p>
+           On 2024 September 1st changes of article 14 of the Education Law of the Republic of Lithuania comes into force and a new inclusive education chapter begins. Every general education school should be ready to accept and educate students with disabilities. However, currently not enough measures are taken to reach this goal. We learned this from numerous calls with special pedagogues, students with disabilities and others working in the field of inclusivity.
+          </p>
+          <p>
+           During our consultations with practitioners working with disabilities, it was often stated that
+           <b>
+            negative experiences in school, pessimistic outlook coming from the teachers and lack of exposure to the inclusivity of universities
+           </b>
+           disencourage pupils from fulfilling their academic potential later in life. As one of our consultants, Dr. Barbara R. Heard, an associate biology professor who focuses on inclusive education, claimed, there are still many complicated areas relating to inclusive education, read full consultation
+           <a href="https://2021.igem.org/Team:Vilnius-Lithuania/Human_Practices              " target="”_blank”">
+            here
+           </a>
+           . According to her, it is crucial to focus on changing the outlook on the problem to induce progress. This and other consultations inspired us to become the change ourselves. While planning our educational activities and thinking about the design and presentation of our project, we followed an inclusive approach.
+          </p>
+          <p>
+           Our main focus groups were people with
+           <b>
+            vision and intellectual disabilities
+           </b>
+           . First, we chose people with visual impairments due to the fact that most of the education material is visual - it takes the form of illustrations, graphs etc. This means people with impaired vision do not have a chance to learn more specific subjects like synthetic biology. Second, individuals with cognitive disabilities were chosen due to common underestimation of their abilities. Meaning that such people might not receive information on complex yet significant topics of contemporary society like vaccines, GMO’s etc.
+          </p>
+          <h3 class="index-headline">
+           6th SynBio sense
+          </h3>
+          <p>
+           As a way to make “6th SynBio sense” platform more inclusive we set several goals. First, we applied
+           <b>
+            accessibility tools
+           </b>
+           to the platform’s web page. As mentioned above, we made sure that the website is accessible for color blind people, by choosing the right color palette and keeping the right contrast ratio between text and background (Fig. 1).
+          </p>
+          <div class="figure-container">
+           <img alt="" id="Figure1" src="https://2021.igem.org/wiki/images/6/6d/T--Vilnius-Lithuania--website_adaptation-03.png"/>
+           <div>
+            <b>
+             Fig. 1.
+            </b>
+            Accessibility adaptations on “6th SynBio sense” website
+           </div>
+          </div>
+          <p>
+           What is more, as the website contains a lot of written information, it was important for us that it is readable for everyone, therefore we applied a
+           <b>
+            font changing function
+           </b>
+           for people with dyslexia. (Fig. 2) We also made
+           <b>
+            sound recordings
+           </b>
+           of the provided information for users, who have vision deficiency. In general, we tried to keep the design of the website minimalistic and with as few distractions as possible, to keep the main focus on the augmented reality models and provided information.
+          </p>
+          <div class="figure-container">
+           <img alt="" id="Figure2" src="https://2021.igem.org/wiki/images/2/2d/T--Vilnius-Lithuania--modification_for_dyslexia.png"/>
+           <div>
+            <b>
+             Fig. 2.
+            </b>
+            Modification for dyslexia on “6th SynBio sense” website
+           </div>
+          </div>
+          <p>
+           Second, we wanted to make 3D models accessible for the blind. To reach the goal, we teamed up with a biology teacher Gintaras Nenartavičius from the Lithuanian Center for the Development of the Blind and Visually Impaired. We learned about the most used educational tools and decided to implement this knowledge into our project. After thorough consultations with an expert teacher and 3D printing specialist, we
+           <b>
+            printed 3D models
+           </b>
+           of virus and protein translation as well as
+           <b>
+            tactile schemes
+           </b>
+           of protein synthesis, synthetic biology, genetic scissors, DNA, RNA, and SARS-CoV-2 virus. (Fig. 3) To test out the tools ourselves, we prepared a lesson for the students at the same institution. At first, we thought it would be rather challenging to educate people that lack one of the most commonly used senses. However, our experience was positive. Pupils were attentive and their teacher assisted us in handing out tactile models and explaining what is pictured there. Moreover, headings with some explanations of what is seen in the picture were provided
+           <b>
+            in Braille
+           </b>
+           . This simplified the process greatly and helped children to follow our lecture.
+          </p>
+          <div class="figure-container">
+           <img alt="" id="Figure3" src="https://2021.igem.org/wiki/images/0/02/T--Vilnius-Lithuania--tactile_model.jpg"/>
+           <div>
+            <b>
+             Fig. 3.
+            </b>
+            Tactile schemes explaining the basics of synthetic biology
+           </div>
+          </div>
+          <p>
+           Third, we saw potential in making “6th SynBio sense” even more inclusive by
+           <b>
+            simplifying descriptions
+           </b>
+           of each model to make them suitable for people with intellectual disabilities. This idea came after encountering an Istanbul convention adapted to autistic people. We contacted a representative from the National Agency for Education Inclusivity department to help us and review our adapted texts. As we found, the key things to an inclusive text are
+           <b>
+            giving clear instructions
+           </b>
+           on what is seen on the screen,
+           <b>
+            explaining complex terms
+           </b>
+           separately, adding
+           <b>
+            examples from real life
+           </b>
+           and keeping to the main idea of the text. We also used “Internet for everyone” [1] guide for any extensive inquires.  Simplified descriptions currently are only in Lithuanian and can be accessed while previewing the text information.
+          </p>
+          <div class="figure-container">
+           <img alt="" id="Figure4" src="https://2021.igem.org/wiki/images/9/96/T--Vilnius-Lithuania--simplified_description-04.png"/>
+           <div>
+            <b>
+             Fig. 4.
+            </b>
+            Example of simplified description
+           </div>
+          </div>
+          <h3 class="index-headline">
+           Wiki accessibility
+          </h3>
+          <p>
+           Our goal this year was to make Wiki clear, intuitive, and accessible.
+          </p>
+          <p>
+           Before digging deeper into the Wiki implementation, we decided to develop it according to
+           <b>
+            WCAG documentation
+           </b>
+           [2] in order to make it
+           <b>
+            accessible
+           </b>
+           . WCAG stands for Web Content Accessibility Guidelines. It is a document that includes many recommendations to make Web content more accessible. We set ourselves a goal to make our Wiki meet as many as possible of the WCAG
+           <b>
+            A and AA level requirements
+           </b>
+           . WCAG contains a rich list of specifications and in order to affirm our plan, which of them are the most sensible to realize, we organized a consultation with Jurij Nesvat - a testing engineer, who specializes in
+           <b>
+            testing accessibility
+           </b>
+           of Web pages. Together we reviewed and
+           <b>
+            confirmed
+           </b>
+           our plan that we set ourselves to fulfill.
+          </p>
+          <p>
+           The plan included ‘A’, ‘AA’ level requirements and optional adjustments for groups with cognitive disability and dyslexia.
+          </p>
+          <p>
+           The ‘A’ level requirements that required our attention, since they might not have been as intuitive as the others, were: making the website accessible by
+           <b>
+            keyboard only
+           </b>
+           , avoiding presentation that relies
+           <b>
+            solely on color
+           </b>
+           , paying attention that content would not have elements causing more than
+           <b>
+            three flashes per second.
+           </b>
+          </p>
+          <p>
+           The AA level requirements applied in our Wiki development were: making the website responsive to
+           <b>
+            various screen sizes
+           </b>
+           , introducing
+           <b>
+            high contrast
+           </b>
+           between pieces of text and their backgrounds, using clear headings and labels, making focus
+           <b>
+            visible
+           </b>
+           , making
+           <b>
+            consistent
+           </b>
+           navigation and identification. These requirements were the ones that we focused on, since the thoughtful implementation of them is exactly what contributes to reaching our goal related to Wiki development.
+          </p>
+          <p>
+           Besides the adjustments determined by WCAG protocol, we also added a couple of functionalities in the
+           <b>
+            accessibility toolbar:
+           </b>
+           one that introduces markings for people with
+           <b>
+            cognitive disabilities
+           </b>
+           and another that changes the font of the text to
+           <b>
+            dyslexia-friendly.
+           </b>
+           Cognitive disability profile adjustments include highlighting of the
+           <b>
+            buttons, headings and links,
+           </b>
+           which makes it easier to navigate through the most important parts of the content. Dyslexia-friendly customization changes the font to make the text
+           <b>
+            easier to read.
+           </b>
+           We chose to implement adjustments for the mentioned target groups, since these adjustments might not be applied with
+           <b>
+            external software.
+           </b>
+          </p>
+          <div class="figure-container">
+           <img alt="" id="Figure5" src="https://2021.igem.org/wiki/images/8/89/T--Vilnius-Lithuania--cognitive_disability_profile_demo.png"/>
+           <div>
+            <b>
+             Fig. 5.
+            </b>
+            Adjustments for cognitive disability profile
+           </div>
+          </div>
+          <div class="figure-container">
+           <img alt="" id="Figure6" src="https://2021.igem.org/wiki/images/f/f5/T--Vilnius-Lithuania--dyslexia_friendly_demo.png"/>
+           <div>
+            <b>
+             Fig. 6.
+            </b>
+            Adjustments for dyslexia
+           </div>
+          </div>
+          <h3 class="index-headline">
+           Adaptations for colorblind
+          </h3>
+          <p>
+           Throughout the project, one of the priorities was to make sure that it is accessible to people with colorblindness. Color vision deficiency affects approximately 1 in 12 men (8 percent) and 1 in 200 (0,5 percent) women. [3] There are several main types of color blindness: deuteranopia (red-green color blindness), protanopia (red color blindness), Tritanopia (blue-yellow color blindness). One member of our team has protanopia as well, so this adaptation was especially important for us. He helped to choose the best color palette for the whole project and checked contrast ratios between colors. Therefore the colors we chose are easy to distinguish for people with all major color blindness types (Fig. 7). We used these colors in all visuals used for the project, on the “6th Synbio sense” website, our wiki and educational powerpoint presentations.
+          </p>
+          <div class="figure-container">
+           <img alt="" id="Figure7" src="https://2021.igem.org/wiki/images/d/d5/T--Vilnius-Lithuania--color_palette.png"/>
+           <div>
+            <b>
+             Fig. 7.
+            </b>
+            Comparison of how colorblind people and common-type people see the selected color palette
+           </div>
+          </div>
+          <p>
+           Despite the right choice of colors, it is essential to maintain the right contrast ratio of text and background. According to Web Content Accessibility Guidelines (WCAG)  2.1 AA rating success criterion 1.43, the visual presentation of text and images of text must have a contrast ratio of at least 4.5:1, and also, large-scale text (with at least 18 points or 14 points bold) and images of large-scale text must have a contrast ratio of at least 3:1 [2] (Fig. 8). We also applied this practice on the “6th Synbio sense” website, our wiki and educational powerpoint presentations.
+          </p>
+          <div class="figure-container">
+           <img alt="" id="Figure8" src="https://2021.igem.org/wiki/images/2/2b/T--Vilnius-Lithuania--contrast_ratio.png"/>
+           <div>
+            <b>
+             Fig. 8.
+            </b>
+            Contrast ratio evaluation
+           </div>
+          </div>
+          <p>
+           We thought about applications for colorblind people not only when creating a graphic and web design, but also when designing a prototype of our diagnostic test. As the sole color shift from blue to red may be indistinguishable and slight tone differences could slip through the eyes of the end user we included reference color circles for extra measures. If a person is infected with amebiasis, diagnostic test outside color equalize with inner membrane color in all three windows so that person could better interpret results.
+          </p>
+          <div class="figure-container">
+           <img alt="" id="Figure9" src="https://2021.igem.org/wiki/images/c/c3/T--Vilnius-Lithuania--3_down_v2_membrane_area.png"/>
+           <div>
+            <b>
+             Fig. 9.
+            </b>
+            Colorimetric reference for diagnostic test - positive result shows as all three windows have merged colors with their corresponding outer rings
+           </div>
+          </div>
+          <p>
+           A similar effect goes to negative results - if a person is not infected or diagnostic test is not functional at the particular moment at least one of all windows will not have merged colorimetric response with outer ring.
+          </p>
+          <div class="figure-container">
+           <img alt="" id="Figure10" src="https://2021.igem.org/wiki/images/1/16/T--Vilnius-Lithuania--3_down_v2_membrane_albumin_correct_area.png"/>
+           <div>
+            <b>
+             Fig. 10.
+            </b>
+            Colorimetric reference for diagnostic test - negative result shows only one red window for albumin
+           </div>
+          </div>
+          <div class="figure-container">
+           <img alt="" id="Figure11" src="https://2021.igem.org/wiki/images/a/ae/T--Vilnius-Lithuania--3_down_v2_membrane_incorrect_area.png"/>
+           <div>
+            <b>
+             Fig. 11.
+            </b>
+            Colorimetric reference for diagnostic test - non-functional test shows all three blue windows
+           </div>
+          </div>
+          <p>
+           These two examples perfectly show that a reference guide could enhance reading assistance for users with various visual impairments. Reading instructions (Fig. 12) are proposed implementation.
+          </p>
+          <div class="figure-container">
+           <img alt="" id="Figure12" src="https://2021.igem.org/wiki/images/0/0f/T--Vilnius-Lithuania--Diagnostic_test_colors.png"/>
+           <div>
+            <b>
+             Fig. 12.
+            </b>
+            Colorimetric reference for the diagnostic test - overall reading scheme
+           </div>
+          </div>
+         </div>
+         <div class="references-wrapper">
+          <div class="breaker">
+          </div>
+          <h2>
+           References
+          </h2>
+          <div class="references-container">
+           <div class="number">
+            1.
+           </div>
+           <div>
+            Aginskaitė, S., Gečaitė, K., &amp; Jonikaitis, G. (2018). Internetas visiems: prieinamos skaitmeninės informacijos rengimo vadovas.
+            <a href="https://lnf.lt/wp-content/uploads/2018/12/Internetas_visiems.pdf" target="_blank">
+             To the article
+            </a>
+           </div>
+           <div class="number">
+            2.
+           </div>
+           <div>
+            Caldwell, B., Cooper, M., Reid, L. G., Vanderheiden, G., Chisholm, W., Slatin, J., &amp; White, J. (2018). Web content accessibility guidelines (WCAG) 2.1.
+            <a href="https://www.w3.org/TR/WCAG21/" target="_blank">
+             To the guidelines
+            </a>
+           </div>
+           <div class="number">
+            3.
+           </div>
+           <div>
+            Colour Blind Awareness is a Community Interest Company. (n.d.). Colour Blindness. Colourblindawareness. Retrieved October 5, 2021.
+            <a href="https://www.colourblindawareness.org/colour-blindness/" target="_blank">
+             To the article
+            </a>
+           </div>
+          </div>
+         </div>
+        </div>
+            <div class="index-container">
+              <div class="index-header"></div>
+              <div class="index-content"></div>
+            </div>
+          </div>
+          <footer>
+            <div class="logo-igem">
+              <object data="../assets/logos/T--Vilnius-Lithuania--iGEM-2021.svg"> </object>
+            </div>
+            <div class="social-container">
+              <div>FOLLOW US</div>
+              <div>
+                <a class="placeholder-social-icon" href="https://www.facebook.com/VilniusiGEM">
+                  <img src="../assets/icons/facebook.svg" />
+                </a>
+                <a class="placeholder-social-icon" href="https://www.instagram.com/igem_vilnius/">
+                  <img src="../assets/icons/instagram.svg" />
+                </a>
+                <a class="placeholder-social-icon" href="https://www.linkedin.com/company/vilnius-igem/">
+                  <img src="../assets/icons/linkedin.svg" />
+                </a>
+              </div>
+            </div>
+            <div class="mail-container">
+              <div>CONTACT US</div>
+              <a href="mailto:info@vilniusigem.lt">info@vilniusigem.lt</a>
+            </div>
+            <div class="grid-sponsors">
+              <div>
+                <div>
+                  <object data="../assets/logos/T--Vilnius-Lithuania--VU.svg"> </object>
+                </div>
+                <div>
+                  <object data="../assets/logos/T--Vilnius-Lithuania--Termofisher.svg"> </object>
+                </div>
+                <div>
+                  <object data="../assets/logos/CityOfVilnius.svg"> </object>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <object data="../assets/logos/T--Vilnius-Lithuania--GMC.svg"> </object>
+                </div>
+                <div>
+                  <object data="../assets/logos/T--Vilnius-Lithuania--Nanodiagnostika.svg"> </object>
+                </div>
+                <div>
+                  <object data="../assets/logos/T--Vilnius-Lithuania--Telesoftas.svg"> </object>
+                </div>
+                <div>
+                  <object data="../assets/logos/T--Vilnius-Lithuania--Kopicentras.svg"> </object>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <object data="../assets/logos/T--Vilnius-Lithuania--SnapGene.svg"> </object>
+                </div>
+                <div>
+                  <object data="../assets/logos/T--Vilnius-Lithuania--Laborama.svg"> </object>
+                </div>
+                <div>
+                  <object data="../assets/logos/T--Vilnius-Lithuania--Biotecha.svg"> </object>
+                </div>
+                <div>
+                  <object data="../assets/logos/T--Vilnius-Lithuania--Grida.svg"> </object>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+    </div>
+    <script src="../scripts/navigationTabs.js"></script>
+    <script src="../scripts/background.js"></script>
+    <script src="../scripts/contentpage.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script>
+      contentPage(
+        "Sections",
+        true,
+        300,
+      )
+    </script>
+    <script src="../scripts/GlslCanvas.js"></script>
+    <script src="../scripts/backgroundTransition.js"></script>
+  </body>
+</html>

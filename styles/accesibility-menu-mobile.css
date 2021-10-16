@@ -9,9 +9,9 @@
     z-index: 1;
   }
   .nav-item-accessibility:focus-within .dropdown-menu {
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: translateX(0) translateY(-8px);
+    -ms-transform: translateX(0) translateY(-8px);
+    transform: translateX(0) translateY(-8px);
     transition: -webkit-transform 0.25s ease;
     transition: -ms-transform 0.25s ease;
     transition: transform 0.25s ease;
@@ -28,9 +28,9 @@
     height: 100%;
     position: fixed;
     right: 0;
-    -webkit-transform: translateX(110%);
-    -ms-transform: translateX(110%);
-    transform: translateX(110%);
+    -webkit-transform: translateX(110%) translateY(-8px);
+    -ms-transform: translateX(110%) translateY(-8px);
+    transform: translateX(110%) translateY(-8px);
     transition: -webkit-transform 0.25s ease;
     transition: -ms-transform 0.25s ease;
     transition: transform 0.25s ease;

@@ -200,7 +200,7 @@ function draw(sections, indexWidth){
   const navbar = document.querySelector('.navbar');
   if (window.innerWidth >= 1025) {
     if (
-      window.scrollY + navbar.offsetHeight + 16 + index.offsetHeight > content.offsetHeight + content.offsetTop - 96
+      window.scrollY + navbar.offsetHeight + navbar.offsetTop + 16 + index.offsetHeight > content.offsetHeight + content.offsetTop - 96
     ) {
       index.style.position = 'absolute';
       index.style.top = null;
@@ -210,7 +210,7 @@ function draw(sections, indexWidth){
     } else if (window.scrollY - content.offsetTop >= 0) {
       index.style.position = 'fixed';
       index.style.bottom = null;
-      index.style.top = `${navbar.offsetHeight + 16}px`;
+      index.style.top = `${navbar.offsetHeight + navbar.offsetTop + 16}px`;
       index.style.right = '10vw';
       index.style.width = `${indexWidth}px`;
     } else {

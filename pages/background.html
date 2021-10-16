@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../styles/background.css">
   </head>
   <body>
+    <div id="loading-anim-container"></div>
     <div class="background">
       <canvas id="background-canvas"></canvas>
       <canvas id="canvas-transition" data-fragment-url="../assets/transition/BackgroundTransition.frag" width="500" height="500"></canvas>
@@ -44,6 +45,14 @@
   <script src="../scripts/background.js"></script>
   <script src="../scripts/map.js"></script>
   <script src="../scripts/drawLandingPage.js"></script>
-  <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
-  <script src="../scripts/backgroundTransition.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+  <script>
+    var animation = bodymovin.loadAnimation({
+    container: document.getElementById('loading-anim-container'), // required
+    path: '../assets/Loading_animacija.json', // required
+    renderer: 'svg', // required
+    loop: true, // optional
+    autoplay: true, // optional
+  });
+  </script>
 </html>

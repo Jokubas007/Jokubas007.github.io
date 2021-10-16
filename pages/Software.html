@@ -25,7 +25,6 @@
     <script src="https://2021.igem.org/common/MathJax-2.5-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   </head>
   <body>
-    
     <div class="navbar-container">
       <nav class="navbar">
         <a href="#main-content" class="bypass-block-link visually-hidden visible-when-focused">Skip to main content</a>
@@ -47,24 +46,33 @@
       <div class="app-header">
         <h1 id="title">SOFTWARE</h1>
         <div id="img" class="app-header-image-wrapper">
-          <img alt="Header" src="../assets/images/placeholder.png" />
+          <img alt="Header" src="https://2021.igem.org/wiki/images/d/d9/T--Vilnius-Lithuania--Software.jpg" />
         </div>
       </div>
       <div id="main-content" class="app-content">
         <div class="app-content-text">
           <div class="content-page-container">
             <h3 class="index-headline">Introduction</h3>
+            <p>
+              Our dry lab team decided to contribute to both parts of “AmeBye” project. The main software was realised for diagnostics part - we implemented aptamer generating software by using <b>entropy fragment based approach (EFBA)</b> and extended it with transformer <b>neural network model (TEA).</b>
+            </p>
+            <p>
+              For the naringenin synthesis part, in the process of a computational fusion protein model development we found several <b>small tools for bioinformatics</b> to be useful, which we decided to present in the software page along with the main software.
+            </p>
+            <p>
+              All these software tools can be found in <a href="https://github.com/iGEM-Vilnius/Software" target="_blank">our repository.</a>
+            </p>
             <h3 class="index-headline">EFBALite</h3>
               <h4>Motivation</h4>
               <p>
                 Creating aptamers in the labaratory is an expensive and time consuming process. Thus we
-                were inspired by <b>[1]</b> to create software that would help with this process.
+                were inspired by <b>[16]</b> to create software that would help with this process.
                 The result of our efforts is EFBALite - an implementation
                 (with several improvments and additions) of the Entropic Fragment-Based Approach ...
                 in the Python programming language that is able to generate an aptamer from scratch.
               </p>
               <p>
-                The program and user guide is available at the GitHub repository (...).
+                The program and user guide is available at the <a href="https://github.com/iGEM-Vilnius/Software/tree/main/EFBALite" target="_blank">GitHub repository.</a>
               </p>
               <h4>Description and theory</h4>
               <p>
@@ -160,7 +168,7 @@
                 [Sauliaus softo pavadinimas] - our third piece of software.
               </p>
               <p>
-                The program and user guide is available at the GitHub repository (...).
+                The program and user guide is available at the <a href="https://github.com/iGEM-Vilnius/Software/tree/main/EFBAScore" target="_blank">GitHub repository.</a>
               </p>
               <h4>Description and theory</h4>
               <p>
@@ -182,20 +190,1046 @@
                 To compute the energy of the aptamer target complex we use the OpenMM package
                 and use the OpenMM's implementation of the AMBER14 forcefield.
               </p>
-            <h3 class="index-headline">Sauliaus softas</h3>
+            <h3 class="index-headline">EFBA extention TEA (Transformer Enhanced Aptamers)</h3>
+            <h4>Abstract</h4>
+            <p>
+              We took a step further and applied a novel transformer-based neural network               (NN) model Albert which was combined with a genetic algorithm to make aptamer              generation
+              <i>
+               in silico
+              </i>
+              a faster and more resource-efficient process. Firstly,               the algorithm was enhanced with a Bayesian probabilistic model to define a               finite GA iteration number that helps users to determine when a list contains               a proper number of fit aptamers. Next, employing MCMC methodology we were               able to analyse the NN model error rate which gave insights about probability               of throwing away the fit aptamer from a final list and space for future               improvements. Finally, the Pytorch NN model was rewritten to the ONNX               framework which sped up the algorithm more than 3 times, and overall               more than 300 compared to EFBALite. Worth mentioning, model has a key               property of transfer learning - anyone who has a similar task can               fine-tune it for instance on different target protein and use it               instantly to generate fit aptamers, also model is reachable in AI               community framework
+              <a href="https://huggingface.co/Vilnius-Lithuania-iGEM/Albumin" target="_target">
+               Hugging Face.
+              </a>
+             </p>
+             <h3>
+              Dataflow
+             </h3>
+             <p>
+              Initially, N (1500 in our case) random aptamer sequences are generated               employing EFBA. Following it up, data must be specifically preprocessed               to contain a pair of aptamers with a binary label that determines               if the second sequence is more fit (1) or not (0).
+             </p>
+             <div class="table-container">
+              <div class="table-headline">
+               <b>
+                Table 2.
+               </b>
+               Example of sequence labeling
+              </div>
+              <table class="table table-bordered table-hover table-condensed">
+               <thead>
+                <tr>
+                 <th title="Field #1">
+                  Sequence1
+                 </th>
+                 <th title="Field #2">
+                  Sequence2
+                 </th>
+                 <th title="Field #3">
+                  Label
+                 </th>
+                </tr>
+               </thead>
+               <tbody>
+                <tr>
+                 <td>
+                  TGATCACGCAGGCAT
+                 </td>
+                 <td>
+                  GAGACCTTTCGTGTA
+                 </td>
+                 <td align="right">
+                  0
+                 </td>
+                </tr>
+                <tr>
+                 <td>
+                  CTAGACCTTATAGAC
+                 </td>
+                 <td>
+                  AACAATCATAAGGCG
+                 </td>
+                 <td align="right">
+                  1
+                 </td>
+                </tr>
+                <tr>
+                 <td>
+                  CTTGCGGTCATACAC
+                 </td>
+                 <td>
+                  TACCCGGGCTTTCGA
+                 </td>
+                 <td align="right">
+                  0
+                 </td>
+                </tr>
+                <tr>
+                 <td>
+                  AATTGGCCCAAATTG
+                 </td>
+                 <td>
+                  GTTTGGAGGCTGATC
+                 </td>
+                 <td align="right">
+                  0
+                 </td>
+                </tr>
+                <tr>
+                 <td>
+                  CGTGCCGCCATCGGC
+                 </td>
+                 <td>
+                  TCATCCCCACAAAGC
+                 </td>
+                 <td align="right">
+                  1
+                 </td>
+                </tr>
+               </tbody>
+              </table>
+             </div>
+             <p>
+              Paired sequences dataset is obtained by comparing every aptamer in-between               by fitness score which is computed with the former software. Afterwards,               the number of labels for classification is balanced by flipping aptamers               places for the model to learn both classes equally.
+             </p>
+             <p>
+              Many transformer-based models could fit this task, however Albert               model was picked because of its state-of-the-art performance with               fewer parameters than the threshold BERT model, which takes 4-5 times               less time to inference, saving days of expensive GPU runtime. Another               significant part of the model is the genetic algorithm (GA) that               produces new sequences at every iteration by well-known breeding,               mutation steps; those steps ensure we are generating new aptamers               with similar “good” properties. Lastly, the sequences of the final               iteration are analyzed and compared by EFBA, furthermore the best of               it, 5 percent of the total, will be reevaluated in the lab.
+             </p>
+             <p>
+              Additionally, Bayesian probabilistic model was employed to ensure               NN convergence and efficiency. From our beliefs about the aptamers               population we draw the prior distribution. Then it was “updated”               by generated data (the likelihood function) to get the posterior               distribution which can be used to make inferences from.
+             </p>
+             <ul>
+              <li>
+               More data is observed, posterior distribution has smaller variance - more precise inference.
+              </li>
+              <li>
+               There is no “perfect” prior to choose from, you should rely on some researches or intuition.
+              </li>
+             </ul>
+             <p>
+              Model output gives us more information of GA iteration on average,               in this case, that every 1000 aptamers will have at least 3 fit               sequences and that there is 85 percent of chance that we will               obtain y ∈ {1,2,3,4,5,6} fit aptamers.
+             </p>
+             <div class="figure-container">
+              <img alt="" id="Figure1" src="https://2021.igem.org/wiki/images/5/54/T--Vilnius-Lithuania--posterior_albumin_curves.png"/>
+              <div>
+               <b>
+                Fig. 1.
+               </b>
+               Prior, likelihood and posterior distributions of aptamers for target protein albumin
+              </div>
+             </div>
+             <div class="figure-container">
+              <img alt="" id="Figure2" src="https://2021.igem.org/wiki/images/5/5f/T--Vilnius-Lithuania--aptamers_albumin_pred_prob.png"/>
+              <div>
+               <b>
+                Fig. 2.
+               </b>
+               Density function of possible number of fit aptamers in 1000 random generated sequences
+              </div>
+             </div>
+             <p>
+              The next modeling step was to evaluate a risk of removing fit               aptamer from the TOP list. Current TEA for albumin has a score of               84.6 percent accuracy, this indicates that on average it is a               state-of-the-art classifier, however if we have to classify similar               aptamers or there is some chaotic behaviour, we might lose an aptamer               or two in a GA iteration. MCMC simulation helped us to see a few               possible scenarios of chaotic GA iterations (outliers) and how to               possibly avoid them - a simple solution is to keep a longer TOP list               and frame top aptamers so they can’t be called fit in one iteration               and unfit in next.
+             </p>
+             <h3>
+              Model training and results
+             </h3>
+             <p>
+              Albert models for albumin have shown the state-of-the-art performance               which can be seen in figure 3, and 5. Large model has shown around               4 percent better performance, however it is twice as slow as the               base alternative so we have chosen albert-base for a further               inference. Using transfer learning property of transformers we were               able to fine-tune the model again for target protein EhPPDK and it               has shown similar results. Fine-tuning took only around 3 hours               because NN only needs to retrain its positional embedding for               different target protein to work it out, also it was trained               on the same size of randomly generated aptamer dataset of 1500               sequences.
+             </p>
+             <div class="figure-container">
+              <img alt="" id="Figure3" src="https://2021.igem.org/wiki/images/3/3c/T--VIlnius-Lithuania--Albumin_ROC_Curves.png"/>
+              <div>
+               <b>
+                Fig. 3.
+               </b>
+               Albert’s ROC curve for base and large models
+              </div>
+             </div>
+             <div class="figure-container">
+              <img alt="" id="Figure4" src="https://2021.igem.org/wiki/images/4/43/T--Vilnius-Lithuania--Albumin_Base_Confusion_Matrix_1.png"/>
+              <div>
+               <b>
+                Fig. 4.
+               </b>
+               Albert-base model confusion matrix with descriptive statistics
+              </div>
+             </div>
+             <div class="figure-container">
+              <img alt="" id="Figure5" src="https://2021.igem.org/wiki/images/d/dd/T--Vilnius-Lithuania--Albumin_Large_Confusion_Matrix_2.png"/>
+              <div>
+               <b>
+                Fig. 5.
+               </b>
+               Albert-large model confusion matrix with descriptive statistics
+              </div>
+             </div>
+             <div class="table-container">
+              <div class="table-headline">
+               <b>
+                Table 3.
+               </b>
+               TEA generated aptamers for albumin
+              </div>
+              <table class="table table-bordered table-hover table-condensed">
+              <thead>
+              <tr>
+              <th title="Field #1">Aptamer</th>
+              <th title="Field #2">Score</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+              <td>TCTTGCTGGTATACT</td>
+              <td>52.55</td>
+              </tr>
+              <tr>
+              <td>CTCTTCAGCTTGATC</td>
+              <td>52.32</td>
+              </tr>
+              <tr>
+              <td>TTCTTCAGCTTTACT</td>
+              <td>52.32</td>
+              </tr>
+              <tr>
+              <td>TTCTTCAGCTTTCCT</td>
+              <td>52.30</td>
+              </tr>
+              <tr>
+              <td>TTCTTCAGCTTTTTG</td>
+              <td>52.28</td>
+              </tr>
+              <tr>
+              <td>TTCTTCAGCTACTCT</td>
+              <td>52.27</td>
+              </tr>
+              <tr>
+              <td>TTCTTCAGATCTCTT</td>
+              <td>52.26</td>
+              </tr>
+              <tr>
+              <td>TTCTTCAGCTGCCCC</td>
+              <td>52.25</td>
+              </tr>
+              <tr>
+             <td>TTCTTCAGATCTCCT</td>
+             <td>52.25</td>
+             </tr>
+             <tr>
+             <td>TTCTTCAGCTCCGAT</td>
+             <td>52.23</td>
+             </tr>
+             </tbody>
+             </table>
+             </div>
+             <div class="table-container">
+              <div class="table-headline">
+               <b>
+                Table 4.
+               </b>
+               Generated aptamers for EhPPDK which are not affine to albumin with TEA
+              </div>
+              <table class="table table-bordered table-hover table-condensed">
+                 <thead>
+                 <tr>
+                 <th title="Field #1">Aptamer</th>
+                 <th title="Field #2">Albumin Entropy</th>
+                 <th title="Field #3">EhPPDK Entropy</th>
+                 <th title="Field #4">Difference</th>
+                 </tr>
+               </thead>
+               <tbody>
+               <tr>
+               <td>ACTTCTCAGGAGCGA</td>
+               <td style="text-align: center;">10.73</td>
+               <td style="text-align: center;">39.38</td>
+               <td style="text-align: center;">28.65</td>
+               </tr>
+               <tr>
+               <td>AGTGCAATTGCCTAC</td>
+               <td style="text-align: center;">10.73</td>
+               <td style="text-align: center;">37.24</td>
+               <td style="text-align: center;">26.51</td>
+               </tr>
+               <tr>
+               <td>AGTTCGCCATTACTT</td>
+               <td style="text-align: center;">10.73</td>
+               <td style="text-align: center;">36.44</td>
+               <td style="text-align: center;">25.71</td>
+               </tr>
+               <tr>
+               <td>AGCGCTCCGGCTTAC</td>
+               <td style="text-align: center;">10.73</td>
+               <td style="text-align: center;">35.53</td>
+               <td style="text-align: center;">24.80</td>
+               </tr>
+               <tr>
+               <td>AGCTCAACGATCACG</td>
+               <td style="text-align: center;">10.73</td>
+               <td style="text-align: center;">35.40</td>
+               <td style="text-align: center;">24.67</td>
+               </tr>
+               <tr>
+               <td>AGCACGCTGTTATAA</td>
+               <td style="text-align: center;">10.73</td>
+               <td style="text-align: center;">35.13</td>
+               <td style="text-align: center;">24.40</td>
+               </tr>
+               <tr>
+               <td>AGCGCGTTATTGGCT</td>
+               <td style="text-align: center;">10.73</td>
+               <td style="text-align: center;">35.12</td>
+               <td style="text-align: center;">24.39</td>
+               </tr>
+               <tr>
+               <td>ACCACGTTTTCAGAT</td>
+               <td style="text-align: center;">10.73</td>
+               <td style="text-align: center;">35.09</td>
+               <td style="text-align: center;">24.36</td>
+               </tr>
+               <tr>
+               <td>AGCACATTCCAGATG</td>
+               <td style="text-align: center;">10.73</td>
+               <td style="text-align: center;">35.05</td>
+               <td style="text-align: center;">24.32</td>
+               </tr>
+               <tr>
+               <td>ATCGCACGCCGATTG</td>
+               <td style="text-align: center;">10.94</td>			
+               <td style="text-align: center;">34.97</td>
+               <td style="text-align: center;">24.03</td>
+               </tr>
+               </tbody>
+               </table>
+             </div>
+             <h4>
+              Optimization
+             </h4>
+             <p>
+              The PyTorch Albert model has been converted to the ONNX framework, which               has an accelerated inference speed approximately thrice of initial speed,               at the end ONNX Albert model is capable to compare around 800 aptamers per               3 minute which is around 300 times faster than using the former EFBA. We               considered a few other possibilities of enhancing the process: like               diminishing parameters precision from F32 to INT8, yet faster processing               comes with decrease in accuracy of the whole model, which is not worth a trade.
+             </p>
+             <h4>
+               Usage and documentation
+              </h4>
+              <p>
+               Detailed usage and documentation of the software can be found               in the
+               <a href="https://github.com/iGEM-Vilnius/Software/tree/main/TEA" target="_blank">
+                GitHub repository.
+               </a>
+              </p>
+              <h3 class="index-headline">
+                Bioinformatics tools
+               </h3>
+               <p>
+                This section is about the bioinformatics tools that we used for               our working flow
+                <i>
+                 in silico
+                </i>
+                . We found them helpful in our               project development. Thus we decided to describe them here since               they might be beneficial for other teams as well. All bioinformatics               tools presented in this section are intended to support the
+                <b>
+                 small bioinformatics tools
+                </b>
+                manifesto [4].
+               </p>
+               <h4 class="index-headline">
+                GenFusMSA
+               </h4>
+               <h5>
+                Motivation
+               </h5>
+               <p>
+                After several attempts to model our fusion protein system, we               decided to include
+                <b>
+                 multiple sequence alignment (MSA)
+                </b>
+                as               an additional input into our chosen modeling programs. Both trRosetta               and RoseTTAFold generate MSA internally. Since the mentioned               programs by default cannot handle our fusion protein cases accurately,               we were encouraged to use sequence-search methods to create MSA               files for our modeling input ourselves.
+               </p>
+               <h5>
+                Description
+               </h5>
+               <p>
+                The presented tool GenFusMSA is a script that generates
+                <b>
+                 multiple sequence alignment files
+                </b>
+                that can be used for               fusion protein modeling with programs like trRosetta[5], RoseTTAFold[6],               and AlphaFold2[7]. By providing our
+                <b>
+                 own MSA files,
+                </b>
+                we received               more probable structures with less disordered domains that belong               to the linked proteins. A more detailed description of our modeling               flow can be found on the Wiki page of fusion protein modeling.
+               </p>
+               <p>
+                The script is a simple program that
+                <b>
+                 scans
+                </b>
+                input full query-template               .a3m files and
+                <b>
+                 pairs
+                </b>
+                sequences according to their
+                <b>
+                 taxonomy ID
+                </b>
+                .               The paired sequences are joined via a
+                <b>
+                 peptide linker
+                </b>
+                that is               determined by the user, and the collection of sequences can be saved               as an output .a3m file.
+               </p>
+               <h5>
+                Usage
+               </h5>
+               <p>
+                From the user side, the script takes in
+                <b>
+                 two .a3m files
+                </b>
+                (as parameters -i1 and -i2) which can be generated by the HHblits[3]               program. Additionally, the user is asked to set a linker sequence                (-l parameter) and how many times (-n parameter) it is repeated.                By default, the newly generated .a3m file is printed
+                <b>
+                 to the screen,
+                </b>
+                        therefore the construction `&gt; [output.a3m]` directs the result to                the specified .a3m file.
+               </p>
+               <div class="code-snippet">
+                 <p>
+                  perl GenFusMSA.pl -i1 [first fullQT.a3m] -i2 [second fullQT.a3m] -l [linker] -n [linker repeats]
+                 </p>
+                </div>
+                <p>
+                 Detailed usage and documentation of the software can be found               in the
+                 <a href="https://github.com/iGEM-Vilnius/Software/tree/main/Bioinformatics/MSA" target="_blank">
+                  <b>GitHub repository.</b>
+                 </a>
+                </p>
+                <h4 class="index-headline">
+                  Molecular dynamics scripts
+                 </h4>
+                 <h5>
+                  Motivation
+                 </h5>
+                 <p>
+                  Conventionally, one of the parts of fusion protein modeling includes
+                  <b>
+                   molecular dynamics
+                  </b>
+                  (MD) simulations[16]. Contemporary protein modeling               approaches reach high enough accuracy that molecular dynamics simulations               for refinement do not improve the modeled structure. However, since our               systems include both rigid and flexible linkers, we thought molecular               dynamics might be helpful to get the probable conformations to               calculate the distance between active sites.
+                 </p>
+                 <p>
+                  While developing our project, we came up with two types of MD               simulations:
+                  <b>
+                   atomic
+                  </b>
+                  and
+                  <b>
+                   coarse-grained
+                  </b>
+                  (CG). For that, we wrote               scripts in the Perl programming language. These scripts are written               to run GROMACS[8] - a molecular dynamics package to simulate               proteins, nucleic acids, and lipids.
+                 </p>
+                 <h5>
+                  Atomic
+                 </h5>
+                 <p>
+                  The atomic simulations take into account each atom in the               system. These simulations are more accurate, yet they take more               time to perform. We did not run the entire production run of atomic               MD simulations because our modeled systems contain up to 330 000               atoms. To get a more reliable output, we would have had to simulate               from 100 to 500 nanoseconds, which would  demand lots of               computational resources.
+                 </p>
+                 <p>
+                  Scripts that can be found in the ‘atomic’ folder of the repository:
+                 </p>
+                 <ul>
+                  <li>
+                   <b>
+                    copy_dir.pl
+                   </b>
+                   - a script to copy the directory that                 contains the atomic MD running bundle.
+                  </li>
+                  <li>
+                   <b>
+                    generate_system_gro.pl
+                   </b>
+                   - a script to get the output to                 check how many atoms are in the simulated system.
+                  </li>
+                  <li>
+                   <b>
+                    protein_md.pl
+                   </b>
+                   - a script that runs required                 commands for GROMACS MD.
+                  </li>
+                  <li>
+                   <b>
+                    clean.pl
+                   </b>
+                   - a script that cleans the directory from generated                 files after running MD simulations.
+                  </li>
+                 </ul>
+                 <h5>
+                  Coarse-grained
+                 </h5>
+                 <p>
+                  On the contrary, CG simulations introduce abstractions to the               simulated system. This type of MD uses the concept of ‘pseudo-atoms’               that represent groups of atoms. In this way, the representation of               the system is reduced, and the system can be simulated using less               computational power. This approach was reached by including
+                  <a href="http://cgmartini.nl/index.php/tools2/proteins-and-bilayers/204-martinize">
+                   MARTINI
+                  </a>
+                  [9] - general-purpose coarse-grained force field - script               into our MD simulation flow.
+                 </p>
+                 <p>
+                  Scripts that can be found in the ‘CG’ folder of the repository:
+                 </p>
+                 <ul>
+                  <li>
+                   <b>
+                    protein_CG_md.pl
+                   </b>
+                   - a script that runs required commands                 for GROMACS coarse-grained MD.
+                  </li>
+                 </ul>
+                 <h5>
+                  Usage
+                 </h5>
+                 <p>
+                  More information about prerequisites and usage is provided in the
+                  <a href="https://github.com/iGEM-Vilnius/Bioinformatics/tree/master/Molecular_Dynamics" target="_blank">
+                   <b>GitHub repository</b>
+                  </a>
+                  of the tool. In general, if GROMACS               (and DSSP for CG version) is successfully installed, then the               following commands should run the MD simulations atomic               and CG respectively:
+                 </p>
+                 <div class="code-snippet">
+                   <p>
+                    perl protein_md.pl [path_to_protein_file]
+                   </p>
+                 </div>
+                  
+                 <div class="code-snippet">
+                   <p>
+                    perl protein_CG_md.pl [path_to_protein_file]
+                   </p>                  
+                 </div>
+
+                 <h4 class="index-headline">
+                  RamachanDrawX
+                 </h4>
+                 <h5>
+                  Motivation
+                 </h5>
+                 <p>
+                  Protein structural scientists use Ramachandran plots to gain               better insight into the
+                  <b>
+                   secondary structure
+                  </b>
+                  of peptides. We used               these plots to analyze the secondary structures of the modeled fusion               proteins before and after molecular dynamics simulations (more               information about fusion protein modeling can be found
+                  <a href="https://2021.igem.org/Team:Vilnius-Lithuania/Fusion_Protein_Modeling" target="_blank">
+                   here
+                  </a>
+                  ).               Ramachandran plots represent the combinations of φ and ᴪ dihedral               angles. Most pairs of φ and ᴪ are sterically forbidden since they               introduce
+                  <b>
+                   interatomic clashes
+                  </b>
+                  . To determine regions and the varieties               of dihedral angles in our system, we used
+                  <a href="https://pypi.org/project/RamachanDraw/" target="_blank">
+                   RamachanDraw library.
+                  </a>
+                  We thought that it would be beneficial to add the functionality of               customization, therefore we contacted the author of RamachanDraw library,               and with his consent, we wrote a small software tool
+                  <b>
+                   RamachanDrawX
+                  </b>
+                  that allows plotting Ramachandran plots more efficiently with a               possibility to customize them for the desired design.
+                 </p>
+                 <h5>
+                  Description
+                 </h5>
+                 <p>
+                  RamachanDrawX is an easy-to-use command-line program based on a               Python library to make Ramachandran plots. It contains the functionality               of customization that consists of:
+                 </p>
+                 <ul>
+                  <li>
+                   <b>
+                    choosing a colormap
+                   </b>
+                   from existing ones in Matplotlib
+                  </li>
+                  <li>
+                   <b>
+                    creating a colormap
+                   </b>
+                   by providing hex color codes
+                  </li>
+                  <li>
+                   selecting colors for
+                   <b>
+                    elements
+                   </b>
+                   in the plot: dots,                 numbers, and axles
+                  </li>
+                  <li>
+                    changing the default
+                    <b>
+                     font
+                    </b>
+                   </li>
+                   <li>
+                    setting background
+                    <b>
+                     transparency
+                    </b>
+                   </li>
+                   <li>
+                    changing the
+                    <b>
+                     opacity
+                    </b>
+                    of the plot
+                   </li>
+                   <li>
+                    setting the
+                    <b>
+                     resolution
+                    </b>
+                    of the plot
+                   </li>
+                   <li>
+                    naming the output
+                    <b>
+                     file
+                    </b>
+                   </li>
+                  </ul>
+                  <h5>
+                   Usage
+                  </h5>
+                  <p>
+                   Prerequisites of the program are
+                   <b>
+                    Python3
+                   </b>
+                   and its packages:
+                   <b>
+                    biopython, mathplotlib,
+                   </b>
+                   and
+                   <b>
+                    rich.
+                   </b>
+                   Each of the mentioned packages               can be easily installed using conda Python package manager. It is               recommended to create and activate a conda environment with               mentioned packages installed. More detailed information about               this step of setting your work environment can be found in the
+                   <a href="https://github.com/iGEM-Vilnius/Software/tree/main/Bioinformatics/RamachanDrawX" target="_blank">
+                    <b>repository of the tool.</b>
+                   </a>
+                  </p>
+                  <p>
+                   The following line can be called to get a plot with default parameters:
+                  </p>
+                  <p>
+                   python3 RamachanDrawX.py [protein.pdb]
+                  </p>
+                  <div class="code-snippet">
+                    <p>
+                      python3 RamachanDrawX.py [protein.pdb]
+                    </p>
+                  </div>
+                  <p>
+                   To check default parameters and get a manual for the usage               of the program call:
+                  </p>
+                  <div class="code-snippet">
+                    <p>
+                      python3 RamachanDrawX.py -h
+                    </p>
+                  </div>
+                  <p>
+                   Optional arguments that can be used for plot customization:
+                  </p>
+                  <ul>
+                   <li>
+                    <b>
+                     --help
+                    </b>
+                    - show this help message and exit
+                   </li>
+                   <li>
+                    <b>
+                     --color_map CMAP
+                    </b>
+                    - provide the color palette to create                 the colormap or use the existing colormap.
+                   </li>
+                   <li>
+                    <b>
+                     --element_color EL_COLOR
+                    </b>
+                    - set the color of dots, elements                 of axles, and labels (default: '#002733')
+                   </li>
+                   <li>
+                    <b>
+                     --font FONT
+                    </b>
+                    - path to the font directory of your                 choice (default: ./Fonts/Quicksand)
+                   </li>
+                   <li>
+                    <b>
+                     --transparency TRANSPARENCY
+                    </b>
+                    - an option whether to set                 transparent background or not (integer value 0 or 1; default:                 1 (True) stands for transparent background setting)
+                   </li>
+                   <li>
+                    <b>
+                     --alpha ALPHA
+                    </b>
+                    - the opacity of the colormap (float                 value [0; 1], default: 1)
+                   </li>
+                   <li>
+                    <b>
+                     --dpi DPI
+                    </b>
+                    - the resolution (number of dots per inch, default: 1000)
+                   </li>
+                   <li>
+                    <b>
+                     --output OUTPUT
+                    </b>
+                    - the name of the output plot file (default: ./PNG/R_plot.png)
+                   </li>
+                  </ul>
+                  <div class="figure-container">
+                   <img alt="Ramachandran plot example" id="Figure6" src="https://2021.igem.org/wiki/images/5/58/T--Vilnius-Lithuania--example_RamachanDrawX_plot.png"/>
+                   <div>
+                    <b>
+                     Fig. 6.
+                    </b>
+                    The default Ramachandran plot generated by                 RamachanDrawX for 4-coumarate:CoA ligase (4CL)
+                   </div>
+                  </div>
+                  <h4 class="index-headline">
+                    FusionPyMOL
+                   </h4>
+                   <h5>
+                    Motivation
+                   </h5>
+                   <p>
+                    <b>
+                     PyMOL
+                    </b>
+                    [10] is an open-source molecular visualization program that               is widely used in the field of structural biology. This year our               team decided to include structural bioinformatics into our project               and dive into the modeling of fusion proteins. This activity               involved quite a lot of manual work to visualize the modeled               structures. Therefore we decided to include the power of               scripting to
+                    <b>
+                     automate
+                    </b>
+                    the process. Eventually, we came up with a
+                    <b>
+                     library of modules
+                    </b>
+                    with functionalities of coloring the complex               system and calculating the distance between active sites.
+                   </p>
+                   <h4>
+                    Description
+                   </h4>
+                   <p>
+                    From a broad perspective, the repository contains a library of               Python modules that can be
+                    <b>
+                     embedded in new workflows
+                    </b>
+                    related               to fusion protein visualization.
+                   </p>
+                   <p>
+                    Modules that can be found in the repository:
+                   </p>
+                   <ul>
+                    <li>
+                     <b>
+                      parse_parameters.py
+                     </b>
+                     - a module that contains a parameter                 parsing function. This function takes parameters from a                 parameter file that determines the way the program works.
+                    </li>
+                    <li>
+                     <b>
+                      color_fusion.py
+                     </b>
+                     - a module that includes subroutines to                 color the fusion protein system: the whole construct, the linker,                 and the active sites of each linked protein.
+                    </li>
+                    <li>
+                     <b>
+                      calculate_distance.py
+                     </b>
+                     - a module that contains functions                 to calculate distance between active centers when a structure                 with single or multiple states is provided.
+                    </li>
+                    <li>
+                     <b>
+                      center_of_mass.py
+                     </b>
+                     - a module that is used to determine                 the spots between which the distance is calculated.
+                    </li>
+                   </ul>
+                   <h5>
+                    Usage
+                   </h5>
+                   <p>
+                    Since a handful of arguments determine the program’s functionality,               the first step is to
+                    <b>
+                     define the parameters file.
+                    </b>
+                    This file contains               the attributes such as the path to fusion protein .pdb, the path               to protein templates, the length of each protein, the linker,               the color palette, and the path to the output file for distance               statistics. Parameters allow customization of the workflow, and               all of them are described in the README.md file in detail.
+                   </p>
+                   <p>
+                    The second step is to choose the needed functionality from the               provided suggestions. In order to present the library in the               simplest way possible, there is a collection of example scripts               submitted in the
+                    <a href="https://github.com/iGEM-Vilnius/Software/tree/main/Bioinformatics/Fusion_PyMOL" target="_blank">
+                     <b>repository.</b>
+                    </a>
+                    They have the role of
+                    <b>
+                     coloring
+                    </b>
+                    the               system and
+                    <b>
+                     calculating
+                    </b>
+                    the distance between the specified active               sites of the linked proteins.
+                   </p>
+                   <p>
+                    The visualization of the protein system is done by using:
+                   </p>
+                   <div class="code-snippet">
+                     <p>
+                      pymol visualise.py -- param.txt
+                     </p>
+                   </div>
+                   <p>
+                    The calculation of distance between active sites is performed               by using:
+                   </p>
+                   <div class="code-snippet">
+                     <p>
+                      pymol calculate.py -- param.txt
+                     </p>
+                   </div>
+                   <div class="figure-container">
+                    <img alt="visualise.py" id="Figure7" src="https://2021.igem.org/wiki/images/4/40/T--Vilnius-Lithuania--visualise_example_GSG.png"/>
+                    <div>
+                     <b>
+                      Fig. 7.
+                     </b>
+                     The example output of visualise.py script for                 4CL:GSG:CHS fusion protein system
+                    </div>
+                   </div>
+                   <p>
+                    Regarding the information in the parameters file, the
+                    <b>
+                     visualise.py
+                    </b>
+                    script colors the system, loads templates for each linked protein,               and aligns them to the modeled structure of fusion protein.
+                   </p>
+                   <p>
+                    The
+                    <b>
+                     calculate.py
+                    </b>
+                    script can calculate the distance between active               sites of the linked proteins. The fusion protein structure can contain               one or multiple models (states). For example, the latter case occurs               when the trajectory file from molecular dynamics simulations is               converted to .pdb format. The script recognizes when the input               .pdb file contains more than one state of the structure,
+                    <b>
+                     calculates the distance
+                    </b>
+                    between active sites for each state,               and saves it to a text file.
+                   </p>
+                   <div class="figure-container">
+                    <img alt="calculate.py" id="Figure8" src="https://2021.igem.org/wiki/images/1/18/T--Vilnius-Lithuania--calculate_example_GSG_MD.gif"/>
+                    <div>
+                     <b>
+                      Fig. 8.
+                     </b>
+                     The example output of calculate.py script                 for 4CL:GSG:CHS fusion protein system (multiple states)
+                    </div>
+                   </div>
+                   <p>
+                    Apart from the example scripts to run the modules, the repository               contains
+                    <b>
+                     ‘example’
+                    </b>
+                    folder with the required files needed to               demonstrate the full functionality of the library.
+                   </p>
+                   <p>
+                    Additionally, there is a possibility to
+                    <b>
+                     extend
+                    </b>
+                    the usage of the               provided library and adjust it to the
+                    <b>
+                     user-defined
+                    </b>
+                    scripts. In               order to use the library, the user has to import the desired               module in their script, which can be passed to PyMOL as an               argument. Importing modules from the
+                    <b>
+                     ‘functions’
+                    </b>
+                    folder can               simply be done with a code fragment:
+                   </p>
+                   <p>
+                    from functions import parse_parameters, color_fusion, calculate_distance
+                    <br/>
+                    class Parameters:
+                    <br/>
+                    pass
+                    <br/>
+                    par = Parameters()
+                    <br/>
+                    par.obj_name = ‘fusion’
+                    <br/>
+                    parse_parameters.parse_parameters(sys.argv[1], par)
+                    <br/>
+                   </p>
+                   <p>
+                    The main.py script in the repository is a script that contains the               mentioned code excerpt, thus it can be used as the
+                    <b>
+                     basement
+                    </b>
+                    for               the usage of other library modules.
+                   </p>
+                   <div class="code-snippet">
+                     <p>
+                      pymol main.py -- param.txt
+                     </p>
+                   </div>
           </div>
           <div class="references-wrapper">
-            <div class="breaker"></div>
-            <h2>References</h2>
-            <div class="references-container">
-              <div class="number">1.</div>
-              <div>
-                Tseng, C.-Y., Ashrafuzzaman, M., Mane, J. Y., Kapty, J., Mercer, J. R., & Tuszynski, J. A. (2011).
-                Entropic Fragment-Based Approach to Aptamer Design. Chemical Biology & Drug Design, 78(1), 1–13.
-                <a href="https://pubmed.ncbi.nlm.nih.gov/21496214/">To the article.</a>
-              </div>
+            <div class="breaker">
             </div>
-          </div>
+            <h2>
+             References
+            </h2>
+            <div class="references-container">
+             <div class="number">
+              1.
+             </div>
+             <div>
+              Shamriz, S., &amp; Ofoghi, H. (2016). Design, structure prediction                   and molecular dynamics simulation of a fusion construct                   containing malaria pre-erythrocytic vaccine candidate, Pf CelTOS,                   and human interleukin 2 as adjuvant. BMC bioinformatics, 17(1), 1-15.
+              <a href="https://pubmed.ncbi.nlm.nih.gov/26851942/" target="_blank">
+               To the article
+              </a>
+             </div>
+             <div class="number">
+              2.
+             </div>
+             <div>
+              Yu, K., Liu, C., Kim, B. G., &amp; Lee, D. Y. (2015). Synthetic fusion protein design and applications. Biotechnology advances, 33(1), 155-164.
+              <a href="https://www.sciencedirect.com/science/article/abs/pii/S0734975014001803" target="_blank">
+               To the article
+              </a>
+             </div>
+             <div class="number">
+              3.
+             </div>
+             <div>
+              Zimmermann, L., Stephens, A., Nam, S. Z., Rau, D., Kübler, J., Lozajic, M., ... &amp; Alva, V. (2018). A completely reimplemented MPI bioinformatics toolkit with a new HHpred server at its core. Journal of molecular biology, 430(15), 2237-2243.
+              <a href="https://pubmed.ncbi.nlm.nih.gov/29258817/" target="_blank">
+               To the article
+              </a>
+             </div>
+             <div class="number">
+              4.
+             </div>
+             <div>
+              Pjotr Prins, Hilmar Lapp, Robert Davey, Richard Smith-Unna, Qingpeng Zhang, Peter Cock, Nathan T. Weeks, Morris Swertz, Matt Shirley, Konrad Förstner, Kevin Murray, Karl Broman, Josh Herr, Artem Tarasov, Joep de Ligt, Joachim Baran, Ilya Sytchev, Francisco Pina-Martins, Felipe Leprevost, Eric Talevich, Daniel Standage, Dan MacLean, Dan, Chris Fields, C. Titus Brown, Bruno Vieira, Bruno P. Kinoshita, Botond Sipos &amp; John Prince, . (2014, August 18). MANIFESTO (Version v1.0). Zenodo.
+              <a href="https://doi.org/10.5281/zenodo.11321" target="_blank">
+               To the article
+              </a>
+             </div>
+             <div class="number">
+              5.
+             </div>
+             <div>
+              Yang, J., Anishchenko, I., Park, H., Peng, Z., Ovchinnikov, S., &amp; Baker, D. (2020). Improved protein structure prediction using predicted interresidue orientations. Proceedings of the National Academy of Sciences, 117(3), 1496-1503.
+              <a href="https://www.pnas.org/content/117/3/1496" target="_blank">
+               To the article
+              </a>
+             </div>
+             <div class="number">
+              6.
+             </div>
+             <div>
+              Baek, M., DiMaio, F., Anishchenko, I., Dauparas, J., Ovchinnikov, S., Lee, G. R., ... &amp; Baker, D. (2021). Accurate prediction of protein structures and interactions using a three-track neural network. Science.
+              <a href="https://www.biorxiv.org/content/10.1101/2021.06.14.448402v1" target="_blank">
+               To the article
+              </a>
+             </div>
+             <div class="number">
+              7.
+             </div>
+             <div>
+              Jumper, J., Evans, R., Pritzel, A., Green, T., Figurnov, M., Ronneberger, O., ... &amp; Hassabis, D. (2021). Highly accurate protein structure prediction with AlphaFold. Nature, 1-11
+              <a href="https://www.nature.com/articles/s41586-021-03819-2" target="_blank">
+               To the article
+              </a>
+             </div>
+             <div class="number">
+              8.
+             </div>
+             <div>
+              Abraham, M. J., Murtola, T., Schulz, R., Páll, S., Smith, J. C., Hess, B., &amp; Lindahl, E. (2015). GROMACS: High performance molecular simulations through multi-level parallelism from laptops to supercomputers. SoftwareX, 1, 19-25.
+              <a href="https://www.sciencedirect.com/science/article/pii/S2352711015000059" target="_blank">
+               To the article
+              </a>
+             </div>
+             <div class="number">
+              9.
+             </div>
+             <div>
+              Monticelli, L., Kandasamy, S. K., Periole, X., Larson, R. G., Tieleman, D. P., &amp; Marrink, S. J. (2008). The MARTINI coarse-grained force field: extension to proteins. Journal of chemical theory and computation, 4(5), 819-834.
+              <a href="https://pubs.acs.org/doi/10.1021/ct700324x" target="_blank">
+               To the article
+              </a>
+             </div>
+             <div class="number">
+              10.
+             </div>
+             <div>
+              DeLano, W. L. (2002). Pymol: An open-source molecular graphics tool. CCP4 Newsletter on protein crystallography, 40(1), 82-92.
+              <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.231.5879&amp;rep=rep1&amp;type=pdf#page=44" target="_blank">
+               To the article
+              </a>
+             </div>
+             <div class="number">
+              11.
+             </div>
+             <div>
+              iGEM Team Heidelberg, (2015). M.A.W.S.
+              <a href="http://2015.igem.org/Team:Heidelberg/software/maws" target="_blank">
+               To the Wiki
+              </a>
+             </div>
+             <div class="number">
+              12.
+             </div>
+             <div>
+              iGEM Team McMasterU, (2017), Genetic algorithm for sequence optimization.
+              <a href="http://2017.igem.org/Team:McMasterU/Genetic" target="_blank">
+               To the Wiki
+              </a>
+             </div>
+             <div class="number">
+              13.
+             </div>
+             <div>
+              iGEM Team Athens, (2019), MEDEA
+              <a href="https://2019.igem.org/Team:Athens/Description" target="_blank">
+               To the Wiki
+              </a>
+             </div>
+             <div class="number">
+              14.
+             </div>
+             <div>
+              Krüger, A., Zimbres, F. M., Kronenberger, T., &amp; Wrenger, C. (2018). Molecular modeling applied to nucleic acid-based molecule development. Biomolecules, 8(3), 83.
+              <a href="https://doi.org/10.3390/biom8030083" target="_blank">
+               To the article
+              </a>
+             </div>
+             <div class="number">
+              15.
+             </div>
+             <div>
+              iGEM Team Heidelberg, (2017), M.A.W.S. 2.0.
+              <a href="http://2017.igem.org/Team:Heidelberg/Software/MAWS" target="_blank">
+               To the Wiki
+              </a>
+             </div>
+             <div class="number">
+              16.
+             </div>
+             <div>
+              Tseng, C.-Y., Ashrafuzzaman, M., Mane, J. Y., Kapty, J., Mercer, J. R., &amp; Tuszynski, J. A. (2011). Entropic Fragment-Based Approach to Aptamer Design. Chemical Biology &amp; Drug Design, 78(1), 1–13. doi:10.1111/j.1747-0285.2011.01125.x
+              <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1747-0285.2011.01125.x" target="_blank">
+               To the article
+              </a>
+             </div>
+            </div>
+           </div>
         </div>
         <div class="index-container">
           <div class="index-header"></div>

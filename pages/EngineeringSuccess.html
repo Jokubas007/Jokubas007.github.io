@@ -15,11 +15,14 @@
     <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
     <link rel="stylesheet" href="../styles/button-pill.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/table.css">
+    <link rel="stylesheet" href="../styles/bypass-block.css">
     <link rel="stylesheet" href="../styles/engineering-success.css">
   </head>
   <body>
     <div class="navbar-container">
       <nav class="navbar">
+        <a href="#main-content" class="bypass-block-link visually-hidden visible-when-focused">Skip to main content</a>
         <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
           <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
           AmeBye
@@ -34,14 +37,11 @@
       <canvas id="background-canvas"></canvas>
       <canvas
         id="canvas-transition"
-        data-fragment-url="../assets/transition/BackgroundTransition.frag"
-        width="500"
-        height="500"
       ></canvas>
       <div class="app-header">
         <h1 id="title">ENGINEERING SUCCESS</h1>
         <div id="img" class="app-header-image-wrapper">
-          <img alt="Header" src="../assets/images/placeholder.png" />
+          <img alt="Header" src="https://2021.igem.org/wiki/images/3/34/T--Vilnius-Lithuania--Engineering.jpg" />
         </div>
       </div>
       <div class="app-content">
@@ -61,8 +61,7 @@
             </p>
             <svg viewBox="0 0 710 350" id="overview-animation"></svg> 
             <h3 class="index-headline">Fusion protein modeling</h3>
-            <svg viewBox="0 0 710 350" id="protein-animation"></svg>
-            <div class="cycle protein-cycle active" id="protein-cycle-0">
+            <div>
               <h3>Cycle 1: Design</h3>
               <p>
                 Since one of the parts of our project is to create a fusion protein system for the bottleneck
@@ -84,7 +83,7 @@
                 <li>Plotting Ramachandran graphs after structure refinement</li>
               </ol>
             </div>
-            <div class="cycle protein-cycle" id="protein-cycle-1">
+            <div>
               <h3>Cycle 1: Build</h3>
               <p>
                 The building stage of the modeling flow consisted of performing the initial design flow.
@@ -102,7 +101,7 @@
                 <li>The plot was not drawn in this cycle</li>
               </ol>
             </div>
-            <div class="cycle protein-cycle" id="protein-cycle-2">
+            <div>
               <h3>Cycle 1: Test</h3>
               <p>
                 The output of SWISS-MODEL showed that sequence identity between the templates found and the sequence
@@ -121,7 +120,7 @@
                 dynamics will not introduce any significant changes to the structure.
               </p>
             </div>
-            <div class="cycle protein-cycle" id="protein-cycle-3">
+            <div>
               <h3>Cycle 1: Learn</h3>
               <p>
                 Nonetheless in theory the homology-based modeling method could be applied,
@@ -129,7 +128,7 @@
                 Therefore, we decided to try running <i>ab initio</i> protein modeling programs.
               </p>
             </div>
-            <div class="cycle protein-cycle" id="protein-cycle-4">
+            <div>
               <h3>Cycle 2: Design</h3>
               <p>
                 The design (main steps) of the modeling flow stayed the same as it was in the first cycle,
@@ -139,7 +138,7 @@
                 modeling programs trRosetta[8] and RoseTTAFold[9] to model our proteins.
               </p>
             </div>
-            <div class="cycle protein-cycle" id="protein-cycle-5">
+            <div>
               <h3>Cycle 2: Build</h3>
               <ol>
                 <li>Protein candidates stayed the same as in the first cycle</li>
@@ -153,7 +152,7 @@
                 <li>The Ramachandran plots were drawn before molecular dynamics (MD) simulations</li>
               </ol>
             </div>
-            <div class="cycle protein-cycle" id="protein-cycle-6">
+            <div>
               <h3>Cycle 2: Test</h3>
               <p>
                 The modeled structures visually were not satisfactory - the disordered domain of 4CL
@@ -161,7 +160,7 @@
                 and MD simulations did not introduce any significant changes to the structure. 
               </p>
             </div>
-            <div class="cycle protein-cycle" id="protein-cycle-7">
+            <div>
               <h3>Cycle 2: Learn</h3>
               <p>
                 After this step we decided to consult the bioinformatician who works with protein modeling.
@@ -172,7 +171,7 @@
                 After the consultation we adjusted the box size of the system and the duration of the simulations.
               </p>
             </div>
-            <div class="cycle protein-cycle" id="protein-cycle-8">
+            <div>
               <h3>Cycle 3: Design</h3>
               <p>
                 In the third engineering cycle we included our own generated multiple sequence alignment (MSA)
@@ -182,7 +181,7 @@
                 refinement was not performed in this cycle due to the lack of computational resources at the time.
               </p>
             </div>
-            <div class="cycle protein-cycle" id="protein-cycle-9">
+            <div>
               <h3>Cycle 3: Build</h3>
               <ol>
                 <li>Protein candidates stayed the same as in the previous cycle</li>
@@ -196,20 +195,20 @@
                 <li>The distances between active sites in fusion protein systems with rigid linkers were calculated</li>
               </ol>
             </div>
-            <div class="cycle protein-cycle" id="protein-cycle-10">
+            <div>
               <h3>Cycle 3: Test</h3>
               <p>
                 The modeled structures were visually satisfactory -
                 the disordered domain of 4CL protein was less disordered in the modeled structure.
               </p>
             </div>
-            <div class="cycle protein-cycle" id="protein-cycle-11">
+            <div>
               <h3>Cycle 3: Learn</h3>
               <p>
                 The multiple sequence alignment (MSA) files have a significant impact on the modeling output.
               </p>
             </div>
-            <div class="cycle protein-cycle" id="protein-cycle-12">
+            <div>
               <h3>Cycle 4: Design</h3>
               <p>
                 According to the output of the third cycle, the fourth engineering cycle was not required.
@@ -219,7 +218,7 @@
                 MD for structures recorded in the studies[12].
               </p>
             </div>
-            <div class="cycle protein-cycle" id="protein-cycle-13">
+            <div>
               <h3>Cycle 4: Build</h3>
               <ol>
                 <li>Protein candidates stayed the same as in the previous cycle</li>
@@ -232,13 +231,13 @@
                 <li>The distances between active sites in fusion protein systems with rigid linkers were calculated</li>
               </ol>
             </div>
-            <div class="cycle protein-cycle" id="protein-cycle-14">
+            <div>
               <h3>Cycle 4: Test</h3>
               <p>
                 The output of the fourth cycle had the less disordered domain just as the output of the third cycle.
               </p>
             </div>
-            <div class="cycle protein-cycle" id="protein-cycle-15">
+            <div>
               <h3>Cycle 4: Learn</h3>
               <p>
                 We were visually satisfied with the modeled complex.

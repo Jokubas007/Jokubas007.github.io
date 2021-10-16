@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <link rel="stylesheet" href="../styles/contentpage-desktop.css">
+    <link rel="stylesheet" href="../styles/contentpage-mobile.css">
+    <link rel="stylesheet" href="../styles/sideindex-desktop.css">
+    <link rel="stylesheet" href="../styles/sideindex-mobile.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/navmenu-desktop.css">
+    <link rel="stylesheet" href="../styles/navmenu-mobile.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-desktop.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
+    <link rel="stylesheet" href="../styles/button-pill.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/table.css">
+    <link rel="stylesheet" href="../styles/bypass-block.css">
+
+  </head>
+  <style>
+    #title {
+      top: 15%;
+    }
+  </style>
+  <body>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a href="#main-content" class="bypass-block-link visually-hidden visible-when-focused">Skip to main content</a>
+        <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
+          <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
+          AmeBye
+        </a>
+        <ul class="nav-menu"></ul>
+      </nav>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <div class="background">
+      <canvas id="background-canvas"></canvas>
+      <canvas
+        id="canvas-transition"
+      ></canvas>
+      <div class="app-header">
+        <h1 id="title">
+         SUSTAINABLE DEVELOPMENT IMPACT
+        </h1>
+        <div class="app-header-image-wrapper" id="img">
+         <img class="cover" alt="Header" src="https://2021.igem.org/wiki/images/2/2d/T--Vilnius-Lithuania--SDG.jpg"/>
+        </div>
+       </div>
+       <div class="app-content">
+        <div class="app-content-text">
+         <div class="content-page-container">
+             <h3 class="index-headline">
+                Introduction
+             </h3>
+             <p>
+              In the past years, we have seen that scientific research can be a driving force for the development of society. Science is everywhere, from the newest technology, making our routines easier, to life-saving solutions in laboratories. Thus, it is essential for us, scientists, to deal with existing problems and avoid creating new ones. We have to look beyond our national borders, act responsibly and protect our environment.
+             </p>
+             <p>
+              Therefore, while creating our project, we followed the 17 United Nations goals for sustainable global development that aim to ensure a better future for everyone [1].
+              The goals work as a balancing act, because the development of society must go hand in hand with the preservation of the planet and our social needs.          
+             </p>
+             <p>
+              <b>This year, our team chose to tackle a global problem - amebiasis.</b> We found that despite it being the 3rd deadliest protist-caused infection in the world [2], it still lacks proper management tools. First, current infection prevention is unspecific, based on good sanitation, avoidance of contaminated food and hands. Second, methods designed to diagnose amebiasis are ineffective or unavailable in the regions where the disease is widespread.
+             </p>
+             <p>
+              <b>Project “AmeBye” is mainly based on goals 3, 9 and 17.</b>
+             </p>
+             
+             <h3 class="index-headline">
+              Goal 3︱Good health and well being
+             </h3>
+             <p>
+              <i>Ensure healthy lives and promote well-being for all at all ages</i>
+             </p>
+             <p>
+              Our team believes that good health is crucial for every person to live a fulfilling life. As we have learned from the current pandemic, well-being disruptions cause enormous problems not only to individuals but also to businesses and the government. Therefore, we see the importance of creating a product to solve a large-scale health problem.
+              We mainly worked toward contributing to <b>target 3.3. </b> (By 2030, end the epidemics of AIDS, tuberculosis, malaria, and neglected tropical diseases and combat hepatitis, water-borne diseases, and other communicable diseases.)[1]
+             </p>
+             <p>
+              We tried to reach this goal by producing preventive probiotics and an affordable and efficient diagnostic test for amebiasis. This tropical disease is the third deadliest parasitic illness in the world that can spread through water, food, and contaminated hands. As our society is global, spreadability means possible danger to any country if action against the parasite is not taken.
+             </p>
+             <p>
+              The first solution that we are offering is probiotics that are to prevent the global spread of amebiasis. We chose prevention as our objective to lower the chances of aggressive infection and to avoid possible worldwide pandemics that might be favored by mass tourism.
+             </p>
+             <p>
+              If the preventive measure fails, an easy-to-use diagnostic test can help combat amebiasis in developing countries where this problem is immense. Keeping in mind less developed economies, our inexpensive tool ensures that medical institutions receive a lower financial load and every patient receives a proper diagnosis.
+             </p>
+             <h3 class="index-headline">
+              Goal 9︱Industry, innovation and infrastructure
+             </h3>
+             <p>
+              <i>Build resilient infrastructure, promote inclusive and sustainable industrialization, and foster innovation</i>
+             </p>
+             <p>
+              In 2020, Lithuania’s biotechnology sector grew by almost 87 percent, and businesses in the field contributed around 2.5 percent to the country’s GDP [3]. These numbers show that Lithuania is indeed a perfect place to create something never seen before. To contribute to the goal, we aimed at <b>target 9.5 </b> (Enhance scientific research, upgrade the technological capabilities of industrial sectors in all countries, in particular developing countries, including, by 2030, encouraging innovation and substantially increasing the number of research and development workers per 1 million people and public and private research and development spending)[1].
+             </p>
+             <p>
+              Our contribution to the goal is seen as a scientific solution to an existing global problem. The amebiasis test we are creating is a new way of diagnostics that has not been implemented before. While making the tool, our laboratory team did thorough scientific research that added to an innovative solution. The results from our experiments are to add to the general knowledge on the topic of amebiasis. Moreover, we see our team’s collaborations with iGEM teams from developing countries to add to a scientific advancement there.
+             </p>
+             <h3 class="index-headline">
+              Goal 17︱ Partnerships for the goals
+             </h3>
+             <p>
+              <i>Strengthen the means of implementation and revitalize the global partnership for sustainable development.</i>
+             </p>
+             <p>
+              We, as a team, understand that working together with others is the best way to make progress. A variety of outlooks coming from different backgrounds and having expertise can help create more universal solutions. This is not only the basis of teamwork but of international partnership as well. To make “AmeBye” suitable for a global society, our team thoroughly followed <b>target 17.16</b> (Enhance the global partnership for sustainable development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology, and financial resources, to support the achievement of the sustainable development goals in all countries, in particular developing countries.)[1]
+             </p>
+             <p>
+              We, as a team, understand that working together with others is the best way to make progress. A variety of outlooks coming from different backgrounds and having expertise can help create more universal solutions. This is not only the basis of teamwork but of international partnership as well. To make “AmeBye” suitable for a global society, our team thoroughly followed <b>target 17.16</b> (Enhance the global partnership for sustainable development, complemented by multi-stakeholder partnerships that mobilize and share knowledge, expertise, technology, and financial resources, to support the achievement of the sustainable development goals in all countries, in particular developing countries.)[1]
+             </p>
+             <h3 class="index-headline">
+              Conclusion
+             </h3>
+             <p>
+              All in all, with our project, we address the sustainable development goals 3, 9, and 17, expressed by the UN, as we want to contribute to improved healthcare globally. Our amebiasis probiotics and test are to help in the combat against a neglected tropical disease. We want to stress that we created our solutions after thorough consultations with representatives of affected countries. Our tools are easy to use, suitable for broad use, and adjustable for further applications. 
+             </p>
+         </div>
+         <div class="references-wrapper">
+          <div class="breaker">
+          </div>
+          <h2>
+           References
+          </h2>
+          <div class="references-container">
+           <div class="number">
+            1.
+           </div>
+           <div>
+            United Nations. 2021. The Sustainable Development Goals Report, 3-4, 18, 28.
+           </div>
+            <div class="number">
+             2.
+            </div>
+            <div>
+              John CC, Salata RA. Amebiasis. In: Kliegman RM, Stanton B, St. Geme J, Schor N, Behrman RE, editors. Nelson textbook of pediatrics. Philadelphia: Saunders; 2010. pp. 1123–5.
+            </div>
+            <div class="number">
+             3.
+            </div>
+            <div>
+              Lithuanian Biotechnology Association. Retrieved October 3rd, 2021. The pandemic left no scars: Lithuanian biotech sector grew at its fastest last year of the past decade.
+            </div>
+            </div>
+         </div>
+        </div>
+        <div class="index-container">
+          <div class="index-header"></div>
+          <div class="index-content"></div>
+        </div>
+      </div>
+      <footer>
+        <div class="logo-igem">
+          <object data="../assets/logos/T--Vilnius-Lithuania--iGEM-2021.svg"> </object>
+        </div>
+        <div class="social-container">
+          <div>FOLLOW US</div>
+          <div>
+            <a class="placeholder-social-icon" href="https://www.facebook.com/VilniusiGEM">
+              <img src="../assets/icons/facebook.svg" />
+            </a>
+            <a class="placeholder-social-icon" href="https://www.instagram.com/igem_vilnius/">
+              <img src="../assets/icons/instagram.svg" />
+            </a>
+            <a class="placeholder-social-icon" href="https://www.linkedin.com/company/vilnius-igem/">
+              <img src="../assets/icons/linkedin.svg" />
+            </a>
+          </div>
+        </div>
+        <div class="mail-container">
+          <div>CONTACT US</div>
+          <a href="mailto:info@vilniusigem.lt">info@vilniusigem.lt</a>
+        </div>
+        <div class="grid-sponsors">
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--VU.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Termofisher.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/CityOfVilnius.svg"> </object>
+            </div>
+          </div>
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--GMC.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Nanodiagnostika.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Telesoftas.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Kopicentras.svg"> </object>
+            </div>
+          </div>
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--SnapGene.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Laborama.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Biotecha.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Grida.svg"> </object>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../scripts/navigationTabs.js"></script>
+    <script src="../scripts/background.js"></script>
+    <script src="../scripts/contentpage.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script>
+      contentPage(
+        "Sections",
+        true,
+        300,
+      )
+    </script>
+    <script src="../scripts/GlslCanvas.js"></script>
+    <script src="../scripts/backgroundTransition.js"></script>
+  </body>
+</html>

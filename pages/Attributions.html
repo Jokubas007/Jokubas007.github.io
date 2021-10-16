@@ -4,7 +4,8 @@
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/fonts.css">
     <link rel="stylesheet" href="../styles/background.css">
-    <link rel="stylesheet" href="../styles/attributions.css">
+    <link rel="stylesheet" href="../styles/attributions-desktop.css">
+    <link rel="stylesheet" href="../styles/attributions-mobile.css">
     <link rel="stylesheet" href="../styles/sideindex-mobile.css">
     <link rel="stylesheet" href="../styles/navbar.css">
     <link rel="stylesheet" href="../styles/navmenu-desktop.css">
@@ -13,12 +14,16 @@
     <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
     <link rel="stylesheet" href="../styles/button-pill.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/bypass-block.css">
   </head>
   <body>
     <div class="navbar-container">
       <nav class="navbar">
-        <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
-          <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
+        <a class="navbar-logo" href="/Team:Vilnius-Lithuania">
+          <img
+            alt="AmebyeLogo"
+            src="https://2021.igem.org/wiki/images/b/b0/T--Vilnius-Lithuania--amebyeLogo.svg"
+          />
           AmeBye
         </a>
         <ul class="nav-menu"></ul>
@@ -28,59 +33,150 @@
       </div>
     </div>
     <div class="background">
-      <canvas id="background-canvas"></canvas>
+      <canvas id="background-canvas"> </canvas>
       <div class="app-header">
         <h1 id="title">ATTRIBUTIONS</h1>
-        <div id="img" class="app-header-image-wrapper">
-          <img alt="Header" src="../assets/images/placeholder.png" />
+        <div class="app-header-image-wrapper" id="img">
+          <img
+            alt="Header"
+            src="https://2021.igem.org/wiki/images/a/a4/T--Vilnius-Lithuania--Attributions.jpg"
+          />
         </div>
       </div>
       <div class="app-content">
         <div class="app-content-text">
           <div>
-            <h3 class="index-headline">PI & ADVISORS</h3>
+            <h3 class="index-headline">PI &amp; ADVISORS</h3>
             <div class="person-container">
-              <img alt="Name Surname" src="../assets/images/placeholder.png"/>
+              <img
+                alt="Name Surname"
+                src="https://2021.igem.org/wiki/images/1/1e/T--Vilnius-Lithuania--Rolandas_Meskys.jpg"
+              />
               <div>
-                <h5>VARDAS PAVARDĖ</h5>
-                <h6>something something</h6>
+                <h5>ROLANDAS MEŠKYS</h5>
+                <h6>Distinguished Professor, Biochemistry</h6>
                 <div class="breaker"></div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. 
+                  Our primary PI was always optimistic about our team and curious
+                  about the current state of our project. We received
+                  comprehensive guidance that enabled us to succeed in reaching
+                  our initial goals.
                 </p>
               </div>
             </div>
             <div class="person-container">
-              <img alt="Name Surname" src="../assets/images/placeholder.png"/>
+              <img
+                alt="Name Surname"
+                src="https://2021.igem.org/wiki/images/1/18/T--Vilnius-Lithuania--Inga_Songailiene_square.jpg"
+              />
               <div>
-                <h5>VARDAS PAVARDĖ</h5>
-                <h6>something something</h6>
+                <h5>INGA SONGAILIENĖ</h5>
+                <h6>PhD candidate, Biochemistry</h6>
                 <div class="breaker"></div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. 
+                  Her big experience and knowledge about CRISPR-Cas systems helped
+                  us to remain calm and make precise genome edits. Provided genome
+                  editing plasmids enabled our probiotic bacteria strain to make
+                  it happen.
+                </p>
+              </div>
+            </div>
+            <div class="person-container">
+              <img
+                alt="Name Surname"
+                src="https://2021.igem.org/wiki/images/e/ea/T--Vilnius-Lithuania--Kliment_Olechnovic_square.jpg"
+              />
+              <div>
+                <h5>KLIMENT OLECHNOVIČ</h5>
+                <h6>PhD, Structural Bioinformatics</h6>
+                <div class="breaker"></div>
+                <p>
+                  The specialist of structural bioinformatics was an advisor to
+                  whom we could reach out whenever the fusion protein modeling
+                  raised questions that Google could not answer. K. Olechnovič
+                  provided us valuable insight, advice, and ideas to improve our
+                  modeling flow.
+                </p>
+              </div>
+            </div>
+            <div class="person-container">
+              <img
+                alt="Name Surname"
+                src="https://2021.igem.org/wiki/images/f/f3/T--Vilnius-Lithuania--Paulius_Sungaila.jpg"
+              />
+              <div>
+                <h5>PAULIUS SUNGAILA</h5>
+                <h6>MSc, Molecular Biology</h6>
+                <div class="breaker"></div>
+                <p>
+                  As a biology teacher Paulius provided us with insights regarding
+                  the background and context of the most pressing issues that we
+                  notice in formal school education, practical advice on student
+                  engagement, and educational content presentation. He was very
+                  helpful in sharing our educational content with society.
                 </p>
               </div>
             </div>
             <h3 class="index-headline">INSTRUCTORS</h3>
             <div class="person-container">
-              <img alt="Name Surname" src="../assets/images/placeholder.png"/>
+              <img
+                alt="Name Surname"
+                src="https://2021.igem.org/wiki/images/2/26/T--Vilnius-Lithuania--Rimvyde_Cepaite_square.JPG"
+              />
               <div>
-                <h5>VARDAS PAVARDĖ</h5>
-                <h6>something something</h6>
+                <h5>RIMVYDĖ ČEPAITĖ</h5>
+                <h6>Second year MSc student of Molecular Biotechnology</h6>
                 <div class="breaker"></div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. 
+                  She took part in brainstorming sessions as well as helped with
+                  lab experiment planning and conducting.
                 </p>
               </div>
             </div>
             <div class="person-container">
-              <img alt="Name Surname" src="../assets/images/placeholder.png"/>
+              <img
+                alt="Name Surname"
+                src="https://2021.igem.org/wiki/images/a/a3/T--Vilnius-Lithuania--Saulius_Lipkevicius_square.JPG"
+              />
               <div>
-                <h5>VARDAS PAVARDĖ</h5>
-                <h6>something something</h6>
+                <h5>SAULIUS LIPKEVIČIUS</h5>
+                <h6>Second year MSc student of Econometry</h6>
                 <div class="breaker"></div>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac enim id metus rutrum blandit sed non dolor. Pellentesque feugiat odio eu imperdiet rutrum. Duis consectetur porttitor enim, id elementum nibh tempus in. Nulla ut massa rutrum, ullamcorper dui et, posuere velit. Cras viverra, tortor at porta pulvinar, libero eros pulvinar orci, sed pulvinar neque felis eget dui. Fusce laoreet libero vitae nunc hendrerit consequat. Nunc eget bibendum turpis. 
+                  Saulius likes to tame parrots in his leisure time, also he
+                  helped with data science related problems: NN software
+                  development, model statistical optimization, data
+                  visualizations.
+                </p>
+              </div>
+            </div>
+            <div class="person-container">
+              <img
+                alt="Name Surname"
+                src="https://2021.igem.org/wiki/images/9/9f/T--Vilnius-Lithuania--Ieva_Lingyte.jpg"
+              />
+              <div>
+                <h5>IEVA LINGYTĖ</h5>
+                <h6>First year MSc student of Molecular Biotechnology</h6>
+                <div class="breaker"></div>
+                <p>
+                  Ieva was the one who had all of the answers to our extensive
+                  range of questions from marketing to lab experiment planning.
+                </p>
+              </div>
+            </div>
+            <div class="person-container">
+              <img
+                alt="Name Surname"
+                src="https://2021.igem.org/wiki/images/8/8a/T--Vilnius-Lithuania--Egle_Vitkunaite.jpg"
+              />
+              <div>
+                <h5>EGLĖ VITKŪNAITĖ</h5>
+                <h6>First year MSc student of Molecular Biotechnology</h6>
+                <div class="breaker"></div>
+                <p>
+                  Gave us a lot of useful insights on brainstorming sessions.
+                  Initial helper with promotor measurement.
                 </p>
               </div>
             </div>
@@ -88,90 +184,335 @@
             <table>
               <tr>
                 <th></th>
-                <th>Something</th>
-                <th>Something</th>
-                <th>Something</th>
+                <th>Mentorship</th>
+                <th>Equipment</th>
+                <th>Reagents</th>
               </tr>
               <tr>
-                <td>Vardas Pavardė</td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
+                <td>Virginijus Šikšnys</td>
+                <td>
+                  <div></div>
+                </td>
+                <td colspan="2">
+                  <div class="marked"></div>
+                </td>
               </tr>
               <tr>
-                <td>Vardas Pavardė</td>
-                <td><div></div></td>
-                <td colspan="2"><div class="marked"></div></td>
+                <td>Jolanta Žiliukienė</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
               </tr>
               <tr>
-                <td>Vardas Pavardė</td>
-                <td colspan="3"><div class="marked"></div></td>
+                <td>Edita Sužiedelienė</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
               </tr>
               <tr>
-                <td>Vardas Pavardė</td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div class="marked"></div></td>
+                <td>Eglė Lastauskienė</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Gintaras Valinčius</td>
+                <td colspan="3">
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Rudolf von Bünau</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Vytautas Petkevičius</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Ramutė Pagalytė</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Julija Armalytė</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Paulius Toliušis</td>
+                <td>
+                  <div></div>
+                </td>
+                <td colspan="2">
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Jolanta Gulbinovič</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Romas Tamoševičius</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>DMTS</td>
+                <td colspan="3">
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Rapolas Žilionis</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Vilmantė Žitkutė</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Mobilioji bioklasė</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Vaidotas Stankevičius</td>
+                <td>
+                  <div></div>
+                </td>
+                <td colspan="2">
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Pall Corporation</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Linas Mažutis</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
               </tr>
             </table>
             <h3 class="index-headline">DRY LAB</h3>
             <table>
               <tr>
                 <th></th>
-                <th>Something</th>
-                <th>Something</th>
-                <th>Something</th>
+                <th>Mentorship</th>
+                <th>Equipment</th>
               </tr>
               <tr>
-                <td>Vardas Pavardė</td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
+                <td>Kliment Olechnovič</td>
+                <td colspan="1">
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
               </tr>
               <tr>
-                <td>Vardas Pavardė</td>
-                <td><div></div></td>
-                <td colspan="2"><div class="marked"></div></td>
+                <td>Justas Dapkūnas</td>
+                <td colspan="1">
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
               </tr>
               <tr>
-                <td>Vardas Pavardė</td>
-                <td colspan="3"><div class="marked"></div></td>
+                <td>Kotryna Kvederavičiūtė</td>
+                <td colspan="2">
+                  <div class="marked"></div>
+                </td>
               </tr>
               <tr>
-                <td>Vardas Pavardė</td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div class="marked"></div></td>
+                <td>Visvaldas Kairys</td>
+                <td colspan="1">
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Laurynas Karpus</td>
+                <td colspan="1">
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Gustautas Snarskis</td>
+                <td colspan="1">
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Česlovas Venclovas</td>
+                <td colspan="2">
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Jurij Nesvat</td>
+                <td colspan="1">
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
               </tr>
             </table>
             <h3 class="index-headline">HUMAN PRACTICES</h3>
             <table>
               <tr>
                 <th></th>
-                <th>Something</th>
-                <th>Something</th>
-                <th>Something</th>
+                <th class="round-corners">Mentorship</th>
               </tr>
               <tr>
-                <td>Vardas Pavardė</td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
+                <td>Jolanta Žiliukienė</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
               </tr>
               <tr>
-                <td>Vardas Pavardė</td>
-                <td><div></div></td>
-                <td colspan="2"><div class="marked"></div></td>
+                <td>Paulius Sungaila</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
               </tr>
               <tr>
-                <td>Vardas Pavardė</td>
-                <td colspan="3"><div class="marked"></div></td>
+                <td>
+                  Vilnius University Communications and Marketing Department
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
               </tr>
               <tr>
-                <td>Vardas Pavardė</td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div class="marked"></div></td>
+                <td>Renata Giudukaitė</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Eglė Lastauskienė</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td>Monika Paulė</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
               </tr>
             </table>
             <h3 class="index-headline">TEAM</h3>
@@ -188,160 +529,1385 @@
                 <th>Bernadeta</th>
                 <th>Ieva</th>
                 <th>Jokūbas</th>
-                <th>Nikolajus</th>
                 <th>Saulius</th>
                 <th>Gintarė</th>
                 <th>Guoda</th>
               </tr>
               <tr>
-                <td rowspan="3" class="row-title">WET LAB</td>
-                <td class="row-title-follow">Something</td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
+                <td class="row-title" rowspan="12">WET LAB</td>
+                <td class="row-title-follow">Promoter evaluation</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
               </tr>
               <tr>
-                <td class="row-title-follow">Something</td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
+                <td class="row-title-follow">Cyclization system</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
               </tr>
               <tr>
-                <td class="row-title-follow">Something</td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
+                <td class="row-title-follow">Constructing fusion protein</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
               </tr>
               <tr>
-                <td rowspan="3" class="row-title">DRY LAB</td>
-                <td class="row-title-follow">Something</td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
+                <td class="row-title-follow">Genome editing</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
               </tr>
               <tr>
-                <td class="row-title-follow">Something</td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
+                <td class="row-title-follow">HPLC-MS</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
               </tr>
               <tr>
-                <td class="row-title-follow">Something</td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
+                <td class="row-title-follow">Kill-switch</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
               </tr>
               <tr>
-                <td rowspan="3" class="row-title">HUMAN PRACTICES</td>
-                <td class="row-title-follow">Something</td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
+                <td class="row-title-follow">Protein purification</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
               </tr>
               <tr>
-                <td class="row-title-follow">Something</td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
+                <td class="row-title-follow">SELEX</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
               </tr>
               <tr>
-                <td class="row-title-follow">Something</td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div class="marked"></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
-                <td><div></div></td>
+                <td class="row-title-follow">ePCR</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">NGS</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">PDA synthesis</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">IT aptamer evaluation</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title" rowspan="8">DRY LAB</td>
+                <td class="row-title-follow">Fusion protein modeling</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Small bioinformatics tools</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">EFBAScore</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">EFBALite</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">TEA</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Aptamer docking modeling</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Test hardware</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Model</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title" rowspan="13">HUMAN PRACTICES</td>
+                <td class="row-title-follow">IHP</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Marketing</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Sustainable development impact</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Inclusivity</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Business plan</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Sense Lab: Touch</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Sense Lab: Taste</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Sense Lab: Smell</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Sense Lab: Hearing</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Sense Lab: Vision</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">The 6th SynBio Sense</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Education</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Communication</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title" rowspan="3">DELIVERABLES</td>
+                <td class="row-title-follow">Promotion video</td>
+                <td colspan="12">
+                  <div class="marked"></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Wiki design</td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-title-follow">Presentation video</td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
+                <td>
+                  <div class="marked"></div>
+                </td>
               </tr>
             </table>
-            <h3 class="index-headline">SPONSORS</h3>
           </div>
           <div class="references-wrapper"></div>
         </div>
@@ -352,7 +1918,9 @@
       </div>
       <footer>
         <div class="logo-igem">
-          <object data="../assets/logos/T--Vilnius-Lithuania--iGEM-2021.svg"> </object>
+          <object
+            data="https://2021.igem.org/wiki/images/f/ff/T--Vilnius-Lithuania--iGEM-2021.svg"
+          ></object>
         </div>
         <div class="social-container">
           <div>FOLLOW US</div>
@@ -364,52 +1932,80 @@
         </div>
         <div class="mail-container">
           <div>CONTACT US</div>
-          <a href="mailto:info@vilniusigem.lt">info@vilniusigem.lt</a>
+          <a href="mailto:info@vilniusigem.lt"> info@vilniusigem.lt </a>
         </div>
         <div class="grid-sponsors">
           <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--VU.svg"> </object>
+            <object
+              data="https://2021.igem.org/wiki/images/d/dc/T--Vilnius-Lithuania--VU.svg"
+            ></object>
           </div>
           <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--GMC.svg"> </object>
+            <object
+              data="https://2021.igem.org/wiki/images/b/bb/T--Vilnius-Lithuania--GMC.svg"
+            ></object>
           </div>
           <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--SnapGene.svg"> </object>
+            <object
+              data="https://2021.igem.org/wiki/images/d/df/T--Vilnius-Lithuania--SnapGene.svg"
+            ></object>
           </div>
           <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--Termofisher.svg"> </object>
+            <object
+              data="https://2021.igem.org/wiki/images/b/bf/T--Vilnius-Lithuania--Termofisher.svg"
+            ></object>
           </div>
           <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--Nanodiagnostika.svg"> </object>
+            <object
+              data="https://2021.igem.org/wiki/images/9/98/T--Vilnius-Lithuania--Nanodiagnostika.svg"
+            ></object>
           </div>
           <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--Laborama.svg"> </object>
+            <object
+              data="https://2021.igem.org/wiki/images/3/3e/T--Vilnius-Lithuania--Laborama.svg"
+            ></object>
           </div>
           <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--Telesoftas.svg"> </object>
+            <object
+              data="https://2021.igem.org/wiki/images/1/16/T--Vilnius-Lithuania--Telesoftas.svg"
+            ></object>
           </div>
           <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--Biotecha.svg"> </object>
+            <object
+              data="https://2021.igem.org/wiki/images/c/c1/T--Vilnius-Lithuania--Biotecha.svg"
+            ></object>
           </div>
           <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--Kopicentras.svg"> </object>
+            <object
+              data="https://2021.igem.org/wiki/images/7/70/T--Vilnius-Lithuania--Kopicentras.svg"
+            ></object>
           </div>
           <div>
-            <object data="../assets/logos/T--Vilnius-Lithuania--Grida.svg"> </object>
+            <object
+              data="https://2021.igem.org/wiki/images/4/4f/T--Vilnius-Lithuania--Grida.svg"
+            ></object>
           </div>
         </div>
       </footer>
     </div>
-    <script src="../scripts/navigationTabs.js"></script>
-    <script src="../scripts/background.js"></script>
-    <script src="../scripts/contentpage.js"></script>
-    <script src="../scripts/navbar.js"></script>
+    <script
+      src="https://2021.igem.org/wiki/index.php?title=Template:Vilnius-Lithuania/scripts/navigationTabs&amp;action=raw&amp;ctype=text/javascript"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://2021.igem.org/wiki/index.php?title=Template:Vilnius-Lithuania/scripts/background&amp;action=raw&amp;ctype=text/javascript"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://2021.igem.org/wiki/index.php?title=Template:Vilnius-Lithuania/scripts/contentpage&amp;action=raw&amp;ctype=text/javascript"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://2021.igem.org/wiki/index.php?title=Template:Vilnius-Lithuania/scripts/navbar&amp;action=raw&amp;ctype=text/javascript"
+      type="text/javascript"
+    ></script>
     <script>
-      contentPage(
-        "Sections",
-        true,
-        150,
-      )
+      contentPage(        "Sections",        true,        150,      )
     </script>
   </body>
 </html>

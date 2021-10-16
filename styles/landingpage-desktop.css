@@ -12,17 +12,16 @@
   }
 
   .landing-page-content .content-container .logo object {
-    width: 15vw;
-    margin-bottom: 5px;
+    width: 22vw;
   }
 
   .landing-page-content .content-container .logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    right: 10%;
-    bottom: 20%;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
   }
 
   .landing-page-content .content-container .logo h1 {
@@ -33,11 +32,12 @@
     font-weight: 700;
     letter-spacing: 0em;
     margin-bottom: 40px !important;
+    line-height: 1;
   }
 
   .landing-page-content .content-container .logo div {
     font-family: var(--main-font);
-    font-size: 2vw;
+    font-size: 3vw;
     font-style: normal;
     font-weight: 300;
     letter-spacing: 0em;
@@ -156,11 +156,11 @@
     text-align: left;
   }
 
-  .China, #IN, #IR, #SA, #EG, #ZA, #TZ, #MX, #BR, #CO, #EQ, #EC {
+  #IN, #EG, #ZA, #MX, #BR, #YE, #MY, #AE {
     fill: #FCCEC0;
   }
 
-  .China:hover, #IN:hover, #IR:hover, #SA:hover, #EG:hover, #ZA:hover, #TZ:hover, #MX:hover, #BR:hover, #CO:hover, #EQ:hover, #EC:hover {
+  #IN:hover, #EG:hover, #ZA:hover, #MX:hover, #BR:hover, #YE:hover, #MY:hover, #AE:hover {
     fill: #EF9F89;
   }
 
@@ -248,6 +248,7 @@
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox */
     box-sizing: border-box;
+    justify-content: space-around;
   }
 
   .landing-page-content .content-container:nth-child(5) > div > div {
@@ -278,11 +279,51 @@
   }
 
   .circles-container {
-    margin: 0 64px !important;
+    margin: 0 32px !important;
   }
 
   .circles-container svg {
     width: 40vw;
+  }
+
+  .landing-page-content .diagnostics-container {
+    padding: 96px !important;
+    display: flex;
+  }
+
+  .landing-page-content .diagnostics-container > object {
+    width: 25%;
+  }
+
+  .landing-page-content .diagnostics-container > div {
+    width: 45%;
+  }
+
+  .landing-page-content .diagnostics-container > object {
+    margin-right: 20% !important;
+    margin-left: 10% !important;
+  }
+
+  .landing-page-content .diagnostics-container > div > h2 {
+    margin: 0 !important;
+    margin-bottom: 40px !important;
+    font-family: var(--secondary-font);
+    font-size: 3.5vw;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FCCEC0;
+  }
+
+  .landing-page-content .diagnostics-container > div > p {
+    font-family: var(--main-font);
+    font-size: 1.25vw;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0em;
+    text-align: left;
+    padding-right: 10vw;
   }
 
   .landing-page-content .solution-container {
@@ -345,6 +386,7 @@
     font-weight: 300;
     letter-spacing: 0em;
     text-align: left;
+    padding-right: 10vw;
   }
 
   .landing-page-content .useful-links-container > div {
@@ -357,9 +399,13 @@
     justify-content: space-between;
   }
 
-  .landing-page-content .useful-links-container > div > a svg {
+  .landing-page-content .useful-links-container > div > a object {
     margin-bottom: 20px !important;
     width: 16vw;
+    pointer-events: none;
+    display: block;
+    z-index: 1;
+    z-index: -1;
   }
 
   .landing-page-content .useful-links-container > div > a {
@@ -384,9 +430,14 @@
     width: 100vw;
   }
 
-  .ameba {
-    position: fixed;
-    width: 50%;
-    height: 50%;
+  .ameba-container {
+    position: absolute;
+    width: 35vw;
+    left: 28vw;
+    top: 100vh;
+  }
+
+  .book {
+    transform: translateX(10%) translateY(-30%);
   }
 }

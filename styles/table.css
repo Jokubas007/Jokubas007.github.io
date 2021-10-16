@@ -18,10 +18,15 @@ table {
   width: 100%;
   word-break: break-all;
   font-size: 1.5vh;
+  border: none !important;
 }
 
-tr:nth-child(even) { background: #F1F5F7 }
-tr:nth-child(odd) { background: #CBD7DC }
+tr:nth-child(even) { background: #F1F5F7 !important }
+tr:nth-child(odd) { background: #CBD7DC !important }
+
+tr {
+  border: none !important;
+}
 
 td:first-child,
 th:first-child {
@@ -35,11 +40,13 @@ th:last-child {
 
 td {
     padding: 8px;
+    border: none !important;
 }
 
 th {
-    background-color: #0D4B5E;
-    color: #FFFFFF;
+    background-color: #0D4B5E !important;
+    color: #FFFFFF !important;
     font-family: var(--secondary-font);
     padding: 8px;
+    border: none !important;
 }

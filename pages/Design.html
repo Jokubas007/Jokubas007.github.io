@@ -15,11 +15,14 @@
     <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
     <link rel="stylesheet" href="../styles/button-pill.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/table.css">
+    <link rel="stylesheet" href="../styles/bypass-block.css">
     <link rel="stylesheet" href="../styles/parallelcard.css">
   </head>
   <body>
     <div class="navbar-container">
       <nav class="navbar">
+        <a href="#main-content" class="bypass-block-link visually-hidden visible-when-focused">Skip to main content</a>
         <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
           <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
           AmeBye
@@ -32,10 +35,13 @@
     </div>
     <div class="background">
       <canvas id="background-canvas"></canvas>
+      <canvas
+        id="canvas-transition"
+      ></canvas>
       <div class="app-header">
         <h1 id="title">DESIGN</h1>
         <div id="img" class="app-header-image-wrapper">
-          <img alt="Header" src="../assets/images/placeholder.png" />
+          <img alt="Header" src="https://2021.igem.org/wiki/images/7/71/T--Vilnius-Lithuania--Design.jpg" />
         </div>
       </div>
       <div class="app-content">
@@ -73,11 +79,11 @@
             <div class="card-container">
               <div class="button-container">
                 <div class="readbtn">
-                  <img src="../assets/icons/T--Vilnius-Lithuania--ellipse_arrow_right.svg" tabindex="0">
+                  <img src="https://2021.igem.org/wiki/images/7/71/T--Vilnius-Lithuania--ellipse_arrow_right.svg" tabindex="0">
                   <div>Read more about left card</div>
                 </div>
                 <div class="readbtn hidden">
-                  <img src="../assets/icons/T--Vilnius-Lithuania--ellipse_arrow_right.svg" tabindex="0">
+                  <img src="https://2021.igem.org/wiki/images/7/71/T--Vilnius-Lithuania--ellipse_arrow_right.svg" tabindex="0">
                   <div>Read more about right card</div>
                 </div>
               </div>
@@ -203,10 +209,6 @@
               Nam vel varius velit. Aenean pretium scelerisque enim, quis mollis
               nunc finibus eu.
             </p>
-            <div class="figure-container">
-              <img src="../assets/images/placeholder.png" id="Figure1" alt="" />
-              <div><b>Figure 1</b><b>.</b> Description</div>
-            </div>
             <h3 class="index-headline">Headline 3</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
@@ -219,10 +221,6 @@
               bibendum turpis. Vestibulum pulvinar interdum mauris nec congue.
               Etiam id nunc ac risus dictum semper sed in nisl.
             </p>
-            <div class="figure-container">
-              <img src="../assets/images/placeholder.png" id="Figure2" alt="" />
-              <div><b>Figure 2</b><b>.</b> Description</div>
-            </div>
             <p>
               Cras ultrices eu massa vitae congue. Vestibulum arcu enim, congue
               id lacus at, laoreet fringilla tortor. Praesent libero nunc,
@@ -315,5 +313,7 @@
         300,
       )
     </script>
+    <script src="../scripts/GlslCanvas.js"></script>
+    <script src="../scripts/backgroundTransition.js"></script>
   </body>
 </html>

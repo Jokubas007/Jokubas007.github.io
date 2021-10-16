@@ -7,27 +7,81 @@
   box-sizing: border-box;
   font-family: var(--main-font), sans-serif;
   background-color: #0D4B5E;
-  line-height: 1.5;
+  line-height: 1.5 !important;
 }
 
-h1, h2, h3, h4, h5 {
+* {
+  line-height: 1.5 !important;
+}
+
+.background h1, .background h2, .background h3, .background h4, .background h5 {
   border: var(--disability-profile,2px) solid #FFB800;
   padding: var(--disability-profile, 10px 12px);
   width: fit-content;
   box-sizing: border-box;
+  overflow: initial !important;
+  margin: initial;
 }
 
-a, .nav-item {
+.background h6 {
+  overflow: initial !important;
+  margin: initial;
+}
+
+.background a, .nav-item {
   border: var(--disability-profile,2px) solid #00E0FF;
 }
 
-a {
+.background a {
   padding: var(--disability-profile, 10px 12px);
 }
 
-li {
-  border: var(--disability-profile,2px) solid #FFB800;
-  padding: var(--disability-profile, 10px 12px);
-  width: fit-content;
-  box-sizing: border-box;
+.MathJax span:last-of-type {
+  border-left-color: transparent !important;
 }
+
+.clickable {
+  cursor: pointer;
+}
+
+.article-links-container {
+  width: 100%;
+  margin-bottom: 40px !important;
+}
+
+.content-hidden {
+  overflow: hidden;
+}
+
+.animation-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 16px;
+  left: 0;
+  z-index: 9999999999999999999999999999999999999999;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var('--secondary-font');
+  font-size: 5vw;
+  font-weight: 800;
+}
+
+#loading-animation {
+  height: 70%;
+}
+
+.animation-container.loaded {
+  display: none;
+}
+
+/*Media wiki killer*/
+#sideMenu, #top_title, .patrollink, #firstHeading, #home_logo, #sideMenu { display:none; }
+#content { padding:0px; width:100%; margin-top:-7px; margin-left:0px; border:none;}
+body, html {background-color:rgba(0, 0, 0, 0); width: 100%; height: 100%; z-index: -999999999;}
+#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 { margin-bottom: initial; overflow: auto; }
+#bodyContent a[href ^="https://"], .link-https { padding-right:0px;}
+img { vertical-align: initial;}

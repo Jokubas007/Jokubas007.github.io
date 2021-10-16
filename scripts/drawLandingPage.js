@@ -2,45 +2,16 @@
 
 const orangeCountries = [
   {
-    name: "China",
-    infections: "10 000",
-    deaths: "10 000",
-    selector: "#China-mainland",
-    tooltipClass: "tooltip-china",
-    tooltipSelector: ".tooltip-china",
-    tooltipShift: -120
-  },
-  {
     name: "India",
-    infections: "10 000",
-    deaths: "10 000",
+    percentage: "19",
     selector: "#IN",
     tooltipClass: "tooltip-india",
     tooltipSelector: ".tooltip-india",
     tooltipShift: -35
   },
   {
-    name: "Iran",
-    infections: "10 000",
-    deaths: "10 000",
-    selector: "#IR",
-    tooltipClass: "tooltip-iran",
-    tooltipSelector: ".tooltip-iran",
-    tooltipShift: 0
-  },
-  {
-    name: "Saudi Arabia",
-    infections: "10 000",
-    deaths: "10 000",
-    selector: "#SA",
-    tooltipClass: "tooltip-saudi-arabia",
-    tooltipSelector: ".tooltip-saudi-arabia",
-    tooltipShift: 0
-  },
-  {
     name: "Egypt",
-    infections: "10 000",
-    deaths: "10 000",
+    percentage: "21",
     selector: "#EG",
     tooltipClass: "tooltip-egypt",
     tooltipSelector: ".tooltip-egypt",
@@ -48,26 +19,15 @@ const orangeCountries = [
   },
   {
     name: "South Africa",
-    infections: "10 000",
-    deaths: "10 000",
+    percentage: "27",
     selector: "#ZA",
     tooltipClass: "tooltip-south-africa",
     tooltipSelector: ".tooltip-south-africa",
     tooltipShift: 0
   },
   {
-    name: "Tanzania",
-    infections: "10 000",
-    deaths: "10 000",
-    selector: "#TZ",
-    tooltipClass: "tooltip-tanzania",
-    tooltipSelector: ".tooltip-tanzania",
-    tooltipShift: 0
-  },
-  {
     name: "Mexico",
-    infections: "10 000",
-    deaths: "10 000",
+    percentage: "21",
     selector: "#MX",
     tooltipClass: "tooltip-mexico",
     tooltipSelector: ".tooltip-mexico",
@@ -75,46 +35,42 @@ const orangeCountries = [
   },
   {
     name: "Brazil",
-    infections: "10 000",
-    deaths: "10 000",
+    percentage: "21",
     selector: "#BR",
     tooltipClass: "tooltip-brazil",
     tooltipSelector: ".tooltip-brazil",
     tooltipShift: 0
   },
   {
-    name: "Colombia",
-    infections: "10 000",
-    deaths: "10 000",
-    selector: "#CO",
-    tooltipClass: "tooltip-colombia",
-    tooltipSelector: ".tooltip-colombia",
-    tooltipShift: 0
+    name: "Malaysia",
+    percentage: "18.6",
+    selector: "#MY",
+    tooltipClass: "tooltip-malaysia",
+    tooltipSelector: ".tooltip-malaysia",
+    tooltipShift: -250
   },
   {
-    name: "Ecuador",
-    infections: "10 000",
-    deaths: "10 000",
-    selector: "#EC",
-    tooltipClass: "tooltip-ecuador",
-    tooltipSelector: ".tooltip-ecuador",
-    tooltipShift: 0
-  }
+    name: "Yemen",
+    percentage: "59",
+    selector: "#YE",
+    tooltipClass: "tooltip-yemen",
+    tooltipSelector: ".tooltip-yemen",
+    tooltipShift: -250
+  },
+  {
+    name: "United Arab Emirates",
+    percentage: "30",
+    selector: "#AE",
+    tooltipClass: "tooltip-uab",
+    tooltipSelector: ".tooltip-uab",
+    tooltipShift: -250
+  },
 ]
 
 const tooltipString = orangeCountries.map((country) => `
   <div class="map-tooltip ${country.tooltipClass}">
     <div>${country.name}</div>
-    <table>
-      <tr>
-        <th>Avg. cases/year</th>
-        <th>Avg. deaths/year</th>
-      </tr>
-      <tr>
-        <td>${country.infections}</td>
-        <td>${country.deaths}</td>
-      </tr>
-    </table>
+    <div>Prevalence of <i>E. histolytica</i> infection is <b>${country.percentage}%</b> of the population</div>
   </div>
 `).join('\n');
 
@@ -223,8 +179,40 @@ function spreadCircles() {
 
 spreadCircles();
 
-document.querySelector('#links-description').innerHTML = linksDescription;
-document.querySelector('#links-design').innerHTML = linksDesign;
-document.querySelector('#links-hp').innerHTML = linksHP;
-document.querySelector('#links-parts').innerHTML = linksParts;
-document.querySelector('#links-software').innerHTML = linksSoftware;
+const amebaContainer = document.querySelector('.ameba-container');
+const ameba = document.querySelector('.ameba');
+const book = document.querySelector('.book');
+const container = document.querySelector('.content-container:nth-child(3)');
+
+function repositionAmeba(){
+  book.style.filter = `opacity(${Math.min(Math.max(100 - (window.scrollY - window.innerHeight/2 - ameba.offsetHeight/2), 0), 100)}%)`
+  if (window.innerWidth > 1024){
+    if (window.scrollY >= 3*window.innerHeight - amebaContainer.offsetHeight - window.innerHeight/2+ameba.offsetHeight/2 + book.offsetHeight) {
+      amebaContainer.style.position = 'absolute';
+      amebaContainer.style.top = `${3*window.innerHeight - amebaContainer.offsetHeight + book.offsetHeight}px`;
+    }
+    else if(window.scrollY >= window.innerHeight/2 + ameba.offsetHeight/2){
+      amebaContainer.style.position = 'fixed';
+      amebaContainer.style.top = `${window.innerHeight/2-ameba.offsetHeight/2}px`;
+    }
+    else {
+      amebaContainer.style.position = 'absolute';
+      amebaContainer.style.top = '100vh';
+    }
+  } else {
+    amebaContainer.style.position = null;
+    amebaContainer.style.top = null;
+  }
+}
+
+repositionAmeba();
+
+window.addEventListener(
+  'scroll',
+  repositionAmeba
+);
+
+window.addEventListener(
+  'resize',
+  repositionAmeba
+);

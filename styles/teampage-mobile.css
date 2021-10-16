@@ -3,7 +3,6 @@
     position: relative;
     z-index: 0;
     width: 100%;
-    height: 100vh;
   }
 
   .app-header h1 {
@@ -14,7 +13,7 @@
     color: rgba(252, 206, 192, 1);
     font-size: 10vh;
     font-weight: 800 !important;
-    bottom: 1%;
+    bottom: -20%;
     left: 5%;
     z-index: 1;
     margin: 0;
@@ -23,11 +22,10 @@
   .app-header-image-wrapper {
     display: flex;
     justify-content: center;
-    width: 80%;
-    height: 70%;
-    position: absolute;
+    width: 90%;
     bottom: 10%;
-    right: 5%;
+    padding: 0 5% !important;
+    margin: 20% 0 !important;
   }
 
   .app-header-image-wrapper > img {
@@ -156,4 +154,5 @@
     text-align: center;
     word-wrap: break-word;
   }
+
 }

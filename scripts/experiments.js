@@ -52,15 +52,15 @@ let currentWeek = 0;
 
 
 function refreshExperimentsPage() {
-  document.querySelector('.week-selector > .button-previous').classList.remove('hidden');
-  document.querySelector('.week-selector > .button-next').classList.remove('hidden');
+  document.querySelector('.week-selector .button-previous').classList.remove('hidden');
+  document.querySelector('.week-selector .button-next').classList.remove('hidden');
   if (currentWeek === 0){
-    document.querySelector('.week-selector > .button-previous').classList.add('hidden');
+    document.querySelector('.week-selector .button-previous').classList.add('hidden');
   }
   if (currentWeek === experimentsWeeks.length - 1) {
-    document.querySelector('.week-selector > .button-next').classList.add('hidden');
+    document.querySelector('.week-selector .button-next').classList.add('hidden');
   }
-  document.querySelector('.week-selector > div').innerHTML = experimentsWeeks[currentWeek];
+  document.querySelector('.week-selector > .week').innerHTML = experimentsWeeks[currentWeek];
   experimentsTabCount.forEach((tab) => {
     tabStrings = [];
     for (let i = 0; i < tab.count; i++) {
@@ -109,15 +109,16 @@ function refreshExperimentsPage() {
 
 refreshExperimentsPage();
 
-document.querySelector('.week-selector > .button-previous').addEventListener(
+document.querySelector('.week-selector .button-previous').addEventListener(
   'click',
-  () => {
+  (e) => {
     currentWeek = currentWeek - 1;
     refreshExperimentsPage();
+    e.target.blur();
   }
 )
 
-document.querySelector('.week-selector > .button-previous').addEventListener(
+document.querySelector('.week-selector .button-previous').addEventListener(
   'keypress',
   (e) => {
     if (e.key === 'Enter') {
@@ -127,15 +128,16 @@ document.querySelector('.week-selector > .button-previous').addEventListener(
   }
 )
 
-document.querySelector('.week-selector > .button-next').addEventListener(
+document.querySelector('.week-selector .button-next').addEventListener(
   'click',
-  () => {
+  (e) => {
     currentWeek = currentWeek + 1;
     refreshExperimentsPage();
+    e.target.blur();
   }
 )
 
-document.querySelector('.week-selector > .button-next').addEventListener(
+document.querySelector('.week-selector .button-next').addEventListener(
   'keypress',
   (e) => {
     if (e.key === 'Enter') {

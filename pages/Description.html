@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <link rel="stylesheet" href="../styles/contentpage-desktop.css">
+    <link rel="stylesheet" href="../styles/contentpage-mobile.css">
+    <link rel="stylesheet" href="../styles/sideindex-desktop.css">
+    <link rel="stylesheet" href="../styles/sideindex-mobile.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/navmenu-desktop.css">
+    <link rel="stylesheet" href="../styles/navmenu-mobile.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-desktop.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
+    <link rel="stylesheet" href="../styles/button-pill.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/table.css">
+    <link rel="stylesheet" href="../styles/bypass-block.css">
+
+  </head>
+  <body>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a href="#main-content" class="bypass-block-link visually-hidden visible-when-focused">Skip to main content</a>
+        <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
+          <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
+          AmeBye
+        </a>
+        <ul class="nav-menu"></ul>
+      </nav>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <div class="background">
+      <canvas id="background-canvas"></canvas>
+      <canvas
+        id="canvas-transition"
+      ></canvas>
+      <div class="app-header">
+        <h1 id="title">
+         DESCRIPTION
+        </h1>
+        <div class="app-header-image-wrapper" id="img">
+         <img class="cover" alt="Header" src="https://2021.igem.org/wiki/images/5/5e/T--Vilnius-Lithuania--Description.jpg"/>
+        </div>
+       </div>
+       <div class="app-content">
+        <div class="app-content-text">
+         <div class="content-page-container">
+             <h3 class="index-headline">
+                Introduction
+             </h3>
+             <p>
+               Last year the world faced a pandemic that has already caused more than 4.4 million deaths, according to the World Health Organization (WHO). However, it is not the only disease that is encroaching on human lives. Over the last 30 years, the world has faced at least 30 new infectious diseases, including Swine flu, well-known Ebola, SARS, etc. There are beneficial conditions for that — favorable climate and weather, ecosystem changes, human susceptibility to infections, international trade and travel, or even lack of public health services [1]. All factors sum up and contribute to the excellent environment for the new emerging or reemerging infectious diseases. 
+             </p>
+             <p>
+               One of the examples is <b>amebiasis</b>, an infectious disease caused mostly by <i>Entamoeba histolytica</i> [2]. <i>E. histolytica</i> cysts enter the human body orally through <b>contaminated food</b>, <b>water</b> or <b>human to human contact</b>[3]. For this reason, this infection mainly affects the developing world in tropical and subtropical regions where there is poor sanitation, lack of publicly available health care, favorable climate for pathogens propagation, lack of knowledge about food processing and keeping conditions, defecation into water sources such as rivers[2].
+             </p>
+             <p>
+    After exposure to <i>E. histolytica</i> cysts, there are two possible pathogenesis pathways. First, trophozoites stay in the large intestine, proliferate asymptomatically, and leave the intestine as newly formed cysts. In this case, an infected person becomes an infection carrier. Second, trophozoites proliferate and adhere to the colonic epithelium by Gal/GalNac lectin, and cause cell lysis. It leads to the destruction of the protective mucous barrier, surrounding cells fagocytation [4, 5].
+    <b>Symptoms</b> of intestinal amebiasis include abdominal pain, ulcerative colitis with mucus and blood, bloody diarrhea which later on progresses to raspberry-jelly-like stool, appendicitis, and ulcers. However, in more progressed inflammation — extraintestinal amebiasis, trophozoites can enter blood circulation, travel to the liver and cause an amebic liver abscess, or less frequently lung, brain abscess, or skin infection [6]. 
+             </p>
+             <h3 class="index-headline">
+                Importance 
+             </h3>
+             <p>
+    About <b>50 million</b> people have a symptomatic form of amebiasis, and <b>100 000 of them die annually</b> [7]. The real numbers of the infection should be higher because only 10 percent of infected people feel symptoms and some cases do not get identified because of poor data collection in regions where this infection is endemic [8]. However, this infection occurs in developed countries as travelers and immigrants disseminate infection. As we saw from the SARS-CoV-2 situation,  a local problem can easily transform into a global pandemic. 
+             </p>
+             <p>
+    The annual rates, lack of publicly available diagnostic tests, inexistent prevention tools, and deadly consequences of pathogenesis progression have inspired us to create <b>effective prevention</b> and <b>sensitive diagnostic tools</b> to improve the control of this infection. Probiotics, a preventive measure, are going to <b>lower the rates of annual amebiasis cases</b> by abolishing E. histolytica trophozoites in their earliest development stages, and the diagnostic test is going to <b>improve the monitoring of the infection progression </b> and <b>accelerate the detection of an invasive form</b>. In this way, the global spread of the <b>infection would be prevented</b> and <b>many lives would be saved</b>. 
+             </p>
+             <p>
+    Although this infection is known for at least 160 years, there are <b>no designed vaccines or other active prevention tools</b>. For this reason, there is a <b>high need for prevention</b> of the infection for a successful control of its spredness. Moreover, currently used methods designed to diagnose amebiasis are not efficient or unavailable in the regions where this infection has spread the most [9, 10]. To find out more, please see  the table below. 
+             </p>
+    
+             <div class="table-container">
+                <div class="table-headline">
+                    <b>Table 1. </b> Currently used amebiasis diagnostic methods
+                 </div>
+                <table class="table table-bordered table-hover table-condensed">
+                 
+                    <thead><tr><th title="Field #1">Method</th>
+                    <th title="Field #2">Detectable form</th>
+                    <th title="Field #3">Disadvantages</th>
+                    <th title="Field #4">Sample type</th>
+                    </tr></thead>
+                    <tbody><tr>
+                    <td>Microscopy</td>
+                    <td>Either intestinal or liver abscess</td>
+                    <td>not specific enough to distinguish histolytica from non-pathogenic Entamoeba species and it causes false-positive results</td>
+                    <td>Stool</td>
+                    </tr>
+                    <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>microscopy of stool samples unsuitable for invasive form detection</td>
+                    <td> </td>
+                    </tr>
+                    <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>microscopy of liver samples insufficient for separating bacterial origin abscess from protozoan</td>
+                    <td> </td>
+                    </tr>
+                    <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>requires complex lab equipment </td>
+                    <td> </td>
+                    </tr>
+                    <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>requires specific theoretical and practical knowledge</td>
+                    <td> </td>
+                    </tr>
+                    <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>specific sample preparation is compulsory </td>
+                    <td> </td>
+                    </tr>
+                    <tr>
+                    <td>Antibody test</td>
+                    <td>Extraintestinal</td>
+                    <td>too expensive</td>
+                    <td>Blood</td>
+                    </tr>
+                    <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>requires complex lab equipment </td>
+                    <td> </td>
+                    </tr>
+                    <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>requires specific theoretical and practical knowledge</td>
+                    <td> </td>
+                    </tr>
+                    <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>doesn’t differentiate past to occuring infection because antibodies remain in blood for an undefined period of time</td>
+                    <td> </td>
+                    </tr>
+                    <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>specific sample preparation is compulsory </td>
+                    <td> </td>
+                    </tr>
+                    <tr>
+                    <td>Amoeba DNA detection by PCR</td>
+                    <td>Extraintestinal and intestinal</td>
+                    <td>too expensive</td>
+                    <td>stool, tissues and liver lesion aspirates</td>
+                    </tr>
+                    <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>requires complex lab equipment </td>
+                    <td> </td>
+                    </tr>
+                    <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>requires specific theoretical and practical knowledge</td>
+                    <td> </td>
+                    </tr>
+                    <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>takes several hours to acquire results</td>
+                    <td> </td>
+                    </tr>
+                    <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>specific sample preparation is compulsory </td>
+                    <td> </td>
+                    </tr>
+                    <tr>
+                    <td>Stool antigen</td>
+                    <td>Intestinal</td>
+                    <td>not specific enough</td>
+                    <td>Stool</td>
+                    </tr>
+                    <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td>do not identify invasive form</td>
+                    <td> </td>
+                    </tr>
+                    </tbody></table>
+             </div>
+    
+    
+             <h3 class="index-headline">
+                AmeBye
+             </h3>
+             <p>
+    When creating our project, we looked at amebiasis holistically and comprehensively. Our team decided to target <i>E. histolytica</i> from two angles: prevention and diagnostics.
+             </p>
+             <p>
+                As a tool to prevent amebiasis, our team created probiotics capable of naringenin biosynthesis. Naringenin is a flavonoid naturally present in plants, and it was chosen as an active substance as experimental data showed that it reduced <i>Entamoeba histolytica</i> virulence [11]. To reach the intestine where the infection may start, we decided to use probiotic bacteria (namely, <i>Escherichia coli</i> Nissle 1917 and <i>Lactobacillus casei</i> BL23), which occur naturally in the intestine, and are adapted to that environment [15]. What is more, <i>E. col</i>i Nissle 1917 have been used to treat several gastrointestinal disorders and some studies have revealed that <i>E. coli</i> Nissle 1917 secreted outer membrane vesicles help to maintain intestinal barrier [12] preventing intestinal infections by induction of antimicrobial peptides secretion and regulation of cytokines or chemokines responses of immune or intestinal epithelial cells [13].  As <i>E. coli</i> Nissle 1917 is facultative anaerobe colonizing mostly the large intestine [14] and <i>L. casei</i> BL23 is colonizing the small intestine [15], our approach is to create the naringenin synthesis of moderate and non toxic amounts dispersed through the all over intestine. This prevents <i>E. histolytica</i> cysts development into infective trophozoites and further infection progression.
+             </p>
+             <p>
+                We understood that synthesis efficiency in the intestine conditions would not be the same as the highest reached efficiency for industry use in recent publications [16, 17]. For this purpose, our team decided to use as much as possible synthesis <b>efficiency-enhancing</b> mechanisms to achieve the higher concentrations of naringenin. While keeping this in mind, we looked for the most effective promoters for both chassis organisms and included an mRNA cyclisation mechanism [18] to enhance translation in bacteria. Thus, we chose to connect enzymes of naringenin biosynthesis with linkers to make metabolic flux used for naringenin synthesis more efficiently.
+             </p>
+             <p>
+                For safety purpose, we used a <b>novel VapXD kill-switch</b> [19] dependent on bile concentration and temperature so that GMO probiotics that left the human body would not cause any harm to the environment. Finally, by CRISPR-Cas9 combined with Lambda Red recombineering [20] or by CRISPR-Cas9D10A nickase-assisted genome editing [21], the whole naringenin construct was inserted into <i>E. coli</i> Nissle 1917 and  <i>L. casei</i> BL23 genomes, respectively. This creates a <b>more stable system</b> and <b>prevents plasmids transfer</b> to other microbiome bacteria. 
+             </p>
+             <p>
+                For the diagnostic part, we have chosen to create a <b>rapid</b>, <b>point of care</b>, <b>user-friendly diagnostic test</b> identifying extraintestinal amebiasis. The main components of this test are aptamers, specific to the <i>E. histolytica</i> secreted proteins. These single stranded DNA sequences fold into tertiary structures for particular fit with target proteins [22]. We have chosen aptamers instead of antibodies or DNA interaction based detection tests because of <b>robust detection</b>, <b>enhanced stability</b> of test components under various environment conditions, <b>overcomed cross-reactions possibility</b> [23] and simpler test design enabling to scale this test. In our test design, aptamers conjugated with polydiacetylene (PDA) polymers bind to particular biomarkers and induce conformational changes. Those changes show up as transitions from blue to red [24]. We also thought about uncertainties of our diagnostic test and precisely chose protein excreted by <i>E. histolytica</i> for much clearer determination of illness condition. <b>Pyruvate phosphate dikinase</b> are particularly unique to <i>E. histolytica</i> [25] and will be detected by aptamers based blood tests. On both of these biomarkers we chose to do SELEX - systematic evolution of ligands by exponential enrichment [26]. Final product consists of 3 detection fields and on each of them just a single drop of blood is needed for amebiasis detection. 
+             </p>
+             <h3 class="index-headline">
+                Future perspectives 
+             </h3>
+             <p>
+                As mentioned earlier, new infections emerge almost every year. Combating those threats is almost impossible without certain tools such as <b>preventive substances, specific, sensitive diagnostic methods, and effective treatment</b>. With deeper analysis of other infectious diseases agents and pathogenesis we would be able to create probiotics for a broader range of deadly pathogens. In addition, relying on intestinal production of pharmacoactive products can <b>diminish drug overdose problems</b> if certain genetic circuits controlling the synthesis of those compounds are included into applied probiotics. 
+             </p>
+             <p>
+                Furthermore, It drags our attention and determination towards scaling our diagnostic test to identify intestinal amebiasis or even other infectious diseases. Our project builds up the basis for developing such tests because <b>we have framed the workflow for evolution of aptamers for specific antigens</b>.            
+             </p>
+             
+         </div>
+         <div class="references-wrapper">
+          <div class="breaker">
+          </div>
+          <h2>
+           References
+          </h2>
+          <div class="references-container">
+           <div class="number">
+            1.
+           </div>
+           <div>
+            Mukherjee, S. (2017). Emerging infectious diseases: epidemiological perspective. Indian journal of dermatology, 62(5), 459.
+           </div>
+           <div class="number">
+            2.
+           </div>
+           <div>
+            Chou, A., & Austin, R. L. (2020). Entamoeba histolytica.
+           </div>
+           <div class="number">
+            3.
+           </div>
+           <div>
+            Farrar, J., Hotez, P. J., Junghanss, T., Kang, G., Lalloo, D., & White, N. J.  (2013). Manson's Tropical Diseases E-Book. Elsevier health sciences.
+           </div>
+           <div class="number">
+            4.
+           </div>
+           <div>
+            Cornick, S., & Chadee, K. (2017). Entamoeba histolytica: Host parasite interactions at the colonic epithelium. Tissue barriers, 5(1), e1283386. 
+           </div>
+           <div class="number">
+            5.
+           </div>
+           <div>
+            Mi-Ichi, F., Yoshida, H., & Hamano, S. (2016). Entamoeba Encystation: New Targets to Prevent the Transmission of Amebiasis. PLoS pathogens, 12(10), e1005845.
+           </div>
+           <div class="number">
+            6.
+           </div>
+           <div>
+            Carrero, J. C., Reyes-Lopez, M., Serrano-Luna, J., Shibayama, M., Unzueta, J., Leon-Sicairos, N., & de la Garza, M. (2020). Intestinal amoebiasis: 160 years of its first detection and still remains as a health problem in developing countries. International Journal of Medical Microbiology, 310(1), 151358.
+           </div>
+           <div class="number">
+            7.
+           </div>
+           <div>
+            Ralston, K. S., & Petri Jr, W. A. (2011). Tissue destruction and invasion by Entamoeba histolytica. Trends in parasitology, 27(6), 254-263.
+           </div>
+           <div class="number">
+            8.
+           </div>
+           <div>
+            Janes, C. R., Corbett, K. K., Jones, J. H., & Trostle, J. (2012). Emerging infectious diseases: the role of social sciences. The Lancet, 380(9857), 1884-1886.
+           </div>
+           <div class="number">
+            9.
+           </div>
+           <div>
+            Tanyuksel, M., & Petri, W. A., Jr (2003). Laboratory diagnosis of amebiasis. Clinical microbiology reviews, 16(4), 713–729.  
+           </div>
+           <div class="number">
+            10.
+           </div>
+           <div>
+            Saidin, S., Othman, N., & Noordin, R. (2019). Update on laboratory diagnosis of amoebiasis. European Journal of Clinical Microbiology & Infectious Diseases, 38(1), 15-38.
+           </div>
+           <div class="number">
+            11.
+           </div>
+           <div>
+            Quintanilla-Licea, R., Vargas-Villarreal, J., Verde-Star, M. J., Rivas-Galindo, V. M., & Torres-Hernández, Á. D. (2020). Antiprotozoal activity against Entamoeba histolytica of flavonoids isolated from Lippia graveolens kunth. Molecules, 25(11), 2464.
+           </div>
+           <div class="number">
+            12.
+           </div>
+           <div>
+            Guo, S., Chen, S., Ma, J., Ma, Y., Zhu, J., Ma, Y., Liu, Y., Wang, P., & Pan, Y. (2019). Escherichia coli Nissle 1917 Protects Intestinal Barrier Function by Inhibiting NF-κB-Mediated Activation of the MLCK-P-MLC Signaling Pathway. Mediators of inflammation, 2019, 5796491.
+           </div>
+           <div class="number">
+            13.
+           </div>
+           <div>
+            Fábrega, M. J., Aguilera, L., Giménez, R., Varela, E., Alexandra Cañas, M., Antolín, M., Badía, J., & Baldomà, L. (2016). Activation of Immune and Defense Responses in the Intestinal Mucosa by Outer Membrane Vesicles of Commensal and Probiotic Escherichia coli Strains. Frontiers in microbiology, 7, 705. 
+           </div>
+           <div class="number">
+            14.
+           </div>
+           <div>
+            Blum-Oehler, G., Oswald, S., Eiteljörge, K., Sonnenborn, U., Schulze, J., Kruis, W., & Hacker, J. (2003). Development of strain-specific PCR reactions for the detection of the probiotic Escherichia coli strain Nissle 1917 in fecal samples. Research in microbiology, 154(1), 59–66.
+           </div>
+           <div class="number">
+            15.
+           </div>
+           <div>
+            Donaldson, G. P., Lee, S. M., & Mazmanian, S. K. (2016). Gut biogeography of the bacterial microbiota. Nature reviews. Microbiology, 14(1), 20–32. 
+           </div>
+           <div class="number">
+            16.
+           </div>
+           <div>
+            Dunstan, M. S., Robinson, C. J., Jervis, A. J., Yan, C., Carbonell, P., Hollywood, K. A., ... & Scrutton, N. S. (2020). Engineering Escherichia coli towards de novo production of gatekeeper (2 S)-flavanones: naringenin, pinocembrin, eriodictyol and homoeriodictyol. Synthetic Biology, 5(1), ysaa012.
+           </div>
+           <div class="number">
+            17.
+           </div>
+           <div>
+            Koopman, F., Beekwilder, J., Crimi, B., van Houwelingen, A., Hall, R. D., Bosch, D., … & Daran, J. M. (2012). De novo production of the flavonoid naringenin in engineered Saccharomyces cerevisiae. Microbial Cell Factories, 11(1), 1-15.
+           </div>
+           <div class="number">
+            18.
+           </div>
+           <div>
+            Yang, J., Han, Y. H., Im, J., & Seo, S. W. (2021). Synthetic protein quality control to enhance full-length translation in bacteria. Nature Chemical Biology, 17(4), 421-427.
+           </div>
+           <div class="number">
+            19.
+           </div>
+           <div>
+            Bertelsen, M. B., Senissar, M., Nielsen, M. H., Bisiak, F., Cunha, M. V., Molinaro, A. L., ... & Brodersen, D. E. (2021). Structural basis for toxin inhibition in the VapXD toxin-antitoxin system. Structure, 29(2), 139-150.
+           </div>
+           <div class="number">
+            20.
+           </div>
+           <div>
+            Jiang, Y., Chen, B., Duan, C., Sun, B., Yang, J., & Yang, S. (2015). Multigene editing in the Escherichia coli genome via the CRISPR-Cas9 system. Applied and environmental microbiology, 81(7), 2506–2514. 
+           </div>
+           <div class="number">
+            21.
+           </div>
+           <div>
+            Song, X., Huang, H., Xiong, Z., Ai, L., & Yang, S. (2017). CRISPR-Cas9D10A Nickase-Assisted Genome Editing in Lactobacillus casei. Applied and environmental microbiology, 83(22), e01259-17. 
+           </div>
+           <div class="number">
+            22.
+           </div>
+           <div>
+            Zhu, Q., Liu, G., & Kai, M. (2015). DNA Aptamers in the Diagnosis and Treatment of Human Diseases. Molecules (Basel, Switzerland), 20(12), 20979–20997. 
+           </div>
+           <div class="number">
+            23.
+           </div>
+           <div>
+            Thiviyanathan, V., & Gorenstein, D. G. (2012). Aptamers and the next generation of diagnostic reagents. Proteomics. Clinical applications, 6(11-12), 563–573. 
+           </div>
+           <div class="number">
+            24.
+           </div>
+           <div>
+            Zhou, C., You, T., Jang, H., Ryu, H., Lee, E. S., Oh, M. H., ... & Jeon, T. J. (2020). Aptamer-conjugated polydiacetylene colorimetric paper chip for the detection of bacillus thuringiensis spores. Sensors, 20(11), 3124.
+           </div>
+           <div class="number">
+            25.
+           </div>
+           <div>
+            Saidin, S., Yunus, M. H., Zakaria, N. D., Razak, K. A., Huat, L. B., Othman, N., & Noordin, R. (2014). Production of recombinant Entamoeba histolytica pyruvate phosphate dikinase and its application in a lateral flow dipstick test for amoebic liver abscess. BMC infectious diseases, 14(1), 1-9.
+           </div>
+           <div class="number">
+            26.
+           </div>
+           <div>
+            Bayat, P., Nosrati, R., Alibolandi, M., Rafatpanah, H., Abnous, K., Khedri, M., & Ramezani, M. (2018). SELEX methods on the road to protein targeting with nucleic acid aptamers. Biochimie, 154, 132-155.
+           </div>
+          </div>
+         </div>
+        </div>
+          <div class="index-container">
+            <div class="index-header"></div>
+            <div class="index-content"></div>
+          </div>
+        </div>
+        <footer>
+          <div class="logo-igem">
+            <object data="../assets/logos/T--Vilnius-Lithuania--iGEM-2021.svg"> </object>
+          </div>
+          <div class="social-container">
+            <div>FOLLOW US</div>
+            <div>
+              <a class="placeholder-social-icon" href="https://www.facebook.com/VilniusiGEM">
+                <img src="../assets/icons/facebook.svg" />
+              </a>
+              <a class="placeholder-social-icon" href="https://www.instagram.com/igem_vilnius/">
+                <img src="../assets/icons/instagram.svg" />
+              </a>
+              <a class="placeholder-social-icon" href="https://www.linkedin.com/company/vilnius-igem/">
+                <img src="../assets/icons/linkedin.svg" />
+              </a>
+            </div>
+          </div>
+          <div class="mail-container">
+            <div>CONTACT US</div>
+            <a href="mailto:info@vilniusigem.lt">info@vilniusigem.lt</a>
+          </div>
+          <div class="grid-sponsors">
+            <div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--VU.svg"> </object>
+              </div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--Termofisher.svg"> </object>
+              </div>
+              <div>
+                <object data="../assets/logos/CityOfVilnius.svg"> </object>
+              </div>
+            </div>
+            <div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--GMC.svg"> </object>
+              </div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--Nanodiagnostika.svg"> </object>
+              </div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--Telesoftas.svg"> </object>
+              </div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--Kopicentras.svg"> </object>
+              </div>
+            </div>
+            <div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--SnapGene.svg"> </object>
+              </div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--Laborama.svg"> </object>
+              </div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--Biotecha.svg"> </object>
+              </div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--Grida.svg"> </object>
+              </div>
+            </div>
+          </div>
+        </footer>
+    </div>
+    <script src="../scripts/navigationTabs.js"></script>
+    <script src="../scripts/background.js"></script>
+    <script src="../scripts/contentpage.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script>
+      contentPage(
+        "Sections",
+        true,
+        300,
+      )
+    </script>
+    <script src="../scripts/GlslCanvas.js"></script>
+    <script src="../scripts/backgroundTransition.js"></script>
+  </body>
+</html>

@@ -21,11 +21,3 @@ svg text {
 #protein-animation .svg-button.active {
   fill: #054d54;
 }
-
-.cycle {
-  display: none;
-}
-
-.cycle.active {
-  display: block;
-}

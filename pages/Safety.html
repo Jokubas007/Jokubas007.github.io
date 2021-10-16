@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <link rel="stylesheet" href="../styles/contentpage-desktop.css">
+    <link rel="stylesheet" href="../styles/contentpage-mobile.css">
+    <link rel="stylesheet" href="../styles/sideindex-desktop.css">
+    <link rel="stylesheet" href="../styles/sideindex-mobile.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/navmenu-desktop.css">
+    <link rel="stylesheet" href="../styles/navmenu-mobile.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-desktop.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
+    <link rel="stylesheet" href="../styles/button-pill.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/table.css">
+    <link rel="stylesheet" href="../styles/bypass-block.css">
+
+  </head>
+  <body>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a href="#main-content" class="bypass-block-link visually-hidden visible-when-focused">Skip to main content</a>
+        <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
+          <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
+          AmeBye
+        </a>
+        <ul class="nav-menu"></ul>
+      </nav>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <div class="background">
+      <canvas id="background-canvas"></canvas>
+      <canvas
+        id="canvas-transition"
+      ></canvas>
+      <div class="app-header">
+        <h1 id="title">
+         SAFETY
+        </h1>
+        <div class="app-header-image-wrapper" id="img">
+         <img class="cover" alt="Header" src="https://2021.igem.org/wiki/images/1/11/T--Vilnius-Lithuania--Safety.jpg"/>
+        </div>
+       </div>
+       <div class="app-content">
+        <div class="app-content-text">
+         <div class="content-page-container">
+          <h3 class="index-headline">
+           Introduction
+          </h3>
+          <p>
+            The Vilnius-Lithuania iGEM team believes that safety is an integral part of science. It strictly defines what is safe, moral and ethical, and protects sensitive groups and the environment. For this reason, the safety aspect was analyzed from both perspectives – inside and outside the laboratory. For a detailed overview, please <a href=”https://2021.igem.org/Safety/Final_Safety_Form?team_id=3904” target=”_blank”>check our safety form</a>.
+          </p>
+          <h3 class="index-headline">
+            Lab safety
+           </h3>
+           <p>
+            All laboratories in our country have to be accredited by the Office under the Ministry of Environment following the standard LST EN ISO / IEC 17025: 2018 [2]. This year the project was conducted in the BSL-1 laboratory, where we fulfilled all requirements for hygiene, fire, and work safety. Furthermore, team members wore lab coats, gloves, and eye-protection glasses during the experiments. Work with bacteria was only performed in the biosafety cabinet.
+           </p>
+           <p>
+            Before any laboratory work started, the team received safety training which mainly included: appropriate use of equipment, following hygiene rules in the laboratory, work with hazardous substances, and their proper disposal. Also, experiments were presented in detail for our PI prof. Rolandas Meškys and Dean’s office. They confirmed that our experimental procedures do not have any biosafety concerns.        
+           </p>
+           <h4 class="">Microorganisms review</h4>
+           <p>
+            Protein expression for the diagnostic test was performed in non-pathogenic and well-characterized <i>Escherichia coli</i> strains: BL21(DE3), Rosetta (DE3, gami), HMS174, Aurora, XL1-Blue, DH5α, TG1, JM109. They were already present in our inventory. As chasses, <i>Escherichia coli</i> Nissle 1917 (kindly provided by Pharma-Zentrale GmbH) and <i>Lactobacillus casei</i> BL23 (kindly supplied by the Vilnius University Life Sciences Center Department of Biological DNA Modification) were used. These strains are probiotic and are discovered in the environment naturally [3,4]. They do not possess serious illnesses or other problems to the people or the environment and belong to the BSL-1 organisms [5,6].
+           </p>
+           <h4 class="">Experiments</h4>
+           <p>
+            The prevention tool (probiotics) was created by transferring the naringenin biosynthesis pathway to the probiotic bacteria, which naturally occur in the human intestine and pose no danger. A <a href="Design" target=”_blank”>VapXD kill-switch</a> was designed to prevent GMO probiotics from escaping the human body. While working with GMOs, team members took every precaution as disinfection and sterilization of clothing to avoid contaminating the environment with GMOs. Also, all biocontaminants were submitted for autoclaving and disposal.
+           </p>
+           <p>
+            A diagnostic test was developed with recombinant <i>Entamoeba histolytica</i> proteins (cysteine proteinase 5 and pyruvate, phosphate dikinase), which were not pathogenic by themselves. Therefore, as a diagnostics proof of concept, blood was used. Concerning this matter, we contacted the Lithuanian Bioethics Committee. They had the meeting and decided that <a href=”T--Vilnius-Lithuania--Permission_of_Lithuanian_Bioethics_Committee.PDF” target=”_blank”>no permission was needed</a>.
+           </p>
+           <h4 class="">Harmful reagents and procedures</h4>
+           <p>
+            Some planned experiments had to be done by using harmful reagents or procedures. Team members followed all rules and guidelines to prevent harm for themselves or the environment as it was taught in the safety training.
+           </p>
+           <p>
+            <b>UV light</b> was used to sterilize the biosafety cabinets and equipment inside them. All safety measures were taken to avoid direct exposure to UV light. For agarose gels’ visualization gel imaging system was used, and standard laboratory procedures were performed with blue light transilluminator.
+           </p>
+           <p>
+            <b>Antibiotics</b> were used for transformants selection. At high doses, they can be toxic when inhaled, ingested, or in contact with the eyes. Antibiotics were handled with appropriate safety measures and disposed of according to the disposal protocols.
+           </p>
+           <p>
+            <b>Ethidium Bromide</b> was needed for the agarose gel visualization. As this chemical is a potent mutagen and is moderately toxic after acute exposure, team members followed all requirements to stay safe according to the material safety data sheet (MSDS).
+           </p>
+           <p>
+            <b>PDA synthesis</b> contains some of the cancerogenic materials 10,12-Tricosadiynoic acid (TCDA), 10,12-pentacosadiynoic acid (PCDA), N-(3-dimethylaminopropyl)-N’-ethylcarbodiimide hydrochloride (EDC-HCl), Ethanolamine, N-hydroxysuccinimide (NHS), Dimethyl-2-(dimethylphosphino)ethylphosphine (DMPE). Whole-body and head protection was used to ensure safe usage. Synthesis was done in a fume hood. 
+           </p>
+           <p>
+            <b>Other hazardous chemicals</b> such as Triton X-100, nitro-cellulose, Pb salts, HCl, MeOH, Cu salts, NaOH, KOH, TRIS-HCl, TRIS-Base, Phosphate buffer, etc. were used while taking every precaution needed and disposing of the waste as it is required by the MSDS.
+           </p>
+           <h3 class="index-headline">
+            Data security
+           </h3>
+           <p>
+            During the execution of three human practices activities, we have received data associated with people. We followed The General Data Protection Regulation [1] and the measures that we have taken in a particular context are explained further on.
+           </p>
+           <p>
+            Augmented reality project <b>“6th SynBio Sense”</b> is a website that uses cookies. As this is an ongoing project that the Vilnius-Lithuania iGEM 2021 team started, the privacy policy was already set. In general, the policy includes information about what data is being collected, how it is used, and contacts to address any questions. The website does not collect names, locations, e-mails of the users, or any other information that could be used to identify a person. Data is only collected via cookies. They are two types:
+           </p>
+          <ul>
+           <li>
+            <b>essential</b> - any user is obliged to agree to this cookie being used. Through this cookie, the website collects information about the selection of language and type of font (there is an alternative font for dyslexia).
+           </li>
+           <li>
+            <b>statistical</b> - optional “Google Analytics” cookies that provide information about website users. No information that could identify a person is not collected.
+           </li>
+          </ul>
+          <p>
+            Complete “6th SynBio Sense” privacy policy can be accessed <a href="https://igem-vilnius-ar.com/privacypolicy">here.</a>
+          </p>
+          <p>
+            <b>The Learning about Life Sciences survey</b> collected no personal information to link a person to their answers. Collected data contained age, sex, residence (city, town, small-town), area of specialization; this information was used to characterize the sample.
+          </p>
+          <p>
+            During four <b>Sense Lab</b> cycle activities (touch, taste, smell, hearing), we collected this personal data: name and surname, telephone number, e-mail, age. As this is sensitive information, the information was tackled with the highest regard for security. Google forms were used as a tool, and each of their descriptions information about data collection and usage was presented. For this, we consulted a lawyer specializing in data protection.
+          </p>
+          <h3 class="index-headline">
+            COVID-19 associated safety measures
+           </h3>
+           <p>
+            Team members followed all the government and university guidelines based on the pandemic situation in the country. For the first five months, teams' meetings were present online, and activities in person were allowed only if inevitable. COVID-19 tests were performed regularly until the whole team got vaccinated.
+           </p>
+           <p>
+            When working in the lab began, a 2-meter distance was kept between members, and attendance was recorded. What is more, the usage of lab equipment was registered. All working surfaces were cleaned with disinfectant fluid before and after work.
+           </p>
+           <p>
+            Our team spent a lot of time responsibly planning public awareness events to consider all necessary safety measures. We followed the highest safety standards and required participants to participate only with a <a href="https://gpasas.lt/?lang=en">National certificate</a>, which proves that a person who has a negative COVID-19 test has been vaccinated against COVID-19 or has recovered from COVID-19. In each of the events, we provided disinfectant, ventilated premises.
+           </p>
+          
+         </div>
+         <div class="references-wrapper">
+          <div class="breaker">
+          </div>
+          <h2>
+           References
+          </h2>
+          <div class="references-container">
+           <div class="number">
+            1.
+           </div>
+           <div>
+            European Parliament. (2016). General Data Protection Regulation. EUR-Lex. <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank">To the source</a>
+           </div>
+           <div class="number">
+            2.
+           </div>
+           <div>
+            The normative basis. Lithuanian National Accreditation Bureau. (2020). <a href="https://nab.lrv.lt/en/accreditation-1/the-normative-basis" target="_blank">To the source</a>
+           </div>
+           <div class="number">
+            3.
+           </div>
+           <div>
+            Sonnenborn, U. (2016). Escherichia coli strain nissle 1917—from bench to bedside and back: History of a special Escherichia coli strain with probiotic properties. FEMS Microbiology Letters, 363(19). <a href="https://doi.org/10.1093/femsle/fnw212" target="_blank">To the source</a>
+           </div>
+           <div class="number">
+            4.
+           </div>
+           <div>
+            Kok, J., Abee, T., & Schaafsma, G. (2002). Lactic Acid Bacteria: Genetics, Metabolism and Applications (p. 44). Springer Science & Business Media
+           </div>
+           <div class="number">
+            5.
+           </div>
+           <div>
+            Medicinal product safety. mutaflor.com. (n.d.). <a href="https://www.mutaflor.com/mutaflor-with-escherichia-coli-strain-nissle-1917-for-human-gut-health/medicinal-product-safety.html" target="_blank">To the source</a>
+           </div>
+           <div class="number">
+            6.
+           </div>
+           <div>
+            Safety/White list. (n.d.). <a href="https://2021.igem.org/Safety/White_List" target="_blank">To the source</a>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="index-container">
+          <div class="index-header"></div>
+          <div class="index-content"></div>
+        </div>
+      </div>
+      <footer>
+        <div class="logo-igem">
+          <object data="../assets/logos/T--Vilnius-Lithuania--iGEM-2021.svg"> </object>
+        </div>
+        <div class="social-container">
+          <div>FOLLOW US</div>
+          <div>
+            <a class="placeholder-social-icon" href="https://www.facebook.com/VilniusiGEM">
+              <img src="../assets/icons/facebook.svg" />
+            </a>
+            <a class="placeholder-social-icon" href="https://www.instagram.com/igem_vilnius/">
+              <img src="../assets/icons/instagram.svg" />
+            </a>
+            <a class="placeholder-social-icon" href="https://www.linkedin.com/company/vilnius-igem/">
+              <img src="../assets/icons/linkedin.svg" />
+            </a>
+          </div>
+        </div>
+        <div class="mail-container">
+          <div>CONTACT US</div>
+          <a href="mailto:info@vilniusigem.lt">info@vilniusigem.lt</a>
+        </div>
+        <div class="grid-sponsors">
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--VU.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Termofisher.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/CityOfVilnius.svg"> </object>
+            </div>
+          </div>
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--GMC.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Nanodiagnostika.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Telesoftas.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Kopicentras.svg"> </object>
+            </div>
+          </div>
+          <div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--SnapGene.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Laborama.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Biotecha.svg"> </object>
+            </div>
+            <div>
+              <object data="../assets/logos/T--Vilnius-Lithuania--Grida.svg"> </object>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../scripts/navigationTabs.js"></script>
+    <script src="../scripts/background.js"></script>
+    <script src="../scripts/contentpage.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script>
+      contentPage(
+        "Sections",
+        true,
+        300,
+      )
+    </script>
+    <script src="../scripts/GlslCanvas.js"></script>
+    <script src="../scripts/backgroundTransition.js"></script>
+  </body>
+</html>

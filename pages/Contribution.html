@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/background.css">
+    <link rel="stylesheet" href="../styles/contentpage-desktop.css">
+    <link rel="stylesheet" href="../styles/contentpage-mobile.css">
+    <link rel="stylesheet" href="../styles/sideindex-desktop.css">
+    <link rel="stylesheet" href="../styles/sideindex-mobile.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <link rel="stylesheet" href="../styles/navmenu-desktop.css">
+    <link rel="stylesheet" href="../styles/navmenu-mobile.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-desktop.css">
+    <link rel="stylesheet" href="../styles/accesibility-menu-mobile.css">
+    <link rel="stylesheet" href="../styles/button-pill.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/table.css">
+    <link rel="stylesheet" href="../styles/bypass-block.css">
+
+  </head>
+  <body>
+    <div class="navbar-container">
+      <nav class="navbar">
+        <a href="#main-content" class="bypass-block-link visually-hidden visible-when-focused">Skip to main content</a>
+        <a href="/Team:Vilnius-Lithuania" class="navbar-logo">
+          <img src="../assets/logos/amebyeLogo.svg" alt="AmebyeLogo" />
+          AmeBye
+        </a>
+        <ul class="nav-menu"></ul>
+      </nav>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+    <div class="background">
+      <canvas id="background-canvas"></canvas>
+      <canvas
+        id="canvas-transition"
+      ></canvas>
+      <div class="app-header">
+        <h1 id="title">
+         CONTRIBUTION
+        </h1>
+        <div class="app-header-image-wrapper" id="img">
+         <img class="cover" alt="Header" src="https://2021.igem.org/wiki/images/2/2f/T--Vilnius-Lithuania--Contribution.jpg"/>
+        </div>
+       </div>
+       <div class="app-content">
+        <div class="app-content-text">
+         <div class="content-page-container">
+          <h3 class="index-headline">
+           Kill-switch - VapXD system
+          </h3>
+          <p>
+           We characterised and implemented two toxin-antitoxin system                 parts - toxin VapD (BBa_XXXX) and VapX (BBa_XXXX). The whole                 network works best for human digestive system and for the                 bacteria which leaves it. None of the previous teams have used                 VapXD system and we hope to path the way for comparison of                 widely used mazEF and novel VapXD.
+          </p>
+          <p>
+           As similar toxin-antitoxin systems, toxin VapD works as                 endoribonuclease for cellular RNAs. It’s activity is inhibited                 by antitoxin VapX which is produced under bile inducible                 promoter (BBa_XXXX). We hope to introduce chassis for future                 iGEM teams to work with genetically engineered probiotic                 bacteria and design further for more applications.
+          </p>
+          <p>
+           <a href="https://2021.igem.org/Team:Vilnius-Lithuania/Design">
+            More about toxin-antitoxin system VapXD
+           </a>
+          </p>
+          <h3 class="index-headline">
+           Aptamer generation
+           <i>
+            in silico
+           </i>
+          </h3>
+          <p>
+           Since aptamers assume a variety of shapes, they are extremely                 versatile and can bind targets with high selectivity and                 specificity. Therefore they can be applied to various areas.                 One of the methods to generate aptamers is SELEX -                 an expensive and mostly time-consuming aptamer-generating                 process. Keeping this in mind, approaches are being created                 to simulate aptamer evolution
+           <i>
+            in silico
+           </i>
+           - making                 the aptamer-generation process cheaper and faster.
+          </p>
+          <p>
+           Actually, computer modelling approaches that include                 docking techniques to evaluate aptamer affinity
+           <i>
+            in silico
+           </i>
+           take time. Knowing this, we were motivated to run M.A.W.S. -                 the software of Heidelberg 2015 iGEM team - which implements                 an idea that provides a fast way to evaluate the affinity                 of the aptamer sequence to the desired target based on the                 nucleotide energy entropy. We intended to use this program                 and check the affinity of the generated aptamer
+           <i>
+            in vitro.
+           </i>
+           Although ours and TU Delft team’s attempts to run the Python                 script provided in the team’s GitHub repository were not                 successful. Additionally, we found out that this software                 tool was improved by Heidelberg iGEM team in 2017, and Athens                 2019 iGEM team made a review about this program. We made an                 assumption that this software should be functional after                 the correction of disturbing errors, which motivated                 us to dig deeper into the code.
+          </p>
+          <h3 class="index-headline">
+           3D test kit model
+          </h3>
+          <p>
+           For the diagnostic test we created hardware design in which                 blood can flow from upper layers to bottom layer due to                 gravitation. Binded in the lower layer the aptamers catch                 specific biomarker. The whole framework is universal for                 diseases that can be detected through blood. By discovering                 aptamer through SELEX method and conjugating it to PDA                 future research groups can create diagnostic tests for                 diseases that could not be detected before.
+          </p>
+          <div class="figure-container">
+           <img alt="" id="Figure1" src="https://2021.igem.org/wiki/images/d/de/T--Vilnius-Lithuania--placeholder.png"/>
+           <div>
+            <b>
+             Fig. 1.
+            </b>
+            3D model of diagnostic test
+           </div>
+          </div>
+          <p>
+           <a href="https://2021.igem.org/Team:Vilnius-Lithuania/Hardware">
+            More about hardware
+           </a>
+          </p>
+         </div>
+        </div>
+          <div class="index-container">
+            <div class="index-header"></div>
+            <div class="index-content"></div>
+          </div>
+        </div>
+        <footer>
+          <div class="logo-igem">
+            <object data="../assets/logos/T--Vilnius-Lithuania--iGEM-2021.svg"> </object>
+          </div>
+          <div class="social-container">
+            <div>FOLLOW US</div>
+            <div>
+              <a class="placeholder-social-icon" href="https://www.facebook.com/VilniusiGEM">
+                <img src="../assets/icons/facebook.svg" />
+              </a>
+              <a class="placeholder-social-icon" href="https://www.instagram.com/igem_vilnius/">
+                <img src="../assets/icons/instagram.svg" />
+              </a>
+              <a class="placeholder-social-icon" href="https://www.linkedin.com/company/vilnius-igem/">
+                <img src="../assets/icons/linkedin.svg" />
+              </a>
+            </div>
+          </div>
+          <div class="mail-container">
+            <div>CONTACT US</div>
+            <a href="mailto:info@vilniusigem.lt">info@vilniusigem.lt</a>
+          </div>
+          <div class="grid-sponsors">
+            <div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--VU.svg"> </object>
+              </div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--Termofisher.svg"> </object>
+              </div>
+              <div>
+                <object data="../assets/logos/CityOfVilnius.svg"> </object>
+              </div>
+            </div>
+            <div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--GMC.svg"> </object>
+              </div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--Nanodiagnostika.svg"> </object>
+              </div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--Telesoftas.svg"> </object>
+              </div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--Kopicentras.svg"> </object>
+              </div>
+            </div>
+            <div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--SnapGene.svg"> </object>
+              </div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--Laborama.svg"> </object>
+              </div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--Biotecha.svg"> </object>
+              </div>
+              <div>
+                <object data="../assets/logos/T--Vilnius-Lithuania--Grida.svg"> </object>
+              </div>
+            </div>
+          </div>
+        </footer>
+    </div>
+    <script src="../scripts/navigationTabs.js"></script>
+    <script src="../scripts/background.js"></script>
+    <script src="../scripts/contentpage.js"></script>
+    <script src="../scripts/navbar.js"></script>
+    <script>
+      contentPage(
+        "Sections",
+        true,
+        300,
+      )
+    </script>
+    <script src="../scripts/GlslCanvas.js"></script>
+    <script src="../scripts/backgroundTransition.js"></script>
+  </body>
+</html>
